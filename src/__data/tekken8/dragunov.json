@@ -27,7 +27,7 @@
     "input": "in heat 2+3",
     "hit_level": "m,m,m",
     "damage": "25,14,23",
-    "startup": "i15~16,\n         i30~32,i31~32",
+    "startup": "i15~16,i30~32,i31~32",
     "block": "+6",
     "hit": "+3d",
     "counter": "",
@@ -2086,7 +2086,7 @@
     ]
   },
   {
-    "name": "\nKi Charge\nSupercharger\n",
+    "name": "Ki Charge",
     "input": "1+2+3+4",
     "hit_level": "",
     "damage": "",
