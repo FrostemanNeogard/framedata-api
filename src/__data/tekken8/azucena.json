@@ -190,7 +190,7 @@
     "hit_level": "M",
     "damage": "27",
     "startup": "i16~18",
-    "block": "-9~-7",
+    "block": "+4",
     "hit": "+58a (+42)",
     "counter": "",
     "alternateInputs": [
@@ -200,7 +200,8 @@
     "notes": [
       "Tornado",
       "Uses heat gauge",
-      "Restores recoverable health"
+      "Restores recoverable health",
+      "Transition to FC with D"
     ]
   },
   {
@@ -259,7 +260,6 @@
       "powercrush"
     ],
     "notes": [
-      "Heat Engager",
       "Heat Dash +5, +43a (+35)",
       "Balcony Break",
       "+0 on block if an attack is absorbed"
@@ -270,8 +270,8 @@
     "input": "b+3",
     "hit_level": "m",
     "damage": "21",
-    "startup": "i22",
-    "block": "+4c",
+    "startup": "i19",
+    "block": "+2c",
     "hit": "+8c",
     "counter": "",
     "alternateInputs": [
@@ -290,13 +290,14 @@
     "name": "Smell the Coffee",
     "input": "d+1+3",
     "hit_level": "t",
-    "damage": "30",
+    "damage": "35",
     "startup": "i12~13",
     "block": "",
     "hit": "+0d",
     "counter": "",
     "alternateInputs": [
-      "d+1+3"
+      "d+1+3",
+      "d+2+4"
     ],
     "categories": [
       "throw"
@@ -439,10 +440,10 @@
     "name": "Groovy Strike",
     "input": "3,2",
     "hit_level": "m,m",
-    "damage": "11,18",
+    "damage": "13,20",
     "startup": ",i23~24",
     "block": "-12",
-    "hit": "+6",
+    "hit": "+23g",
     "counter": "+33d (+25)",
     "alternateInputs": [
       "3,2"
@@ -486,6 +487,7 @@
     ],
     "categories": [],
     "notes": [
+      "Heat Engager",
       "Balcony Break",
       "Combo from 1st hit with 6f delay"
     ]
@@ -527,12 +529,12 @@
   {
     "name": "Delfin Patadas",
     "input": "4,3",
-    "hit_level": "h,M",
-    "damage": "15,17",
+    "hit_level": "h,m",
+    "damage": "15,20",
     "startup": ",i26~27",
     "block": "-11",
-    "hit": "+19g",
-    "counter": "+37a",
+    "hit": "+37a",
+    "counter": "",
     "alternateInputs": [
       "4,3"
     ],
@@ -647,6 +649,23 @@
     "notes": [
       "Balcony Break",
       "Combo from 1st hit with 8f delay"
+    ]
+  },
+  {
+    "name": "Sumatra Patadas",
+    "input": "f+3,4",
+    "hit_level": "m,m",
+    "damage": "15,20",
+    "startup": ",i24~25",
+    "block": "-11",
+    "hit": "+8",
+    "counter": "+52a",
+    "alternateInputs": [
+      "f+3,4"
+    ],
+    "categories": [],
+    "notes": [
+      "Natural combo"
     ]
   },
   {
@@ -855,8 +874,8 @@
     "hit_level": "m",
     "damage": "20",
     "startup": "i20~21",
-    "block": "-2",
-    "hit": "+4c",
+    "block": "+4",
+    "hit": "+7c",
     "counter": "+44a",
     "alternateInputs": [
       "d+1"
@@ -960,7 +979,7 @@
   {
     "name": "",
     "input": "d+4",
-    "hit_level": "L",
+    "hit_level": "l",
     "damage": "13",
     "startup": "i15~16",
     "block": "-13",
@@ -977,7 +996,7 @@
   {
     "name": "Roast Knuckle Combo",
     "input": "d+4,1",
-    "hit_level": "L,h",
+    "hit_level": "l,h",
     "damage": "13,5",
     "startup": ",i27~28",
     "block": "-1",
@@ -996,19 +1015,19 @@
   {
     "name": "Full City Roast Knuckle Combo",
     "input": "d+4,1~2",
-    "hit_level": "L,m",
+    "hit_level": "l,m",
     "damage": "13,20",
     "startup": ",i17~18",
     "block": "-8",
-    "hit": "+10g +22w",
+    "hit": "+20a (+11)",
     "counter": "+59a",
     "alternateInputs": [
       "d+4,1~2"
     ],
     "categories": [],
     "notes": [
-      "Wall Crush +22g on hit",
-      " "
+      "Balcony Break",
+      "Strong Aerial Tailspin"
     ]
   },
   {
@@ -1157,8 +1176,8 @@
     "hit_level": "h,h",
     "damage": "14,16",
     "startup": ",i23",
-    "block": "+3",
-    "hit": "+8",
+    "block": "-8",
+    "hit": "+3",
     "counter": "",
     "alternateInputs": [
       "b+1,1"
@@ -1185,7 +1204,7 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Combo from 2nd CH with 6f delay",
+      "Combo from 1st CH",
       "Input can be delayed 9f",
       "6 chip damage on block",
       "8 chip damage on block during heat",
@@ -1332,16 +1351,17 @@
     "name": "Rhythmic Hook",
     "input": "uf+2",
     "hit_level": "h",
-    "damage": "23",
+    "damage": "20",
     "startup": "i17~18",
-    "block": "-7",
-    "hit": "+15a (+6)",
-    "counter": "+51a",
+    "block": "-5",
+    "hit": "+14",
+    "counter": "",
     "alternateInputs": [
       "uf+2"
     ],
     "categories": [],
     "notes": [
+      "Strong Aerial Tailspin",
       "Balcony Break"
     ]
   },
@@ -1436,15 +1456,15 @@
   },
   {
     "name": "Ortiz Molino",
-    "input": "f,F+3+4",
+    "input": "uf+3+4",
     "hit_level": "m,M",
     "damage": "10,18",
     "startup": "i21~22 i10~12",
     "block": "+4~+6",
-    "hit": "+5d",
+    "hit": "+8c",
     "counter": "",
     "alternateInputs": [
-      "f,F+3+4"
+      "uf+3+4"
     ],
     "categories": [],
     "notes": [
@@ -1490,7 +1510,8 @@
       "Jail from 1st attack",
       "8 chip damage on block",
       "(3)+9 chip damage on block during heat",
-      "Available only as combo from 1st hit"
+      "Available only as combo from 1st hit",
+      "Transition to LIB (+28a/+5) with F"
     ]
   },
   {
@@ -1564,7 +1585,7 @@
   {
     "name": "Cosecha Látigo",
     "input": "FC df+3",
-    "hit_level": "L",
+    "hit_level": "l",
     "damage": "17",
     "startup": "i18~19",
     "block": "-13",
@@ -1576,6 +1597,23 @@
     "categories": [],
     "notes": [
       ""
+    ]
+  },
+  {
+    "name": "Etching Blade",
+    "input": "FC df+4",
+    "hit_level": "l",
+    "damage": "23",
+    "startup": "i17~18",
+    "block": "-15",
+    "hit": "+5",
+    "counter": "+24a",
+    "alternateInputs": [
+      "FC df+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Transition to LIB on hit"
     ]
   },
   {
@@ -1663,16 +1701,17 @@
     ],
     "categories": [],
     "notes": [
-      "Combo from 1st hit with 6f delay"
+      "Combo from 1st hit with 6f delay",
+      "Transition to LIB (+8/+0) with F"
     ]
   },
   {
     "name": "Combo de Cantuta",
     "input": "ws4,1,3",
     "hit_level": "m,h,m",
-    "damage": "13,10,23",
+    "damage": "13,10,28",
     "startup": ",i22~23",
-    "block": "-14",
+    "block": "-13",
     "hit": "+10a (+1)",
     "counter": "+27a",
     "alternateInputs": [
@@ -1936,7 +1975,7 @@
     "hit_level": "h",
     "damage": "25",
     "startup": "i16~17",
-    "block": "-5",
+    "block": "-2",
     "hit": "+32a",
     "counter": "",
     "alternateInputs": [
@@ -1947,17 +1986,36 @@
       "homing"
     ],
     "notes": [
+      "Powercrush",
+      "Absorbs from frame 7",
       "Homing",
       "Balcony Break",
       "7 chip damage on block",
       "10 chip damge on block during heat",
-      "Frame advantage is +0 if an attack is absorbed"
+      "Frame advantage is +3 if an attack is absorbed"
+    ]
+  },
+  {
+    "name": "Pedalada Tron",
+    "input": "LIB d+3",
+    "hit_level": "m",
+    "damage": "25",
+    "startup": "i24~26",
+    "block": "+2",
+    "hit": "+13a",
+    "counter": "+38a",
+    "alternateInputs": [
+      "LIB d+3"
+    ],
+    "categories": [],
+    "notes": [
+      ""
     ]
   },
   {
     "name": "",
     "input": "LIB d+4",
-    "hit_level": "L",
+    "hit_level": "l",
     "damage": "14",
     "startup": "i19~20",
     "block": "-31",
@@ -2122,7 +2180,7 @@
     "hit_level": "h",
     "damage": "9",
     "startup": "i10~11",
-    "block": "+0",
+    "block": "+2",
     "hit": "+6",
     "counter": "+8",
     "alternateInputs": [
@@ -2139,7 +2197,7 @@
     "hit_level": "h,h",
     "damage": "9,23",
     "startup": ",i22~23",
-    "block": "-7",
+    "block": "-1",
     "hit": "+19a (+10)",
     "counter": "",
     "alternateInputs": [
@@ -2235,7 +2293,7 @@
     "hit_level": "m",
     "damage": "15",
     "startup": "i15~16",
-    "block": "-5",
+    "block": "-3",
     "hit": "+6",
     "counter": "",
     "alternateInputs": [
@@ -2254,7 +2312,7 @@
     "startup": ",i23~24",
     "block": "-14",
     "hit": "+16a (-1)",
-    "counter": "",
+    "counter": "+70a (+54)",
     "alternateInputs": [
       "BT 4,3"
     ],
@@ -2287,7 +2345,7 @@
   {
     "name": "Foo Fighter",
     "input": "BT 3+4",
-    "hit_level": "M",
+    "hit_level": "m",
     "damage": "23",
     "startup": "i27~29",
     "block": "-5c~-3c",
@@ -2298,7 +2356,8 @@
     ],
     "categories": [],
     "notes": [
-      "Spike"
+      "Spike",
+      "Chip damage on block"
     ]
   },
   {
