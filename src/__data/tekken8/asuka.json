@@ -76,10 +76,10 @@
     "name": "Heaven's Hammer",
     "input": "d+2",
     "hit_level": "m",
-    "damage": "18",
+    "damage": "20",
     "startup": "i18",
     "block": "-4c",
-    "hit": "+9c",
+    "hit": "+19a",
     "counter": "",
     "alternateInputs": [
       "d+2"
@@ -247,7 +247,8 @@
       "Chip damage on block",
       "Cancel to r18 with B",
       "Interrupt with i15 from 2nd block",
-      "Last input can be held to power up"
+      "Last input can be held to power up",
+      "Strong Aerial Tailspin"
     ]
   },
   {
@@ -267,7 +268,8 @@
       "Balcony Break",
       "Chip damage on block",
       "Cancel to r15 with B",
-      "Interrupt with i36 from 2nd block"
+      "Interrupt with i36 from 2nd block",
+      "Strong Aerial Tailspin"
     ]
   },
   {
@@ -277,7 +279,7 @@
     "damage": "6,9,20",
     "startup": ",i18~19",
     "block": "-12",
-    "hit": "+12s",
+    "hit": "+18a (+1)",
     "counter": "",
     "alternateInputs": [
       "1,2,4"
@@ -386,10 +388,10 @@
     "name": "Mizu Basho",
     "input": "2,3",
     "hit_level": "h,m",
-    "damage": "9,16",
+    "damage": "9,20",
     "startup": ",i22~23",
     "block": "-17",
-    "hit": "+14g",
+    "hit": "+11a (-6)",
     "counter": "",
     "alternateInputs": [
       "2,3"
@@ -579,7 +581,8 @@
       "Cancel to r18 with B",
       "Interrupt with i18 from 2nd block",
       "Last input can be held to power up",
-      "Link to attack from Spinning Heel Drop (f+3)"
+      "Link to attack from Spinning Heel Drop (f+3)",
+      "Strong Aerial Tailspin"
     ]
   },
   {
@@ -643,7 +646,7 @@
   {
     "name": "Demon Slayer",
     "input": "f+2",
-    "hit_level": "M",
+    "hit_level": "m",
     "damage": "20",
     "startup": "i17~18",
     "block": "-18",
@@ -658,6 +661,25 @@
       "Gain NWG on hit with 1",
       "hit advantage becomes +26a (+16) on NWG gain",
       "Sometimes written Tooth Fairy"
+    ]
+  },
+  {
+    "name": "Demon Slayer Vigil",
+    "input": "NWG f+2,1+2",
+    "hit_level": "m",
+    "damage": "15",
+    "startup": ",i31~32",
+    "block": "-8",
+    "hit": "+67a (+51)",
+    "counter": "",
+    "alternateInputs": [
+      "NWG f+2,1+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Tornado",
+      "Natural combo",
+      "Jails from 1st attack"
     ]
   },
   {
@@ -753,7 +775,8 @@
       "Balcony Break",
       "Chip damage on block",
       "Gain NWG on hit",
-      "-2a (-11) on hit after NWG gain"
+      "-2a (-11) on hit after NWG gain",
+      "Strong Aerial Tailspin"
     ]
   },
   {
@@ -1471,13 +1494,31 @@
     ]
   },
   {
+    "name": "Ikutama Festival Bash",
+    "input": "NWG uf+1,2",
+    "hit_level": "m",
+    "damage": "24",
+    "startup": ",i26~27",
+    "block": "0",
+    "hit": "+36a",
+    "counter": "",
+    "alternateInputs": [
+      "NWG uf+1,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Cancel to FC (-3/-15) with uf+1,2~D",
+      "Balcony break"
+    ]
+  },
+  {
     "name": "Sumiyoshi Festival Plunge",
     "input": "NWG u+1+2",
-    "hit_level": "M",
-    "damage": "24",
+    "hit_level": "m",
+    "damage": "33",
     "startup": "i31~32",
     "block": "+8~+9",
-    "hit": "+18a",
+    "hit": "+44a",
     "counter": "",
     "alternateInputs": [
       "NWG u+1+2"
@@ -1571,13 +1612,14 @@
     "damage": "16",
     "startup": "i15~16",
     "block": "-9",
-    "hit": "+1",
+    "hit": "+2",
     "counter": "",
     "alternateInputs": [
       "f,F+2"
     ],
     "categories": [],
     "notes": [
+      "Transition to FC with D",
       "Elbow"
     ]
   },
@@ -1600,16 +1642,17 @@
       "Combo from 1st hit with 6f delay",
       "Combo from 1st CH with 10f delay",
       "Input can be delayed 12f",
-      "Move can be delayed 10f"
+      "Move can be delayed 10f",
+      "Heat Engager"
     ]
   },
   {
     "name": "Yata Kagami",
     "input": "f,F+2,3",
-    "hit_level": "m,M",
+    "hit_level": "m,m",
     "damage": "16,22",
     "startup": ",i27~28",
-    "block": "-8",
+    "block": "-7",
     "hit": "+15a",
     "counter": "",
     "alternateInputs": [
@@ -1620,7 +1663,25 @@
       "Balcony Break",
       "Combo from 1st CH with 4f delay",
       "Input can be delayed 12f",
-      "Move can be delayed 10f"
+      "Move can be delayed 10f",
+      "Can be charged with f,F+2,3*"
+    ]
+  },
+  {
+    "name": "Yata Kagami (Hold)",
+    "input": "f,F+2,3**",
+    "hit_level": "m,m",
+    "damage": "16,26",
+    "startup": ",i38~39",
+    "block": "+7",
+    "hit": "+39a",
+    "counter": "",
+    "alternateInputs": [
+      "f,F+2,3**"
+    ],
+    "categories": [],
+    "notes": [
+      "Move can be partially charged"
     ]
   },
   {
@@ -1686,7 +1747,7 @@
   {
     "name": "Tenjin Upward Strike",
     "input": "f,F+1+2",
-    "hit_level": "M",
+    "hit_level": "m",
     "damage": "20",
     "startup": "i19~20",
     "block": "-6",
@@ -1923,7 +1984,26 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony Break"
+      "Balcony Break",
+      "Can be charged with FC df+3*"
+    ]
+  },
+  {
+    "name": "Minazuki (Hold)",
+    "input": "FC df+3**",
+    "hit_level": "m",
+    "damage": "30",
+    "startup": "i26",
+    "block": "+8",
+    "hit": "+37a",
+    "counter": "",
+    "alternateInputs": [
+      "FC df+3**"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Move can be partially charged"
     ]
   },
   {
@@ -1983,7 +2063,7 @@
     "name": "Kohaku",
     "input": "ws2,1+2",
     "hit_level": "m,t",
-    "damage": "18,8",
+    "damage": "18,12",
     "startup": ",i24~25",
     "block": "-5",
     "hit": "+17",
@@ -2340,6 +2420,39 @@
       "Throw break 2",
       "Opponent recovers off-axis FUFT on hit",
       "Can side switch on hit"
+    ]
+  },
+  {
+    "name": "Ikutama Bash",
+    "input": "uf+1",
+    "hit_level": "h",
+    "damage": "12",
+    "startup": "i13",
+    "block": "-9",
+    "hit": "+3",
+    "counter": "",
+    "alternateInputs": [
+      "uf+1"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "Ikutama Bash",
+    "input": "uf+1,2",
+    "hit_level": "m",
+    "damage": "19",
+    "startup": ",i26~27",
+    "block": "-11",
+    "hit": "+13g",
+    "counter": "",
+    "alternateInputs": [
+      "uf+1,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Cancel to FC (-3/-15) with uf+1,2~D",
+      "Balcony break"
     ]
   },
   {
