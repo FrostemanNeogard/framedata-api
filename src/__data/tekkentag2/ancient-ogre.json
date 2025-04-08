@@ -8,7 +8,9 @@
     "block": "+1",
     "hit": "+8",
     "counter": "+8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -21,7 +23,9 @@
     "block": "-6",
     "hit": "+2(+8)",
     "counter": "+2",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "1, 1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -34,7 +38,9 @@
     "block": "-14",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "1, 1, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -47,7 +53,9 @@
     "block": "-1",
     "hit": "+5",
     "counter": "+5",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "1, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -60,7 +68,9 @@
     "block": "-15",
     "hit": "-4",
     "counter": "-4",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "1, 2, 1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -73,7 +83,9 @@
     "block": "0",
     "hit": "+8",
     "counter": "+8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -86,7 +98,9 @@
     "block": "+3",
     "hit": "+5",
     "counter": "+5",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "2, 1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -99,7 +113,9 @@
     "block": "-13",
     "hit": "-2",
     "counter": "-2",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "2, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -112,7 +128,9 @@
     "block": "-12",
     "hit": "Launch (JG?)",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "2, d+1+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -125,7 +143,9 @@
     "block": "-7",
     "hit": "+4",
     "counter": "+4",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -138,7 +158,9 @@
     "block": "-3",
     "hit": "+7",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "3, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -151,7 +173,9 @@
     "block": "-11~-10",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "4~3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -164,7 +188,9 @@
     "block": "-9",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "3+4"
+    ],
     "categories": [
       "homing"
     ],
@@ -181,7 +207,9 @@
     "block": "-12",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -194,7 +222,9 @@
     "block": "-8",
     "hit": "+5",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -207,7 +237,9 @@
     "block": "-9",
     "hit": "+6 OC",
     "counter": "+6 OC",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f+3, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -220,7 +252,9 @@
     "block": "+3~+4 OC",
     "hit": "+7~+8 OC",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -233,7 +267,9 @@
     "block": "-11",
     "hit": "Throw(KND)",
     "counter": "Throw(KND)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f+1+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -246,7 +282,9 @@
     "block": "-17",
     "hit": "-2 OC",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f+3+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -259,7 +297,9 @@
     "block": "-10~-4",
     "hit": "KFUD",
     "counter": "KFUD",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f+2+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -272,7 +312,9 @@
     "block": "-3",
     "hit": "+8 GB",
     "counter": "+8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/f+1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -285,7 +327,9 @@
     "block": "-6",
     "hit": "+5",
     "counter": "+5",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/f+1, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -298,7 +342,9 @@
     "block": "-8",
     "hit": "+3",
     "counter": "+3",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/f+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -311,7 +357,9 @@
     "block": "-12",
     "hit": "-1",
     "counter": "-1",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/f+2, 1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -324,7 +372,9 @@
     "block": "-13",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/f+2, 1, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -337,7 +387,9 @@
     "block": "-12~-11",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/f+3"
+    ],
     "categories": [
       "homing"
     ],
@@ -354,7 +406,9 @@
     "block": "-15",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/f+1+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -367,7 +421,9 @@
     "block": "-11",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/f+3+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -380,7 +436,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "+2",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d+1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -393,7 +451,9 @@
     "block": "-5~-4",
     "hit": "+5~+6 OC",
     "counter": "+5~+6 OC",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -406,7 +466,9 @@
     "block": "-10",
     "hit": "KND",
     "counter": "Launch",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d+2, 3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -419,7 +481,9 @@
     "block": "-12",
     "hit": "+1",
     "counter": "+1",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -432,7 +496,9 @@
     "block": "-13",
     "hit": "-14",
     "counter": "-2",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -445,7 +511,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d+4, 4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -458,7 +526,9 @@
     "block": "-12",
     "hit": "Launch (JG?)",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d+1+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -471,7 +541,9 @@
     "block": "-15",
     "hit": "Launch (JG?)",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d+3+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -484,7 +556,9 @@
     "block": "-16",
     "hit": "+2",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/b+2"
+    ],
     "categories": [
       "homing"
     ],
@@ -501,7 +575,9 @@
     "block": "-18~-17",
     "hit": "-4~-3",
     "counter": "-4~-3",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/b+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -514,7 +590,9 @@
     "block": "CS",
     "hit": "CS",
     "counter": "CS",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d/b+1+2"
+    ],
     "categories": [
       "unblockable"
     ],
@@ -529,7 +607,9 @@
     "block": "-15~-14",
     "hit": "-3~-2",
     "counter": "-3~-2",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -542,7 +622,9 @@
     "block": "-13",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+1, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -555,7 +637,9 @@
     "block": "-16~-15",
     "hit": "-4~-3",
     "counter": "-4~-3",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+1, 2, b (Cancel)"
+    ],
     "categories": [],
     "notes": []
   },
@@ -568,7 +652,9 @@
     "block": "-16",
     "hit": "CS",
     "counter": "CS",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -581,7 +667,9 @@
     "block": "-16",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+2, 1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -594,7 +682,9 @@
     "block": "-13~-11",
     "hit": "+4~+6 OC",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -607,7 +697,9 @@
     "block": "-8",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+3, 4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -620,7 +712,9 @@
     "block": "-5",
     "hit": "+6",
     "counter": "+6",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -633,7 +727,9 @@
     "block": "-10",
     "hit": "+5",
     "counter": "+5",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+4, 3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -646,7 +742,9 @@
     "block": "-17",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+4, 3, 3+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -659,7 +757,9 @@
     "block": "-23~",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+1+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -672,7 +772,9 @@
     "block": "KND",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b+2+3"
+    ],
     "categories": [
       "unblockable"
     ],
@@ -687,7 +789,9 @@
     "block": "-23~-22",
     "hit": "Launch (JG?)",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "u/b+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -700,7 +804,9 @@
     "block": "-19~-18",
     "hit": "Launch (JG?)",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "u/b+3, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -713,7 +819,9 @@
     "block": "-12~-10",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "u+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -726,7 +834,9 @@
     "block": "+2s",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "u or u/f+1+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -739,7 +849,9 @@
     "block": "-8",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "u/f+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -752,7 +864,9 @@
     "block": "-8",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "u/f+3, 4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -765,7 +879,9 @@
     "block": "",
     "hit": "KND",
     "counter": "",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "u/f+3, 4, 3+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -778,7 +894,9 @@
     "block": "-9~-8 OC",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, f, 4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -791,7 +909,9 @@
     "block": "-36~-35",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, f, 3+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -804,7 +924,9 @@
     "block": "+6",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, F+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -817,7 +939,9 @@
     "block": "-14",
     "hit": "",
     "counter": "",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, F+2 (Second hit avoided by sidestep)"
+    ],
     "categories": [],
     "notes": []
   },
@@ -830,7 +954,9 @@
     "block": "-24",
     "hit": "",
     "counter": "",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, F+2 (Second hit avoided by back dash)"
+    ],
     "categories": [],
     "notes": []
   },
@@ -843,7 +969,9 @@
     "block": "-3 OC",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, F+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -856,7 +984,9 @@
     "block": "+1~+8",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, F+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -869,7 +999,9 @@
     "block": "CS",
     "hit": "CS",
     "counter": "CS",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, F+1+2"
+    ],
     "categories": [
       "unblockable"
     ],
@@ -884,7 +1016,9 @@
     "block": "-19~-18",
     "hit": "Launch(JG?)",
     "counter": "Launch(JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "d, D/B+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -897,7 +1031,9 @@
     "block": "-8",
     "hit": "Launch (JG?)",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b, f+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -910,7 +1046,9 @@
     "block": "KND",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "b, B+1+2"
+    ],
     "categories": [
       "unblockable"
     ],
@@ -925,7 +1063,9 @@
     "block": "+9",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "f, f, f+3 or 2+4+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -938,7 +1078,9 @@
     "block": "KND",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "qcb, f+2+3"
+    ],
     "categories": [
       "unblockable"
     ],
@@ -953,7 +1095,9 @@
     "block": "-6",
     "hit": "+5",
     "counter": "+5",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -966,7 +1110,9 @@
     "block": "-8~-7",
     "hit": "+3~+4 OC",
     "counter": "+3~+4 OC",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+1, 2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -979,7 +1125,9 @@
     "block": "-20",
     "hit": "CS",
     "counter": "CS",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+2"
+    ],
     "categories": [
       "homing"
     ],
@@ -996,7 +1144,9 @@
     "block": "-21~-20",
     "hit": "-10~-9",
     "counter": "-10~-9",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1009,7 +1159,9 @@
     "block": "-20~-18",
     "hit": "-9~-7 OC",
     "counter": "-9~-7 OC",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+3, 3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1022,7 +1174,9 @@
     "block": "-19",
     "hit": "-8",
     "counter": "-8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+3, 3, D+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1035,7 +1189,9 @@
     "block": "-19",
     "hit": "-8",
     "counter": "-8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+3, 3, D+3, n+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1048,7 +1204,9 @@
     "block": "-16",
     "hit": "-5",
     "counter": "-5",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+3, 3, D+3, n+3, 3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1061,7 +1219,9 @@
     "block": "-19",
     "hit": "-8",
     "counter": "-8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+3, 3, D/F+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1074,7 +1234,9 @@
     "block": "-16",
     "hit": "-5",
     "counter": "-5",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+3, 3, D/F+3, n+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1087,7 +1249,9 @@
     "block": "-19",
     "hit": "-8",
     "counter": "-8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+3, 3, D/F+3, n+3, 3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1100,7 +1264,9 @@
     "block": "-19",
     "hit": "-8",
     "counter": "-8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "In+f-Kick D+3, ,,"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1113,7 +1279,9 @@
     "block": "-20~-18",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "In+f-Kick U+3, ,,"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1126,7 +1294,9 @@
     "block": "-3",
     "hit": "+8",
     "counter": "+8",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1139,7 +1309,9 @@
     "block": "-15~-14",
     "hit": "-4~-3 OC",
     "counter": "-4~-3 OC",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "WS+4, 4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1152,7 +1324,9 @@
     "block": "-17",
     "hit": "-3",
     "counter": "-3",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "FC+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1165,7 +1339,9 @@
     "block": "-17",
     "hit": "-6 OC",
     "counter": "-4 OC",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "FC+3, 3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1178,7 +1354,9 @@
     "block": "-15",
     "hit": "Launch (JG?)",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "FC+3, 3, 3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1191,7 +1369,9 @@
     "block": "-17",
     "hit": "-1",
     "counter": "-1",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "FC+3, 3, d+3"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1204,7 +1384,9 @@
     "block": "-14",
     "hit": "CS",
     "counter": "CS",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "FC+f+1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1217,7 +1399,9 @@
     "block": "-13~-11 OC",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "FC+f+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1230,7 +1414,9 @@
     "block": "-14",
     "hit": "0 OC",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "FC+d/f+1"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1243,7 +1429,9 @@
     "block": "-27",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "FC+d/f+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1256,7 +1444,9 @@
     "block": "-14",
     "hit": "Launch (JG?)",
     "counter": "Launch (JG?)",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "SS+2"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1269,7 +1459,9 @@
     "block": "-17",
     "hit": "KND",
     "counter": "KND",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "SS+4"
+    ],
     "categories": [],
     "notes": []
   },
@@ -1282,7 +1474,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [],
+    "alternateInputs": [
+      "1+2+3+4"
+    ],
     "categories": [],
     "notes": []
   }
