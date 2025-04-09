@@ -954,7 +954,7 @@
     "hit_level": "l, h, (MTS)",
     "damage": "14,20",
     "startup": "21",
-    "block": "+11",
+    "block": "-11",
     "hit": "+21 GB",
     "counter": "Launch (JG?)",
     "alternateInputs": [
