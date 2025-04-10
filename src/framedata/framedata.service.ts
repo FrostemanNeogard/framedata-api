@@ -73,8 +73,10 @@ export class FramedataService {
         });
       }
     }
+
     if (!attackInfo[0]) {
       similarityMap.sort((a, b) => b.similarity - a.similarity);
+
       const top5Moves = similarityMap.slice(0, 5).map((entry) => entry.move);
       const uniqueSimilarMoves = top5Moves.filter(
         (value, index, array) => array.indexOf(value) == index,
