@@ -14,7 +14,7 @@
     "categories": [],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -2101,7 +2101,7 @@
     "hit_level": "m,m",
     "damage": "12,24",
     "startup": "i20",
-    "block": "-13",
+    "block": "-14",
     "hit": "+32a (+22)",
     "counter": "",
     "alternateInputs": [

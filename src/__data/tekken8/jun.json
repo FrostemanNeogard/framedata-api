@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -2256,9 +2256,9 @@
     "hit_level": "m",
     "damage": "21",
     "startup": "i16~17",
-    "block": "-9",
+    "block": "-6",
     "hit": "+2",
-    "counter": "+23",
+    "counter": "+25",
     "alternateInputs": [
       "IZU f+1+2"
     ],
@@ -2268,7 +2268,7 @@
     "notes": [
       "Homing",
       "Balcony Break (airborne)",
-      "Only i13 or faster attacks guaranteed on CH"
+      "Only i15 or faster attacks guaranteed on CH"
     ]
   },
   {
@@ -2553,7 +2553,8 @@
     "categories": [],
     "notes": [
       "Can't block for 5 seconds",
-      "CH state for 5 seconds"
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {

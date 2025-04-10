@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -600,7 +600,8 @@
     "notes": [
       "Homing",
       "Balcony Break",
-      "Interrupt with i1 from 1st block"
+      "Interrupt with i1 from 1st block",
+      "1st forces crouching against crouching opponents (opponents recover standing after 2nd hit)"
     ]
   },
   {
@@ -800,7 +801,7 @@
     "notes": [
       "Balcony Break",
       "Opponent recovers crouching on normal hit",
-      "Enter MCR +16 with F on hit",
+      "Enter MCR +16g with F on hit",
       "Enter MCR +31d (+23d) with F on CH",
       "Combo on 1st CH with 10f delay",
       "Move can be delayed 5f"
@@ -845,7 +846,7 @@
     ],
     "categories": [],
     "notes": [
-      ""
+      "+2c on hit against crouching opponents"
     ]
   },
   {
@@ -1450,6 +1451,7 @@
     ],
     "notes": [
       "Input bufferable",
+      "-1c on hit against crouching opponents",
       "Homing at +3 and above",
       "Can be sidestepped to the right at -2 to +2"
     ]

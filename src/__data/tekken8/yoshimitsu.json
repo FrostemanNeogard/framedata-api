@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -687,7 +687,7 @@
     "categories": [],
     "notes": [
       "Tornado",
-      "Balcony break on airborne hit",
+      "Balcony Break (airborne)",
       "Combo from 1st hit with 1f delay",
       "Enter KIN r26 with 1+2",
       "Transition to NSS on hit or block only"
@@ -835,7 +835,7 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony break on airborne hit"
+      "Balcony Break (airborne)"
     ]
   },
   {
@@ -1042,7 +1042,7 @@
     ],
     "categories": [],
     "notes": [
-      "Link to db+2 extensions"
+      "Links to db+2 extensions"
     ]
   },
   {
@@ -1758,7 +1758,7 @@
     "startup": "i26~28",
     "block": "-11~-9",
     "hit": "+4~+6",
-    "counter": "7~+9",
+    "counter": "+7~+9",
     "alternateInputs": [
       "db+1"
     ],
@@ -1781,7 +1781,7 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony break on airborne or CH",
+      "Balcony Break (airborne or CH)",
       "Combo from 1st with 1f delay",
       "Combo from 1st CH with 8f delay",
       "Input can be delayed 8f"
@@ -3468,7 +3468,7 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony break or airborne hit"
+      "Balcony Break (airborne)"
     ]
   },
   {
@@ -5275,7 +5275,7 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony break on airborne hit",
+      "Balcony Break (airborne)",
       "Elbow",
       "Combo from 2nd CH",
       "Sometimes written NSS.ws2,1,2"
@@ -5616,7 +5616,7 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony break on airborne hit",
+      "Balcony Break (airborne)",
       "Elbow",
       "Combo from 1st CH"
     ]
@@ -5730,7 +5730,8 @@
     "categories": [],
     "notes": [
       "Can't block for 5 seconds",
-      "CH state for 5 seconds"
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {

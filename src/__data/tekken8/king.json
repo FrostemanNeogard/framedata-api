@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -111,7 +111,8 @@
       "+35g on heat engager hit",
       "Shifts to throw on front grounded hit.",
       "-5 on block after absorbing an attack with muscle armor.",
-      "6 chip damage on block after absorbing an attack with muscle armor."
+      "6 chip damage on block after absorbing an attack with muscle armor.",
+      "Transition into +12? JGR with input 3+4 on throw hit"
     ]
   },
   {

@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -28,8 +28,8 @@
     "input": "in heat 2+3",
     "hit_level": "m",
     "damage": "50",
-    "startup": "i13",
-    "block": "",
+    "startup": "i13~14",
+    "block": "-5",
     "hit": "+0d",
     "counter": "",
     "alternateInputs": [
@@ -40,7 +40,9 @@
       "Heat Smash",
       "Reversal Break",
       "Balcony Break",
-      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when they attack you"
+      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when land a hit on you",
+      "Transition to attack throw on hit",
+      "Jails"
     ]
   },
   {
@@ -81,17 +83,19 @@
     "notes": [
       "Heat Engager",
       "Heat Dash +5, +67a (+50)",
+      "Balcony Break",
+      "Spike",
       "Weapon",
-      "Combo from 1st hit",
+      "Combo from 1st hit with 5f delay",
       "6 chip damage on block",
-      "? chip damage on block in heat"
+      "7 chip damage on block in heat"
     ]
   },
   {
     "name": "",
     "input": "FC df+1",
-    "hit_level": ",m",
-    "damage": "",
+    "hit_level": "m",
+    "damage": "22",
     "startup": "i20",
     "block": "-10",
     "hit": "+21d (+11)",
@@ -103,7 +107,9 @@
     "notes": [
       "Heat Engager",
       "Heat Dash +5, +36a (+26)",
-      "Weapon"
+      "Balcony Break",
+      "Weapon",
+      "Chip damage on block"
     ]
   },
   {
@@ -113,7 +119,7 @@
     "damage": "20",
     "startup": "i13~14",
     "block": "+6",
-    "hit": "",
+    "hit": "+30a (+20)",
     "counter": "",
     "alternateInputs": [
       "HAM 1"
@@ -121,21 +127,21 @@
     "categories": [],
     "notes": [
       "Heat Engager",
-      "Heat Dash +5, ?",
-      "Elbow",
+      "Heat Dash +5, +43d (+35)",
       "Balcony Break",
+      "Elbow",
       "6 chip damage on block",
-      "? chip damage on block in heat"
+      "7 chip damage on block in heat"
     ]
   },
   {
     "name": "Carmine Hands",
     "input": "CJM 2,1",
-    "hit_level": "h?,m?",
-    "damage": ",",
-    "startup": "i?",
-    "block": "",
-    "hit": "?",
+    "hit_level": "h,m",
+    "damage": "10,16",
+    "startup": ",i20~21",
+    "block": "-11",
+    "hit": "+24a (+19)",
     "counter": "",
     "alternateInputs": [
       "CJM 2,1"
@@ -143,25 +149,30 @@
     "categories": [],
     "notes": [
       "Heat Engager",
-      "Heat Dash +5, +?",
-      "Combo from 1st hit?"
+      "Heat Dash +5, +36a (+26)",
+      "Balcony Break",
+      "Combo from 1st hit with 6f delay"
     ]
   },
   {
     "name": "Roasted with Eternal Love",
-    "input": "1,2,1,2",
+    "input": "1,2,1,in heat 2",
     "hit_level": "h,h,h,m,m,m",
     "damage": "5,8,4",
     "startup": ",i23~72 i36~85 i54~103",
-    "block": "-3~+49g?",
-    "hit": "",
+    "block": "-2~+47g",
+    "hit": "+23a (-3)",
     "counter": "",
     "alternateInputs": [
-      "1,2,1,2"
+      "1,2,1,in heat 2"
     ],
     "categories": [],
     "notes": [
       "Weapon",
+      "Wall Crush +5g~ minimum",
+      "Combo from 3rd CH",
+      "Jails from 4th hit",
+      "Partially uses remaining Heat time",
       "Sometimes written H.1,2,1,2"
     ]
   },
@@ -171,7 +182,7 @@
     "hit_level": "m,h",
     "damage": "22,20",
     "startup": ",i40~89",
-    "block": "+4~",
+    "block": "+4g~+53g",
     "hit": "+20a (-6)",
     "counter": "",
     "alternateInputs": [
@@ -179,11 +190,13 @@
     ],
     "categories": [],
     "notes": [
+      "Strong Aerial Tailspin",
       "Balcony Break",
       "Weapon",
       "Combo from 1st hit",
-      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when they attack you",
+      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when land a hit on you",
       "6 chip damage on block",
+      "Partially uses remaining Heat time",
       "Sometimes written H.uf+3,1"
     ]
   },
@@ -193,7 +206,7 @@
     "hit_level": "m,h",
     "damage": "22,30",
     "startup": ",i40~139",
-    "block": "-1",
+    "block": "-1~+98g",
     "hit": "+20a (-6)",
     "counter": "",
     "alternateInputs": [
@@ -201,52 +214,84 @@
     ],
     "categories": [],
     "notes": [
+      "Strong Aerial Tailspin",
       "Balcony Break",
       "Weapon",
       "Combo from 1st hit",
       "Chip damage on block",
+      "Partially uses remaining Heat time",
       "Sometimes written H.uf+3,2"
     ]
   },
   {
-    "name": "",
-    "input": "f,f,F+3,in heat 2,2,2",
+    "name": "Grilled with Eternal Love",
+    "input": "f,f,F+3,in heat 2",
     "hit_level": "L,SL,SL,SL",
-    "damage": "12?,20?,8?,30?",
+    "damage": "12,9,9,32",
     "startup": ",i28~77 i41~90 i60~109",
-    "block": "-1",
+    "block": "-5~+44g",
     "hit": "+21a (-5)",
     "counter": "",
     "alternateInputs": [
-      "f,f,F+3,in heat 2,2,2"
+      "f,f,F+3,in heat 2"
     ],
     "categories": [],
     "notes": [
+      "Balcony Break",
       "Weapon",
-      "Wall Crush  +g",
-      "Combo from 1st CH?",
-      "Sometimes written H.f,f,F+3,2,2,2"
+      "Wall Crush +2g~ minimum",
+      "Combo from 1st CH",
+      "Jails from 2nd hit",
+      "Chip damage on block",
+      "Partially uses remaining Heat time",
+      "Sometimes written H.f,f,F+3,2"
     ]
   },
   {
-    "name": "Right Handed Sweep > Cold Blade?",
-    "input": "FC df+2,in heat 1",
-    "hit_level": ",L,L",
-    "damage": ",12,18",
-    "startup": "i27~28",
-    "block": "",
+    "name": "Leanán Sith's Grail",
+    "input": "FC df+2~in heat 1",
+    "hit_level": "L,L",
+    "damage": "12,18",
+    "startup": ",i27~28",
+    "block": "-21",
     "hit": "+64a (+48)",
     "counter": "",
     "alternateInputs": [
-      "FC df+2,in heat 1"
+      "FC df+2~in heat 1"
     ],
     "categories": [],
     "notes": [
+      "Balcony Break (airborne)",
       "Weapon",
+      "Jail from 1st attack",
+      "Instant Tornado on hit",
+      "Chip damage on block",
+      "Partially uses remaining Heat time",
+      "Sometimes written H.FC.df+2~1"
+    ]
+  },
+  {
+    "name": "Baked with Eternal Love",
+    "input": "CJM 3,in heat 2",
+    "hit_level": "m,m,m,m",
+    "damage": "12,9,9,32",
+    "startup": ",i28~77 i41~90 i59~108",
+    "block": "-2~+47g",
+    "hit": "+26a (+0)",
+    "counter": "",
+    "alternateInputs": [
+      "CJM 3,in heat 2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Weapon",
+      "Wall Crush +5g~ minimum",
       "Combo from 1st hit",
-      "Sometimes written ",
-      "FC.df+2,H.1",
-      "H.FC.df+2,1"
+      "Jails from 2nd hit",
+      "Chip damage on block",
+      "Partially uses remaining Heat time",
+      "Sometimes written H.CJM.3,2"
     ]
   },
   {
@@ -304,6 +349,26 @@
     ]
   },
   {
+    "name": "Roasted with Eternal Love",
+    "input": "1,2,1,2",
+    "hit_level": "h,h,h,m",
+    "damage": "5,8,4,24",
+    "startup": ",i23~72",
+    "block": "-14~+35",
+    "hit": "+21a (+11)",
+    "counter": "",
+    "alternateInputs": [
+      "1,2,1,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Weapon",
+      "Combo from 3rd CH",
+      "Chip damage on block"
+    ]
+  },
+  {
     "name": "Frost Combination",
     "input": "1,2,1,4",
     "hit_level": "h,h,h,m",
@@ -335,7 +400,7 @@
     ],
     "categories": [],
     "notes": [
-      "Transition to HAM on hit only"
+      "Transition to HAM on hit automatically"
     ]
   },
   {
@@ -388,7 +453,7 @@
     ],
     "categories": [],
     "notes": [
-      "Enter HMC +1 +7 +13 with F"
+      "Enter HAM +1 +7 +13 with F"
     ]
   },
   {
@@ -406,8 +471,10 @@
     "categories": [],
     "notes": [
       "Combo from 1st CH",
+      "High evasion",
+      "Interrupt with i11 from 1st block",
       "Input can be delayed 5f",
-      "Transition to HAM on hit only"
+      "Transition to HAM on hit automatically"
     ]
   },
   {
@@ -609,7 +676,10 @@
     ],
     "categories": [],
     "notes": [
-      "Cancel to r23 FC with db on frame 13"
+      "Enter r23 FC with db on frame 13",
+      "Enter r16 CJM with b+3 on frame 13",
+      "Sometimes written ",
+      "HAM"
     ]
   },
   {
@@ -774,7 +844,7 @@
     "notes": [
       "Balcony Break",
       "Weapon",
-      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when they attack you",
+      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when land a hit on you",
       "Unpunishable on block due to pushback",
       "Interrupt with i12 from 2nd block",
       "5 Chip damage on block"
@@ -796,7 +866,7 @@
     "notes": [
       "Balcony Break",
       "Weapon",
-      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when they attack you",
+      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when land a hit on you",
       "Unpunishable on block due to pushback",
       "Interrupt with i12 from 2nd block",
       "7 Chip damage on block"
@@ -858,7 +928,7 @@
       "Combo from 2nd CH",
       "Input can be delayed 10f",
       "Move can be delayed 5f",
-      "Transition to HAM on hit only"
+      "Transition to HAM on hit automatically"
     ]
   },
   {
@@ -867,7 +937,7 @@
     "hit_level": "m,h,h",
     "damage": "13,9,22",
     "startup": ",i22",
-    "block": "",
+    "block": "-6",
     "hit": "+20a (+11)",
     "counter": "+49a",
     "alternateInputs": [
@@ -908,8 +978,8 @@
     "hit_level": "L",
     "damage": "17",
     "startup": "i16~17",
-    "block": "+5c",
-    "hit": "-15",
+    "block": "-15",
+    "hit": "+5c",
     "counter": "+25d",
     "alternateInputs": [
       "df+4"
@@ -923,20 +993,236 @@
     ]
   },
   {
-    "name": "",
-    "input": "",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
+    "name": "Low Jab",
+    "input": "d+1",
+    "hit_level": "sl",
+    "damage": "5",
+    "startup": "i10",
+    "block": "-5",
+    "hit": "+6",
     "counter": "",
     "alternateInputs": [
-      ""
+      "d+1"
+    ],
+    "categories": [],
+    "notes": [
+      "Can recover standing with F"
+    ]
+  },
+  {
+    "name": "Low Jab Rising Kick",
+    "input": "d+1,4",
+    "hit_level": "sl,m",
+    "damage": "5,10",
+    "startup": ",i16~17",
+    "block": "-11",
+    "hit": "+0",
+    "counter": "",
+    "alternateInputs": [
+      "d+1,4"
+    ],
+    "categories": [],
+    "notes": [
+      "Combo from 1st CH"
+    ]
+  },
+  {
+    "name": "Ice Sickle",
+    "input": "d+2",
+    "hit_level": "m",
+    "damage": "17",
+    "startup": "i16~17",
+    "block": "+1",
+    "hit": "+7c",
+    "counter": "+24d",
+    "alternateInputs": [
+      "d+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Spike"
+    ]
+  },
+  {
+    "name": "Left Spin Low Kick",
+    "input": "d+3",
+    "hit_level": "L",
+    "damage": "10",
+    "startup": "16",
+    "block": "-17",
+    "hit": "-6",
+    "counter": "",
+    "alternateInputs": [
+      "d+3"
     ],
     "categories": [],
     "notes": [
       ""
+    ]
+  },
+  {
+    "name": "Left Spin Low Kick > Right Upper",
+    "input": "d+3,2",
+    "hit_level": "L,m",
+    "damage": "10,18",
+    "startup": ",i25~27",
+    "block": "-11",
+    "hit": "+14~+16",
+    "counter": "",
+    "alternateInputs": [
+      "d+3,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Combo from 1st CH"
+    ]
+  },
+  {
+    "name": "",
+    "input": "d+3,4",
+    "hit_level": "L,h",
+    "damage": "10,14",
+    "startup": ",i20",
+    "block": "-8",
+    "hit": "+1",
+    "counter": "",
+    "alternateInputs": [
+      "d+3,4"
+    ],
+    "categories": [],
+    "notes": [
+      "Combo from 1st CH"
+    ]
+  },
+  {
+    "name": "Left Spin Low Kick > B Slap Combo",
+    "input": "d+3,4,1",
+    "hit_level": "L,h,m",
+    "damage": "10,14,20",
+    "startup": ",i29~30",
+    "block": "-3",
+    "hit": "+5c",
+    "counter": "+21a",
+    "alternateInputs": [
+      "d+3,4,1"
+    ],
+    "categories": [],
+    "notes": [
+      "Spike",
+      "Combo from 2nd hit",
+      "Combo from 1st CH"
+    ]
+  },
+  {
+    "name": "Right Low Kick",
+    "input": "d+4",
+    "hit_level": "l",
+    "damage": "6",
+    "startup": "i12",
+    "block": "-15",
+    "hit": "-4",
+    "counter": "",
+    "alternateInputs": [
+      "d+4"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "Right Low Kick > Back Spin Chop",
+    "input": "d+4,1",
+    "hit_level": "l,h",
+    "damage": "6,10",
+    "startup": ",i25",
+    "block": "+0",
+    "hit": "+6",
+    "counter": "+11",
+    "alternateInputs": [
+      "d+4,1"
+    ],
+    "categories": [],
+    "notes": [
+      "Combo from 1st CH with 5f delay",
+      "Input can be delayed 9f",
+      "Cancel to SS -21 +7 r32 with U_D on frame 23",
+      "Cancel to CJM -10 +1 r29 with B on frame 14",
+      "r38 when blocking after SS"
+    ]
+  },
+  {
+    "name": "Sudden Severe Drop",
+    "input": "d+4,1~4",
+    "hit_level": "l,M",
+    "damage": "6,20",
+    "startup": ",i27~31",
+    "block": "-14c",
+    "hit": "+0d",
+    "counter": "",
+    "alternateInputs": [
+      "d+4,1~4"
+    ],
+    "categories": [],
+    "notes": [
+      "Spike",
+      "Cancel to this move takes 6f"
+    ]
+  },
+  {
+    "name": "Scarlet Rain",
+    "input": "db+1",
+    "hit_level": "m",
+    "damage": "16",
+    "startup": "i16~18",
+    "block": "-12",
+    "hit": "+3",
+    "counter": "",
+    "alternateInputs": [
+      "db+1"
+    ],
+    "categories": [],
+    "notes": [
+      "Spike",
+      "Can recover in FC with DB_D_DF"
+    ]
+  },
+  {
+    "name": "Scarlet Ray",
+    "input": "db+1,2",
+    "hit_level": "m,m",
+    "damage": "16,20",
+    "startup": ",i25~26",
+    "block": "-13",
+    "hit": "+5",
+    "counter": "",
+    "alternateInputs": [
+      "db+1,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break (airborne)",
+      "Combo from 1st CH with 8f delay",
+      "Input can be delayed 15f"
+    ]
+  },
+  {
+    "name": "Scarlet Splatter",
+    "input": "db+1,4",
+    "hit_level": "m,h",
+    "damage": "16,24",
+    "startup": ",i24",
+    "block": "-8",
+    "hit": "+10a (+1)",
+    "counter": "",
+    "alternateInputs": [
+      "db+1,4"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Combo from 1st CH with 9f delay",
+      "Input can be delayed 15f"
     ]
   },
   {
@@ -945,32 +1231,35 @@
     "hit_level": "m",
     "damage": "17",
     "startup": "i15~16",
-    "block": "",
-    "hit": "+8",
-    "counter": "",
+    "block": "-9",
+    "hit": "+8s",
+    "counter": "+36d",
     "alternateInputs": [
       "db+2"
     ],
     "categories": [],
     "notes": [
-      ""
+      "Strong Aerial Tailspin",
+      "Transition to r31 TOM on hit automatically",
+      "+13a (+4) on BT hit"
     ]
   },
   {
     "name": "",
     "input": "db+3",
     "hit_level": "L",
-    "damage": "",
+    "damage": "21",
     "startup": "i30~32",
     "block": "-26",
-    "hit": "",
+    "hit": "+68a (+52)",
     "counter": "",
     "alternateInputs": [
       "db+3"
     ],
     "categories": [],
     "notes": [
-      "Stagger on block"
+      "Stagger on block",
+      "Instant Tornado on hit"
     ]
   },
   {
@@ -980,14 +1269,106 @@
     "damage": "14",
     "startup": "i17~18",
     "block": "-13",
-    "hit": "+8c HAM",
+    "hit": "+8c",
     "counter": "+13",
     "alternateInputs": [
       "db+4"
     ],
     "categories": [],
     "notes": [
-      "Transition to HAM on hit only?"
+      "Transition to r26 HAM on hit automatically",
+      "Cancel HAM transition -13 +3c +8 with B"
+    ]
+  },
+  {
+    "name": "",
+    "input": "db+3+4",
+    "hit_level": "L",
+    "damage": "18",
+    "startup": "i24",
+    "block": "-26",
+    "hit": "-6",
+    "counter": "",
+    "alternateInputs": [
+      "db+3+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Clean hit -4 on hit, +3 damage"
+    ]
+  },
+  {
+    "name": "Stalker Repellant Alter",
+    "input": "db+3+4,4",
+    "hit_level": "L,h",
+    "damage": "18,23",
+    "startup": ",i29~30",
+    "block": "-9",
+    "hit": "+14a (+5)",
+    "counter": "",
+    "alternateInputs": [
+      "db+3+4,4"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Combo from 1st hit on clean hit",
+      "Combo from 1st CH with no clean hit"
+    ]
+  },
+  {
+    "name": "",
+    "input": "b+1",
+    "hit_level": "m",
+    "damage": "14",
+    "startup": "i16~17",
+    "block": "-2",
+    "hit": "+1",
+    "counter": "",
+    "alternateInputs": [
+      "b+1"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "input": "b+1,2",
+    "hit_level": "m,h",
+    "damage": "14,12",
+    "startup": ",i24",
+    "block": "-11",
+    "hit": "+5",
+    "counter": "",
+    "alternateInputs": [
+      "b+1,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Combo from 1st hit"
+    ]
+  },
+  {
+    "name": "Cross Cut Saw",
+    "input": "b+1,2,2",
+    "hit_level": "m,h,m",
+    "damage": "14,12,24",
+    "startup": ",i26~27",
+    "block": "-12",
+    "hit": "+20a (+15)",
+    "counter": "+29d (+21)",
+    "alternateInputs": [
+      "b+1,2,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break (airborne)",
+      "Elbow",
+      "Combo from 1st CH",
+      "Combo from 2nd CH with 9f delay",
+      "Input can be delayed 15f"
     ]
   },
   {
@@ -996,7 +1377,7 @@
     "hit_level": "h",
     "damage": "10",
     "startup": "i13~14",
-    "block": "",
+    "block": "-5",
     "hit": "+1",
     "counter": "",
     "alternateInputs": [
@@ -1015,7 +1396,7 @@
     "hit_level": "h,h",
     "damage": "10,20",
     "startup": ",i18~19",
-    "block": "",
+    "block": "-9",
     "hit": "+5",
     "counter": "",
     "alternateInputs": [
@@ -1023,7 +1404,33 @@
     ],
     "categories": [],
     "notes": [
-      ""
+      "Balcony Break (airborne)",
+      "Combo from 1st hit",
+      "Female characters can slap back with 2 on hit",
+      "Male characters can slap back with 2 on hit (likely a bug)"
+    ]
+  },
+  {
+    "name": "Chaos Judgement",
+    "input": "b+3",
+    "hit_level": "",
+    "damage": "",
+    "startup": "",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "b+3"
+    ],
+    "categories": [
+      "parry"
+    ],
+    "notes": [
+      "Actionable after 16f",
+      "i3? low parry: parries all lows (including Heat Smash lows)",
+      "i3? throw parry: +0d and 25 damage",
+      "Enter HAM with f+3 on frame 16",
+      "Sometimes written CJM"
     ]
   },
   {
@@ -1033,7 +1440,7 @@
     "damage": "17",
     "startup": "i19~21",
     "block": "-9",
-    "hit": "+11",
+    "hit": "+11g",
     "counter": "",
     "alternateInputs": [
       "b+4"
@@ -1042,8 +1449,9 @@
       "homing"
     ],
     "notes": [
+      "Strong Aerial Tailspin",
       "Homing",
-      "Transition to HAM on hit only"
+      "Transition to r24 HAM on hit automatically"
     ]
   },
   {
@@ -1052,15 +1460,115 @@
     "hit_level": "m",
     "damage": "21",
     "startup": "i20~21",
-    "block": "+4",
+    "block": "-13",
     "hit": "+20a (+15)",
     "counter": "",
     "alternateInputs": [
       "b+1+2"
     ],
+    "categories": [
+      "powercrush"
+    ],
+    "notes": [
+      "Balcony Break",
+      "-8 on block after absorbing an attack",
+      "Deals chip damage on block after attack absorbtion"
+    ]
+  },
+  {
+    "name": "Attack Reversal",
+    "input": "b+1+3",
+    "hit_level": "",
+    "damage": "25",
+    "startup": "",
+    "block": "",
+    "hit": "+3d",
+    "counter": "",
+    "alternateInputs": [
+      "b+1+3"
+    ],
+    "categories": [
+      "parry"
+    ],
+    "notes": [
+      "Parries high or mid punches or kicks",
+      "Can side switch depending on the parried attack"
+    ]
+  },
+  {
+    "name": "Bloody Scissors",
+    "input": "ub+1+2",
+    "hit_level": "m!",
+    "damage": "50",
+    "startup": "i60",
+    "block": "",
+    "hit": "+46a (+15)",
+    "counter": "",
+    "alternateInputs": [
+      "ub+1+2"
+    ],
     "categories": [],
     "notes": [
       ""
+    ]
+  },
+  {
+    "name": "",
+    "input": "uf+1",
+    "hit_level": "h",
+    "damage": "6",
+    "startup": "i13",
+    "block": "-4",
+    "hit": "+7",
+    "counter": "",
+    "alternateInputs": [
+      "uf+1"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "Fatal Attack Combo",
+    "input": "uf+1,3",
+    "hit_level": "h,m",
+    "damage": "6,17",
+    "startup": ",i15",
+    "block": "-16",
+    "hit": "+7",
+    "counter": "+51a",
+    "alternateInputs": [
+      "uf+1,3"
+    ],
+    "categories": [],
+    "notes": [
+      "Combo from 1st CH with 12f delay",
+      "Input can be delayed 12f",
+      "Move can be delayed 11f"
+    ]
+  },
+  {
+    "name": "Hail Storm",
+    "input": "uf+1,3,3+4",
+    "hit_level": "h,m,m,m",
+    "damage": "6,17,6,10",
+    "startup": ",i32~34 i11~12",
+    "block": "-4",
+    "hit": "+78a (+62)",
+    "counter": "",
+    "alternateInputs": [
+      "uf+1,3,3+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Tornado",
+      "Balcony Break",
+      "Knee",
+      "Combo from 2nd hit with 5f delay",
+      "Combo from 1st CH",
+      "+27a (+18) if only the last hit connects",
+      "Instant Tornado on hit"
     ]
   },
   {
@@ -1070,15 +1578,15 @@
     "damage": "18",
     "startup": "i20~21",
     "block": "-8",
-    "hit": "+12",
+    "hit": "+12s",
     "counter": "+72a (+56)",
     "alternateInputs": [
       "uf+2"
     ],
     "categories": [],
     "notes": [
-      "Transition to HAM on hit only",
-      "Cancel HAM transition with input db?"
+      "Transition to r27 HAM on hit automatically",
+      "Instant Tornado on CH"
     ]
   },
   {
@@ -1096,7 +1604,7 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Opponent recovers crouching on hit?"
+      "Power up in Heat"
     ]
   },
   {
@@ -1105,7 +1613,7 @@
     "hit_level": "m",
     "damage": "24",
     "startup": "i18~20",
-    "block": "",
+    "block": "-18",
     "hit": "+27a (+17)",
     "counter": "",
     "alternateInputs": [
@@ -1113,7 +1621,25 @@
     ],
     "categories": [],
     "notes": [
-      "Tornado"
+      "Tornado",
+      "18 damage when using ub+4"
+    ]
+  },
+  {
+    "name": "Dominatrix Heel",
+    "input": "uf+3+4",
+    "hit_level": "M,M",
+    "damage": "4,18",
+    "startup": "i25~28",
+    "block": "-3c",
+    "hit": "+5c",
+    "counter": "",
+    "alternateInputs": [
+      "uf+3+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Spike"
     ]
   },
   {
@@ -1133,9 +1659,10 @@
     ],
     "notes": [
       "Homing",
+      "Balcony Break (airborne)",
       "Weapon",
       "6 chip damage on block",
-      "? chip damage on block in heat"
+      "7 chip damage on block in heat"
     ]
   },
   {
@@ -1144,8 +1671,8 @@
     "hit_level": "m",
     "damage": "14",
     "startup": "i15",
-    "block": "",
-    "hit": "",
+    "block": "-11",
+    "hit": "+5",
     "counter": "",
     "alternateInputs": [
       "f,F+3"
@@ -1156,20 +1683,113 @@
     ]
   },
   {
-    "name": "Crouch Dash",
-    "input": "qcf",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
+    "name": "Mouse Trouble",
+    "input": "f,F+3,3",
+    "hit_level": "m,L",
+    "damage": "14,14",
+    "startup": ",i25",
+    "block": "-14",
+    "hit": "+4c",
+    "counter": "+14",
     "alternateInputs": [
-      "qcf"
+      "f,F+3,3"
     ],
     "categories": [],
     "notes": [
-      ""
+      "Combo from 1st hit with 5f delay"
+    ]
+  },
+  {
+    "name": "Falling Heel",
+    "input": "f,F+4",
+    "hit_level": "M",
+    "damage": "20",
+    "startup": "i31~34",
+    "block": "+5",
+    "hit": "+19a",
+    "counter": "",
+    "alternateInputs": [
+      "f,F+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Spike",
+      "Enter CJM +6 +20a r28 with B",
+      "Chip damage on block"
+    ]
+  },
+  {
+    "name": "Sosho Zanha",
+    "input": "f,F+1+2",
+    "hit_level": "m",
+    "damage": "25",
+    "startup": "i18~20",
+    "block": "-9",
+    "hit": "+19a (+14)",
+    "counter": "",
+    "alternateInputs": [
+      "f,F+1+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "5 chip damage on block"
+    ]
+  },
+  {
+    "name": "Sosho Zanha",
+    "input": "f,F+1+2*",
+    "hit_level": "m",
+    "damage": "30",
+    "startup": "i27~29",
+    "block": "+5~+7",
+    "hit": "+33a (+12)",
+    "counter": "",
+    "alternateInputs": [
+      "f,F+1+2*"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "12 chip damage on block"
+    ]
+  },
+  {
+    "name": "Treading Water",
+    "input": "f,F+3+4",
+    "hit_level": "m,m,m",
+    "damage": "8,8,10",
+    "startup": "i15~16 i8~11 i7~8",
+    "block": "+0",
+    "hit": "+9",
+    "counter": "+30a (+23)",
+    "alternateInputs": [
+      "f,F+3+4"
+    ],
+    "categories": [],
+    "notes": [
+      "CH advantage is for the first hit"
+    ]
+  },
+  {
+    "name": "Assassin's Dagger",
+    "input": "qcf+1",
+    "hit_level": "h",
+    "damage": "20",
+    "startup": "i13~17",
+    "block": "+1~+5",
+    "hit": "+3~+7",
+    "counter": "+47a (+37)",
+    "alternateInputs": [
+      "qcf+1"
+    ],
+    "categories": [],
+    "notes": [
+      "Elbow",
+      "Can be buffered",
+      "Chip damage on block",
+      "Perfect input d,df,f#1, f and 1 must be pressed on the same frame, grants +3 damage and increased chip damage on block",
+      "Sometimes written d,df,f+1"
     ]
   },
   {
@@ -1178,7 +1798,7 @@
     "hit_level": "m",
     "damage": "10",
     "startup": "i16",
-    "block": "",
+    "block": "-12",
     "hit": "+3",
     "counter": "",
     "alternateInputs": [
@@ -1186,51 +1806,96 @@
     ],
     "categories": [],
     "notes": [
-      ""
+      "Elbow",
+      "Can be buffered",
+      "Sometimes written d,df,f+2"
     ]
   },
   {
     "name": "Artemis Arrow",
-    "input": "qcf+2,3",
+    "input": "qcf+2,1",
     "hit_level": "m,m",
     "damage": "10,16",
     "startup": ",i22~24",
-    "block": "",
+    "block": "-16",
     "hit": "+67a (+51)",
     "counter": "",
     "alternateInputs": [
-      "qcf+2,3"
+      "qcf+2,1"
     ],
     "categories": [],
     "notes": [
       "Tornado",
-      "Combo from 1st hit"
+      "Elbow",
+      "Combo from 1st hit with 8f delay",
+      "Input can be delayed 8f",
+      "Move can be delayed 7f",
+      "Can be buffered",
+      "Cancel to CJM -13 +2 r34 with B on frame 14",
+      "Sometimes written d,df,f+2,1"
+    ]
+  },
+  {
+    "name": "",
+    "input": "f,f,F+2",
+    "hit_level": "m",
+    "damage": "10",
+    "startup": "i15~16",
+    "block": "-8",
+    "hit": "+1",
+    "counter": "",
+    "alternateInputs": [
+      "f,f,F+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Sometimes written wr2"
+    ]
+  },
+  {
+    "name": "Double Meteor Alter",
+    "input": "f,f,F+2,4",
+    "hit_level": "m,m",
+    "damage": "10,28",
+    "startup": ",i28~30",
+    "block": "-13",
+    "hit": "+9a (+0)",
+    "counter": "",
+    "alternateInputs": [
+      "f,f,F+2,4"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Knee",
+      "Combo from 1st hit",
+      "Sometimes written wr2,4"
     ]
   },
   {
     "name": "",
     "input": "f,f,F+3",
     "hit_level": "L",
-    "damage": "12?",
+    "damage": "12",
     "startup": "i16~20",
     "block": "-20",
-    "hit": "",
+    "hit": "-2c",
     "counter": "",
     "alternateInputs": [
       "f,f,F+3"
     ],
     "categories": [],
     "notes": [
-      ""
+      "Sometimes written wr3"
     ]
   },
   {
     "name": "",
     "input": "f,f,F+3,2",
-    "hit_level": "L,SL?",
-    "damage": "12?,20?",
+    "hit_level": "L,SL",
+    "damage": "12,24",
     "startup": ",i28~77",
-    "block": "",
+    "block": "-16~+33g",
     "hit": "+19a (+9)",
     "counter": "",
     "alternateInputs": [
@@ -1238,36 +1903,41 @@
     ],
     "categories": [],
     "notes": [
+      "Balcony Break",
       "Weapon",
-      "Combo from 1st CH?"
+      "Combo from 1st CH",
+      "Chip damage on block",
+      "Power up in Heat",
+      "Sometimes written wr3,2"
     ]
   },
   {
-    "name": "Assassin's Dagger",
-    "input": "hcf+1",
-    "hit_level": "h",
-    "damage": "",
-    "startup": "i13~17",
-    "block": "",
-    "hit": "",
+    "name": "Imploding Star",
+    "input": "f,f,F+4",
+    "hit_level": "m",
+    "damage": "28",
+    "startup": "i19~20",
+    "block": "+3",
+    "hit": "+19a (+9)",
     "counter": "",
     "alternateInputs": [
-      "hcf+1"
+      "f,f,F+4"
     ],
     "categories": [],
     "notes": [
-      "Elbow",
-      "can also be performed with qcf?",
-      "Can be buffered?"
+      "Balcony Break",
+      "Chip damage on block",
+      "Hitstop 20f on hit",
+      "Sometimes written wr4"
     ]
   },
   {
     "name": "Right Handed Sweep",
     "input": "FC df+2",
-    "hit_level": ",L",
-    "damage": ",12",
+    "hit_level": "L",
+    "damage": "12",
     "startup": "i20",
-    "block": "",
+    "block": "-21",
     "hit": "+70a (+54)",
     "counter": "",
     "alternateInputs": [
@@ -1275,6 +1945,8 @@
     ],
     "categories": [],
     "notes": [
+      "Instant Tornado on hit",
+      "Recovers 6f faster on hit",
       "Deals only 6 damage when using its follow up attack in Heat"
     ]
   },
@@ -1284,7 +1956,7 @@
     "hit_level": "m",
     "damage": "10",
     "startup": "i13~14",
-    "block": "",
+    "block": "-8",
     "hit": "+5",
     "counter": "",
     "alternateInputs": [
@@ -1298,18 +1970,22 @@
   {
     "name": "Ocelot Frenzy",
     "input": "ws1,2",
-    "hit_level": "m,m",
+    "hit_level": "m,M",
     "damage": "10,17",
     "startup": ",i18~19",
-    "block": "",
-    "hit": "+9",
+    "block": "-13",
+    "hit": "+9s",
     "counter": "",
     "alternateInputs": [
       "ws1,2"
     ],
     "categories": [],
     "notes": [
-      ""
+      "Strong Aerial Tailspin",
+      "Transition to r30 TOM on hit automatically",
+      "Combo from 1st hit with 13f delay",
+      "Input can be delayed 13f",
+      "Move can be delayed 9f"
     ]
   },
   {
@@ -1319,14 +1995,14 @@
     "damage": "16",
     "startup": "i16~17",
     "block": "-13",
-    "hit": "+27a(+17)",
+    "hit": "+27a (+17)",
     "counter": "",
     "alternateInputs": [
       "ws2"
     ],
     "categories": [],
     "notes": [
-      ""
+      "Tornado"
     ]
   },
   {
@@ -1337,7 +2013,7 @@
     "startup": "i11~12",
     "block": "-3",
     "hit": "+8",
-    "counter": "",
+    "counter": "+12",
     "alternateInputs": [
       "ws3"
     ],
@@ -1352,7 +2028,7 @@
     "hit_level": "m",
     "damage": "16",
     "startup": "i11~12",
-    "block": "",
+    "block": "-6",
     "hit": "+5",
     "counter": "",
     "alternateInputs": [
@@ -1364,12 +2040,34 @@
     ]
   },
   {
+    "name": "Right Hand Slap",
+    "input": "ws1+2",
+    "hit_level": "m",
+    "damage": "25",
+    "startup": "i20~21",
+    "block": "-14",
+    "hit": "+14a",
+    "counter": "",
+    "alternateInputs": [
+      "ws1+2"
+    ],
+    "categories": [
+      "powercrush"
+    ],
+    "notes": [
+      "Balcony Break",
+      "Spike",
+      "-9 on block after absorbing an attack",
+      "Deals chip damage after attack absorbtion"
+    ]
+  },
+  {
     "name": "",
     "input": "HAM 2",
     "hit_level": "m",
     "damage": "12",
     "startup": "i15~16",
-    "block": "",
+    "block": "-9",
     "hit": "+3",
     "counter": "",
     "alternateInputs": [
@@ -1379,17 +2077,17 @@
     "notes": [
       "Weapon",
       "2 chip damage on block",
-      "? chip damage on block in heat"
+      "3 chip damage on block in heat"
     ]
   },
   {
     "name": "",
     "input": "HAM 2,1",
     "hit_level": "m,h",
-    "damage": "1223?",
+    "damage": "12,23",
     "startup": ",i25~26",
     "block": "",
-    "hit": "+17a (+8a)?",
+    "hit": "+17a (+8)",
     "counter": "",
     "alternateInputs": [
       "HAM 2,1"
@@ -1397,39 +2095,43 @@
     "categories": [],
     "notes": [
       "Strong Aerial Tailspin",
+      "Balcony Break",
       "Weapon",
-      "Combo from 1st hit?",
+      "Combo from 1st hit",
       "6 chip damage on block",
-      "? chip damage on block in heat"
+      "8 chip damage on block in heat"
     ]
   },
   {
     "name": "",
     "input": "HAM 2,1,2",
     "hit_level": "m,h,M",
-    "damage": "1223?",
+    "damage": "12,23,32",
     "startup": ",i33~34",
     "block": "+6c",
-    "hit": "",
+    "hit": "+17a (+7)",
     "counter": "",
     "alternateInputs": [
       "HAM 2,1,2"
     ],
     "categories": [],
     "notes": [
+      "Reversal Break",
+      "Spike",
       "Weapon",
+      "Combo from 1st hit",
       "9 chip damage on block",
-      "? chip damage on block in heat"
+      "13 chip damage on block in heat"
     ]
   },
   {
     "name": "",
     "input": "HAM 2,2",
-    "hit_level": "m,M?",
+    "hit_level": "m,M",
     "damage": "12,23",
     "startup": ",i22~23",
     "block": "-14",
-    "hit": "+33",
+    "hit": "+33a",
     "counter": "",
     "alternateInputs": [
       "HAM 2,2"
@@ -1438,8 +2140,11 @@
     "notes": [
       "Tornado",
       "Weapon",
+      "Combo from 1st hit",
+      "Transition to r34 TOM on hit automatically",
+      "Steel Pedal",
       "6 chip damage on block",
-      "? chip damage on block in heat"
+      "8 chip damage on block in heat"
     ]
   },
   {
@@ -1448,9 +2153,9 @@
     "hit_level": "L",
     "damage": "17",
     "startup": "i20~21",
-    "block": "",
+    "block": "-14",
     "hit": "-3",
-    "counter": "+6",
+    "counter": "+6c",
     "alternateInputs": [
       "HAM 3"
     ],
@@ -1458,48 +2163,111 @@
       "homing"
     ],
     "notes": [
-      "Homing"
+      "Homing",
+      "Cancel to CJM -7 +4 +13 r25 with B"
     ]
   },
   {
     "name": "",
     "input": "HAM 4",
     "hit_level": "m,m",
-    "damage": "",
+    "damage": "12,12",
     "startup": "i16~19 i4~6",
     "block": "-12",
-    "hit": "",
+    "hit": "+6",
     "counter": "",
     "alternateInputs": [
       "HAM 4"
     ],
     "categories": [],
     "notes": [
-      ""
+      "Balcony Break"
     ]
   },
   {
     "name": "",
     "input": "HAM 1+2",
     "hit_level": "M",
-    "damage": "",
+    "damage": "36",
     "startup": "i24~25",
     "block": "+6c",
-    "hit": "",
+    "hit": "+17a (+7)",
     "counter": "",
     "alternateInputs": [
       "HAM 1+2"
     ],
     "categories": [],
     "notes": [
+      "Reversal Break",
+      "Balcony Break",
+      "Spike",
       "Weapon",
       "14 chip damage on block",
-      "? chip damage on block in heat"
+      "16 chip damage on block in heat"
+    ]
+  },
+  {
+    "name": "Backhand Slap",
+    "input": "HAM 1+3",
+    "hit_level": "t",
+    "damage": "15",
+    "startup": "i11",
+    "block": "-2",
+    "hit": "+0",
+    "counter": "",
+    "alternateInputs": [
+      "HAM 1+3"
+    ],
+    "categories": [
+      "throw"
+    ],
+    "notes": [
+      "Throw break 1+2"
+    ]
+  },
+  {
+    "name": "Arm Break > Double Arm Lock Toss",
+    "input": "HAM 1+3,1",
+    "hit_level": "t,t",
+    "damage": "15,35",
+    "startup": "i11",
+    "block": "-3",
+    "hit": "+0d",
+    "counter": "",
+    "alternateInputs": [
+      "HAM 1+3,1"
+    ],
+    "categories": [
+      "throw"
+    ],
+    "notes": [
+      "Throw break 1",
+      "15 damage to Anna on break"
+    ]
+  },
+  {
+    "name": "Arm Snap",
+    "input": "HAM 1+3,2",
+    "hit_level": "t,t",
+    "damage": "15,30",
+    "startup": "i11",
+    "block": "-3",
+    "hit": "+3d",
+    "counter": "",
+    "alternateInputs": [
+      "HAM 1+3,2"
+    ],
+    "categories": [
+      "throw"
+    ],
+    "notes": [
+      "Throw break 2",
+      "15 damage to Anna on break"
     ]
   },
   {
     "name": "Chaos Judgement",
-    "input": "b+3",
+    "input": "HAM b+3",
     "hit_level": "",
     "damage": "",
     "startup": "",
@@ -1507,7 +2275,29 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "b+3"
+      "HAM b+3"
+    ],
+    "categories": [
+      "parry"
+    ],
+    "notes": [
+      "Actionable after 16f",
+      "i3? low parry: parries all lows (including Heat Smash lows)",
+      "i3? throw parry: +0d and 25 damage",
+      "Enter HAM with f+3 on frame 16"
+    ]
+  },
+  {
+    "name": "Stryx",
+    "input": "CJM P",
+    "hit_level": "m",
+    "damage": "20",
+    "startup": "i15~16",
+    "block": "-14",
+    "hit": "+29a (+19)",
+    "counter": "",
+    "alternateInputs": [
+      "CJM P"
     ],
     "categories": [],
     "notes": [
@@ -1520,9 +2310,9 @@
     "hit_level": "h",
     "damage": "17",
     "startup": "i11~12",
-    "block": "",
+    "block": "+0",
     "hit": "+7",
-    "counter": "",
+    "counter": "+14",
     "alternateInputs": [
       "CJM 1"
     ],
@@ -1534,11 +2324,11 @@
   {
     "name": "",
     "input": "CJM 2",
-    "hit_level": "h?",
-    "damage": "",
-    "startup": "i10?",
-    "block": "",
-    "hit": "",
+    "hit_level": "h",
+    "damage": "10",
+    "startup": "i10",
+    "block": "-11",
+    "hit": "+0",
     "counter": "",
     "alternateInputs": [
       "CJM 2"
@@ -1552,10 +2342,10 @@
     "name": "Picking Heel",
     "input": "CJM 3",
     "hit_level": "m",
-    "damage": "",
+    "damage": "12",
     "startup": "i12~14",
     "block": "-12",
-    "hit": "",
+    "hit": "+3",
     "counter": "",
     "alternateInputs": [
       "CJM 3"
@@ -1566,49 +2356,74 @@
     ]
   },
   {
+    "name": "Baked with Love",
+    "input": "CJM 3,2",
+    "hit_level": "m,m",
+    "damage": "12,24",
+    "startup": "i28~77",
+    "block": "-14~+35",
+    "hit": "+21a (+11)",
+    "counter": "",
+    "alternateInputs": [
+      "CJM 3,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Weapon",
+      "Combo from 1st hit",
+      "Chip damage on block"
+    ]
+  },
+  {
+    "name": "Queen Heel",
+    "input": "CJM 4",
+    "hit_level": "M",
+    "damage": "23",
+    "startup": "i20~21",
+    "block": "-13",
+    "hit": "+10a",
+    "counter": "",
+    "alternateInputs": [
+      "CJM 4"
+    ],
+    "categories": [
+      "powercrush"
+    ],
+    "notes": [
+      "Balcony Break",
+      "Spike",
+      "-9 on block after absorbing an attack",
+      "Deals chip damage on block after attack absorbtion"
+    ]
+  },
+  {
     "name": "Caracal",
     "input": "CJM 1+2",
-    "hit_level": "M?",
-    "damage": "20",
+    "hit_level": "M",
+    "damage": "23",
     "startup": "i17~18",
     "block": "+2c",
-    "hit": "",
-    "counter": "",
+    "hit": "+8c",
+    "counter": "+23d",
     "alternateInputs": [
       "CJM 1+2"
     ],
     "categories": [],
     "notes": [
-      "Spike?",
+      "Spike",
       "4 chip damage on block",
-      "? chip damage on block in heat"
-    ]
-  },
-  {
-    "name": "Queen Heel",
-    "input": "CJM 3+4",
-    "hit_level": "m",
-    "damage": "23",
-    "startup": "i20~21",
-    "block": "",
-    "hit": "+10a",
-    "counter": "",
-    "alternateInputs": [
-      "CJM 3+4"
-    ],
-    "categories": [],
-    "notes": [
-      "Balcony Break"
+      "7 chip damage on block in heat"
     ]
   },
   {
     "name": "",
     "input": "CJM d+3",
     "hit_level": "L",
-    "damage": "",
+    "damage": "8",
     "startup": "i15",
-    "block": "",
-    "hit": "",
+    "block": "-11",
+    "hit": "+0",
     "counter": "",
     "alternateInputs": [
       "CJM d+3"
@@ -1622,10 +2437,10 @@
     "name": "Dendrobates Azureus",
     "input": "CJM d+3,3",
     "hit_level": "L,h",
-    "damage": "",
+    "damage": "8,20",
     "startup": ",i21",
-    "block": "",
-    "hit": "",
+    "block": "-7",
+    "hit": "+7",
     "counter": "",
     "alternateInputs": [
       "CJM d+3,3"
@@ -1636,47 +2451,246 @@
     ]
   },
   {
+    "name": "Flying Fascinator",
+    "input": "CJM uf+1",
+    "hit_level": "M",
+    "damage": "25",
+    "startup": "i19~29",
+    "block": "-11~+1",
+    "hit": "+9a (-1)",
+    "counter": "",
+    "alternateInputs": [
+      "CJM uf+1"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Chip damage on block",
+      "Unpunishable on block due to pushback",
+      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when land a hit on you"
+    ]
+  },
+  {
+    "name": "Flying Penetrator",
+    "input": "CJM uf+2",
+    "hit_level": "M",
+    "damage": "35",
+    "startup": "i19~29",
+    "block": "-11~+1",
+    "hit": "+3a",
+    "counter": "",
+    "alternateInputs": [
+      "CJM uf+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Chip damage on block",
+      "Unpunishable on block due to pushback"
+    ]
+  },
+  {
+    "name": "Sudden Storm",
+    "input": "CJM uf+3",
+    "hit_level": "m",
+    "damage": "22",
+    "startup": "i23~24",
+    "block": "+0",
+    "hit": "+27d",
+    "counter": "",
+    "alternateInputs": [
+      "CJM uf+3"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Power up in Heat"
+    ]
+  },
+  {
+    "name": "Stryx",
+    "input": "CJM uf+4",
+    "hit_level": "m",
+    "damage": "22",
+    "startup": "i15~16",
+    "block": "-13",
+    "hit": "+30a (+20)",
+    "counter": "",
+    "alternateInputs": [
+      "CJM uf+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Tornado"
+    ]
+  },
+  {
+    "name": "Hammer Chance",
+    "input": "CJM f+3",
+    "hit_level": "",
+    "damage": "",
+    "startup": "",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "CJM f+3"
+    ],
+    "categories": [],
+    "notes": [
+      "Enter r23 FC with db on frame 13",
+      "Enter r16 CJM with b+3 on frame 13",
+      "Sometimes written ",
+      "HAM"
+    ]
+  },
+  {
+    "name": "Forward Roll (ROLL)",
+    "input": "CJM df",
+    "hit_level": "",
+    "damage": "",
+    "startup": "",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "CJM df"
+    ],
+    "categories": [],
+    "notes": [
+      "Sometimes written CJM~df"
+    ]
+  },
+  {
+    "name": "Rolling Stone",
+    "input": "ROLL 3",
+    "hit_level": "m",
+    "damage": "27",
+    "startup": "i10~11",
+    "block": "-9",
+    "hit": "+32d (+24)",
+    "counter": "",
+    "alternateInputs": [
+      "ROLL 3"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Sometimes written ",
+      "CJM.df,3",
+      "CJM.df+3"
+    ]
+  },
+  {
+    "name": "Falling Frost",
+    "input": "ROLL 4",
+    "hit_level": "h",
+    "damage": "21",
+    "startup": "i20",
+    "block": "+7",
+    "hit": "+32a (+22)",
+    "counter": "+57a",
+    "alternateInputs": [
+      "ROLL 4"
+    ],
+    "categories": [],
+    "notes": [
+      "Tornado",
+      "Chip damage on block",
+      "Roll adds minimum 20f, effective startup i40",
+      "Sometimes written ",
+      "CJM.df,4",
+      "CJM.df+4"
+    ]
+  },
+  {
     "name": "",
     "input": "TOM 1",
     "hit_level": "m",
-    "damage": "",
-    "startup": "8~57",
-    "block": "+4",
-    "hit": "",
+    "damage": "30",
+    "startup": "i8~18",
+    "block": "+4~+53",
+    "hit": "+20a (-6)",
     "counter": "",
     "alternateInputs": [
       "TOM 1"
     ],
     "categories": [],
     "notes": [
-      "Applies Fragile debuff",
+      "Balcony Break",
+      "Weapon",
+      "Fragile debuff on hit or block, opponent receives chip damage from any attack, removed when land a hit on you",
       "4 chip damage on block",
-      "? chip damage on block"
+      "9 chip damage on block in Heat",
+      "Power up in Heat: +10 damage"
     ]
   },
   {
     "name": "",
     "input": "TOM 2",
     "hit_level": "m",
-    "damage": "",
+    "damage": "30",
     "startup": "8~107",
-    "block": "-1",
-    "hit": "-1a (-2)",
+    "block": "-1~+98",
+    "hit": "+20a (-6)",
     "counter": "",
     "alternateInputs": [
       "TOM 2"
     ],
     "categories": [],
     "notes": [
-      "21 chip damage on block",
-      "? chip damage on block in heat"
+      "Balcony Break",
+      "Weapon",
+      "Wall Crush +10g~ minimum",
+      "12 chip damage on block",
+      "16 chip damage on block in heat",
+      "Power up in Heat: +10 damage"
+    ]
+  },
+  {
+    "name": "Chaos Judgement",
+    "input": "TOM 3",
+    "hit_level": "",
+    "damage": "",
+    "startup": "",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "TOM 3"
+    ],
+    "categories": [
+      "parry"
+    ],
+    "notes": [
+      "Actionable after 16f",
+      "i3? low parry: parries all lows (including Heat Smash lows)",
+      "i3? throw parry: +0d and 25 damage",
+      "Enter HAM with f+3 on frame 16"
+    ]
+  },
+  {
+    "name": "Banquet Crasher",
+    "input": "TOM 4",
+    "hit_level": "L",
+    "damage": "21",
+    "startup": "i15",
+    "block": "-13",
+    "hit": "+28d",
+    "counter": "",
+    "alternateInputs": [
+      "TOM 4"
+    ],
+    "categories": [],
+    "notes": [
+      ""
     ]
   },
   {
     "name": "Some Like It Rough!",
     "input": "in rage df+1+2",
     "hit_level": "m,t",
-    "damage": "",
+    "damage": "55+",
     "startup": "i20",
     "block": "-15",
     "hit": "+0d",
@@ -1689,11 +2703,30 @@
       "Rage Art",
       "Removes Recoverable Health",
       "Reversal Break",
-      "Damage increases with lower health, maximum ??",
+      "Damage increases with lower health, maximum 82",
       "Freezes match timer on activation and on hit",
       "Restores recoverable health on hit",
       "Transition to attack throw on hit",
       "Consumes Rage"
+    ]
+  },
+  {
+    "name": "\nKi Charge\nSupercharger\n",
+    "input": "1+2+3+4",
+    "hit_level": "",
+    "damage": "",
+    "startup": "",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "1+2+3+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Can't block for 5 seconds",
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {
@@ -1710,20 +2743,354 @@
     ],
     "categories": [],
     "notes": [
-      ""
+      "Sidestep adds minimum 9f, effective startup i29~30"
+    ]
+  },
+  {
+    "name": "Heel Mash",
+    "input": "SS 3",
+    "hit_level": "M",
+    "damage": "23",
+    "startup": "i21~23",
+    "block": "+4c",
+    "hit": "+8c",
+    "counter": "+25d",
+    "alternateInputs": [
+      "SS 3"
+    ],
+    "categories": [],
+    "notes": [
+      "Spike",
+      "Sidestep adds minimum 9f, effective startup i30~32"
     ]
   },
   {
     "name": "Bloody Chaos",
     "input": "SS 1+2",
     "hit_level": "m,m",
-    "damage": "",
+    "damage": "5,7",
     "startup": "i19~20 i5~9",
     "block": "-11",
-    "hit": "",
+    "hit": "+32a (+22)",
     "counter": "",
     "alternateInputs": [
       "SS 1+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Sidestep adds minimum 9f, effective startup i28~29"
+    ]
+  },
+  {
+    "name": "Twist Jab",
+    "input": "BT 1",
+    "hit_level": "h",
+    "damage": "15",
+    "startup": "i8",
+    "block": "-8",
+    "hit": "+3",
+    "counter": "",
+    "alternateInputs": [
+      "BT 1"
+    ],
+    "categories": [],
+    "notes": [
+      "Links to 1 jab extensions",
+      "Combo into extensions on CH"
+    ]
+  },
+  {
+    "name": "Heel Grind",
+    "input": "OTG d+3+4",
+    "hit_level": "L",
+    "damage": "30",
+    "startup": "i17~18",
+    "block": "-17",
+    "hit": "-7d",
+    "counter": "",
+    "alternateInputs": [
+      "OTG d+3+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Spike",
+      "Partially restores remaining Heat time on hit"
+    ]
+  },
+  {
+    "name": "Cruel Punishment",
+    "input": "1+3",
+    "hit_level": "t",
+    "damage": "35",
+    "startup": "i12~14",
+    "block": "-6",
+    "hit": "+0d",
+    "counter": "",
+    "alternateInputs": [
+      "1+3"
+    ],
+    "categories": [
+      "throw",
+      "homing"
+    ],
+    "notes": [
+      "Homing",
+      "Throw break 1 or 2"
+    ]
+  },
+  {
+    "name": "Losing Face",
+    "input": "2+4",
+    "hit_level": "t",
+    "damage": "21",
+    "startup": "i12~14",
+    "block": "-3",
+    "hit": "+0d",
+    "counter": "",
+    "alternateInputs": [
+      "2+4"
+    ],
+    "categories": [
+      "throw",
+      "homing"
+    ],
+    "notes": [
+      "Homing",
+      "Throw break 1 or 2",
+      "Side switch on hit"
+    ]
+  },
+  {
+    "name": "Torso Splitter",
+    "input": "Left throw",
+    "hit_level": "t",
+    "damage": "40",
+    "startup": "i12~14",
+    "block": "-3",
+    "hit": "+0d",
+    "counter": "",
+    "alternateInputs": [
+      "Left throw"
+    ],
+    "categories": [
+      "throw"
+    ],
+    "notes": [
+      "Throw break 1",
+      "Can side switch on hit"
+    ]
+  },
+  {
+    "name": "Serpentine Arm Break",
+    "input": "Right throw",
+    "hit_level": "t",
+    "damage": "38",
+    "startup": "i12~14",
+    "block": "-3",
+    "hit": "+0d",
+    "counter": "",
+    "alternateInputs": [
+      "Right throw"
+    ],
+    "categories": [
+      "throw"
+    ],
+    "notes": [
+      "Throw break 2",
+      "Side switch on hit"
+    ]
+  },
+  {
+    "name": "Overhead Triangle Lock",
+    "input": "Back throw",
+    "hit_level": "t",
+    "damage": "50",
+    "startup": "i12~14",
+    "block": "",
+    "hit": "+0d",
+    "counter": "",
+    "alternateInputs": [
+      "Back throw"
+    ],
+    "categories": [
+      "throw"
+    ],
+    "notes": [
+      "Unbreakable",
+      "Side switch on hit"
+    ]
+  },
+  {
+    "name": "Queen's Reward",
+    "input": "db+1+2",
+    "hit_level": "t",
+    "damage": "40",
+    "startup": "i12",
+    "block": "-6",
+    "hit": "+0d",
+    "counter": "",
+    "alternateInputs": [
+      "db+1+2"
+    ],
+    "categories": [
+      "throw"
+    ],
+    "notes": [
+      "Throw break 1+2"
+    ]
+  },
+  {
+    "name": "\nOverhead Toss\nJumping Flip\n",
+    "input": "uf+1+2",
+    "hit_level": "t",
+    "damage": "30,10",
+    "startup": "i12",
+    "block": "+0",
+    "hit": "+29d (-32)",
+    "counter": "",
+    "alternateInputs": [
+      "uf+1+2"
+    ],
+    "categories": [
+      "throw"
+    ],
+    "notes": [
+      "Throw break 1+2",
+      "Opponent can tech roll to reduce damage to 30",
+      "45 damage on wall splat",
+      "Side switch on break, Anna recovers side turned"
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1",
+    "hit_level": "m,h",
+    "damage": "13,9",
+    "startup": ",i19",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1,2",
+    "hit_level": "m,h",
+    "damage": "13,9",
+    "startup": ",i19",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1,2"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1,2,4",
+    "hit_level": "m,h",
+    "damage": "13,9",
+    "startup": ",i19",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1,2,4"
+    ],
+    "categories": [],
+    "notes": [
+      "Transition to -21 -10 +9a CJM with B"
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1,2,4,1",
+    "hit_level": "m,h",
+    "damage": "13,9",
+    "startup": ",i19",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1,2,4,1"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1,2,4,1,2",
+    "hit_level": "m,h",
+    "damage": "13,9",
+    "startup": ",i19",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1,2,4,1,2"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1,2,4,1,2,2",
+    "hit_level": "m,h",
+    "damage": "13,9",
+    "startup": ",i19",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1,2,4,1,2,2"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1,2,4,1,2,2,3+4",
+    "hit_level": "m,h",
+    "damage": "13,9",
+    "startup": ",i19",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1,2,4,1,2,2,3+4"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "10 Hit Combo",
+    "input": "df+3,2,1,2,4,1,2,2,3+4,2",
+    "hit_level": "m,h",
+    "damage": "13,9",
+    "startup": ",i19",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1,2,4,1,2,2,3+4,2"
     ],
     "categories": [],
     "notes": [
