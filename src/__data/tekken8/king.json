@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -111,7 +111,8 @@
       "+35g on heat engager hit",
       "Shifts to throw on front grounded hit.",
       "-5 on block after absorbing an attack with muscle armor.",
-      "6 chip damage on block after absorbing an attack with muscle armor."
+      "6 chip damage on block after absorbing an attack with muscle armor.",
+      "Transition into +12? JGR with input 3+4 on throw hit"
     ]
   },
   {
@@ -1096,11 +1097,10 @@
       "powercrush"
     ],
     "notes": [
-      "50% damage reduction when absorbing attacks",
       "Damage taken during power crush state is recoverable",
       "Cancel into db1+2,2 (Emerald Elbow) on frames 17~60 with input 2",
-      "Cancel into movement or crouch or any attack on frame 30 (r30)",
-      "Cancel into r30 JGR with input 3+4 on frame 35"
+      "Cancel into r30 JGR with input 3+4 on frame 35",
+      "Cancel into movement or crouch or any attack on frame 40 (r40)"
     ]
   },
   {

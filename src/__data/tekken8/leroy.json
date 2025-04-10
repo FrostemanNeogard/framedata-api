@@ -852,7 +852,7 @@
     "hit_level": "h",
     "damage": "23",
     "startup": "i18~19",
-    "block": "-9",
+    "block": "-2",
     "hit": "+70a(+54)~+71a(+55)",
     "counter": "",
     "alternateInputs": [
@@ -1304,7 +1304,7 @@
     "hit_level": "m,th",
     "damage": "21,25",
     "startup": "i18~19",
-    "block": "-14",
+    "block": "-8",
     "hit": "+0d",
     "counter": "",
     "alternateInputs": [
@@ -2074,7 +2074,7 @@
     "startup": "i18~19",
     "block": "-12",
     "hit": "+4",
-    "counter": "+12",
+    "counter": "+14",
     "alternateInputs": [
       "SS 4"
     ],
@@ -2107,7 +2107,7 @@
     "input": "f+2+3",
     "hit_level": "m",
     "damage": "35",
-    "startup": "i22~23",
+    "startup": "i16~17",
     "block": "-7",
     "hit": "+73a",
     "counter": "",

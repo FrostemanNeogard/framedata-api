@@ -17,7 +17,9 @@
     "notes": [
       "Heat Burst",
       "100% recoverable damage",
-      "Chip damage on block"
+      "Chip damage on block",
+      "Partially uses remaining Heat time",
+      "Input b,b to cancel the attack"
     ]
   },
   {
@@ -25,9 +27,9 @@
     "input": "in heat 2+3",
     "hit_level": "m,m,m",
     "damage": "25,14,23",
-    "startup": "i15~16,i30~32,i31~35",
+    "startup": "i15~16,i30~32,i31~32",
     "block": "+6",
-    "hit": "+2c",
+    "hit": "+3d",
     "counter": "",
     "alternateInputs": [
       "in heat 2+3"
@@ -57,7 +59,8 @@
       "throw"
     ],
     "notes": [
-      "Heat Smash"
+      "Heat Burst",
+      "Unbreakable on hit"
     ]
   },
   {
@@ -138,7 +141,8 @@
       "Balcony Break",
       "Spike",
       "Combo from 1st hit",
-      "Chip damage on block"
+      "Chip damage on block",
+      "Interruptable by i10 from 1st block"
     ]
   },
   {
@@ -201,7 +205,7 @@
     "notes": [
       "Heat Engager",
       "Crouch throw",
-      "Can't Heat Dash cancel"
+      "Can't Heat Dash"
     ]
   },
   {
@@ -223,8 +227,8 @@
       "Heat Engager",
       "Side switch",
       "Crouch throw",
-      "Cancel into FC with D_DB",
-      "Can't Heat Dash cancel"
+      "Cancel into FC with D, DB or DF",
+      "Can't Heat Dash"
     ]
   },
   {
@@ -246,8 +250,7 @@
       "Throw break 1+2",
       "Unbreakable during Heat",
       "Partially uses remaining Heat time",
-      "Cancel with B",
-      "Alternate input f,F+2~1+2"
+      "Cancel with B"
     ]
   },
   {
@@ -274,6 +277,7 @@
       "ss2,1+2,1+2",
       "ss3+4,1+2",
       "(Face down).1+2,1+2",
+      "f,f,F+2,H.1+2",
       "FC.df+1,H.1+2"
     ]
   },
@@ -344,6 +348,7 @@
     ],
     "categories": [],
     "notes": [
+      "Jail from 1st attack",
       "Combo from 1st hit"
     ]
   },
@@ -361,7 +366,8 @@
     ],
     "categories": [],
     "notes": [
-      "Jail from 1st attack"
+      "Jail from 1st attack",
+      "Combo from 1st hit"
     ]
   },
   {
@@ -414,7 +420,8 @@
     "categories": [],
     "notes": [
       "Jail from 1st attack",
-      "Enter SNK -1 +10 r20 with df"
+      "Combo from 1st hit",
+      "Enter SNK -1 +10 r20 with DF"
     ]
   },
   {
@@ -443,14 +450,15 @@
     "damage": "10,10,14",
     "startup": ",i23",
     "block": "-12",
-    "hit": "+3",
+    "hit": "+3c",
     "counter": "",
     "alternateInputs": [
       "2,1,4"
     ],
     "categories": [],
     "notes": [
-      "Spike"
+      "Spike",
+      "Trades with i8 from 2nd block"
     ]
   },
   {
@@ -485,7 +493,7 @@
     "categories": [],
     "notes": [
       "Combo from 1st hit",
-      "Enter SNK -3 +6 r23 with df"
+      "Enter SNK -3 +6 r23 with DF"
     ]
   },
   {
@@ -578,8 +586,7 @@
     "categories": [],
     "notes": [
       "Spike",
-      "Combo from 1st CH",
-      "Interrupt with i4 from 1st block"
+      "Combo from 1st CH"
     ]
   },
   {
@@ -587,7 +594,7 @@
     "input": "4,4",
     "hit_level": "h,m",
     "damage": "10,23",
-    "startup": ",i25~36",
+    "startup": ",i35~36",
     "block": "+5",
     "hit": "+29a (+20)",
     "counter": "+46a",
@@ -628,7 +635,7 @@
     "hit_level": "h",
     "damage": "25",
     "startup": "i25~26",
-    "block": "-13d",
+    "block": "-13",
     "hit": "+41a",
     "counter": "",
     "alternateInputs": [
@@ -690,7 +697,7 @@
     ],
     "categories": [],
     "notes": [
-      "Enter SNK +0 +11 r19 with df"
+      "Enter SNK +0 +11 r19 with DF"
     ]
   },
   {
@@ -709,6 +716,7 @@
     "notes": [
       "Spike",
       "Combo from 1st CH",
+      "Side switch on hit",
       "+20 damage throw when hit from the front in close range"
     ]
   },
@@ -745,7 +753,8 @@
     "notes": [
       "Tornado",
       "Balcony Break",
-      "Combo from 1st hit with 3f delay"
+      "Combo from 1st hit with 3f delay",
+      "Interruptable by i14 from 1st block"
     ]
   },
   {
@@ -781,7 +790,8 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony Break"
+      "Balcony Break",
+      "Interrupt with i6 from 2nd block"
     ]
   },
   {
@@ -843,7 +853,7 @@
     "hit_level": "m,h",
     "damage": "13,23",
     "startup": ",i22~23",
-    "block": "-6",
+    "block": "-7",
     "hit": "+22a (+13)",
     "counter": "+58a",
     "alternateInputs": [
@@ -853,8 +863,7 @@
     "notes": [
       "Balcony Break",
       "Combo from 1st CH with 8f delay",
-      "Input can be delayed 12f",
-      "Input can be delayed 10f"
+      "Input can be delayed 12f"
     ]
   },
   {
@@ -987,7 +996,7 @@
     "hit_level": "L,h",
     "damage": "13,18",
     "startup": ",i24~25",
-    "block": "-6",
+    "block": "-8",
     "hit": "+6",
     "counter": "",
     "alternateInputs": [
@@ -1014,7 +1023,8 @@
     "notes": [
       "Balcony Break",
       "Spike",
-      "Chip damage on block"
+      "Chip damage on block",
+      "Interruptable by i14 from 2nd block"
     ]
   },
   {
@@ -1204,7 +1214,7 @@
     "damage": "23",
     "startup": "i20~21",
     "block": "-31",
-    "hit": "+3",
+    "hit": "+3g",
     "counter": "+20a",
     "alternateInputs": [
       "db+3+4"
@@ -1357,8 +1367,8 @@
     "notes": [
       "Spike",
       "Combo from 1st CH with 5f delay",
-      "Enter FC r26 with D",
-      "Enter SNK -6 +5 r25 with df"
+      "Enter FC r26 with D or DB",
+      "Enter SNK -6 +5 r25 with DF"
     ]
   },
   {
@@ -1416,7 +1426,7 @@
       "Parries mid and high punches and kicks",
       "+1d on a successful kick parry",
       "100% recoverable damage",
-      "Side switch on hit"
+      "Sometimes Side switches on hit"
     ]
   },
   {
@@ -1479,7 +1489,7 @@
     "hit_level": "m",
     "damage": "21",
     "startup": "i22~23",
-    "block": "-17",
+    "block": "-16~17",
     "hit": "+11a",
     "counter": "",
     "alternateInputs": [
@@ -1505,7 +1515,8 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony Break"
+      "Balcony Break",
+      "Unblockable"
     ]
   },
   {
@@ -1531,7 +1542,7 @@
     "hit_level": "m",
     "damage": "21",
     "startup": "i22~23",
-    "block": "-9",
+    "block": "-12~13",
     "hit": "+15a",
     "counter": "",
     "alternateInputs": [
@@ -1678,7 +1689,7 @@
     "damage": "21",
     "startup": "i26~28",
     "block": "-1",
-    "hit": "+13",
+    "hit": "+13c",
     "counter": "",
     "alternateInputs": [
       "f,F+4"
@@ -1704,8 +1715,8 @@
     "notes": [
       "Balcony Break",
       "Spike",
-      "20% (4) Chip damage on block - 30% (9) when powered up",
-      "Do n,f,n,f+2 within 8 total frames (first forward doesn't matter) for powered up (bluespark) version - 26 damage",
+      "20% (4) Chip damage on block - 30% (7) when powered up",
+      "Do f,n,f+2 within 8 total frames (first forward and neutral doesn't matter) for the powered up (bluespark) version - 26 damage",
       "Sometimes written wr2"
     ]
   },
@@ -1724,10 +1735,11 @@
     "categories": [],
     "notes": [
       "Tornado",
-      "on wall hit only",
+      "on wall hit only (Death's Fragrance)",
       "Knee",
       "Transition to attack throw on front standing or wall hit",
       "Throw is unbreakable",
+      "Sometimes Side switches on hit",
       "Sometimes written wr4"
     ]
   },
@@ -1747,7 +1759,8 @@
     "notes": [
       "Transition to attack throw on front standing hit",
       "Must run for 32f to access this move",
-      "+27a on BT hit"
+      "+27a on BT hit",
+      "Normally Side switches on hit"
     ]
   },
   {
@@ -1802,7 +1815,7 @@
     "notes": [
       "Knee",
       "Combo from 1st hit",
-      "Available only as combo from 1st",
+      "Available only as combo from 1st hit",
       "Input 4 on frames 16~19 to power up - 14 damage"
     ]
   },
@@ -1820,7 +1833,7 @@
     ],
     "categories": [],
     "notes": [
-      "Enter SNK -5 +2 r22 with df"
+      "Enter SNK -5 +2 r22 with DF"
     ]
   },
   {
@@ -1944,7 +1957,7 @@
     "notes": [
       "Lapses to standing",
       "Cancel to SS with u",
-      "Input d,DF to transition to FC instead of SNK"
+      "Input d, DF to transition to FC instead of SNKSometimes written qcf"
     ]
   },
   {
@@ -2024,7 +2037,7 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "ShoulderSometimes written qcf+1+2"
+      "ShoulderSometimes written qcf+1+2 or ws1+2"
     ]
   },
   {
@@ -2073,7 +2086,7 @@
     ]
   },
   {
-    "name": "\nKi Charge\nSupercharger\n",
+    "name": "Ki Charge",
     "input": "1+2+3+4",
     "hit_level": "",
     "damage": "",
@@ -2087,7 +2100,8 @@
     "categories": [],
     "notes": [
       "Can't block for 5 seconds",
-      "CH state for 5 seconds"
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {
@@ -2264,10 +2278,12 @@
       "1+3"
     ],
     "categories": [
-      "throw"
+      "throw",
+      "homing"
     ],
     "notes": [
-      "Throw break 1 or 2"
+      "Throw break 1 or 2",
+      "Homing"
     ]
   },
   {
@@ -2283,11 +2299,13 @@
       "2+4"
     ],
     "categories": [
-      "throw"
+      "throw",
+      "homing"
     ],
     "notes": [
       "Throw break 1 or 2",
-      "Side switch on hit and break"
+      "Homing",
+      "Side switch on hit or break"
     ]
   },
   {
@@ -2325,7 +2343,7 @@
       "throw"
     ],
     "notes": [
-      "Throw break 1"
+      "Throw break 2"
     ]
   },
   {
@@ -2344,7 +2362,7 @@
       "throw"
     ],
     "notes": [
-      ""
+      "Unbreakable"
     ]
   },
   {
@@ -2364,7 +2382,7 @@
     ],
     "notes": [
       "Throw break 1",
-      "Side switch"
+      "Side switch on hit"
     ]
   },
   {
@@ -2404,7 +2422,7 @@
     "notes": [
       "Floor Break",
       "Throw break 1+2",
-      "Side switch"
+      "Side switch on hit"
     ]
   },
   {
@@ -2423,7 +2441,7 @@
       "throw"
     ],
     "notes": [
-      ""
+      "Unbreakable (avoid by ducking)"
     ]
   },
   {

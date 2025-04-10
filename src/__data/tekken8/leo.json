@@ -39,25 +39,6 @@
     ]
   },
   {
-    "name": "Ultimate Huo Jian Qiang Fist",
-    "input": "in heat KNK 2+3",
-    "hit_level": "l,m,m",
-    "damage": "8,13,14 (35)",
-    "startup": "i20~21",
-    "block": "-13~-12",
-    "hit": "+31a (+13)",
-    "counter": "",
-    "alternateInputs": [
-      "in heat KNK 2+3"
-    ],
-    "categories": [],
-    "notes": [
-      "Heat Smash",
-      "Balcony Break",
-      "11 chip damage on block"
-    ]
-  },
-  {
     "name": "Bei Zhan Juan Long Jiao",
     "input": "db+2,4",
     "hit_level": "m,h",
@@ -124,7 +105,7 @@
     "hit_level": "h,m",
     "damage": "12,17",
     "startup": "i18",
-    "block": "-9",
+    "block": "-10",
     "hit": "+17",
     "counter": "",
     "alternateInputs": [
@@ -370,7 +351,7 @@
     "name": "Wu Dang Xuan Feng Jiao",
     "input": "3,2,3",
     "hit_level": "h,h,m",
-    "damage": "15,10,26",
+    "damage": "15,10,23",
     "startup": "i23~24",
     "block": "-7~-6",
     "hit": "+13a (+4)",
@@ -921,7 +902,7 @@
     "hit_level": "m",
     "damage": "17",
     "startup": "i18~19",
-    "block": "-12~-11",
+    "block": "-9",
     "hit": "+1",
     "counter": "",
     "alternateInputs": [
@@ -973,7 +954,7 @@
     "hit_level": "m",
     "damage": "11",
     "startup": "i14",
-    "block": "-11",
+    "block": "-9",
     "hit": "+0",
     "counter": "",
     "alternateInputs": [
@@ -1595,8 +1576,8 @@
     "hit_level": "m",
     "damage": "30",
     "startup": "i23~26",
-    "block": "+6~+9",
-    "hit": "+13a (+3)",
+    "block": "+6~+11",
+    "hit": "+17a (+7)",
     "counter": "",
     "alternateInputs": [
       "f,f,F+3"
@@ -1606,7 +1587,8 @@
       "Balcony Break",
       "9 chip damage on block",
       "12 chip damage on block in heat",
-      "Alternate input wr3"
+      "Alternate input wr3",
+      "Enter BOK +10 +21 (+11) with d"
     ]
   },
   {
@@ -1928,7 +1910,7 @@
     "hit_level": "m,m,m",
     "damage": "12,13,25",
     "startup": ",i17",
-    "block": "-13",
+    "block": "-12",
     "hit": "+10a",
     "counter": "",
     "alternateInputs": [
@@ -1940,6 +1922,25 @@
       "Combo from 1st hit",
       "10 chip damage on block",
       "11 chip damage on block in heat"
+    ]
+  },
+  {
+    "name": "Ultimate Huo Jian Qiang Fist",
+    "input": "KNK 4,LTG 1+2",
+    "hit_level": "L,m,m",
+    "damage": "1813,14 (35)",
+    "startup": "i",
+    "block": "-14~-13",
+    "hit": "+31a (+13)",
+    "counter": "",
+    "alternateInputs": [
+      "KNK 4,LTG 1+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "11 chip damage on block",
+      "Combo from 1st hit"
     ]
   },
   {
@@ -1977,11 +1978,30 @@
     ]
   },
   {
+    "name": "Bai She Luan Tui",
+    "input": "KNK 1,4",
+    "hit_level": "h,4",
+    "damage": "12,20",
+    "startup": "i22",
+    "block": "-4",
+    "hit": "+32a (+6)",
+    "counter": "",
+    "alternateInputs": [
+      "KNK 1,4"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Combo from 1st hit",
+      "Enter BOK -8 with D "
+    ]
+  },
+  {
     "name": "Heng Quan",
     "input": "KNK 2",
     "hit_level": "h",
     "damage": "20",
-    "startup": "i13",
+    "startup": "i13~14",
     "block": "-4",
     "hit": "+22a (+13)",
     "counter": "+58a",
@@ -2050,7 +2070,7 @@
     "input": "KNK 1+2",
     "hit_level": "M",
     "damage": "20",
-    "startup": "i25",
+    "startup": "i22-24",
     "block": "-6",
     "hit": "+21",
     "counter": "+41a (+31)",
@@ -2224,6 +2244,23 @@
     "categories": [],
     "notes": [
       "Same move as f+4"
+    ]
+  },
+  {
+    "name": "Shuang Sao Tui",
+    "input": "BOK 3+4",
+    "hit_level": "l,l",
+    "damage": "7,13",
+    "startup": "16,12",
+    "block": "-12",
+    "hit": "+4",
+    "counter": "",
+    "alternateInputs": [
+      "BOK 3+4"
+    ],
+    "categories": [],
+    "notes": [
+      ""
     ]
   },
   {
@@ -2553,7 +2590,8 @@
     "notes": [
       "Balcony Break",
       "Throw break 1+2",
-      "Side switch"
+      "Side switch",
+      "Usable from KNK"
     ]
   }
 ]

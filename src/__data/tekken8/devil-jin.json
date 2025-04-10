@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -42,7 +42,7 @@
       "Transition to attack throw on hit",
       "Transition to MCR on block only",
       "Can cancel transition to MCR on block with B at +2~+12",
-      "8 Chip Damage on block"
+      "7 chip damage on block"
     ]
   },
   {
@@ -79,7 +79,7 @@
     "notes": [
       "Tornado",
       "Weapon",
-      "4 Chip Damage on block",
+      "3 chip damage on block",
       "Consumes 220F of remaining heat time"
     ]
   },
@@ -97,7 +97,7 @@
     ],
     "categories": [],
     "notes": [
-      "6 Chip Damage on block",
+      "5 chip damage on block",
       "Available only as combo from 1st hit",
       "Unavailable on whiff",
       "Transition to attack throw on hit",
@@ -121,7 +121,7 @@
       "Balcony Break",
       "Tornado",
       "Weapon",
-      "4 Chip Damage on block",
+      "3 chip damage on block",
       "Consumes 220F of remaining heat time"
     ]
   },
@@ -161,8 +161,9 @@
     "notes": [
       "Tornado",
       "Weapon",
-      "6 Chip Damage on block",
-      "Consumes 220F of remaining heat time"
+      "5 chip damage on block",
+      "Consumes 220F of remaining heat time",
+      "No pushback on 1st CH"
     ]
   },
   {
@@ -182,7 +183,7 @@
       "Heat Engager",
       "Heat Dash +5, +62a (+42)",
       "Balcony Break",
-      "16 Chip Damage on Heat Dash",
+      "12 chip damage on Heat Dash",
       "Combo from 1st hit with 5f delay",
       "Move can be delayed 3f"
     ]
@@ -204,7 +205,7 @@
       "Heat Engager",
       "Heat Dash +5, +43d (+35)",
       "Balcony Break",
-      "17 Chip Damage on Heat Dash",
+      "13 chip damage on Heat Dash",
       "Backsway",
       "Max distance from opponent when performed at tip range: ~3.82-3.83 (frames 16-19?)"
     ]
@@ -226,7 +227,7 @@
       "Heat Engager",
       "Heat Dash +5, +62a (+42)",
       "Balcony Break",
-      "16 Chip Damage on Heat Dash"
+      "12 chip damage on Heat Dash"
     ]
   },
   {
@@ -247,9 +248,9 @@
       "Heat Dash +5, +36a (+26)",
       "Balcony Break",
       "i18 startup when unbuffered, and i16 startup when buffered",
-      "7 Chip Damage on block",
-      "10 Chip Damage on block while in heat",
-      "20 Chip Damage on Heat Dash"
+      "7 chip damage on block",
+      "8 chip damage on block while in heat",
+      "15 chip damage on Heat Dash"
     ]
   },
   {
@@ -269,7 +270,7 @@
       "Heat Engager",
       "Heat Dash +5, +67a (+50)",
       "Spike",
-      "16 Chip Damage on blocked Heat Dash",
+      "12 chip damage on blocked Heat Dash",
       "Combo from 1st hit",
       "Opponent recovers FDFA on hit"
     ]
@@ -560,8 +561,8 @@
     "notes": [
       "Homing",
       "Balcony Break",
-      "7 chip Damage on block",
-      "10 chip Damage on block in heat"
+      "7 chip damage on block",
+      "8 chip damage on block in heat"
     ]
   },
   {
@@ -599,7 +600,8 @@
     "notes": [
       "Homing",
       "Balcony Break",
-      "Interrupt with i1 from 1st block"
+      "Interrupt with i1 from 1st block",
+      "1st forces crouching against crouching opponents (opponents recover standing after 2nd hit)"
     ]
   },
   {
@@ -635,7 +637,8 @@
     "notes": [
       "Tornado",
       "Combo from 2nd CH",
-      "6 chip damage on block"
+      "6 chip damage on block",
+      "7 chip damage on block in heat"
     ]
   },
   {
@@ -798,7 +801,7 @@
     "notes": [
       "Balcony Break",
       "Opponent recovers crouching on normal hit",
-      "Enter MCR +16 with F on hit",
+      "Enter MCR +16g with F on hit",
       "Enter MCR +31d (+23d) with F on CH",
       "Combo on 1st CH with 10f delay",
       "Move can be delayed 5f"
@@ -843,7 +846,7 @@
     ],
     "categories": [],
     "notes": [
-      ""
+      "+2c on hit against crouching opponents"
     ]
   },
   {
@@ -1044,8 +1047,8 @@
     ],
     "categories": [],
     "notes": [
-      "4 Chip Damage on block",
-      "6 Chip Damage on block in heat"
+      "4 chip damage on block",
+      "5 chip damage on block in heat"
     ]
   },
   {
@@ -1100,8 +1103,7 @@
       "Wall Crush +24g on block",
       "Balcony Break on CH or air hit",
       "Cancel to r27 MCR with F (js27~)",
-      "10 Chip Damage on block",
-      "11 Chip Damage on block while in heat"
+      "10 chip damage on block"
     ]
   },
   {
@@ -1121,8 +1123,29 @@
       "Balcony Break",
       "Guard Break",
       "Cancel to r27 MCR with F (js27~)",
-      "16 Chip Damage on block",
-      "19 Chip Damage on block while in heat"
+      "16 chip damage on block",
+      "17 chip damage on block while in heat"
+    ]
+  },
+  {
+    "name": "Hellfire Blast",
+    "input": "db+1+4",
+    "hit_level": "h!",
+    "damage": "40",
+    "startup": "i32~63",
+    "block": "+4d (-54)",
+    "hit": "+4d (-54)",
+    "counter": "",
+    "alternateInputs": [
+      "db+1+4"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Tracking score notes:",
+      "Tracking score based on i40 impact",
+      "Tracking score only for immediate sidestep/sidewalk. Move can be sidewalked on reaction at any frame advantage",
+      "Tracks only SSR when opponent is +5~+7"
     ]
   },
   {
@@ -1222,7 +1245,7 @@
     "hit_level": "m",
     "damage": "21",
     "startup": "i20~21",
-    "block": "-1c",
+    "block": "+3c",
     "hit": "+7c",
     "counter": "+24d",
     "alternateInputs": [
@@ -1232,8 +1255,8 @@
     "notes": [
       "Spike",
       "Opponent recovers FDFA on CH",
-      "6 Chip Damage on block",
-      "8 Chip Damage on block while in heat"
+      "4 chip damage on block",
+      "6 chip damage on block while in heat"
     ]
   },
   {
@@ -1251,27 +1274,6 @@
     "categories": [],
     "notes": [
       ""
-    ]
-  },
-  {
-    "name": "Hellfire Blast",
-    "input": "ub+1+2",
-    "hit_level": "h!",
-    "damage": "40",
-    "startup": "i32~63",
-    "block": "+4d (-54)",
-    "hit": "+4d (-54)",
-    "counter": "",
-    "alternateInputs": [
-      "ub+1+2"
-    ],
-    "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Tracking score notes:",
-      "Tracking score based on i40 impact",
-      "Tracking score only for immediate sidestep/sidewalk. Move can be sidewalked on reaction at any frame advantage",
-      "Tracks only SSR when opponent is +5~+7"
     ]
   },
   {
@@ -1329,8 +1331,8 @@
       "Transition to r20 MCR on hit or block only",
       "r47 opponent hitstun",
       "Only deals recoverable damage.",
-      "2 Chip Damage on block",
-      "3 Chip Damage on block while in heat"
+      "2 chip damage on block",
+      "3 chip damage on block while in heat"
     ]
   },
   {
@@ -1449,6 +1451,7 @@
     ],
     "notes": [
       "Input bufferable",
+      "-1c on hit against crouching opponents",
       "Homing at +3 and above",
       "Can be sidestepped to the right at -2 to +2"
     ]
@@ -1491,8 +1494,8 @@
       "Combo on 2nd CH with 8f delay",
       "Input can be delayed 20f",
       "Move can be delayed 15f",
-      "7 Chip Damage on block",
-      "10 Chip Damage on block"
+      "7 chip damage on block",
+      "8 chip damage on block"
     ]
   },
   {
@@ -1570,8 +1573,7 @@
     "notes": [
       "Weapon",
       "17 damage on hit with scaling",
-      "6 Chip Damage on block",
-      "12 Chip Damage on block while in heat"
+      "6 chip damage on block"
     ]
   },
   {
@@ -1607,8 +1609,8 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "9 Chip Damage on block",
-      "12 Chip Damage on block while in heat",
+      "9 chip damage on block",
+      "11 chip damage on block while in heat",
       "Sometimes written wr3"
     ]
   },
@@ -1648,8 +1650,8 @@
       "Weapon",
       "Combo from 1st CH with 1f delay",
       "Transition to MCR on hit or block only",
-      "2 Chip Damage on block",
-      "3 Chip Damage on block while in heat"
+      "2 chip damage on block",
+      "3 chip damage on block while in heat"
     ]
   },
   {
@@ -1688,8 +1690,8 @@
     "categories": [],
     "notes": [
       "Tornado",
-      "6 Chip Damage on block",
-      "8 Chip Damage on block while in heat"
+      "6 chip damage on block",
+      "7 chip damage on block while in heat"
     ]
   },
   {
@@ -1735,7 +1737,7 @@
     "damage": "10,20",
     "startup": ",i27~28",
     "block": "-16",
-    "hit": "+4c",
+    "hit": "+7c",
     "counter": "",
     "alternateInputs": [
       "ws4,4"
@@ -1841,7 +1843,7 @@
     "notes": [
       "Turns into EWGF (f,n,d,df#2) while in heat",
       "Consumes 70F of remaining heat time while in heat",
-      "8 Chip Damage on block while in heat",
+      "7 chip damage on block while in heat",
       "Sometimes written ",
       "WGF",
       "CD.df+2"
@@ -1861,8 +1863,8 @@
     ],
     "categories": [],
     "notes": [
-      "4 Chip Damage on block",
-      "8 Chip Damage on block while in heat",
+      "4 chip damage on block",
+      "7 chip damage on block while in heat",
       "Can also be performed with f,n,df#2 (i13~)",
       "Sometimes written ",
       "EWGF",
@@ -1885,8 +1887,8 @@
     "categories": [],
     "notes": [
       "Spike",
-      "7 Chip Damage on block",
-      "10 Chip Damage on block while in heat",
+      "7 chip damage on block",
+      "9 chip damage on block while in heat",
       "Sometimes written CD.df+3"
     ]
   },
@@ -1933,7 +1935,7 @@
     "damage": "7,28",
     "startup": ",i25~26",
     "block": "-16",
-    "hit": "+4c",
+    "hit": "+7c",
     "counter": "+14a",
     "alternateInputs": [
       "f,n,d,DF+4,4"
@@ -1970,9 +1972,9 @@
     "hit_level": "m",
     "damage": "25",
     "startup": "i26~27",
-    "block": "-9",
-    "hit": "+12a (+3)",
-    "counter": "+34a",
+    "block": "-5",
+    "hit": "+32d (+24d)",
+    "counter": "",
     "alternateInputs": [
       "f,n,d,df+1+2"
     ],
@@ -1982,8 +1984,8 @@
     "notes": [
       "Homing",
       "Balcony Break",
-      "7 Chip Damage on block",
-      "10 Chip Damage on block while in heat",
+      "7 chip damage on block",
+      "9 chip damage on block while in heat",
       "Opponent recovers FUFA on CH",
       "Sometimes written CD.df+1+2"
     ]
@@ -2061,12 +2063,31 @@
     ]
   },
   {
+    "name": "Forsaken Soul",
+    "input": "FLY 4,1",
+    "hit_level": "M,h",
+    "damage": "10,20",
+    "startup": ",i40~41",
+    "block": "+1",
+    "hit": "+71a (+51)",
+    "counter": "",
+    "alternateInputs": [
+      "FLY 4,1"
+    ],
+    "categories": [],
+    "notes": [
+      "Strong Aerial Tailspin",
+      "14 damage with combo scaling from 1st hit",
+      "24 damage total from 1st hit"
+    ]
+  },
+  {
     "name": "",
     "input": "FLY 4,2",
     "hit_level": "M,m",
     "damage": "10,20",
     "startup": ",i22~23",
-    "block": "",
+    "block": "-27",
     "hit": "+52a (+7)",
     "counter": "",
     "alternateInputs": [
@@ -2074,16 +2095,52 @@
     ],
     "categories": [],
     "notes": [
-      "Available only on 1st hit",
       "14 damage with combo scaling from 1st hit",
       "24 damage total from 1st hit"
+    ]
+  },
+  {
+    "name": "",
+    "input": "FLY 4,2,1",
+    "hit_level": "M,m,m",
+    "damage": "10,20,20",
+    "startup": ",i22~24",
+    "block": "-16",
+    "hit": "+29a(+19a)",
+    "counter": "",
+    "alternateInputs": [
+      "FLY 4,2,1"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "Cursed Starstorm",
+    "input": "FLY 4,2,1,UF",
+    "hit_level": "M,m,m,t",
+    "damage": "10,20,20,14 (10)",
+    "startup": ",i55?",
+    "block": "",
+    "hit": "-4d",
+    "counter": "",
+    "alternateInputs": [
+      "FLY 4,2,1,UF"
+    ],
+    "categories": [],
+    "notes": [
+      "Transition to attack throw on hit",
+      "Available only on hit",
+      "10dmg with combo scaling from previous hit",
+      "Opponent recovers FDFA on hit"
     ]
   },
   {
     "name": "Devil Starstorm",
     "input": "FLY 4,2,1+2",
     "hit_level": "M,m,m!,M!",
-    "damage": "10,20,14,20",
+    "damage": "10,20,14, 20",
     "startup": ",i27~28 i22~60",
     "block": "",
     "hit": "-6a",
@@ -2093,9 +2150,11 @@
     ],
     "categories": [],
     "notes": [
-      "Available only on 1st hit",
+      "Available only on 2nd hit",
       "15 (7+8) damage with combo scaling from 1st hit",
-      "39 damage total from 1st hit"
+      "39 damage total from 1st hit",
+      "20 damage (10+10) with combo scaling from 2nd hit",
+      "40 damage total from 2nd hit"
     ]
   },
   {
@@ -2149,8 +2208,8 @@
     "notes": [
       "Spike",
       "Opponent recovers FDFA on hit",
-      "6 Chip Damage on block",
-      "8 Chip Damage on block while in heat"
+      "6 chip damage on block",
+      "7 chip damage on block while in heat"
     ]
   },
   {
@@ -2188,8 +2247,8 @@
     "notes": [
       "Tornado",
       "Balcony Break",
-      "7 Chip Damage on block",
-      "10 Chip Damage on block while in heat"
+      "7 chip damage on block",
+      "9 chip damage on block while in heat"
     ]
   },
   {
@@ -2210,12 +2269,31 @@
     ]
   },
   {
+    "name": "Forsaken Soul",
+    "input": "MCR 4,1",
+    "hit_level": "M,h",
+    "damage": "10,20",
+    "startup": ",i40~41",
+    "block": "+1",
+    "hit": "+71a (+51)",
+    "counter": "",
+    "alternateInputs": [
+      "MCR 4,1"
+    ],
+    "categories": [],
+    "notes": [
+      "Strong Aerial Tailspin",
+      "14 damage with combo scaling from 1st hit",
+      "24 damage total from 1st hit"
+    ]
+  },
+  {
     "name": "",
     "input": "MCR 4,2",
     "hit_level": "M,m",
     "damage": "10,20",
     "startup": ",i22~23",
-    "block": "",
+    "block": "-27",
     "hit": "+52a (+7)",
     "counter": "",
     "alternateInputs": [
@@ -2223,16 +2301,52 @@
     ],
     "categories": [],
     "notes": [
-      "Available only on 1st hit",
       "14 damage with combo scaling from 1st hit",
       "24 damage total from 1st hit"
+    ]
+  },
+  {
+    "name": "",
+    "input": "MCR 4,2,1",
+    "hit_level": "M,m,m",
+    "damage": "10,20,20",
+    "startup": ",i22~24",
+    "block": "-16",
+    "hit": "+29a(+19a)",
+    "counter": "",
+    "alternateInputs": [
+      "MCR 4,2,1"
+    ],
+    "categories": [],
+    "notes": [
+      ""
+    ]
+  },
+  {
+    "name": "Cursed Starstorm",
+    "input": "MCR 4,2,1,UF",
+    "hit_level": "M,m,m,t",
+    "damage": "10,20,20,14 (10)",
+    "startup": ",i55?",
+    "block": "",
+    "hit": "-4d",
+    "counter": "",
+    "alternateInputs": [
+      "MCR 4,2,1,UF"
+    ],
+    "categories": [],
+    "notes": [
+      "Transition to attack throw on hit",
+      "Available only on hit",
+      "10dmg with combo scaling from previous hit",
+      "Opponent recovers FDFA on hit"
     ]
   },
   {
     "name": "Devil Starstorm",
     "input": "MCR 4,2,1+2",
     "hit_level": "M,m,m!,M!",
-    "damage": "10,20,14,20",
+    "damage": "10,20,14, 20",
     "startup": ",i27~28 i22~60",
     "block": "",
     "hit": "-6a",
@@ -2242,9 +2356,28 @@
     ],
     "categories": [],
     "notes": [
-      "Available only on 1st hit",
+      "Available only on 2nd hit",
       "15 (7+8) damage with combo scaling from 1st hit",
-      "39 damage total from 1st hit"
+      "39 damage total from 1st hit",
+      "20 damage (10+10) with combo scaling from 2nd hit",
+      "40 damage total from 2nd hit"
+    ]
+  },
+  {
+    "name": "Inner Turmoil",
+    "input": "MCR 1+2",
+    "hit_level": "h!",
+    "damage": "12",
+    "startup": "i20",
+    "block": "",
+    "hit": "+5",
+    "counter": "",
+    "alternateInputs": [
+      "MCR 1+2"
+    ],
+    "categories": [],
+    "notes": [
+      ""
     ]
   },
   {
