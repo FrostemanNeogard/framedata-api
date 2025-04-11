@@ -1906,7 +1906,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "BAL 1",
     "hit_level": "",
     "damage": "21",
     "startup": "",
@@ -1921,7 +1921,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "BAL 2",
     "hit_level": "",
     "damage": "25",
     "startup": "CR",
@@ -1936,7 +1936,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "BAL 3",
     "hit_level": "",
     "damage": "36",
     "startup": "",
@@ -1951,7 +1951,7 @@
   },
   {
     "name": "",
-    "input": "4",
+    "input": "BAL 4",
     "hit_level": "",
     "damage": "16",
     "startup": "",
@@ -1966,7 +1966,7 @@
   },
   {
     "name": "",
-    "input": "3+4",
+    "input": "BAL 3+4",
     "hit_level": "",
     "damage": "33",
     "startup": "CR",
@@ -1981,7 +1981,7 @@
   },
   {
     "name": "",
-    "input": "3+4, b",
+    "input": "BAL 3+4, b",
     "hit_level": "",
     "damage": "33",
     "startup": "BT",

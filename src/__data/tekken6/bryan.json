@@ -1966,7 +1966,7 @@
   },
   {
     "name": "",
-    "input": "f+2",
+    "input": "After TNT f+2",
     "hit_level": "",
     "damage": "12",
     "startup": "15",
@@ -1981,7 +1981,7 @@
   },
   {
     "name": "",
-    "input": "f+2, 1",
+    "input": "After TNT f+2, 1",
     "hit_level": "",
     "damage": "12,14",
     "startup": "",
@@ -1996,7 +1996,7 @@
   },
   {
     "name": "",
-    "input": "f+2, 1, 4",
+    "input": "After TNT f+2, 1, 4",
     "hit_level": "",
     "damage": "12,14,19",
     "startup": "",
@@ -2011,7 +2011,7 @@
   },
   {
     "name": "",
-    "input": "f+2, 1, 4, 2",
+    "input": "After TNT f+2, 1, 4, 2",
     "hit_level": "",
     "damage": "12,14,19,6",
     "startup": "",
@@ -2026,7 +2026,7 @@
   },
   {
     "name": "",
-    "input": "f+2, 1, 4, 2, 1",
+    "input": "After TNT f+2, 1, 4, 2, 1",
     "hit_level": "",
     "damage": "12,14,19,6,6",
     "startup": "",
@@ -2041,7 +2041,7 @@
   },
   {
     "name": "",
-    "input": "f+2, 1, 4, 2, 1, 4",
+    "input": "After TNT f+2, 1, 4, 2, 1, 4",
     "hit_level": "",
     "damage": "12,14,19,6,6 , ~ ~ 12",
     "startup": "",
@@ -2056,7 +2056,7 @@
   },
   {
     "name": "",
-    "input": "f+2, 1, 4, 2, 1, 4, 2",
+    "input": "After TNT f+2, 1, 4, 2, 1, 4, 2",
     "hit_level": "",
     "damage": "12,14,19 , 6,6, ~ ~ 12,25",
     "startup": "",
@@ -2071,7 +2071,7 @@
   },
   {
     "name": "",
-    "input": "ff+2",
+    "input": "After TNT ff+2",
     "hit_level": "",
     "damage": "52",
     "startup": "14",
@@ -2086,7 +2086,7 @@
   },
   {
     "name": "",
-    "input": "b 1, 2+",
+    "input": "After TNT b 1, 2+",
     "hit_level": "",
     "damage": "6,2 ~",
     "startup": "16",
