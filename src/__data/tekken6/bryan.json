@@ -1353,11 +1353,11 @@
     "name": "",
     "input": "b+1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "3",
-    "block": " ",
+    "block": "",
     "hit": "+",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "b+1+2"
     ],
@@ -1713,11 +1713,11 @@
     "name": "",
     "input": "qcf",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcf"
     ],
@@ -1878,11 +1878,11 @@
     "name": "",
     "input": "qcb",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcb"
     ],

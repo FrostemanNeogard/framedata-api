@@ -813,11 +813,11 @@
     "name": "",
     "input": "df+3, f",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "df+3, f"
     ],
@@ -1385,9 +1385,9 @@
     "hit_level": "",
     "damage": "14,16,22",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD   B",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "uf+3, 4, 3"
     ],
@@ -1728,11 +1728,11 @@
     "name": "",
     "input": "fff+3 _ WR 3, f",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "fff+3 _ WR 3, f"
     ],
@@ -2043,11 +2043,11 @@
     "name": "",
     "input": "b+3",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+3"
     ],
@@ -2058,11 +2058,11 @@
     "name": "",
     "input": "d_b_f_u",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d_b_f_u"
     ],
@@ -2266,6 +2266,21 @@
   },
   {
     "name": "",
+    "input": "b+3",
+    "hit_level": "",
+    "damage": "19",
+    "startup": "17",
+    "block": "-3 CR",
+    "hit": "0 CR",
+    "counter": "KD",
+    "alternateInputs": [
+      "b+3"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "",
     "input": "uf+3",
     "hit_level": "",
     "damage": "28",
@@ -2283,11 +2298,11 @@
     "name": "",
     "input": "in Flamingo etc (except upward)",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in Flamingo etc (except upward)"
     ],

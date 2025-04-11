@@ -80,8 +80,8 @@
     "hit_level": "",
     "damage": "8,9,26",
     "startup": "",
-    "block": "+10?",
-    "hit": "+21?",
+    "block": "-14",
+    "hit": "-3",
     "counter": "KD",
     "alternateInputs": [
       "1, 2, 4"
@@ -185,8 +185,8 @@
     "hit_level": "",
     "damage": "9,26",
     "startup": "",
-    "block": "+10?",
-    "hit": "+21?",
+    "block": "-14",
+    "hit": "-3",
     "counter": "KD",
     "alternateInputs": [
       "2, 4"
@@ -425,8 +425,8 @@
     "hit_level": "",
     "damage": "18,16,24",
     "startup": "",
-    "block": "+9?",
-    "hit": "+19?",
+    "block": "-15",
+    "hit": "-5",
     "counter": "KD",
     "alternateInputs": [
       "f+4, 3, 4"
@@ -620,9 +620,9 @@
     "hit_level": "",
     "damage": "18",
     "startup": "14",
-    "block": "+10?",
-    "hit": "+15?",
-    "counter": "+15?",
+    "block": "-14",
+    "hit": "-9",
+    "counter": "-9",
     "alternateInputs": [
       "df+4"
     ],
@@ -652,7 +652,7 @@
     "startup": "",
     "block": "-4",
     "hit": "+2",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "df+3+4, 3"
     ],
@@ -682,7 +682,7 @@
     "startup": "",
     "block": "-16",
     "hit": "0",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "df+3+4, 3, 3, 3"
     ],
@@ -697,7 +697,7 @@
     "startup": "",
     "block": "-20",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "df+3+4, 3, 3, 3, 3"
     ],
@@ -1053,11 +1053,11 @@
     "name": "",
     "input": "b+4, 3, 4",
     "hit_level": "",
-    "damage": "16,16,27",
+    "damage": "16,16,21",
     "startup": "",
-    "block": "-20",
-    "hit": "KD",
-    "counter": "KD",
+    "block": "-23 ~",
+    "hit": "-11",
+    "counter": "-11",
     "alternateInputs": [
       "b+4, 3, 4"
     ],
@@ -1190,7 +1190,7 @@
     "hit_level": "",
     "damage": "30",
     "startup": "19",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -1263,11 +1263,11 @@
     "name": "",
     "input": "bb+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "bb+3+4"
     ],
@@ -1443,11 +1443,11 @@
     "name": "",
     "input": "Various specific technical",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "Various specific technical"
     ],
@@ -1548,11 +1548,11 @@
     "name": "",
     "input": "f,n,d,df",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f,n,d,df"
     ],
