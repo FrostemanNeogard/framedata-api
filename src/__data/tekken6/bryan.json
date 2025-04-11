@@ -1353,11 +1353,11 @@
     "name": "",
     "input": "b+1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "3",
-    "block": " ",
+    "block": "",
     "hit": "+",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "b+1+2"
     ],
@@ -1713,11 +1713,11 @@
     "name": "",
     "input": "qcf",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcf"
     ],
@@ -1878,11 +1878,11 @@
     "name": "",
     "input": "qcb",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcb"
     ],
@@ -1966,7 +1966,7 @@
   },
   {
     "name": "",
-    "input": "f+2",
+    "input": "After TNT f+2",
     "hit_level": "",
     "damage": "12",
     "startup": "15",
@@ -1974,14 +1974,14 @@
     "hit": "-5",
     "counter": "-5",
     "alternateInputs": [
-      "f+2"
+      "After TNT f+2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+2, 1",
+    "input": "After TNT f+2, 1",
     "hit_level": "",
     "damage": "12,14",
     "startup": "",
@@ -1989,14 +1989,14 @@
     "hit": "+7",
     "counter": "+7",
     "alternateInputs": [
-      "f+2, 1"
+      "After TNT f+2, 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+2, 1, 4",
+    "input": "After TNT f+2, 1, 4",
     "hit_level": "",
     "damage": "12,14,19",
     "startup": "",
@@ -2004,14 +2004,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4"
+      "After TNT f+2, 1, 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+2, 1, 4, 2",
+    "input": "After TNT f+2, 1, 4, 2",
     "hit_level": "",
     "damage": "12,14,19,6",
     "startup": "",
@@ -2019,14 +2019,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4, 2"
+      "After TNT f+2, 1, 4, 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+2, 1, 4, 2, 1",
+    "input": "After TNT f+2, 1, 4, 2, 1",
     "hit_level": "",
     "damage": "12,14,19,6,6",
     "startup": "",
@@ -2034,14 +2034,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4, 2, 1"
+      "After TNT f+2, 1, 4, 2, 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+2, 1, 4, 2, 1, 4",
+    "input": "After TNT f+2, 1, 4, 2, 1, 4",
     "hit_level": "",
     "damage": "12,14,19,6,6 , ~ ~ 12",
     "startup": "",
@@ -2049,14 +2049,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4, 2, 1, 4"
+      "After TNT f+2, 1, 4, 2, 1, 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+2, 1, 4, 2, 1, 4, 2",
+    "input": "After TNT f+2, 1, 4, 2, 1, 4, 2",
     "hit_level": "",
     "damage": "12,14,19 , 6,6, ~ ~ 12,25",
     "startup": "",
@@ -2064,14 +2064,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4, 2, 1, 4, 2"
+      "After TNT f+2, 1, 4, 2, 1, 4, 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "ff+2",
+    "input": "After TNT ff+2",
     "hit_level": "",
     "damage": "52",
     "startup": "14",
@@ -2079,14 +2079,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ff+2"
+      "After TNT ff+2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "b 1, 2+",
+    "input": "After TNT b 1, 2+",
     "hit_level": "",
     "damage": "6,2 ~",
     "startup": "16",
@@ -2094,7 +2094,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "b 1, 2+"
+      "After TNT b 1, 2+"
     ],
     "categories": [],
     "notes": []

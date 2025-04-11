@@ -1143,11 +1143,11 @@
     "name": "",
     "input": "1+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "16",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "1+3+4"
     ],
@@ -1171,67 +1171,7 @@
   },
   {
     "name": "",
-    "input": "start game three in ff ~ b+2+4",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "start game three in ff ~ b+2+4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "b+1",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "b+1"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "f",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "f"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "df",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "df"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "1",
+    "input": "CDS 1",
     "hit_level": "",
     "damage": "16",
     "startup": "21",
@@ -1239,14 +1179,14 @@
     "hit": "+12 NG ?",
     "counter": "+12 NG ?",
     "alternateInputs": [
-      "1"
+      "CDS 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "1, 2",
+    "input": "CDS 1, 2",
     "hit_level": "",
     "damage": "16,25",
     "startup": "",
@@ -1254,14 +1194,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1, 2"
+      "CDS 1, 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "2",
+    "input": "CDS 2",
     "hit_level": "",
     "damage": "32",
     "startup": "",
@@ -1269,14 +1209,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "CDS 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3",
+    "input": "CDS 3",
     "hit_level": "",
     "damage": "30",
     "startup": "27",
@@ -1284,14 +1224,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "CDS 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "4",
+    "input": "CDS 4",
     "hit_level": "",
     "damage": "24",
     "startup": "",
@@ -1299,7 +1239,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "CDS 4"
     ],
     "categories": [],
     "notes": []
@@ -1308,11 +1248,11 @@
     "name": "",
     "input": "f,n,d,df",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f,n,d,df"
     ],
@@ -1323,11 +1263,11 @@
     "name": "",
     "input": "f,n,d,dfuf",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f,n,d,dfuf"
     ],

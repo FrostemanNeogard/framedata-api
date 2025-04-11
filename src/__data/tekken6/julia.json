@@ -155,7 +155,7 @@
     "hit_level": "",
     "damage": "40",
     "startup": "11",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -1488,11 +1488,11 @@
     "name": "",
     "input": "2+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "2+3+4"
     ],
@@ -1501,37 +1501,7 @@
   },
   {
     "name": "",
-    "input": "3+4",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "3+4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "u+3+4_d+3+4",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "u+3+4_d+3+4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "1",
+    "input": "CES 1",
     "hit_level": "",
     "damage": "15",
     "startup": "31",
@@ -1539,14 +1509,14 @@
     "hit": "+5",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "CES 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "2",
+    "input": "CES 2",
     "hit_level": "",
     "damage": "30",
     "startup": "38",
@@ -1554,14 +1524,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "CES 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "CES 1+2",
     "hit_level": "",
     "damage": "18",
     "startup": "37",
@@ -1569,14 +1539,14 @@
     "hit": "-4 CR",
     "counter": "KD",
     "alternateInputs": [
-      "1+2"
+      "CES 1+2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3",
+    "input": "CES 3",
     "hit_level": "",
     "damage": "21",
     "startup": "34",
@@ -1584,14 +1554,14 @@
     "hit": "-12 ~ - 11",
     "counter": "DOS",
     "alternateInputs": [
-      "3"
+      "CES 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3, 1",
+    "input": "CES 3, 1",
     "hit_level": "",
     "damage": "21,30",
     "startup": "",
@@ -1599,14 +1569,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, 1"
+      "CES 3, 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "4",
+    "input": "CES 4",
     "hit_level": "",
     "damage": "14",
     "startup": "36 CR",
@@ -1614,14 +1584,14 @@
     "hit": "+6 CR",
     "counter": "+6 CR",
     "alternateInputs": [
-      "4"
+      "CES 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "4, 1+2",
+    "input": "CES 4, 1+2",
     "hit_level": "",
     "damage": "14,30",
     "startup": "",
@@ -1629,7 +1599,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4, 1+2"
+      "CES 4, 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1638,11 +1608,11 @@
     "name": "",
     "input": "f+3",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f+3"
     ],
@@ -1653,11 +1623,11 @@
     "name": "",
     "input": "f+3, db_d",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f+3, db_d"
     ],

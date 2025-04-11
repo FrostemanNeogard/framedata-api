@@ -1188,11 +1188,11 @@
     "name": "",
     "input": "1+2+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "1+2+3+4"
     ],
@@ -1308,11 +1308,11 @@
     "name": "",
     "input": "b+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+3+4"
     ],
@@ -1321,22 +1321,22 @@
   },
   {
     "name": "",
-    "input": "f+4, df _ df in Kinkei",
+    "input": "f+4, df _ df KNK",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "17 CR",
     "block": "-5",
     "hit": "+1",
     "counter": "+1",
     "alternateInputs": [
-      "f+4, df _ df in Kinkei"
+      "f+4, df _ df KNK"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "in Kinkei 1",
+    "input": "KNK 1",
     "hit_level": "",
     "damage": "16",
     "startup": "22",
@@ -1344,14 +1344,14 @@
     "hit": "+2",
     "counter": "+2",
     "alternateInputs": [
-      "in Kinkei 1"
+      "KNK 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "in Kinkei 1, 2",
+    "input": "KNK 1, 2",
     "hit_level": "",
     "damage": "16,20",
     "startup": "",
@@ -1359,14 +1359,14 @@
     "hit": "+7",
     "counter": "KD",
     "alternateInputs": [
-      "in Kinkei 1, 2"
+      "KNK 1, 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "Kinkei in 1, d",
+    "input": "KNK 1, d",
     "hit_level": "",
     "damage": "16",
     "startup": "22",
@@ -1374,14 +1374,14 @@
     "hit": "+4",
     "counter": "+4",
     "alternateInputs": [
-      "Kinkei in 1, d"
+      "KNK 1, d"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "Kinkei in 2",
+    "input": "KNK 2",
     "hit_level": "",
     "damage": "21",
     "startup": "15",
@@ -1389,14 +1389,14 @@
     "hit": "+7 B",
     "counter": "KD",
     "alternateInputs": [
-      "Kinkei in 2"
+      "KNK 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "in Kinkei 3",
+    "input": "KNK 3",
     "hit_level": "",
     "damage": "20",
     "startup": "20",
@@ -1404,14 +1404,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "in Kinkei 3"
+      "KNK 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "in Kinkei 3, 4",
+    "input": "KNK 3, 4",
     "hit_level": "",
     "damage": "20,22",
     "startup": "",
@@ -1419,14 +1419,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "in Kinkei 3, 4"
+      "KNK 3, 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "in Kinkei 4",
+    "input": "KNK 4",
     "hit_level": "",
     "damage": "21",
     "startup": "20",
@@ -1434,29 +1434,14 @@
     "hit": "-3",
     "counter": "+7",
     "alternateInputs": [
-      "in Kinkei 4"
+      "KNK 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "d+1+2 _ FC db_d+1+2",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "d+1+2 _ FC db_d+1+2"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "in ?? 1",
+    "input": "BOK 1",
     "hit_level": "",
     "damage": "21",
     "startup": "13",
@@ -1464,14 +1449,14 @@
     "hit": "+9 B",
     "counter": "DOS   +~~ +22",
     "alternateInputs": [
-      "in ?? 1"
+      "BOK 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "?? in 2",
+    "input": "BOK 2",
     "hit_level": "",
     "damage": "25",
     "startup": "19",
@@ -1479,14 +1464,14 @@
     "hit": "CR KD",
     "counter": "CR KD",
     "alternateInputs": [
-      "?? in 2"
+      "BOK 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "in ?? 3",
+    "input": "BOK 3",
     "hit_level": "",
     "damage": "36",
     "startup": "21",
@@ -1494,14 +1479,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "in ?? 3"
+      "BOK 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "in ?? 4",
+    "input": "BOK 4",
     "hit_level": "",
     "damage": "16",
     "startup": "17",
@@ -1509,14 +1494,14 @@
     "hit": "+14",
     "counter": "+14",
     "alternateInputs": [
-      "in ?? 4"
+      "BOK 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "in ?? 1+2",
+    "input": "BOK 1+2",
     "hit_level": "",
     "damage": "36",
     "startup": "26",
@@ -1524,7 +1509,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "in ?? 1+2"
+      "BOK 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1533,11 +1518,11 @@
     "name": "",
     "input": "qcf _ df in in,depen,dent Kinkei",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcf _ df in in,depen,dent Kinkei"
     ],

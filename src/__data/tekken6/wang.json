@@ -110,9 +110,9 @@
     "hit_level": "",
     "damage": "50",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "?? into the Rin Naka 1+2"
     ],
@@ -1293,11 +1293,11 @@
     "name": "",
     "input": "b+1",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "2 ~ 12",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+1"
     ],
@@ -1308,11 +1308,11 @@
     "name": "",
     "input": "b+1, b",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "2 ~ 12",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+1, b"
     ],
@@ -1321,7 +1321,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "b+1 (Parry) 1",
     "hit_level": "",
     "damage": "6,(20)",
     "startup": "33",
@@ -1329,14 +1329,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "b+1 (Parry) 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "2",
+    "input": "b+1 (Parry) 2",
     "hit_level": "",
     "damage": "28",
     "startup": "26",
@@ -1344,14 +1344,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "b+1 (Parry) 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3",
+    "input": "b+1 (Parry) 3",
     "hit_level": "",
     "damage": "18",
     "startup": "29",
@@ -1359,14 +1359,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "b+1 (Parry) 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "4",
+    "input": "b+1 (Parry) 4",
     "hit_level": "",
     "damage": "21",
     "startup": "27",
@@ -1374,7 +1374,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "b+1 (Parry) 4"
     ],
     "categories": [],
     "notes": []

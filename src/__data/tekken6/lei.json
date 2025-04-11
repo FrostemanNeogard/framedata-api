@@ -228,11 +228,11 @@
     "name": "",
     "input": "d st_m in the relevant leg",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d st_m in the relevant leg"
     ],
@@ -815,7 +815,7 @@
     "hit_level": "",
     "damage": "26",
     "startup": "21",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -920,7 +920,7 @@
     "hit_level": "",
     "damage": "21",
     "startup": "15",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -933,11 +933,11 @@
     "name": "",
     "input": "u+1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "u+1+2"
     ],
@@ -948,11 +948,11 @@
     "name": "",
     "input": "u+1+2, d",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "KD",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "u+1+2, d"
     ],
@@ -2013,11 +2013,11 @@
     "name": "",
     "input": "1+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "1+3+4"
     ],
@@ -2043,11 +2043,11 @@
     "name": "",
     "input": "f+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "5 ~ 26",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f+3+4"
     ],
@@ -2058,11 +2058,11 @@
     "name": "",
     "input": "d in the ran,dom walk",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d in the ran,dom walk"
     ],
@@ -2073,11 +2073,11 @@
     "name": "",
     "input": "f in a ran,dom walk",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f in a ran,dom walk"
     ],
@@ -2088,11 +2088,11 @@
     "name": "",
     "input": "f in a ran,dom walk ~, d",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f in a ran,dom walk ~, d"
     ],
@@ -2103,11 +2103,11 @@
     "name": "",
     "input": "f in a ran,dom walk ~, b",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f in a ran,dom walk ~, b"
     ],
@@ -2118,11 +2118,11 @@
     "name": "",
     "input": "b during the ran,dom walk",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b during the ran,dom walk"
     ],
@@ -2133,11 +2133,11 @@
     "name": "",
     "input": "in the ran,dom walk d+1+2 _ d+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the ran,dom walk d+1+2 _ d+3+4"
     ],
@@ -2300,7 +2300,7 @@
     "hit_level": "",
     "damage": "15,24",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -2375,7 +2375,7 @@
     "hit_level": "",
     "damage": "20",
     "startup": "18",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -2388,11 +2388,11 @@
     "name": "",
     "input": "in the ran,dom walk 1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the ran,dom walk 1+2"
     ],
@@ -2403,11 +2403,11 @@
     "name": "",
     "input": "in the ran,dom walk 1+2, 1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the ran,dom walk 1+2, 1+2"
     ],
@@ -2418,11 +2418,11 @@
     "name": "",
     "input": "in the ran,dom walk 1+2, 1+2, 1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "KD",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the ran,dom walk 1+2, 1+2, 1+2"
     ],
@@ -2435,7 +2435,7 @@
     "hit_level": "",
     "damage": "26",
     "startup": "29 ~ 30 KD",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -2450,9 +2450,9 @@
     "hit_level": "",
     "damage": "33",
     "startup": "15",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "in a ran,dom walk 1+3_2+4"
     ],
@@ -2463,11 +2463,11 @@
     "name": "",
     "input": "in the ran,dom walk 1+3_2+4 f when swinging",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the ran,dom walk 1+3_2+4 f when swinging"
     ],
@@ -2480,7 +2480,7 @@
     "hit_level": "",
     "damage": "30",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -2493,11 +2493,11 @@
     "name": "",
     "input": "in the ran,dom walk ub+1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the ran,dom walk ub+1+2"
     ],
@@ -2540,7 +2540,7 @@
     "hit_level": "",
     "damage": "25",
     "startup": "KD",
-    "block": " ",
+    "block": "",
     "hit": "-CR ?",
     "counter": "KD",
     "alternateInputs": [
@@ -2553,11 +2553,11 @@
     "name": "",
     "input": "~ d in the various w_k posture sleeping",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "KD",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "~ d in the various w_k posture sleeping"
     ],
@@ -2568,11 +2568,11 @@
     "name": "",
     "input": "his back in bed ready 1+2+3",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "his back in bed ready 1+2+3"
     ],
@@ -2583,11 +2583,11 @@
     "name": "",
     "input": "while sleeping posture 1 _ d+1",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "while sleeping posture 1 _ d+1"
     ],
@@ -2598,11 +2598,11 @@
     "name": "",
     "input": "down posture during sleep _ 2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "down posture during sleep _ 2"
     ],
@@ -2613,11 +2613,11 @@
     "name": "",
     "input": "while sleeping posture 1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "while sleeping posture 1+2"
     ],
@@ -2628,11 +2628,11 @@
     "name": "",
     "input": "d+1+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d+1+4"
     ],
@@ -2675,7 +2675,7 @@
     "hit_level": "",
     "damage": "27",
     "startup": "KD",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -2688,11 +2688,11 @@
     "name": "",
     "input": "d+1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d+1+2"
     ],
@@ -2723,6 +2723,21 @@
     "block": "-25",
     "hit": "KD",
     "counter": "KD",
+    "alternateInputs": [
+      "?? lying face down leg side+3, 4"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "",
+    "input": "?? lying face down leg side+3, 4",
+    "hit_level": "",
+    "damage": "9",
+    "startup": "25",
+    "block": "-25",
+    "hit": "-",
+    "counter": "-",
     "alternateInputs": [
       "?? lying face down leg side+3, 4"
     ],
@@ -2793,11 +2808,11 @@
     "name": "",
     "input": "d+2+3",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d+2+3"
     ],
@@ -2813,6 +2828,21 @@
     "block": "-25",
     "hit": "KD",
     "counter": "KD",
+    "alternateInputs": [
+      "supine posture of the head while sleeping ~ 3"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "",
+    "input": "supine posture of the head while sleeping ~ 3",
+    "hit_level": "",
+    "damage": "9",
+    "startup": "20",
+    "block": "-25",
+    "hit": "+2",
+    "counter": "+2",
     "alternateInputs": [
       "supine posture of the head while sleeping ~ 3"
     ],
@@ -2896,6 +2926,21 @@
   },
   {
     "name": "",
+    "input": "supine posture of the head while sleeping ~ 3, f",
+    "hit_level": "",
+    "damage": "9",
+    "startup": "20",
+    "block": "-25",
+    "hit": "+2",
+    "counter": "+2",
+    "alternateInputs": [
+      "supine posture of the head while sleeping ~ 3, f"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "",
     "input": "in the head supine sleeping posture 4",
     "hit_level": "",
     "damage": "24",
@@ -2928,11 +2973,11 @@
     "name": "",
     "input": "d+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d+3+4"
     ],
@@ -2990,7 +3035,7 @@
     "hit_level": "",
     "damage": "18",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -3005,7 +3050,7 @@
     "hit_level": "",
     "damage": "24",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -3018,11 +3063,11 @@
     "name": "",
     "input": "b+3+4 _ b ~ 3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "BT",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+3+4 _ b ~ 3+4"
     ],
@@ -3033,11 +3078,26 @@
     "name": "",
     "input": "f BT",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "BT",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
+    "alternateInputs": [
+      "f BT"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "",
+    "input": "f BT",
+    "hit_level": "",
+    "damage": "",
+    "startup": "BT",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f BT"
     ],
@@ -3080,7 +3140,7 @@
     "hit_level": "",
     "damage": "14,12,8",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "+",
     "counter": "+",
     "alternateInputs": [
@@ -3095,7 +3155,7 @@
     "hit_level": "",
     "damage": "14,12, 8,19",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -3110,7 +3170,7 @@
     "hit_level": "",
     "damage": "14,12,8,19",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -3200,7 +3260,7 @@
     "hit_level": "",
     "damage": "14,21",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "+ CR",
     "counter": "+ CR",
     "alternateInputs": [
@@ -3393,11 +3453,11 @@
     "name": "",
     "input": "b+1+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+1+4"
     ],
@@ -3408,11 +3468,11 @@
     "name": "",
     "input": "f Sleeping Princess in birds",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f Sleeping Princess in birds"
     ],
@@ -3543,11 +3603,11 @@
     "name": "",
     "input": "Sleeping Princess in birds 1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "Sleeping Princess in birds 1+2"
     ],
@@ -3603,11 +3663,11 @@
     "name": "",
     "input": "Sleeping Princess in birds d_u+2+3",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "Sleeping Princess in birds d_u+2+3"
     ],
@@ -3633,11 +3693,11 @@
     "name": "",
     "input": "b_f+2+3 _ the various cooperation",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b_f+2+3 _ the various cooperation"
     ],
@@ -3648,11 +3708,11 @@
     "name": "",
     "input": "SS 1+4_2+3",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "SS 1+4_2+3"
     ],
@@ -3800,7 +3860,7 @@
     "hit_level": "",
     "damage": "12,15,12,24",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -3995,9 +4055,9 @@
     "hit_level": "",
     "damage": "35",
     "startup": "26",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "snake in the preparation f_ 1+3"
     ],
@@ -4008,11 +4068,11 @@
     "name": "",
     "input": "snake in the preparation f_ 1+3, b",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "snake in the preparation f_ 1+3, b"
     ],
@@ -4023,11 +4083,11 @@
     "name": "",
     "input": "u during the preparation f_ snake _ d in the stance of the tiger _ w_k different",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "u during the preparation f_ snake _ d in the stance of the tiger _ w_k different"
     ],
@@ -4040,9 +4100,9 @@
     "hit_level": "",
     "damage": "35",
     "startup": "26",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the stance of the Dragon 1"
     ],
@@ -4053,11 +4113,11 @@
     "name": "",
     "input": "in the stance of the Dragon 1, b",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the stance of the Dragon 1, b"
     ],
@@ -4162,7 +4222,7 @@
     "startup": "",
     "block": "-",
     "hit": "+?",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "in the stance of the dragon 4, 1, f"
     ],
@@ -4177,7 +4237,7 @@
     "startup": "",
     "block": "-",
     "hit": "+?",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "in the stance of the dragon 4, 1, u_d"
     ],
@@ -4293,11 +4353,11 @@
     "name": "",
     "input": "in the stance of the Dragon d+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "in the stance of the Dragon d+3+4"
     ],
@@ -4308,11 +4368,11 @@
     "name": "",
     "input": "d in the stance of the Snake _ u in the stance of the crane _ w_k different",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d in the stance of the Snake _ u in the stance of the crane _ w_k different"
     ],
@@ -4323,11 +4383,11 @@
     "name": "",
     "input": "f in a leopard ready",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f in a leopard ready"
     ],
@@ -4428,11 +4488,11 @@
     "name": "",
     "input": "u during the preparation f_ the dragon _ w_k different",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "u during the preparation f_ the dragon _ w_k different"
     ],
@@ -4443,11 +4503,11 @@
     "name": "",
     "input": "f in Tiger stance",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "+6",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "f in Tiger stance"
     ],
@@ -4520,7 +4580,7 @@
     "hit_level": "",
     "damage": "33,16",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -4578,11 +4638,11 @@
     "name": "",
     "input": "d in the stance of a panther _ w_k different",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d in the stance of a panther _ w_k different"
     ],

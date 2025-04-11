@@ -498,11 +498,11 @@
     "name": "",
     "input": "f+2, db_d_df",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f+2, db_d_df"
     ],
@@ -573,11 +573,11 @@
     "name": "",
     "input": "f+3, b",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f+3, b"
     ],
@@ -920,7 +920,7 @@
     "hit_level": "",
     "damage": "24",
     "startup": "CR",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -1203,11 +1203,11 @@
     "name": "",
     "input": "WS 1+2, d",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "WS 1+2, d"
     ],

@@ -1998,11 +1998,11 @@
     "name": "",
     "input": "b+3",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+3"
     ],
@@ -2011,22 +2011,7 @@
   },
   {
     "name": "",
-    "input": "",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      ""
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "1",
+    "input": "CJM 1",
     "hit_level": "",
     "damage": "16",
     "startup": "11",
@@ -2034,14 +2019,14 @@
     "hit": "+15",
     "counter": "+15",
     "alternateInputs": [
-      "1"
+      "CJM 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "2",
+    "input": "CJM 2",
     "hit_level": "",
     "damage": "12",
     "startup": "10",
@@ -2049,14 +2034,14 @@
     "hit": "-2",
     "counter": "-2",
     "alternateInputs": [
-      "2"
+      "CJM 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "2, 1",
+    "input": "CJM 2, 1",
     "hit_level": "",
     "damage": "12,14",
     "startup": "",
@@ -2064,14 +2049,14 @@
     "hit": "+4",
     "counter": "+4",
     "alternateInputs": [
-      "2, 1"
+      "CJM 2, 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3",
+    "input": "CJM 3",
     "hit_level": "",
     "damage": "21",
     "startup": "12",
@@ -2079,14 +2064,14 @@
     "hit": "+1",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "CJM 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "4",
+    "input": "CJM 4",
     "hit_level": "",
     "damage": "24",
     "startup": "29 CR",
@@ -2094,14 +2079,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "CJM 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "CJM 1+2",
     "hit_level": "",
     "damage": "0",
     "startup": "16",
@@ -2109,14 +2094,14 @@
     "hit": "+5",
     "counter": "+19",
     "alternateInputs": [
-      "1+2"
+      "CJM 1+2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "2+3",
+    "input": "CJM 2+3",
     "hit_level": "",
     "damage": "24",
     "startup": "14",
@@ -2124,14 +2109,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2+3"
+      "CJM 2+3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "db+3",
+    "input": "CJM db+3",
     "hit_level": "",
     "damage": "7",
     "startup": "15",
@@ -2139,14 +2124,14 @@
     "hit": "0",
     "counter": "0",
     "alternateInputs": [
-      "db+3"
+      "CJM db+3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "db+3, 3",
+    "input": "CJM db+3, 3",
     "hit_level": "",
     "damage": "7,24",
     "startup": "",
@@ -2154,14 +2139,14 @@
     "hit": "+1",
     "counter": "+1",
     "alternateInputs": [
-      "db+3, 3"
+      "CJM db+3, 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "ub+4",
+    "input": "CJM ub+4",
     "hit_level": "",
     "damage": "18",
     "startup": "15",
@@ -2169,14 +2154,14 @@
     "hit": "-5",
     "counter": "-5",
     "alternateInputs": [
-      "ub+4"
+      "CJM ub+4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "u+4",
+    "input": "CJM u+4",
     "hit_level": "",
     "damage": "24",
     "startup": "15",
@@ -2184,14 +2169,14 @@
     "hit": "-5",
     "counter": "-5",
     "alternateInputs": [
-      "u+4"
+      "CJM u+4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "uf+4",
+    "input": "CJM uf+4",
     "hit_level": "",
     "damage": "24",
     "startup": "15",
@@ -2199,29 +2184,29 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "uf+4"
+      "CJM uf+4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "ff",
+    "input": "CJM ff",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
-      "ff"
+      "CJM ff"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "ff 3",
+    "input": "CJM ff 3",
     "hit_level": "",
     "damage": "32",
     "startup": "30 CR",
@@ -2229,14 +2214,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ff 3"
+      "CJM ff 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "ff 4",
+    "input": "CJM ff 4",
     "hit_level": "",
     "damage": "25",
     "startup": "",
@@ -2244,7 +2229,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ff 4"
+      "CJM ff 4"
     ],
     "categories": [],
     "notes": []
@@ -2253,11 +2238,11 @@
     "name": "",
     "input": "qcf",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcf"
     ],
@@ -2270,9 +2255,9 @@
     "hit_level": "",
     "damage": "15",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "+",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "qcf+1+2"
     ],
@@ -2343,7 +2328,7 @@
     "name": "",
     "input": "qcf+4",
     "hit_level": "",
-    "damage": "14,14",
+    "damage": "14",
     "startup": "21",
     "block": "-12",
     "hit": "KD",

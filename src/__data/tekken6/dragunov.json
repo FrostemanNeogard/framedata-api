@@ -110,9 +110,9 @@
     "hit_level": "",
     "damage": "8,16,35",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "1, 3, 2, 1+2"
     ],
@@ -305,7 +305,7 @@
     "hit_level": "",
     "damage": "42",
     "startup": "25 KD",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -393,11 +393,11 @@
     "name": "",
     "input": "f+3, 3",
     "hit_level": "",
-    "damage": "19,16,(20)",
+    "damage": "19,16",
     "startup": "",
-    "block": "-12 ~ -10",
-    "hit": "AT _ +6 ~ +8 CR",
-    "counter": "AT _  +6 ~ +8 CR",
+    "block": "-9",
+    "hit": "+6 CR",
+    "counter": "+10 CR  _ +12",
     "alternateInputs": [
       "f+3, 3"
     ],
@@ -543,11 +543,11 @@
     "name": "",
     "input": "df+1+2 _ FC df+1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "df+1+2 _ FC df+1+2"
     ],
@@ -740,9 +740,9 @@
     "hit_level": "",
     "damage": "45",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "db+3, 1+2"
     ],
@@ -815,9 +815,9 @@
     "hit_level": "",
     "damage": "16,13,45",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "b+2, 1, 3, 1+2+"
     ],
@@ -1040,9 +1040,9 @@
     "hit_level": "",
     "damage": "35",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "Throw",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "ff+2, 1+2"
     ],
@@ -1280,9 +1280,9 @@
     "hit_level": "",
     "damage": "19,9,14,5",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "SS 2, 1+2, 1+2"
     ],
@@ -1308,11 +1308,11 @@
     "name": "",
     "input": "FDHT 1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "BT CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "FDHT 1+2"
     ],
@@ -1323,11 +1323,11 @@
     "name": "",
     "input": "FDHT 1+2, d",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "BT CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "FDHT 1+2, d"
     ],
@@ -1340,9 +1340,9 @@
     "hit_level": "",
     "damage": "5",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "FDHT 1+2, 1+2"
     ],
@@ -1368,11 +1368,11 @@
     "name": "",
     "input": "qcf",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcf"
     ],
@@ -1445,9 +1445,9 @@
     "hit_level": "",
     "damage": "30,10,20",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcf+4 on hit 1, 3, 4, 2"
     ],
@@ -1460,9 +1460,9 @@
     "hit_level": "",
     "damage": "30,10,20",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcf+4 on hit 2, 4, 3, 1"
     ],

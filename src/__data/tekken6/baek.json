@@ -813,11 +813,11 @@
     "name": "",
     "input": "df+3, f",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "df+3, f"
     ],
@@ -1385,9 +1385,9 @@
     "hit_level": "",
     "damage": "14,16,22",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD   B",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "uf+3, 4, 3"
     ],
@@ -1728,11 +1728,11 @@
     "name": "",
     "input": "fff+3 _ WR 3, f",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "fff+3 _ WR 3, f"
     ],
@@ -2043,11 +2043,11 @@
     "name": "",
     "input": "b+3",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+3"
     ],
@@ -2056,22 +2056,22 @@
   },
   {
     "name": "",
-    "input": "d_b_f_u",
+    "input": "FLA d_b_f_u",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
-      "d_b_f_u"
+      "FLA d_b_f_u"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3",
+    "input": "FLA 3",
     "hit_level": "",
     "damage": "14",
     "startup": "15",
@@ -2079,14 +2079,14 @@
     "hit": "-3",
     "counter": "-3",
     "alternateInputs": [
-      "3"
+      "FLA 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3, 3",
+    "input": "FLA 3, 3",
     "hit_level": "",
     "damage": "14,18",
     "startup": "",
@@ -2094,14 +2094,14 @@
     "hit": "-8",
     "counter": "-8",
     "alternateInputs": [
-      "3, 3"
+      "FLA 3, 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3, 3, 4",
+    "input": "FLA 3, 3, 4",
     "hit_level": "",
     "damage": "14,18,12",
     "startup": "CR",
@@ -2109,14 +2109,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, 3, 4"
+      "FLA 3, 3, 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3, 4",
+    "input": "FLA 3, 4",
     "hit_level": "",
     "damage": "14,18",
     "startup": "",
@@ -2124,14 +2124,14 @@
     "hit": "+5",
     "counter": "+5",
     "alternateInputs": [
-      "3, 4"
+      "FLA 3, 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3, 4, 4",
+    "input": "FLA 3, 4, 4",
     "hit_level": "",
     "damage": "14,18,21",
     "startup": "",
@@ -2139,14 +2139,14 @@
     "hit": "+8 CR",
     "counter": "+7 CR",
     "alternateInputs": [
-      "3, 4, 4"
+      "FLA 3, 4, 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3, 4, 4, 3, b_f",
+    "input": "FLA 3, 4, 4, 3, b_f",
     "hit_level": "",
     "damage": "14,18,21",
     "startup": "",
@@ -2154,14 +2154,14 @@
     "hit": "+4 CR",
     "counter": "+3 CR",
     "alternateInputs": [
-      "3, 4, 4, 3, b_f"
+      "FLA 3, 4, 4, 3, b_f"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3, 4, 4, 3",
+    "input": "FLA 3, 4, 4, 3",
     "hit_level": "",
     "damage": "14,18,21,20",
     "startup": "",
@@ -2169,14 +2169,14 @@
     "hit": "-3",
     "counter": "DOS    0",
     "alternateInputs": [
-      "3, 4, 4, 3"
+      "FLA 3, 4, 4, 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "3, 4, 4, 4",
+    "input": "FLA 3, 4, 4, 4",
     "hit_level": "",
     "damage": "14,18,21,14",
     "startup": "CR",
@@ -2184,14 +2184,14 @@
     "hit": "+1 CR",
     "counter": "KD",
     "alternateInputs": [
-      "3, 4, 4, 4"
+      "FLA 3, 4, 4, 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+3",
+    "input": "FLA f+3",
     "hit_level": "",
     "damage": "30",
     "startup": "20",
@@ -2199,14 +2199,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+3"
+      "FLA f+3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+4",
+    "input": "FLA f+4",
     "hit_level": "",
     "damage": "36",
     "startup": "19",
@@ -2214,14 +2214,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+4"
+      "FLA f+4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f+3+4",
+    "input": "FLA f+3+4",
     "hit_level": "",
     "damage": "27",
     "startup": "21",
@@ -2229,14 +2229,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+3+4"
+      "FLA f+3+4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "d+1",
+    "input": "FLA d+1",
     "hit_level": "",
     "damage": "21",
     "startup": "15",
@@ -2244,14 +2244,14 @@
     "hit": "+8 ~ +9 CR",
     "counter": "+8 ~ +9 CR",
     "alternateInputs": [
-      "d+1"
+      "FLA d+1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "d+1, 4",
+    "input": "FLA d+1, 4",
     "hit_level": "",
     "damage": "21,25",
     "startup": "",
@@ -2259,14 +2259,14 @@
     "hit": "+6",
     "counter": "KD",
     "alternateInputs": [
-      "d+1, 4"
+      "FLA d+1, 4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "uf+3",
+    "input": "FLA uf+3",
     "hit_level": "",
     "damage": "28",
     "startup": "18",
@@ -2274,22 +2274,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "uf+3"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "in Flamingo etc (except upward)",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "in Flamingo etc (except upward)"
+      "FLA uf+3"
     ],
     "categories": [],
     "notes": []

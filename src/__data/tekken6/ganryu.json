@@ -410,9 +410,9 @@
     "hit_level": "",
     "damage": "22,0",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "1+2, b+1+2, 1+2"
     ],
@@ -931,7 +931,7 @@
   },
   {
     "name": "",
-    "input": "d+3+4 hold",
+    "input": "d+3+4*",
     "hit_level": "",
     "damage": "60or72",
     "startup": "",
@@ -939,7 +939,22 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "d+3+4 hold"
+      "d+3+4*"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "",
+    "input": "d+3+4**",
+    "hit_level": "",
+    "damage": "72",
+    "startup": "",
+    "block": "KD",
+    "hit": "KD",
+    "counter": "KD",
+    "alternateInputs": [
+      "d+3+4**"
     ],
     "categories": [],
     "notes": []
@@ -995,9 +1010,9 @@
     "hit_level": "",
     "damage": "0",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "db+1+2, 1+2"
     ],
@@ -1008,11 +1023,11 @@
     "name": "",
     "input": "db+1+2, d",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "db+1+2, d"
     ],
@@ -1715,7 +1730,7 @@
     "hit_level": "",
     "damage": "45",
     "startup": "30 KD",
-    "block": " ",
+    "block": "",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -1726,22 +1741,7 @@
   },
   {
     "name": "",
-    "input": "3+4",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "3 F",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "3+4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "ub_u_uf+3+4",
+    "input": "SIT ub_u_uf+3+4",
     "hit_level": "",
     "damage": "27",
     "startup": "34",
@@ -1749,14 +1749,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ub_u_uf+3+4"
+      "SIT ub_u_uf+3+4"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "SIT 1+2",
     "hit_level": "",
     "damage": "12",
     "startup": "26",
@@ -1764,14 +1764,14 @@
     "hit": "+15",
     "counter": "+15",
     "alternateInputs": [
-      "1+2"
+      "SIT 1+2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "1",
+    "input": "SIT 1",
     "hit_level": "",
     "damage": "32",
     "startup": "30",
@@ -1779,14 +1779,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "SIT 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "2",
+    "input": "SIT 2",
     "hit_level": "",
     "damage": "19",
     "startup": "19 CR",
@@ -1794,52 +1794,37 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "SIT 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "d from the Cooperation",
+    "input": "SIT 1+2",
     "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "damage": "39",
+    "startup": "30 KD",
+    "block": "",
+    "hit": "KD",
+    "counter": "KD",
     "alternateInputs": [
-      "d from the Cooperation"
+      "SIT 1+2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "f splits into",
+    "input": "SIT 3+4",
     "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "damage": "26",
+    "startup": "45? KD",
+    "block": "",
+    "hit": "KD",
+    "counter": "KD",
     "alternateInputs": [
-      "f splits into"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "splits d_u",
-    "hit_level": "",
-    "damage": " ",
-    "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
-    "alternateInputs": [
-      "splits d_u"
+      "SIT 3+4"
     ],
     "categories": [],
     "notes": []
