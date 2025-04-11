@@ -1321,7 +1321,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "b+1 (Parry) 1",
     "hit_level": "",
     "damage": "6,(20)",
     "startup": "33",
@@ -1336,7 +1336,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "b+1 (Parry) 2",
     "hit_level": "",
     "damage": "28",
     "startup": "26",
@@ -1351,7 +1351,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "b+1 (Parry) 3",
     "hit_level": "",
     "damage": "18",
     "startup": "29",
@@ -1366,7 +1366,7 @@
   },
   {
     "name": "",
-    "input": "4",
+    "input": "b+1 (Parry) 4",
     "hit_level": "",
     "damage": "21",
     "startup": "27",

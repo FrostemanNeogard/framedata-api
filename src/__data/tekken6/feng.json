@@ -1441,22 +1441,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "f+3+4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "f+3+4 (parry occurs)",
+    "input": "STC(parry occurs)",
     "hit_level": "",
     "damage": "25",
     "startup": "",
@@ -1471,7 +1456,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4, b",
+    "input": "STC b",
     "hit_level": "",
     "damage": "",
     "startup": "BT",
@@ -1486,7 +1471,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4, 1",
+    "input": "STC 1",
     "hit_level": "",
     "damage": "24",
     "startup": "",
@@ -1501,7 +1486,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4, 2",
+    "input": "STC 2",
     "hit_level": "",
     "damage": "18",
     "startup": "",
@@ -1516,7 +1501,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4, 3",
+    "input": "STC 3",
     "hit_level": "",
     "damage": "36",
     "startup": "51 ?",
@@ -1531,7 +1516,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4, 4",
+    "input": "STC 4",
     "hit_level": "",
     "damage": "25",
     "startup": "",
@@ -1546,7 +1531,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4, 1+2",
+    "input": "STC 1+2",
     "hit_level": "",
     "damage": "8",
     "startup": "",
@@ -1561,7 +1546,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4, 1+2, 1",
+    "input": "STC 1+2, 1",
     "hit_level": "",
     "damage": "8,9",
     "startup": "",
@@ -1576,7 +1561,7 @@
   },
   {
     "name": "",
-    "input": "f+3+4, 1+2, 1, 2",
+    "input": "STC 1+2, 1, 2",
     "hit_level": "",
     "damage": "8,9,21",
     "startup": "",
@@ -1591,22 +1576,7 @@
   },
   {
     "name": "",
-    "input": "b+3+4",
-    "hit_level": "",
-    "damage": "",
-    "startup": "BT",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "b+3+4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "b+3+4, f",
+    "input": "KNP f",
     "hit_level": "",
     "damage": "",
     "startup": "",
@@ -1621,7 +1591,7 @@
   },
   {
     "name": "",
-    "input": "b+3+4, 1",
+    "input": "KNP 1",
     "hit_level": "",
     "damage": "26",
     "startup": "",
@@ -1636,7 +1606,7 @@
   },
   {
     "name": "",
-    "input": "b+3+4, 2",
+    "input": "KNP 2",
     "hit_level": "",
     "damage": "21",
     "startup": "29",
@@ -1651,7 +1621,7 @@
   },
   {
     "name": "",
-    "input": "b+3+4, 3",
+    "input": "KNP 3",
     "hit_level": "",
     "damage": "18",
     "startup": "",
@@ -1666,7 +1636,7 @@
   },
   {
     "name": "",
-    "input": "b+3+4, 4",
+    "input": "KNP 4",
     "hit_level": "",
     "damage": "32",
     "startup": "",
@@ -1681,7 +1651,7 @@
   },
   {
     "name": "",
-    "input": "b+3+4, 4, 3+4",
+    "input": "KNP 4, 3+4",
     "hit_level": "",
     "damage": "32,24",
     "startup": "",

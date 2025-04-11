@@ -1906,37 +1906,7 @@
   },
   {
     "name": "",
-    "input": "db_d+3+4",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "db_d+3+4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "SD in f_b",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "SD in f_b"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "uf+3+4",
+    "input": "SIT uf+3+4",
     "hit_level": "",
     "damage": "27",
     "startup": "34",
@@ -1951,7 +1921,7 @@
   },
   {
     "name": "",
-    "input": "d+3+4, 3+4",
+    "input": "SIT d+3+4, 3+4",
     "hit_level": "",
     "damage": "42",
     "startup": "74",
@@ -1966,7 +1936,7 @@
   },
   {
     "name": "",
-    "input": "uf+3+4, 3+4",
+    "input": "SIT uf+3+4, 3+4",
     "hit_level": "",
     "damage": "27,42",
     "startup": "",
@@ -1981,7 +1951,7 @@
   },
   {
     "name": "",
-    "input": "d+1+2",
+    "input": "SIT d+1+2",
     "hit_level": "",
     "damage": "21",
     "startup": "28",
@@ -1996,7 +1966,7 @@
   },
   {
     "name": "",
-    "input": "w_k in the 1+2",
+    "input": "SIT w_k in the 1+2",
     "hit_level": "",
     "damage": "25",
     "startup": "20? CR",
@@ -2011,7 +1981,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "SIT 1",
     "hit_level": "",
     "damage": "12",
     "startup": "19",
@@ -2026,7 +1996,7 @@
   },
   {
     "name": "",
-    "input": "1, 2",
+    "input": "SIT 1, 2",
     "hit_level": "",
     "damage": "12,12",
     "startup": "",
@@ -2041,7 +2011,7 @@
   },
   {
     "name": "",
-    "input": "1, 2, 1",
+    "input": "SIT 1, 2, 1",
     "hit_level": "",
     "damage": "12,12,12",
     "startup": "",
@@ -2056,7 +2026,7 @@
   },
   {
     "name": "",
-    "input": "1, 2, 1, 2",
+    "input": "SIT 1, 2, 1, 2",
     "hit_level": "",
     "damage": "12,12,12,12",
     "startup": "",
@@ -2071,7 +2041,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "SIT 2",
     "hit_level": "",
     "damage": "12",
     "startup": "19",
@@ -2086,7 +2056,7 @@
   },
   {
     "name": "",
-    "input": "2, 1",
+    "input": "SIT 2, 1",
     "hit_level": "",
     "damage": "12,12",
     "startup": "",
@@ -2101,7 +2071,7 @@
   },
   {
     "name": "",
-    "input": "2, 1, 2",
+    "input": "SIT 2, 1, 2",
     "hit_level": "",
     "damage": "12,12,12",
     "startup": "",
@@ -2116,7 +2086,7 @@
   },
   {
     "name": "",
-    "input": "2, 1, 2, 1",
+    "input": "SIT 2, 1, 2, 1",
     "hit_level": "",
     "damage": "12,12,12,12",
     "startup": "",

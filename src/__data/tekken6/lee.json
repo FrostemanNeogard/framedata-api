@@ -1981,67 +1981,7 @@
   },
   {
     "name": "",
-    "input": "d_u",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "d_u"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "f",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "f"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "db_d",
-    "hit_level": "",
-    "damage": "",
-    "startup": "CR",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "db_d"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "b",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "b"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "1",
+    "input": "HMS 1",
     "hit_level": "",
     "damage": "12",
     "startup": "12",
@@ -2056,7 +1996,7 @@
   },
   {
     "name": "",
-    "input": "1, 1,",
+    "input": "HMS 1, 1,",
     "hit_level": "",
     "damage": "12,12,,",
     "startup": "",
@@ -2071,7 +2011,7 @@
   },
   {
     "name": "",
-    "input": "1, f,n",
+    "input": "HMS 1, f,n",
     "hit_level": "",
     "damage": "",
     "startup": "CR",
@@ -2086,7 +2026,7 @@
   },
   {
     "name": "",
-    "input": "1, 4",
+    "input": "HMS 1, 4",
     "hit_level": "",
     "damage": "12,18",
     "startup": "",
@@ -2101,7 +2041,7 @@
   },
   {
     "name": "",
-    "input": "1, 4, 3",
+    "input": "HMS 1, 4, 3",
     "hit_level": "",
     "damage": "12,18",
     "startup": "",
@@ -2116,7 +2056,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "HMS 2",
     "hit_level": "",
     "damage": "27",
     "startup": "19",
@@ -2131,7 +2071,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "HMS 3",
     "hit_level": "",
     "damage": "25",
     "startup": "17 ~ 19",
@@ -2146,7 +2086,7 @@
   },
   {
     "name": "",
-    "input": "3 (when it hits the front)",
+    "input": "HMS 3 (when it hits the front)",
     "hit_level": "",
     "damage": "25,(13)",
     "startup": "",
@@ -2161,7 +2101,7 @@
   },
   {
     "name": "",
-    "input": "4",
+    "input": "HMS 4",
     "hit_level": "",
     "damage": "28",
     "startup": "24 CR",
@@ -2176,7 +2116,7 @@
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "HMS 1+2",
     "hit_level": "",
     "damage": "14,14",
     "startup": "13",
@@ -2191,7 +2131,7 @@
   },
   {
     "name": "",
-    "input": "uf+3",
+    "input": "HMS uf+3",
     "hit_level": "",
     "damage": "28",
     "startup": "20",
@@ -2206,7 +2146,7 @@
   },
   {
     "name": "",
-    "input": "uf+3, d",
+    "input": "HMS uf+3, d",
     "hit_level": "",
     "damage": "28",
     "startup": "20 CR",
@@ -2221,7 +2161,7 @@
   },
   {
     "name": "",
-    "input": "uf+4",
+    "input": "HMS uf+4",
     "hit_level": "",
     "damage": "24",
     "startup": "26",
@@ -2251,7 +2191,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "MS 3",
     "hit_level": "",
     "damage": "21",
     "startup": "16",
@@ -2266,7 +2206,7 @@
   },
   {
     "name": "",
-    "input": "3, 4",
+    "input": "MS 3, 4",
     "hit_level": "",
     "damage": "21,19",
     "startup": "",
@@ -2281,22 +2221,7 @@
   },
   {
     "name": "",
-    "input": "",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      ""
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "b,n",
+    "input": "MS b,n",
     "hit_level": "",
     "damage": "",
     "startup": "CR",
@@ -2311,7 +2236,7 @@
   },
   {
     "name": "",
-    "input": "SW in 4",
+    "input": "Sway 4",
     "hit_level": "",
     "damage": "21",
     "startup": "",
@@ -2320,21 +2245,6 @@
     "counter": "KD",
     "alternateInputs": [
       "SW in 4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "SW comman,d of n",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "SW comman,d of n"
     ],
     "categories": [],
     "notes": []

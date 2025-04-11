@@ -1741,22 +1741,7 @@
   },
   {
     "name": "",
-    "input": "3+4",
-    "hit_level": "",
-    "damage": "",
-    "startup": "3 F",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "3+4"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "ub_u_uf+3+4",
+    "input": "SIT ub_u_uf+3+4",
     "hit_level": "",
     "damage": "27",
     "startup": "34",
@@ -1771,7 +1756,7 @@
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "SIT 1+2",
     "hit_level": "",
     "damage": "12",
     "startup": "26",
@@ -1786,7 +1771,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "SIT 1",
     "hit_level": "",
     "damage": "32",
     "startup": "30",
@@ -1801,7 +1786,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "SIT 2",
     "hit_level": "",
     "damage": "19",
     "startup": "19 CR",
@@ -1816,7 +1801,7 @@
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "SIT 1+2",
     "hit_level": "",
     "damage": "39",
     "startup": "30 KD",
@@ -1831,7 +1816,7 @@
   },
   {
     "name": "",
-    "input": "3+4",
+    "input": "SIT 3+4",
     "hit_level": "",
     "damage": "26",
     "startup": "45? KD",

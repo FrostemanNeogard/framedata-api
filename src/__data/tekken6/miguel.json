@@ -1276,7 +1276,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "SAV 1",
     "hit_level": "",
     "damage": "14",
     "startup": "12",
@@ -1291,7 +1291,7 @@
   },
   {
     "name": "",
-    "input": "1, f",
+    "input": "SAV 1, f",
     "hit_level": "",
     "damage": "14",
     "startup": "12",
@@ -1306,7 +1306,7 @@
   },
   {
     "name": "",
-    "input": "1, 1",
+    "input": "SAV 1, 1",
     "hit_level": "",
     "damage": "14,20",
     "startup": "",
@@ -1321,7 +1321,7 @@
   },
   {
     "name": "",
-    "input": "1, 1, f",
+    "input": "SAV 1, 1, f",
     "hit_level": "",
     "damage": "14,20",
     "startup": "",
@@ -1336,7 +1336,7 @@
   },
   {
     "name": "",
-    "input": "1, 2",
+    "input": "SAV 1, 2",
     "hit_level": "",
     "damage": "14,9",
     "startup": "",
@@ -1351,7 +1351,7 @@
   },
   {
     "name": "",
-    "input": "1, 2, f",
+    "input": "SAV 1, 2, f",
     "hit_level": "",
     "damage": "14,9",
     "startup": "",
@@ -1366,7 +1366,7 @@
   },
   {
     "name": "",
-    "input": "1, 2, 1",
+    "input": "SAV 1, 2, 1",
     "hit_level": "",
     "damage": "14,9,24",
     "startup": "",
@@ -1381,7 +1381,7 @@
   },
   {
     "name": "",
-    "input": "1, 4",
+    "input": "SAV 1, 4",
     "hit_level": "",
     "damage": "14,30",
     "startup": "",
@@ -1396,7 +1396,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "SAV 2",
     "hit_level": "",
     "damage": "32",
     "startup": "18",
@@ -1411,7 +1411,7 @@
   },
   {
     "name": "",
-    "input": "2h",
+    "input": "SAV 2h",
     "hit_level": "",
     "damage": "36",
     "startup": "",
@@ -1426,7 +1426,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "SAV 3",
     "hit_level": "",
     "damage": "14",
     "startup": "15",
@@ -1441,7 +1441,7 @@
   },
   {
     "name": "",
-    "input": "3, f",
+    "input": "SAV 3, f",
     "hit_level": "",
     "damage": "14",
     "startup": "15",
@@ -1456,7 +1456,7 @@
   },
   {
     "name": "",
-    "input": "3, 3",
+    "input": "SAV 3, 3",
     "hit_level": "",
     "damage": "14,20",
     "startup": "",
@@ -1471,7 +1471,7 @@
   },
   {
     "name": "",
-    "input": "3, 3, f",
+    "input": "SAV 3, 3, f",
     "hit_level": "",
     "damage": "14,20",
     "startup": "",
@@ -1486,7 +1486,7 @@
   },
   {
     "name": "",
-    "input": "4",
+    "input": "SAV 4",
     "hit_level": "",
     "damage": "21",
     "startup": "15",
@@ -1501,7 +1501,7 @@
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "SAV 1+2",
     "hit_level": "",
     "damage": "30,(5)",
     "startup": "",
@@ -1516,7 +1516,7 @@
   },
   {
     "name": "",
-    "input": "1+2h",
+    "input": "SAV 1+2h",
     "hit_level": "",
     "damage": "36,(5)",
     "startup": "",
@@ -1531,7 +1531,7 @@
   },
   {
     "name": "",
-    "input": "f+1+2",
+    "input": "SAV f+1+2",
     "hit_level": "",
     "damage": "26",
     "startup": "16",
@@ -1546,7 +1546,7 @@
   },
   {
     "name": "",
-    "input": "f+1+2, f",
+    "input": "SAV f+1+2, f",
     "hit_level": "",
     "damage": "26",
     "startup": "16",
@@ -1561,7 +1561,7 @@
   },
   {
     "name": "",
-    "input": "df+1",
+    "input": "SAV df+1",
     "hit_level": "",
     "damage": "19",
     "startup": "14",
@@ -1576,7 +1576,7 @@
   },
   {
     "name": "",
-    "input": "df+1, f",
+    "input": "SAV df+1, f",
     "hit_level": "",
     "damage": "19",
     "startup": "14",
@@ -1591,7 +1591,7 @@
   },
   {
     "name": "",
-    "input": "Block",
+    "input": "SAV Block",
     "hit_level": "",
     "damage": "SS during df+2",
     "startup": "27",
@@ -1606,7 +1606,7 @@
   },
   {
     "name": "",
-    "input": "d+4",
+    "input": "SAV d+4",
     "hit_level": "",
     "damage": "9",
     "startup": "15",
@@ -1621,7 +1621,7 @@
   },
   {
     "name": "",
-    "input": "d+4, f",
+    "input": "SAV d+4, f",
     "hit_level": "",
     "damage": "9",
     "startup": "15",
@@ -1636,7 +1636,7 @@
   },
   {
     "name": "",
-    "input": "d+4, 3",
+    "input": "SAV d+4, 3",
     "hit_level": "",
     "damage": "9,14",
     "startup": "",
@@ -1651,7 +1651,7 @@
   },
   {
     "name": "",
-    "input": "d+4, 3, f",
+    "input": "SAV d+4, 3, f",
     "hit_level": "",
     "damage": "9,14",
     "startup": "",
@@ -1666,7 +1666,7 @@
   },
   {
     "name": "",
-    "input": "db+3",
+    "input": "SAV db+3",
     "hit_level": "",
     "damage": "19",
     "startup": "19",
@@ -1681,7 +1681,7 @@
   },
   {
     "name": "",
-    "input": "db+3, f",
+    "input": "SAV db+3, f",
     "hit_level": "",
     "damage": "19",
     "startup": "19",
@@ -1696,7 +1696,7 @@
   },
   {
     "name": "",
-    "input": "db+4",
+    "input": "SAV db+4",
     "hit_level": "",
     "damage": "24",
     "startup": "25",
@@ -1711,7 +1711,7 @@
   },
   {
     "name": "",
-    "input": "b+1",
+    "input": "SAV b+1",
     "hit_level": "",
     "damage": "16",
     "startup": "14",
@@ -1726,7 +1726,7 @@
   },
   {
     "name": "",
-    "input": "b+1, f",
+    "input": "SAV b+1, f",
     "hit_level": "",
     "damage": "16",
     "startup": "",
@@ -1741,7 +1741,7 @@
   },
   {
     "name": "",
-    "input": "b+1, 2",
+    "input": "SAV b+1, 2",
     "hit_level": "",
     "damage": "16,18",
     "startup": "",
@@ -1756,7 +1756,7 @@
   },
   {
     "name": "",
-    "input": "b+1, 4",
+    "input": "SAV b+1, 4",
     "hit_level": "",
     "damage": "16,19",
     "startup": "",
@@ -1771,7 +1771,7 @@
   },
   {
     "name": "",
-    "input": "b+2",
+    "input": "SAV b+2",
     "hit_level": "",
     "damage": "24",
     "startup": "23",
@@ -1786,7 +1786,7 @@
   },
   {
     "name": "",
-    "input": "b+3",
+    "input": "SAV b+3",
     "hit_level": "",
     "damage": "28",
     "startup": "17",
@@ -1801,7 +1801,7 @@
   },
   {
     "name": "",
-    "input": "b+3, f",
+    "input": "SAV b+3, f",
     "hit_level": "",
     "damage": "28",
     "startup": "17",
@@ -1816,7 +1816,7 @@
   },
   {
     "name": "",
-    "input": "uf+3",
+    "input": "SAV uf+3",
     "hit_level": "",
     "damage": "24",
     "startup": "15",

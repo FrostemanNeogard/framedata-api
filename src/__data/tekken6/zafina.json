@@ -1216,7 +1216,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "TRT 1",
     "hit_level": "",
     "damage": "13",
     "startup": "18",
@@ -1231,7 +1231,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "TRT 2",
     "hit_level": "",
     "damage": "28",
     "startup": "33",
@@ -1246,7 +1246,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "TRT 3",
     "hit_level": "",
     "damage": "19",
     "startup": "14",
@@ -1261,7 +1261,7 @@
   },
   {
     "name": "",
-    "input": "3, u",
+    "input": "TRT 3, u",
     "hit_level": "",
     "damage": "19",
     "startup": "14",
@@ -1276,7 +1276,7 @@
   },
   {
     "name": "",
-    "input": "3, d",
+    "input": "TRT 3, d",
     "hit_level": "",
     "damage": "19",
     "startup": "14",
@@ -1291,7 +1291,7 @@
   },
   {
     "name": "",
-    "input": "4",
+    "input": "TRT 4",
     "hit_level": "",
     "damage": "21",
     "startup": "28",
@@ -1306,7 +1306,7 @@
   },
   {
     "name": "",
-    "input": "4, 3",
+    "input": "TRT 4, 3",
     "hit_level": "",
     "damage": "21,18",
     "startup": "",
@@ -1321,7 +1321,7 @@
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "TRT 1+2",
     "hit_level": "",
     "damage": "10,24",
     "startup": "19",
@@ -1336,7 +1336,7 @@
   },
   {
     "name": "",
-    "input": "d+1+2",
+    "input": "TRT d+1+2",
     "hit_level": "",
     "damage": "24",
     "startup": "25",
@@ -1381,7 +1381,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "SCR 1",
     "hit_level": "",
     "damage": "14",
     "startup": "10",
@@ -1396,7 +1396,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "SCR 2",
     "hit_level": "",
     "damage": "15",
     "startup": "14",
@@ -1411,7 +1411,7 @@
   },
   {
     "name": "",
-    "input": "2, 2",
+    "input": "SCR 2, 2",
     "hit_level": "",
     "damage": "15,20",
     "startup": "",
@@ -1426,7 +1426,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "SCR 3",
     "hit_level": "",
     "damage": "18",
     "startup": "13",
@@ -1441,7 +1441,7 @@
   },
   {
     "name": "",
-    "input": "3, 3",
+    "input": "SCR 3, 3",
     "hit_level": "",
     "damage": "18,12",
     "startup": "",
@@ -1456,7 +1456,7 @@
   },
   {
     "name": "",
-    "input": "3, 3, 4",
+    "input": "SCR 3, 3, 4",
     "hit_level": "",
     "damage": "18,12,18",
     "startup": "",
@@ -1471,7 +1471,7 @@
   },
   {
     "name": "",
-    "input": "3, 3, 4, d",
+    "input": "SCR 3, 3, 4, d",
     "hit_level": "",
     "damage": "18,12,18",
     "startup": "",
@@ -1486,7 +1486,7 @@
   },
   {
     "name": "",
-    "input": "3, f+3",
+    "input": "SCR 3, f+3",
     "hit_level": "",
     "damage": "18,18",
     "startup": "",
@@ -1501,7 +1501,7 @@
   },
   {
     "name": "",
-    "input": "4",
+    "input": "SCR 4",
     "hit_level": "",
     "damage": "30",
     "startup": "14",
@@ -1516,7 +1516,7 @@
   },
   {
     "name": "",
-    "input": "4, b",
+    "input": "SCR 4, b",
     "hit_level": "",
     "damage": "30",
     "startup": "14",
@@ -1531,7 +1531,7 @@
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "SCR 1+2",
     "hit_level": "",
     "damage": "33",
     "startup": "17",
@@ -1546,7 +1546,7 @@
   },
   {
     "name": "",
-    "input": "1+2, d",
+    "input": "SCR 1+2, d",
     "hit_level": "",
     "damage": "33",
     "startup": "17",
@@ -1561,7 +1561,7 @@
   },
   {
     "name": "",
-    "input": "3+4",
+    "input": "SCR 3+4",
     "hit_level": "",
     "damage": "7,24",
     "startup": "17",
@@ -1576,7 +1576,7 @@
   },
   {
     "name": "",
-    "input": "3+4, d",
+    "input": "SCR 3+4, d",
     "hit_level": "",
     "damage": "7,24",
     "startup": "17",
@@ -1591,7 +1591,7 @@
   },
   {
     "name": "",
-    "input": "df+3",
+    "input": "SCR df+3",
     "hit_level": "",
     "damage": "24",
     "startup": "28 CR",
@@ -1606,7 +1606,7 @@
   },
   {
     "name": "",
-    "input": "df+3, d",
+    "input": "SCR df+3, d",
     "hit_level": "",
     "damage": "24",
     "startup": "28",
@@ -1621,7 +1621,7 @@
   },
   {
     "name": "",
-    "input": "df+4",
+    "input": "SCR df+4",
     "hit_level": "",
     "damage": "18",
     "startup": "24",
@@ -1636,7 +1636,7 @@
   },
   {
     "name": "",
-    "input": "df+4, d",
+    "input": "SCR df+4, d",
     "hit_level": "",
     "damage": "18",
     "startup": "24",
@@ -1651,7 +1651,7 @@
   },
   {
     "name": "",
-    "input": "d+3",
+    "input": "SCR d+3",
     "hit_level": "",
     "damage": "12",
     "startup": "18",
@@ -1666,7 +1666,7 @@
   },
   {
     "name": "",
-    "input": "d+3, 3",
+    "input": "SCR d+3, 3",
     "hit_level": "",
     "damage": "12,33",
     "startup": "",
@@ -1681,7 +1681,7 @@
   },
   {
     "name": "",
-    "input": "d+3, 3, b",
+    "input": "SCR d+3, 3, b",
     "hit_level": "",
     "damage": "12,33",
     "startup": "",
@@ -1696,7 +1696,7 @@
   },
   {
     "name": "",
-    "input": "d+3, d+3",
+    "input": "SCR d+3, d+3",
     "hit_level": "",
     "damage": "12,18",
     "startup": "",
@@ -1711,7 +1711,7 @@
   },
   {
     "name": "",
-    "input": "d+4",
+    "input": "SCR d+4",
     "hit_level": "",
     "damage": "20",
     "startup": "26 CR  ~ 32 CR ?",
@@ -1726,7 +1726,7 @@
   },
   {
     "name": "",
-    "input": "d+4, d",
+    "input": "SCR d+4, d",
     "hit_level": "",
     "damage": "20",
     "startup": "",
@@ -1741,7 +1741,7 @@
   },
   {
     "name": "",
-    "input": "d+3+4",
+    "input": "SCR d+3+4",
     "hit_level": "",
     "damage": "",
     "startup": "",
@@ -1786,7 +1786,7 @@
   },
   {
     "name": "",
-    "input": "2+3",
+    "input": "MNT 2+3",
     "hit_level": "",
     "damage": "",
     "startup": "BT",
@@ -1801,7 +1801,7 @@
   },
   {
     "name": "",
-    "input": "1",
+    "input": "MNT 1",
     "hit_level": "",
     "damage": "14",
     "startup": "13",
@@ -1816,7 +1816,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "MNT 2",
     "hit_level": "",
     "damage": "22",
     "startup": "13",
@@ -1831,7 +1831,7 @@
   },
   {
     "name": "",
-    "input": "2, 1",
+    "input": "MNT 2, 1",
     "hit_level": "",
     "damage": "22,12",
     "startup": "",
@@ -1846,7 +1846,7 @@
   },
   {
     "name": "",
-    "input": "2, 1, 4",
+    "input": "MNT 2, 1, 4",
     "hit_level": "",
     "damage": "22,12,30",
     "startup": "",
@@ -1861,7 +1861,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "MNT 3",
     "hit_level": "",
     "damage": "22",
     "startup": "22",
@@ -1876,7 +1876,7 @@
   },
   {
     "name": "",
-    "input": "3, 4",
+    "input": "MNT 3, 4",
     "hit_level": "",
     "damage": "22,12",
     "startup": "",
@@ -1891,7 +1891,7 @@
   },
   {
     "name": "",
-    "input": "3, 4, 4",
+    "input": "MNT 3, 4, 4",
     "hit_level": "",
     "damage": "22,12,22",
     "startup": "CR",
@@ -1906,7 +1906,7 @@
   },
   {
     "name": "",
-    "input": "3, 4, d+4",
+    "input": "MNT 3, 4, d+4",
     "hit_level": "",
     "damage": "22,12,19",
     "startup": "",
@@ -1921,7 +1921,7 @@
   },
   {
     "name": "",
-    "input": "4",
+    "input": "MNT 4",
     "hit_level": "",
     "damage": "15",
     "startup": "17",
@@ -1936,7 +1936,7 @@
   },
   {
     "name": "",
-    "input": "4, 3",
+    "input": "MNT 4, 3",
     "hit_level": "",
     "damage": "15,24",
     "startup": "",
@@ -1951,7 +1951,7 @@
   },
   {
     "name": "",
-    "input": "df+2",
+    "input": "MNT df+2",
     "hit_level": "",
     "damage": "20",
     "startup": "19",
@@ -1966,7 +1966,7 @@
   },
   {
     "name": "",
-    "input": "df+3",
+    "input": "MNT df+3",
     "hit_level": "",
     "damage": "24",
     "startup": "15",
@@ -1981,7 +1981,7 @@
   },
   {
     "name": "",
-    "input": "df+3, 4",
+    "input": "MNT df+3, 4",
     "hit_level": "",
     "damage": "24",
     "startup": "15 BT",
@@ -1996,7 +1996,7 @@
   },
   {
     "name": "",
-    "input": "d+1",
+    "input": "MNT d+1",
     "hit_level": "",
     "damage": "16",
     "startup": "15",
@@ -2011,7 +2011,7 @@
   },
   {
     "name": "",
-    "input": "d+1, 4",
+    "input": "MNT d+1, 4",
     "hit_level": "",
     "damage": "16,27",
     "startup": "",
@@ -2026,7 +2026,7 @@
   },
   {
     "name": "",
-    "input": "d+3",
+    "input": "MNT d+3",
     "hit_level": "",
     "damage": "14",
     "startup": "15",
@@ -2041,7 +2041,7 @@
   },
   {
     "name": "",
-    "input": "d+3, 1",
+    "input": "MNT d+3, 1",
     "hit_level": "",
     "damage": "14,19",
     "startup": "",
@@ -2056,7 +2056,7 @@
   },
   {
     "name": "",
-    "input": "d+4",
+    "input": "MNT d+4",
     "hit_level": "",
     "damage": "17",
     "startup": "20 ~ 22",
@@ -2071,7 +2071,7 @@
   },
   {
     "name": "",
-    "input": "d+4, d",
+    "input": "MNT d+4, d",
     "hit_level": "",
     "damage": "20",
     "startup": "20 ~ 22",
@@ -2086,7 +2086,7 @@
   },
   {
     "name": "",
-    "input": "uf+3",
+    "input": "MNT uf+3",
     "hit_level": "",
     "damage": "30",
     "startup": "26 ~ 28",
@@ -2101,7 +2101,7 @@
   },
   {
     "name": "",
-    "input": "uf+3, d",
+    "input": "MNT uf+3, d",
     "hit_level": "",
     "damage": "30",
     "startup": "26 CR  ~ 28 CR",

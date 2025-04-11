@@ -1186,22 +1186,7 @@
   },
   {
     "name": "",
-    "input": "various technical cooperation",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "various technical cooperation"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "1",
+    "input": "SEN 1",
     "hit_level": "",
     "damage": "32",
     "startup": "12",
@@ -1216,7 +1201,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "SEN 2",
     "hit_level": "",
     "damage": "24",
     "startup": "22 CR",
@@ -1231,7 +1216,7 @@
   },
   {
     "name": "",
-    "input": "3",
+    "input": "SEN 3",
     "hit_level": "",
     "damage": "24",
     "startup": "14",
@@ -1246,22 +1231,7 @@
   },
   {
     "name": "",
-    "input": "f+3 _ a variety of technical cooperation",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "f+3 _ a variety of technical cooperation"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "1",
+    "input": "DEN 1",
     "hit_level": "",
     "damage": "16",
     "startup": "11",
@@ -1276,7 +1246,7 @@
   },
   {
     "name": "",
-    "input": "1, f",
+    "input": "DEN 1, f",
     "hit_level": "",
     "damage": "16",
     "startup": "11",
@@ -1291,7 +1261,7 @@
   },
   {
     "name": "",
-    "input": "1, 2",
+    "input": "DEN 1, 2",
     "hit_level": "",
     "damage": "16,24",
     "startup": "",
@@ -1306,7 +1276,7 @@
   },
   {
     "name": "",
-    "input": "1, 2j",
+    "input": "DEN 1, 2j",
     "hit_level": "",
     "damage": "16,16,24",
     "startup": "",
@@ -1321,7 +1291,7 @@
   },
   {
     "name": "",
-    "input": "2",
+    "input": "DEN 2",
     "hit_level": "",
     "damage": "20",
     "startup": "18",
@@ -1336,7 +1306,7 @@
   },
   {
     "name": "",
-    "input": "1+2",
+    "input": "DEN 1+2",
     "hit_level": "",
     "damage": "24",
     "startup": "17 ~ 18",
@@ -1351,7 +1321,7 @@
   },
   {
     "name": "",
-    "input": "2+3",
+    "input": "DEN 2+3",
     "hit_level": "",
     "damage": "20,20",
     "startup": "10",
@@ -1366,7 +1336,7 @@
   },
   {
     "name": "",
-    "input": "2+3 (against air)",
+    "input": "DEN 2+3 (against air)",
     "hit_level": "",
     "damage": "10,10",
     "startup": "10",

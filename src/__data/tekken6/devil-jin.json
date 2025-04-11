@@ -1306,7 +1306,7 @@
   },
   {
     "name": "",
-    "input": "flying in the air 1",
+    "input": "FLY 1",
     "hit_level": "",
     "damage": "22",
     "startup": "",
@@ -1314,14 +1314,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "flying in the air 1"
+      "FLY 1"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "air flight 2",
+    "input": "FLY 2",
     "hit_level": "",
     "damage": "24,(30)",
     "startup": "",
@@ -1329,14 +1329,14 @@
     "hit": "KD",
     "counter": "",
     "alternateInputs": [
-      "air flight 2"
+      "FLY 2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "air flight 3",
+    "input": "FLY 3",
     "hit_level": "",
     "damage": "36",
     "startup": "",
@@ -1344,14 +1344,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "air flight 3"
+      "FLY 3"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "air flight 1+2",
+    "input": "FLY 1+2",
     "hit_level": "",
     "damage": "60",
     "startup": "60",
@@ -1359,14 +1359,14 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "air flight 1+2"
+      "FLY 1+2"
     ],
     "categories": [],
     "notes": []
   },
   {
     "name": "",
-    "input": "air flight f+1+2",
+    "input": "FLY f+1+2",
     "hit_level": "",
     "damage": "60",
     "startup": "120?",
@@ -1374,7 +1374,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "air flight f+1+2"
+      "FLY f+1+2"
     ],
     "categories": [],
     "notes": []

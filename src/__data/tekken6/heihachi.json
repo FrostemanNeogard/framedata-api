@@ -961,21 +961,6 @@
   },
   {
     "name": "",
-    "input": "~& Align (center) {Mishima Ryuu · cooperation from the team's stance suppress} & aname (kamae)",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "~& Align (center) {Mishima Ryuu · cooperation from the team's stance suppress} & aname (kamae)"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
     "input": "d+3+4",
     "hit_level": "",
     "damage": "",
@@ -1090,21 +1075,6 @@
     "counter": "",
     "alternateInputs": [
       "stance in 2, b"
-    ],
-    "categories": [],
-    "notes": []
-  },
-  {
-    "name": "",
-    "input": "~& Align (center) {god of the wind-step integration} & aname (step)",
-    "hit_level": "",
-    "damage": "",
-    "startup": "",
-    "block": "",
-    "hit": "",
-    "counter": "",
-    "alternateInputs": [
-      "~& Align (center) {god of the wind-step integration} & aname (step)"
     ],
     "categories": [],
     "notes": []
