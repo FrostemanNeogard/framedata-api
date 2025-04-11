@@ -1974,7 +1974,7 @@
     "hit": "-5",
     "counter": "-5",
     "alternateInputs": [
-      "f+2"
+      "After TNT f+2"
     ],
     "categories": [],
     "notes": []
@@ -1989,7 +1989,7 @@
     "hit": "+7",
     "counter": "+7",
     "alternateInputs": [
-      "f+2, 1"
+      "After TNT f+2, 1"
     ],
     "categories": [],
     "notes": []
@@ -2004,7 +2004,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4"
+      "After TNT f+2, 1, 4"
     ],
     "categories": [],
     "notes": []
@@ -2019,7 +2019,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4, 2"
+      "After TNT f+2, 1, 4, 2"
     ],
     "categories": [],
     "notes": []
@@ -2034,7 +2034,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4, 2, 1"
+      "After TNT f+2, 1, 4, 2, 1"
     ],
     "categories": [],
     "notes": []
@@ -2049,7 +2049,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4, 2, 1, 4"
+      "After TNT f+2, 1, 4, 2, 1, 4"
     ],
     "categories": [],
     "notes": []
@@ -2064,7 +2064,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+2, 1, 4, 2, 1, 4, 2"
+      "After TNT f+2, 1, 4, 2, 1, 4, 2"
     ],
     "categories": [],
     "notes": []
@@ -2079,7 +2079,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ff+2"
+      "After TNT ff+2"
     ],
     "categories": [],
     "notes": []
@@ -2094,7 +2094,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "b 1, 2+"
+      "After TNT b 1, 2+"
     ],
     "categories": [],
     "notes": []

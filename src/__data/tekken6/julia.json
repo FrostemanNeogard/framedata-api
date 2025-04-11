@@ -1509,7 +1509,7 @@
     "hit": "+5",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "CES 1"
     ],
     "categories": [],
     "notes": []
@@ -1524,7 +1524,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "CES 2"
     ],
     "categories": [],
     "notes": []
@@ -1539,7 +1539,7 @@
     "hit": "-4 CR",
     "counter": "KD",
     "alternateInputs": [
-      "1+2"
+      "CES 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1554,7 +1554,7 @@
     "hit": "-12 ~ - 11",
     "counter": "DOS",
     "alternateInputs": [
-      "3"
+      "CES 3"
     ],
     "categories": [],
     "notes": []
@@ -1569,7 +1569,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, 1"
+      "CES 3, 1"
     ],
     "categories": [],
     "notes": []
@@ -1584,7 +1584,7 @@
     "hit": "+6 CR",
     "counter": "+6 CR",
     "alternateInputs": [
-      "4"
+      "CES 4"
     ],
     "categories": [],
     "notes": []
@@ -1599,7 +1599,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4, 1+2"
+      "CES 4, 1+2"
     ],
     "categories": [],
     "notes": []

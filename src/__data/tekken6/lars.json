@@ -1194,7 +1194,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "SEN 1"
     ],
     "categories": [],
     "notes": []
@@ -1209,7 +1209,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "SEN 2"
     ],
     "categories": [],
     "notes": []
@@ -1224,7 +1224,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "SEN 3"
     ],
     "categories": [],
     "notes": []
@@ -1239,7 +1239,7 @@
     "hit": "+7",
     "counter": "+7",
     "alternateInputs": [
-      "1"
+      "DEN 1"
     ],
     "categories": [],
     "notes": []
@@ -1254,7 +1254,7 @@
     "hit": "+6",
     "counter": "+6",
     "alternateInputs": [
-      "1, f"
+      "DEN 1, f"
     ],
     "categories": [],
     "notes": []
@@ -1269,7 +1269,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1, 2"
+      "DEN 1, 2"
     ],
     "categories": [],
     "notes": []
@@ -1284,7 +1284,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1, 2j"
+      "DEN 1, 2j"
     ],
     "categories": [],
     "notes": []
@@ -1299,7 +1299,7 @@
     "hit": "+7",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "DEN 2"
     ],
     "categories": [],
     "notes": []
@@ -1314,7 +1314,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1+2"
+      "DEN 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1329,7 +1329,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2+3"
+      "DEN 2+3"
     ],
     "categories": [],
     "notes": []
@@ -1344,7 +1344,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2+3 (against air)"
+      "DEN 2+3 (against air)"
     ],
     "categories": [],
     "notes": []

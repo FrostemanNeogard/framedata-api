@@ -759,7 +759,7 @@
     "hit": "+9",
     "counter": "+9",
     "alternateInputs": [
-      "Hold b 1+2"
+      "1+2*"
     ],
     "categories": [],
     "notes": []
@@ -774,7 +774,7 @@
     "hit": "+14",
     "counter": "+14",
     "alternateInputs": [
-      "Hold b 1+2"
+      "1+2**"
     ],
     "categories": [],
     "notes": []
@@ -789,7 +789,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "Hold b 1+2"
+      "1+2***"
     ],
     "categories": [],
     "notes": []

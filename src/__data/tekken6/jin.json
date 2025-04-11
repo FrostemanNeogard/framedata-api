@@ -1179,7 +1179,7 @@
     "hit": "+12 NG ?",
     "counter": "+12 NG ?",
     "alternateInputs": [
-      "1"
+      "CDS 1"
     ],
     "categories": [],
     "notes": []
@@ -1194,7 +1194,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1, 2"
+      "CDS 1, 2"
     ],
     "categories": [],
     "notes": []
@@ -1209,7 +1209,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "CDS 2"
     ],
     "categories": [],
     "notes": []
@@ -1224,7 +1224,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "CDS 3"
     ],
     "categories": [],
     "notes": []
@@ -1239,7 +1239,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "CDS 4"
     ],
     "categories": [],
     "notes": []

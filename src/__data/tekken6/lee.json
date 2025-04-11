@@ -309,7 +309,7 @@
     "hit": "+1",
     "counter": "+1",
     "alternateInputs": [
-      "3, 3"
+      "3 ~ 3"
     ],
     "categories": [],
     "notes": []
@@ -324,7 +324,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, 3 _+when the guard hits 4"
+      "3 ~ 3: 4"
     ],
     "categories": [],
     "notes": []
@@ -1989,7 +1989,7 @@
     "hit": "+9",
     "counter": "+9",
     "alternateInputs": [
-      "1"
+      "HMS 1"
     ],
     "categories": [],
     "notes": []
@@ -2004,7 +2004,7 @@
     "hit": "+8",
     "counter": "+8",
     "alternateInputs": [
-      "1, 1,"
+      "HMS 1, 1,"
     ],
     "categories": [],
     "notes": []
@@ -2019,7 +2019,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "1, f,n"
+      "HMS 1, f,n"
     ],
     "categories": [],
     "notes": []
@@ -2034,7 +2034,7 @@
     "hit": "0",
     "counter": "0",
     "alternateInputs": [
-      "1, 4"
+      "HMS 1, 4"
     ],
     "categories": [],
     "notes": []
@@ -2049,7 +2049,7 @@
     "hit": "0",
     "counter": "0",
     "alternateInputs": [
-      "1, 4, 3"
+      "HMS 1, 4, 3"
     ],
     "categories": [],
     "notes": []
@@ -2064,7 +2064,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "HMS 2"
     ],
     "categories": [],
     "notes": []
@@ -2079,7 +2079,7 @@
     "hit": "KD   AT",
     "counter": "KD   throw shot",
     "alternateInputs": [
-      "3"
+      "HMS 3"
     ],
     "categories": [],
     "notes": []
@@ -2094,7 +2094,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3 (when it hits the front)"
+      "HMS 3 (when it hits the front)"
     ],
     "categories": [],
     "notes": []
@@ -2109,7 +2109,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "HMS 4"
     ],
     "categories": [],
     "notes": []
@@ -2124,7 +2124,7 @@
     "hit": "+6",
     "counter": "+6",
     "alternateInputs": [
-      "1+2"
+      "HMS 1+2"
     ],
     "categories": [],
     "notes": []
@@ -2139,7 +2139,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "uf+3"
+      "HMS uf+3"
     ],
     "categories": [],
     "notes": []
@@ -2154,7 +2154,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "uf+3, d"
+      "HMS uf+3, d"
     ],
     "categories": [],
     "notes": []
@@ -2169,7 +2169,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "uf+4"
+      "HMS uf+4"
     ],
     "categories": [],
     "notes": []
@@ -2199,7 +2199,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "MS 3"
     ],
     "categories": [],
     "notes": []
@@ -2214,7 +2214,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, 4"
+      "MS 3, 4"
     ],
     "categories": [],
     "notes": []
@@ -2229,7 +2229,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "b,n"
+      "MS b,n"
     ],
     "categories": [],
     "notes": []
@@ -2244,7 +2244,7 @@
     "hit": "-1",
     "counter": "KD",
     "alternateInputs": [
-      "SW in 4"
+      "Sway 4"
     ],
     "categories": [],
     "notes": []

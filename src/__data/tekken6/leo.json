@@ -1449,7 +1449,7 @@
     "hit": "+9 B",
     "counter": "DOS   +~~ +22",
     "alternateInputs": [
-      "in ?? 1"
+      "BOK 1"
     ],
     "categories": [],
     "notes": []
@@ -1464,7 +1464,7 @@
     "hit": "CR KD",
     "counter": "CR KD",
     "alternateInputs": [
-      "?? in 2"
+      "BOK 2"
     ],
     "categories": [],
     "notes": []
@@ -1479,7 +1479,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "in ?? 3"
+      "BOK 3"
     ],
     "categories": [],
     "notes": []
@@ -1494,7 +1494,7 @@
     "hit": "+14",
     "counter": "+14",
     "alternateInputs": [
-      "in ?? 4"
+      "BOK 4"
     ],
     "categories": [],
     "notes": []
@@ -1509,7 +1509,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "in ?? 1+2"
+      "BOK 1+2"
     ],
     "categories": [],
     "notes": []

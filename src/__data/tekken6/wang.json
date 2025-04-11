@@ -1329,7 +1329,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "b+1 (Parry) 1"
     ],
     "categories": [],
     "notes": []
@@ -1344,7 +1344,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "b+1 (Parry) 2"
     ],
     "categories": [],
     "notes": []
@@ -1359,7 +1359,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "b+1 (Parry) 3"
     ],
     "categories": [],
     "notes": []
@@ -1374,7 +1374,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "b+1 (Parry) 4"
     ],
     "categories": [],
     "notes": []

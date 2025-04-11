@@ -1554,7 +1554,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "HYP 2"
     ],
     "categories": [],
     "notes": []
@@ -1569,7 +1569,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "HYP 2"
     ],
     "categories": [],
     "notes": []
@@ -1584,7 +1584,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "HYP 2"
     ],
     "categories": [],
     "notes": []
@@ -1599,7 +1599,7 @@
     "hit": "+1",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "HYP 4"
     ],
     "categories": [],
     "notes": []
@@ -1614,7 +1614,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3+4"
+      "HYP 3+4"
     ],
     "categories": [],
     "notes": []
@@ -1629,7 +1629,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2+3"
+      "HYP 2+3"
     ],
     "categories": [],
     "notes": []
@@ -1644,7 +1644,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2+3"
+      "HYP 2+3"
     ],
     "categories": [],
     "notes": []
@@ -1659,7 +1659,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2+3"
+      "HYP 2+3"
     ],
     "categories": [],
     "notes": []
@@ -2169,7 +2169,7 @@
     "hit": "+3",
     "counter": "+3",
     "alternateInputs": [
-      "1"
+      "AOP 1"
     ],
     "categories": [],
     "notes": []
@@ -2184,7 +2184,7 @@
     "hit": "+ 5",
     "counter": "+5",
     "alternateInputs": [
-      "1, 2"
+      "AOP 1, 2"
     ],
     "categories": [],
     "notes": []
@@ -2199,7 +2199,7 @@
     "hit": "0",
     "counter": "0",
     "alternateInputs": [
-      "s2"
+      "AOP s2"
     ],
     "categories": [],
     "notes": []
@@ -2214,7 +2214,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2, 1"
+      "AOP 2, 1"
     ],
     "categories": [],
     "notes": []
@@ -2229,7 +2229,7 @@
     "hit": "-3",
     "counter": "- 3",
     "alternateInputs": [
-      "3"
+      "AOP 3"
     ],
     "categories": [],
     "notes": []
@@ -2244,7 +2244,7 @@
     "hit": "+7",
     "counter": "+7",
     "alternateInputs": [
-      "4"
+      "AOP 4"
     ],
     "categories": [],
     "notes": []
@@ -2259,7 +2259,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4, 3"
+      "AOP 4, 3"
     ],
     "categories": [],
     "notes": []
@@ -2274,7 +2274,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4, 3; d_u"
+      "AOP 4, 3; d_u"
     ],
     "categories": [],
     "notes": []
@@ -2289,7 +2289,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1+2"
+      "AOP 1+2"
     ],
     "categories": [],
     "notes": []
@@ -2304,7 +2304,7 @@
     "hit": "CR KD",
     "counter": "CR KD",
     "alternateInputs": [
-      "d+1+2"
+      "AOP d+1+2"
     ],
     "categories": [],
     "notes": []
@@ -2319,7 +2319,7 @@
     "hit": "+",
     "counter": "+",
     "alternateInputs": [
-      "3+4"
+      "AOP 3+4"
     ],
     "categories": [],
     "notes": []
@@ -2334,7 +2334,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "1+3_2+4"
+      "AOP 1+3_2+4"
     ],
     "categories": [],
     "notes": []
@@ -2349,7 +2349,7 @@
     "hit": "+4 ~ +5",
     "counter": "+4 ~ +5",
     "alternateInputs": [
-      "f+4"
+      "AOP f+4"
     ],
     "categories": [],
     "notes": []
@@ -2364,7 +2364,7 @@
     "hit": "+5",
     "counter": "+5",
     "alternateInputs": [
-      "f+4, 4"
+      "AOP f+4, 4"
     ],
     "categories": [],
     "notes": []
@@ -2379,7 +2379,7 @@
     "hit": "-1",
     "counter": "KD   throw shot",
     "alternateInputs": [
-      "d+1"
+      "AOP d+1"
     ],
     "categories": [],
     "notes": []
@@ -2394,7 +2394,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ub_u_uf+3"
+      "AOP ub_u_uf+3"
     ],
     "categories": [],
     "notes": []
@@ -2409,7 +2409,7 @@
     "hit": "+7 CR",
     "counter": "+7 CR",
     "alternateInputs": [
-      "ub_u_uf+3, 1"
+      "AOP ub_u_uf+3, 1"
     ],
     "categories": [],
     "notes": []
@@ -2424,7 +2424,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ub_u_uf+3, 3"
+      "AOP ub_u_uf+3, 3"
     ],
     "categories": [],
     "notes": []
@@ -2439,7 +2439,7 @@
     "hit": "-3",
     "counter": "+ 21 ~ +22 _ Tech Roll",
     "alternateInputs": [
-      "ub_u_uf+3, 4"
+      "AOP ub_u_uf+3, 4"
     ],
     "categories": [],
     "notes": []
@@ -2454,7 +2454,7 @@
     "hit": "+1 ~ +2",
     "counter": "+1 ~ +2",
     "alternateInputs": [
-      "u_uf+4"
+      "AOP u_uf+4"
     ],
     "categories": [],
     "notes": []
@@ -2469,7 +2469,7 @@
     "hit": "+9",
     "counter": "+9",
     "alternateInputs": [
-      "u_uf+4"
+      "AOP u_uf+4"
     ],
     "categories": [],
     "notes": []
@@ -2484,7 +2484,7 @@
     "hit": "-3 ~ -2",
     "counter": "-3 ~ -2",
     "alternateInputs": [
-      "u_uf+4, b"
+      "AOP u_uf+4, b"
     ],
     "categories": [],
     "notes": []
@@ -2499,7 +2499,7 @@
     "hit": "0 ~ +1",
     "counter": "0 ~ +1",
     "alternateInputs": [
-      "u_uf+4, d+1+2"
+      "AOP u_uf+4, d+1+2"
     ],
     "categories": [],
     "notes": []
@@ -2514,7 +2514,7 @@
     "hit": "- 1",
     "counter": "-1",
     "alternateInputs": [
-      "u_uf+4, 4"
+      "AOP u_uf+4, 4"
     ],
     "categories": [],
     "notes": []
@@ -2529,7 +2529,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ub_u_uf in Phoenix during the landing 3"
+      "AOP ub_u_uf in Phoenix during the landing 3"
     ],
     "categories": [],
     "notes": []
@@ -2544,7 +2544,7 @@
     "hit": "+6 ~ +8 B",
     "counter": "+6 ~ +8 B",
     "alternateInputs": [
-      "ub_u_uf,n,3"
+      "AOP ub_u_uf,n,3"
     ],
     "categories": [],
     "notes": []
@@ -2559,7 +2559,7 @@
     "hit": "+19 ~ +21 B",
     "counter": "+19 ~ +21 B",
     "alternateInputs": [
-      "ub_u_uf,n,3, d+1+2"
+      "AOP ub_u_uf,n,3, d+1+2"
     ],
     "categories": [],
     "notes": []
@@ -2574,7 +2574,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "ub_u_uf,n,4"
+      "AOP ub_u_uf,n,4"
     ],
     "categories": [],
     "notes": []
@@ -2589,7 +2589,7 @@
     "hit": "+1",
     "counter": "+1",
     "alternateInputs": [
-      "ub_u_uf in Phoenix during the landing 4"
+      "AOP ub_u_uf in Phoenix during the landing 4"
     ],
     "categories": [],
     "notes": []
@@ -2604,7 +2604,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "db_b_df_f"
+      "AOP db_b_df_f"
     ],
     "categories": [],
     "notes": []
@@ -2619,7 +2619,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "bb_ff"
+      "AOP bb_ff"
     ],
     "categories": [],
     "notes": []
@@ -2634,7 +2634,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "d"
+      "AOP d"
     ],
     "categories": [],
     "notes": []
@@ -2649,7 +2649,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "ub_u_uf"
+      "AOP ub_u_uf"
     ],
     "categories": [],
     "notes": []
@@ -2664,7 +2664,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "b+3+4"
+      "AOP b+3+4"
     ],
     "categories": [],
     "notes": []
@@ -2679,7 +2679,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "f+3+4"
+      "AOP f+3+4"
     ],
     "categories": [],
     "notes": []
@@ -2694,7 +2694,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "f+3+4, d"
+      "AOP f+3+4, d"
     ],
     "categories": [],
     "notes": []

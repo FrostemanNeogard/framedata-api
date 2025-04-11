@@ -1224,7 +1224,7 @@
     "hit": "+5",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "TRT 1"
     ],
     "categories": [],
     "notes": []
@@ -1239,7 +1239,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "TRT 2"
     ],
     "categories": [],
     "notes": []
@@ -1254,7 +1254,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "TRT 3"
     ],
     "categories": [],
     "notes": []
@@ -1269,7 +1269,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, u"
+      "TRT 3, u"
     ],
     "categories": [],
     "notes": []
@@ -1284,7 +1284,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, d"
+      "TRT 3, d"
     ],
     "categories": [],
     "notes": []
@@ -1299,7 +1299,7 @@
     "hit": "-6",
     "counter": "-6 CR",
     "alternateInputs": [
-      "4"
+      "TRT 4"
     ],
     "categories": [],
     "notes": []
@@ -1314,7 +1314,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4, 3"
+      "TRT 4, 3"
     ],
     "categories": [],
     "notes": []
@@ -1329,7 +1329,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1+2"
+      "TRT 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1344,7 +1344,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "d+1+2"
+      "TRT d+1+2"
     ],
     "categories": [],
     "notes": []
@@ -1389,7 +1389,7 @@
     "hit": "+8",
     "counter": "+8",
     "alternateInputs": [
-      "1"
+      "SCR 1"
     ],
     "categories": [],
     "notes": []
@@ -1404,7 +1404,7 @@
     "hit": "+7",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "SCR 2"
     ],
     "categories": [],
     "notes": []
@@ -1419,7 +1419,7 @@
     "hit": "+8 CR",
     "counter": "KD",
     "alternateInputs": [
-      "2, 2"
+      "SCR 2, 2"
     ],
     "categories": [],
     "notes": []
@@ -1434,7 +1434,7 @@
     "hit": "+5",
     "counter": "+5",
     "alternateInputs": [
-      "3"
+      "SCR 3"
     ],
     "categories": [],
     "notes": []
@@ -1449,7 +1449,7 @@
     "hit": "+2",
     "counter": "+7",
     "alternateInputs": [
-      "3, 3"
+      "SCR 3, 3"
     ],
     "categories": [],
     "notes": []
@@ -1464,7 +1464,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, 3, 4"
+      "SCR 3, 3, 4"
     ],
     "categories": [],
     "notes": []
@@ -1479,7 +1479,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, 3, 4, d"
+      "SCR 3, 3, 4, d"
     ],
     "categories": [],
     "notes": []
@@ -1494,7 +1494,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3, f+3"
+      "SCR 3, f+3"
     ],
     "categories": [],
     "notes": []
@@ -1509,7 +1509,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "SCR 4"
     ],
     "categories": [],
     "notes": []
@@ -1524,7 +1524,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4, b"
+      "SCR 4, b"
     ],
     "categories": [],
     "notes": []
@@ -1539,7 +1539,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1+2"
+      "SCR 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1554,7 +1554,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1+2, d"
+      "SCR 1+2, d"
     ],
     "categories": [],
     "notes": []
@@ -1569,7 +1569,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3+4"
+      "SCR 3+4"
     ],
     "categories": [],
     "notes": []
@@ -1584,7 +1584,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3+4, d"
+      "SCR 3+4, d"
     ],
     "categories": [],
     "notes": []
@@ -1599,7 +1599,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "df+3"
+      "SCR df+3"
     ],
     "categories": [],
     "notes": []
@@ -1614,7 +1614,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "df+3, d"
+      "SCR df+3, d"
     ],
     "categories": [],
     "notes": []
@@ -1629,7 +1629,7 @@
     "hit": "+4",
     "counter": "KD",
     "alternateInputs": [
-      "df+4"
+      "SCR df+4"
     ],
     "categories": [],
     "notes": []
@@ -1644,7 +1644,7 @@
     "hit": "+3",
     "counter": "KD",
     "alternateInputs": [
-      "df+4, d"
+      "SCR df+4, d"
     ],
     "categories": [],
     "notes": []
@@ -1659,7 +1659,7 @@
     "hit": "+3",
     "counter": "+10 CR",
     "alternateInputs": [
-      "d+3"
+      "SCR d+3"
     ],
     "categories": [],
     "notes": []
@@ -1674,7 +1674,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "d+3, 3"
+      "SCR d+3, 3"
     ],
     "categories": [],
     "notes": []
@@ -1689,7 +1689,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "d+3, 3, b"
+      "SCR d+3, 3, b"
     ],
     "categories": [],
     "notes": []
@@ -1704,7 +1704,7 @@
     "hit": "+8 CR",
     "counter": "+8 CR",
     "alternateInputs": [
-      "d+3, d+3"
+      "SCR d+3, d+3"
     ],
     "categories": [],
     "notes": []
@@ -1719,7 +1719,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "d+4"
+      "SCR d+4"
     ],
     "categories": [],
     "notes": []
@@ -1734,7 +1734,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "d+4, d"
+      "SCR d+4, d"
     ],
     "categories": [],
     "notes": []
@@ -1749,7 +1749,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "d+3+4"
+      "SCR d+3+4"
     ],
     "categories": [],
     "notes": []
@@ -1794,7 +1794,7 @@
     "hit": "",
     "counter": "",
     "alternateInputs": [
-      "2+3"
+      "MNT 2+3"
     ],
     "categories": [],
     "notes": []
@@ -1809,7 +1809,7 @@
     "hit": "+5",
     "counter": "+5",
     "alternateInputs": [
-      "1"
+      "MNT 1"
     ],
     "categories": [],
     "notes": []
@@ -1824,7 +1824,7 @@
     "hit": "-4",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "MNT 2"
     ],
     "categories": [],
     "notes": []
@@ -1839,7 +1839,7 @@
     "hit": "+6",
     "counter": "+6",
     "alternateInputs": [
-      "2, 1"
+      "MNT 2, 1"
     ],
     "categories": [],
     "notes": []
@@ -1854,7 +1854,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2, 1, 4"
+      "MNT 2, 1, 4"
     ],
     "categories": [],
     "notes": []
@@ -1869,7 +1869,7 @@
     "hit": "+3 CR",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "MNT 3"
     ],
     "categories": [],
     "notes": []
@@ -1884,7 +1884,7 @@
     "hit": "-1 CR",
     "counter": "-1 CR",
     "alternateInputs": [
-      "3, 4"
+      "MNT 3, 4"
     ],
     "categories": [],
     "notes": []
@@ -1899,7 +1899,7 @@
     "hit": "-4 CR",
     "counter": "KD",
     "alternateInputs": [
-      "3, 4, 4"
+      "MNT 3, 4, 4"
     ],
     "categories": [],
     "notes": []
@@ -1914,7 +1914,7 @@
     "hit": "+9",
     "counter": "+9",
     "alternateInputs": [
-      "3, 4, d+4"
+      "MNT 3, 4, d+4"
     ],
     "categories": [],
     "notes": []
@@ -1929,7 +1929,7 @@
     "hit": "-3",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "MNT 4"
     ],
     "categories": [],
     "notes": []
@@ -1944,7 +1944,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4, 3"
+      "MNT 4, 3"
     ],
     "categories": [],
     "notes": []
@@ -1959,7 +1959,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "df+2"
+      "MNT df+2"
     ],
     "categories": [],
     "notes": []
@@ -1974,7 +1974,7 @@
     "hit": "+11",
     "counter": "KD",
     "alternateInputs": [
-      "df+3"
+      "MNT df+3"
     ],
     "categories": [],
     "notes": []
@@ -1989,7 +1989,7 @@
     "hit": "+12",
     "counter": "KD",
     "alternateInputs": [
-      "df+3, 4"
+      "MNT df+3, 4"
     ],
     "categories": [],
     "notes": []
@@ -2004,7 +2004,7 @@
     "hit": "0",
     "counter": "0",
     "alternateInputs": [
-      "d+1"
+      "MNT d+1"
     ],
     "categories": [],
     "notes": []
@@ -2019,7 +2019,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "d+1, 4"
+      "MNT d+1, 4"
     ],
     "categories": [],
     "notes": []
@@ -2034,7 +2034,7 @@
     "hit": "-1",
     "counter": "-1",
     "alternateInputs": [
-      "d+3"
+      "MNT d+3"
     ],
     "categories": [],
     "notes": []
@@ -2049,7 +2049,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "d+3, 1"
+      "MNT d+3, 1"
     ],
     "categories": [],
     "notes": []
@@ -2064,7 +2064,7 @@
     "hit": "+2 CR  ~ +4 CR",
     "counter": "KD",
     "alternateInputs": [
-      "d+4"
+      "MNT d+4"
     ],
     "categories": [],
     "notes": []
@@ -2079,7 +2079,7 @@
     "hit": "+3 CR  ~ +5 CR",
     "counter": "KD",
     "alternateInputs": [
-      "d+4, d"
+      "MNT d+4, d"
     ],
     "categories": [],
     "notes": []
@@ -2094,7 +2094,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "uf+3"
+      "MNT uf+3"
     ],
     "categories": [],
     "notes": []
@@ -2109,7 +2109,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "uf+3, d"
+      "MNT uf+3, d"
     ],
     "categories": [],
     "notes": []

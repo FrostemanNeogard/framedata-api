@@ -1494,7 +1494,7 @@
     "hit": "0",
     "counter": "0",
     "alternateInputs": [
-      "1"
+      "HBS 1"
     ],
     "categories": [],
     "notes": []
@@ -1509,7 +1509,7 @@
     "hit": "+3",
     "counter": "+3",
     "alternateInputs": [
-      "1, 2"
+      "HBS 1, 2"
     ],
     "categories": [],
     "notes": []
@@ -1524,7 +1524,7 @@
     "hit": "+21 NG",
     "counter": "+21 NG",
     "alternateInputs": [
-      "2"
+      "HBS 2"
     ],
     "categories": [],
     "notes": []
@@ -1539,7 +1539,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1+2"
+      "HBS 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1554,7 +1554,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3+4"
+      "HBS 3+4"
     ],
     "categories": [],
     "notes": []
@@ -1569,7 +1569,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "f+1+2"
+      "HBS f+1+2"
     ],
     "categories": [],
     "notes": []
@@ -1584,7 +1584,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "df+2"
+      "HBS df+2"
     ],
     "categories": [],
     "notes": []
@@ -1599,7 +1599,7 @@
     "hit": "+1",
     "counter": "+18 _ KD",
     "alternateInputs": [
-      "d_df+1+2"
+      "HBS d_df+1+2"
     ],
     "categories": [],
     "notes": []
@@ -1614,7 +1614,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "b+1+2"
+      "HBS b+1+2"
     ],
     "categories": [],
     "notes": []
@@ -1629,7 +1629,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "b+1+2, 1+2"
+      "HBS b+1+2, 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1644,7 +1644,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "b+1+2, 3+4"
+      "HBS b+1+2, 3+4"
     ],
     "categories": [],
     "notes": []
@@ -1659,7 +1659,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "b_f+3+4"
+      "HBS b_f+3+4"
     ],
     "categories": [],
     "notes": []
@@ -1674,7 +1674,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "b_f+3+4 ~ b 3+4"
+      "HBS b_f+3+4 ~ b 3+4"
     ],
     "categories": [],
     "notes": []
@@ -1689,7 +1689,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "u+1+2"
+      "HBS u+1+2"
     ],
     "categories": [],
     "notes": []
@@ -1704,7 +1704,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "ROL 1"
     ],
     "categories": [],
     "notes": []
@@ -1719,7 +1719,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "2"
+      "ROL 2"
     ],
     "categories": [],
     "notes": []
@@ -1734,7 +1734,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "3"
+      "ROL 3"
     ],
     "categories": [],
     "notes": []
@@ -1749,7 +1749,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "4"
+      "ROL 4"
     ],
     "categories": [],
     "notes": []
@@ -1764,7 +1764,7 @@
     "hit": "TKKD",
     "counter": "TKKD",
     "alternateInputs": [
-      "1+2"
+      "ROL 1+2"
     ],
     "categories": [],
     "notes": []
@@ -1779,7 +1779,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "uf+3+4"
+      "SIT uf+3+4"
     ],
     "categories": [],
     "notes": []
@@ -1794,7 +1794,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "while down on his back d+1+2"
+      "SIT while down on his back d+1+2"
     ],
     "categories": [],
     "notes": []
@@ -1809,7 +1809,7 @@
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
-      "1"
+      "SIT 1"
     ],
     "categories": [],
     "notes": []
