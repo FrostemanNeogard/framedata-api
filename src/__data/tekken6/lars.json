@@ -1158,11 +1158,11 @@
     "name": "",
     "input": "1+2+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "1+2+3+4"
     ],
@@ -1188,11 +1188,11 @@
     "name": "",
     "input": "various technical cooperation",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "various technical cooperation"
     ],
@@ -1248,11 +1248,11 @@
     "name": "",
     "input": "f+3 _ a variety of technical cooperation",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f+3 _ a variety of technical cooperation"
     ],
@@ -1383,11 +1383,11 @@
     "name": "",
     "input": "ub_u_uf+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "ub_u_uf+3+4"
     ],

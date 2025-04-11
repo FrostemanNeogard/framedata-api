@@ -318,11 +318,11 @@
     "name": "",
     "input": "f 2, 1+2; u_d",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f 2, 1+2; u_d"
     ],
@@ -738,11 +738,11 @@
     "name": "",
     "input": "bb+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "bb+3+4"
     ],
@@ -948,11 +948,11 @@
     "name": "",
     "input": "2+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "2+3+4"
     ],
@@ -978,11 +978,11 @@
     "name": "",
     "input": "d+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d+3+4"
     ],
@@ -1083,11 +1083,11 @@
     "name": "",
     "input": "stance in 2, b",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "stance in 2, b"
     ],
@@ -1113,11 +1113,11 @@
     "name": "",
     "input": "f,n,d,df",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f,n,d,df"
     ],
@@ -1236,7 +1236,7 @@
     "damage": "18,12",
     "startup": "G",
     "block": "(-14)",
-    "hit": "KD",
+    "hit": "+3",
     "counter": "KD",
     "alternateInputs": [
       "f,n,d,df+4, 4"
@@ -1248,10 +1248,10 @@
     "name": "",
     "input": "f,n,d,df+4, 4, 4",
     "hit_level": "",
-    "damage": "18,12,9",
+    "damage": "18,12,19",
     "startup": "G",
     "block": "(-14)",
-    "hit": "KD",
+    "hit": "+3",
     "counter": "KD",
     "alternateInputs": [
       "f,n,d,df+4, 4, 4"

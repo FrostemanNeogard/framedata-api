@@ -412,7 +412,7 @@
     "startup": "",
     "block": "-18",
     "hit": "-9",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "d+4, 2j"
     ],
@@ -948,11 +948,11 @@
     "name": "",
     "input": "d ~ (f+0F)",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "d ~ (f+0F)"
     ],
@@ -1023,11 +1023,11 @@
     "name": "",
     "input": "qcf",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcf"
     ],
@@ -1113,11 +1113,11 @@
     "name": "",
     "input": "qcb",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "qcb"
     ],

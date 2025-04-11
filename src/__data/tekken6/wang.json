@@ -110,9 +110,9 @@
     "hit_level": "",
     "damage": "50",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "?? into the Rin Naka 1+2"
     ],
@@ -1293,11 +1293,11 @@
     "name": "",
     "input": "b+1",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "2 ~ 12",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+1"
     ],
@@ -1308,11 +1308,11 @@
     "name": "",
     "input": "b+1, b",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "2 ~ 12",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+1, b"
     ],

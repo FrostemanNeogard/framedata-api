@@ -543,11 +543,11 @@
     "name": "",
     "input": "df+1+3",
     "hit_level": "",
-    "damage": "25",
-    "startup": "20 ~ 29?",
-    "block": "Throw shots (KD  )",
-    "hit": "AT KD",
-    "counter": "AT KD",
+    "damage": "24",
+    "startup": "30 KD",
+    "block": "+?",
+    "hit": "KD",
+    "counter": "KD",
     "alternateInputs": [
       "df+1+3"
     ],
@@ -770,9 +770,9 @@
     "hit_level": "",
     "damage": "40or45",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "Cossacks in d+1+2"
     ],
@@ -1204,8 +1204,8 @@
     "input": "ff+3+4",
     "hit_level": "",
     "damage": "30",
-    "startup": "22",
-    "block": "-82",
+    "startup": "32",
+    "block": "-110",
     "hit": "KD",
     "counter": "KD",
     "alternateInputs": [
@@ -1908,11 +1908,11 @@
     "name": "",
     "input": "db_d+3+4",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "db_d+3+4"
     ],
@@ -1923,11 +1923,11 @@
     "name": "",
     "input": "SD in f_b",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "SD in f_b"
     ],

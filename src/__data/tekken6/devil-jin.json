@@ -738,11 +738,11 @@
     "name": "",
     "input": "b+1+2",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "b+1+2"
     ],
@@ -751,13 +751,43 @@
   },
   {
     "name": "",
-    "input": "Hold b 1+2",
+    "input": "1+2*",
     "hit_level": "",
     "damage": "18",
     "startup": "30",
     "block": "-4",
     "hit": "+9",
     "counter": "+9",
+    "alternateInputs": [
+      "Hold b 1+2"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "",
+    "input": "1+2**",
+    "hit_level": "",
+    "damage": "30",
+    "startup": "66?",
+    "block": "0",
+    "hit": "+14",
+    "counter": "+14",
+    "alternateInputs": [
+      "Hold b 1+2"
+    ],
+    "categories": [],
+    "notes": []
+  },
+  {
+    "name": "",
+    "input": "1+2***",
+    "hit_level": "",
+    "damage": "50",
+    "startup": "103",
+    "block": "+17 NG",
+    "hit": "KD",
+    "counter": "KD",
     "alternateInputs": [
       "Hold b 1+2"
     ],
@@ -1025,7 +1055,7 @@
     "hit_level": "",
     "damage": "20,13",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "+",
     "counter": "+",
     "alternateInputs": [
@@ -1235,9 +1265,9 @@
     "hit_level": "",
     "damage": "30,(21,20)",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "SS 2 u ~ (when hit)"
     ],
@@ -1263,11 +1293,11 @@
     "name": "",
     "input": "3+4 _ various cooperation",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "3+4 _ various cooperation"
     ],
@@ -1295,9 +1325,9 @@
     "hit_level": "",
     "damage": "24,(30)",
     "startup": "",
-    "block": " ",
+    "block": "",
     "hit": "KD",
-    "counter": " ",
+    "counter": "",
     "alternateInputs": [
       "air flight 2"
     ],
@@ -1353,11 +1383,11 @@
     "name": "",
     "input": "f,n,d,df",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "CR",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f,n,d,df"
     ],
@@ -1368,11 +1398,11 @@
     "name": "",
     "input": "f,n,d,dfuf",
     "hit_level": "",
-    "damage": " ",
+    "damage": "",
     "startup": "",
-    "block": " ",
-    "hit": " ",
-    "counter": " ",
+    "block": "",
+    "hit": "",
+    "counter": "",
     "alternateInputs": [
       "f,n,d,dfuf"
     ],
