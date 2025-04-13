@@ -22,10 +22,10 @@ export class CharacterCodesController {
   }
 
   @Get(':gameName/:characterName')
-  public formatCharacterName(
+  public async formatCharacterName(
     @Param('gameName') gameName: string,
     @Param('characterName') characterName: string,
-  ): CharacterCodeDto {
+  ): Promise<CharacterCodeDto> {
     this.logger.log(
       `Attempting to get characterCode for: ${characterName} in game: ${gameName}`,
     );
@@ -37,7 +37,7 @@ export class CharacterCodesController {
       throw new NotFoundException("Couldn't find the given game.");
     }
 
-    const characterCode = this.characterCodesService.getCharacterCode(
+    const characterCode = await this.characterCodesService.getCharacterCode(
       characterName,
       gameCode,
     );
