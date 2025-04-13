@@ -7,25 +7,33 @@ import {
 import * as fs from 'fs';
 import { FrameData } from 'src/__types/frameData';
 import { promisify } from 'util';
+import { InjectConnection } from '@nestjs/mongoose';
+import { Connection } from 'mongoose';
 
 @Injectable()
 export class FramedataService {
-  private readonly logger = new Logger();
+  private readonly logger = new Logger(FramedataService.name);
+
+  constructor(@InjectConnection() private readonly connection: Connection) {}
 
   async getCharacterFrameData(
     characterCode: string,
     game: string,
   ): Promise<FrameData[]> {
-    const filePath = `src/__data/${game}/${characterCode}.json`;
-
     try {
-      const readFileAsync = promisify(fs.readFile);
-      const data = await readFileAsync(filePath, 'utf8');
-      const jsonData = JSON.parse(data);
-      return jsonData;
+      const collection = this.connection.collection(game.toLowerCase());
+
+      const query = { [characterCode.toLowerCase()]: { $exists: true } };
+      const result = await collection.findOne(query);
+
+      if (!result || !result[characterCode]) {
+        throw new Error('Character data not found');
+      }
+
+      return result[characterCode];
     } catch (error) {
       this.logger.error(
-        `An error occurred when reading ${filePath}. ${error.code}: ${error.message}`,
+        `An error occurred fetching frame data for ${characterCode} in ${game}. ${error.message}`,
       );
       throw new BadRequestException(
         `No framedata was found for the given character and game combo.`,
@@ -96,6 +104,7 @@ export class FramedataService {
     return [attackInfo[0]];
   }
 
+  // TODO: Update this to use database
   async saveCharacterFrameData(
     characterCode: string,
     game: string,
