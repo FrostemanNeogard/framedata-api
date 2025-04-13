@@ -2859,7 +2859,7 @@
   },
   {
     "name": "Headlock Drop",
-    "input": "uf+1+2,2,1,1+2",
+    "input": "uf+1+2,1,2,1+2",
     "hit_level": "t",
     "damage": "40",
     "startup": "i12",
@@ -2867,7 +2867,7 @@
     "hit": "-6d",
     "counter": "",
     "alternateInputs": [
-      "uf+1+2,2,1,1+2"
+      "uf+1+2,1,2,1+2"
     ],
     "categories": [
       "throw"

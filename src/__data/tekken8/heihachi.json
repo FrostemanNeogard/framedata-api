@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -737,10 +737,16 @@
     "alternateInputs": [
       "f+3"
     ],
-    "categories": [],
+    "categories": [
+      "homing"
+    ],
     "notes": [
       "Knee",
-      "Enter FUJ -2 +12 r25 with D"
+      "Enter FUJ -2 +12 r25 with D",
+      "Tracking notes:",
+      "Can sidewalk left from -4 to +8",
+      "Can sidestep left from +0 to +3",
+      "Effectively homing to SSR/SWR side"
     ]
   },
   {
@@ -2441,7 +2447,8 @@
     "categories": [],
     "notes": [
       "Can't block for 5 seconds",
-      "CH state for 5 seconds"
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {

@@ -8,15 +8,11 @@
     "block": "+1",
     "hit": "+2c",
     "counter": "",
-    "alternateInputs": [
-      "2+3"
-    ],
-    "categories": [
-      "powercrush"
-    ],
+    "alternateInputs": ["2+3"],
+    "categories": ["powercrush"],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -32,9 +28,7 @@
     "block": "-6~+37g",
     "hit": "+21a~+64a (-5~+38)",
     "counter": "",
-    "alternateInputs": [
-      "in heat 2+3"
-    ],
+    "alternateInputs": ["in heat 2+3"],
     "categories": [],
     "notes": [
       "Heat Smash",
@@ -52,9 +46,7 @@
     "block": "-12~+3",
     "hit": "+25 (+7)",
     "counter": "",
-    "alternateInputs": [
-      "in heat GEN 2+3"
-    ],
+    "alternateInputs": ["in heat GEN 2+3"],
     "categories": [],
     "notes": [
       "Heat Smash",
@@ -75,15 +67,9 @@
     "block": "",
     "hit": "+40g",
     "counter": "",
-    "alternateInputs": [
-      "in heat f+1+2,P"
-    ],
-    "categories": [
-      "parry"
-    ],
-    "notes": [
-      "Sabaki, parries mid or high punches or kicks"
-    ]
+    "alternateInputs": ["in heat f+1+2,P"],
+    "categories": ["parry"],
+    "notes": ["Sabaki, parries mid or high punches or kicks"]
   },
   {
     "name": "Shunkei",
@@ -94,15 +80,9 @@
     "block": "-12",
     "hit": "+28a",
     "counter": "",
-    "alternateInputs": [
-      "1+2"
-    ],
+    "alternateInputs": ["1+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Heat Engager",
-      "Heat Dash +5, +43d (+35)"
-    ]
+    "notes": ["Balcony Break", "Heat Engager", "Heat Dash +5, +43d (+35)"]
   },
   {
     "name": "Ame-no-Habakiri",
@@ -113,9 +93,7 @@
     "block": "-9",
     "hit": "+32a (+17)",
     "counter": "",
-    "alternateInputs": [
-      "f+2,1+2"
-    ],
+    "alternateInputs": ["f+2,1+2"],
     "categories": [],
     "notes": [
       "Heat Engager",
@@ -136,9 +114,7 @@
     "block": "-6",
     "hit": "+12a (+3)",
     "counter": "",
-    "alternateInputs": [
-      "IZU 3"
-    ],
+    "alternateInputs": ["IZU 3"],
     "categories": [],
     "notes": [
       "Heat Engager",
@@ -156,12 +132,8 @@
     "block": "-20",
     "hit": "+26a (+0)",
     "counter": "",
-    "alternateInputs": [
-      "MIA 2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["MIA 2"],
+    "categories": ["parry"],
     "notes": [
       "Heat Engager",
       "Heat Dash +5, +36a (+26)",
@@ -180,15 +152,9 @@
     "block": "+6",
     "hit": "+8c",
     "counter": "",
-    "alternateInputs": [
-      "SS 4"
-    ],
+    "alternateInputs": ["SS 4"],
     "categories": [],
-    "notes": [
-      "Heat Engager",
-      "Heat Dash +5, +67a (+50)",
-      "Spike"
-    ]
+    "notes": ["Heat Engager", "Heat Dash +5, +67a (+50)", "Spike"]
   },
   {
     "name": "Jab",
@@ -199,13 +165,9 @@
     "block": "+1",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "1"
-    ],
+    "alternateInputs": ["1"],
     "categories": [],
-    "notes": [
-      "Recovers 2f faster on hit or block (t27 r17)"
-    ]
+    "notes": ["Recovers 2f faster on hit or block (t27 r17)"]
   },
   {
     "name": "Suikei > Izumo Smash",
@@ -216,9 +178,7 @@
     "block": "-1",
     "hit": "+8",
     "counter": "+13",
-    "alternateInputs": [
-      "1,1"
-    ],
+    "alternateInputs": ["1,1"],
     "categories": [],
     "notes": [
       "Combo from 1st hit with 1f delay",
@@ -234,9 +194,7 @@
     "block": "-3",
     "hit": "+6",
     "counter": "",
-    "alternateInputs": [
-      "1,2"
-    ],
+    "alternateInputs": ["1,2"],
     "categories": [],
     "notes": [
       "Jail from 1st attack with 2f delay",
@@ -252,12 +210,8 @@
     "block": "+6",
     "hit": "+11",
     "counter": "+20c",
-    "alternateInputs": [
-      "1,2,2"
-    ],
-    "categories": [
-      "homing"
-    ],
+    "alternateInputs": ["1,2,2"],
+    "categories": ["homing"],
     "notes": [
       "Homing",
       "Combo from 2nd CH with 5f delay",
@@ -274,9 +228,7 @@
     "block": "-12",
     "hit": "+5",
     "counter": "+15a (+6)",
-    "alternateInputs": [
-      "1,2,4"
-    ],
+    "alternateInputs": ["1,2,4"],
     "categories": [],
     "notes": [
       "Balcony Break (airborne)",
@@ -293,13 +245,9 @@
     "block": "-12",
     "hit": "+2",
     "counter": "+6c",
-    "alternateInputs": [
-      "1,3"
-    ],
+    "alternateInputs": ["1,3"],
     "categories": [],
-    "notes": [
-      "Combo from 1st CH with 2f delay"
-    ]
+    "notes": ["Combo from 1st CH with 2f delay"]
   },
   {
     "name": "Right Jab",
@@ -310,13 +258,9 @@
     "block": "-4",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "2"
-    ],
+    "alternateInputs": ["2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -327,9 +271,7 @@
     "block": "-6",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "2,1"
-    ],
+    "alternateInputs": ["2,1"],
     "categories": [],
     "notes": [
       "Elbow",
@@ -346,14 +288,9 @@
     "block": "-12",
     "hit": "-1",
     "counter": "",
-    "alternateInputs": [
-      "2,1,4"
-    ],
+    "alternateInputs": ["2,1,4"],
     "categories": [],
-    "notes": [
-      "Knee",
-      "Combo from 1st hit"
-    ]
+    "notes": ["Knee", "Combo from 1st hit"]
   },
   {
     "name": "Byakuren Tsukinuki",
@@ -364,12 +301,8 @@
     "block": "-9",
     "hit": "+10a (+1)",
     "counter": "+42a (-5)",
-    "alternateInputs": [
-      "2,1,4,1"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["2,1,4,1"],
+    "categories": ["parry"],
     "notes": [
       "Balcony Break",
       "Combo from 3rd CH",
@@ -388,9 +321,7 @@
     "block": "-9",
     "hit": "+13a (+4)",
     "counter": "",
-    "alternateInputs": [
-      "2,1,4,3"
-    ],
+    "alternateInputs": ["2,1,4,3"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -407,15 +338,9 @@
     "block": "+2",
     "hit": "+48d (+10)",
     "counter": "",
-    "alternateInputs": [
-      "2,1,1+2"
-    ],
+    "alternateInputs": ["2,1,1+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Elbow",
-      "Combo from 2nd CH with 9f delay"
-    ]
+    "notes": ["Balcony Break", "Elbow", "Combo from 2nd CH with 9f delay"]
   },
   {
     "name": "Shion",
@@ -426,13 +351,9 @@
     "block": "-13",
     "hit": "+18a (+1)",
     "counter": "",
-    "alternateInputs": [
-      "3"
-    ],
+    "alternateInputs": ["3"],
     "categories": [],
-    "notes": [
-      "Balcony Break"
-    ]
+    "notes": ["Balcony Break"]
   },
   {
     "name": "Magic Four",
@@ -443,13 +364,9 @@
     "block": "-9",
     "hit": "+7",
     "counter": "+32d",
-    "alternateInputs": [
-      "4"
-    ],
+    "alternateInputs": ["4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Ryuuntsui - Misogi",
@@ -460,9 +377,7 @@
     "block": "-6",
     "hit": "+26a (+8)",
     "counter": "",
-    "alternateInputs": [
-      "3+4"
-    ],
+    "alternateInputs": ["3+4"],
     "categories": [],
     "notes": [
       "Spike",
@@ -480,14 +395,9 @@
     "block": "-3",
     "hit": "-3",
     "counter": "+4",
-    "alternateInputs": [
-      "1+4"
-    ],
+    "alternateInputs": ["1+4"],
     "categories": [],
-    "notes": [
-      "Jail from 1st attack",
-      "CH advantage listed is for the 2nd hit"
-    ]
+    "notes": ["Jail from 1st attack", "CH advantage listed is for the 2nd hit"]
   },
   {
     "name": "",
@@ -498,13 +408,9 @@
     "block": "-2",
     "hit": "+9",
     "counter": "",
-    "alternateInputs": [
-      "1+4,2"
-    ],
+    "alternateInputs": ["1+4,2"],
     "categories": [],
-    "notes": [
-      "Combo from 2nd CH"
-    ]
+    "notes": ["Combo from 2nd CH"]
   },
   {
     "name": "White Heron Dance",
@@ -515,13 +421,9 @@
     "block": "-15",
     "hit": "+11a (+2)",
     "counter": "",
-    "alternateInputs": [
-      "1+4,2,4"
-    ],
+    "alternateInputs": ["1+4,2,4"],
     "categories": [],
-    "notes": [
-      "Combo from 3rd CH"
-    ]
+    "notes": ["Combo from 3rd CH"]
   },
   {
     "name": "White Heron Lower Dance",
@@ -532,13 +434,9 @@
     "block": "-23~-22",
     "hit": "+27a",
     "counter": "",
-    "alternateInputs": [
-      "1+4,2,d+4"
-    ],
+    "alternateInputs": ["1+4,2,d+4"],
     "categories": [],
-    "notes": [
-      "Combo from 3rd CH"
-    ]
+    "notes": ["Combo from 3rd CH"]
   },
   {
     "name": "",
@@ -549,13 +447,9 @@
     "block": "-11~-10",
     "hit": "+1~+2",
     "counter": "",
-    "alternateInputs": [
-      "1+4,3"
-    ],
+    "alternateInputs": ["1+4,3"],
     "categories": [],
-    "notes": [
-      "Combo from 2nd CH"
-    ]
+    "notes": ["Combo from 2nd CH"]
   },
   {
     "name": "White Heron Sun Palm",
@@ -566,13 +460,9 @@
     "block": "-13~-12",
     "hit": "+17a (+10)",
     "counter": "",
-    "alternateInputs": [
-      "1+4,3,1"
-    ],
+    "alternateInputs": ["1+4,3,1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "White Heron Moon Kick",
@@ -583,13 +473,9 @@
     "block": "-13~-12",
     "hit": "+4c~+5c",
     "counter": "+26a",
-    "alternateInputs": [
-      "1+4,3,4"
-    ],
+    "alternateInputs": ["1+4,3,4"],
     "categories": [],
-    "notes": [
-      "Combo from 3rd CH"
-    ]
+    "notes": ["Combo from 3rd CH"]
   },
   {
     "name": "Izumo Smash",
@@ -600,13 +486,9 @@
     "block": "+0",
     "hit": "+9",
     "counter": "+14",
-    "alternateInputs": [
-      "f+1"
-    ],
+    "alternateInputs": ["f+1"],
     "categories": [],
-    "notes": [
-      "Restores 2 health and 2 recoverable on hit"
-    ]
+    "notes": ["Restores 2 health and 2 recoverable on hit"]
   },
   {
     "name": "Demon Slayer",
@@ -617,13 +499,9 @@
     "block": "-18",
     "hit": "+33a (+23)",
     "counter": "",
-    "alternateInputs": [
-      "f+2"
-    ],
+    "alternateInputs": ["f+2"],
     "categories": [],
-    "notes": [
-      "Cancel to r26 FC with D"
-    ]
+    "notes": ["Cancel to r26 FC with D"]
   },
   {
     "name": "",
@@ -634,9 +512,7 @@
     "block": "-9",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "f+3"
-    ],
+    "alternateInputs": ["f+3"],
     "categories": [],
     "notes": [
       "Enter SS -16 +14g r21 with u_d",
@@ -653,12 +529,8 @@
     "block": "+6",
     "hit": "+11",
     "counter": "+20c",
-    "alternateInputs": [
-      "f+3,2"
-    ],
-    "categories": [
-      "homing"
-    ],
+    "alternateInputs": ["f+3,2"],
+    "categories": ["homing"],
     "notes": [
       "Homing",
       "Combo from 1st hit with 5f delay",
@@ -674,14 +546,9 @@
     "block": "-13~-11",
     "hit": "+28a (+13)",
     "counter": "",
-    "alternateInputs": [
-      "f+3,4"
-    ],
+    "alternateInputs": ["f+3,4"],
     "categories": [],
-    "notes": [
-      "Tornado",
-      "Combo from 1st hit with 5f delay"
-    ]
+    "notes": ["Tornado", "Combo from 1st hit with 5f delay"]
   },
   {
     "name": "Getsukankyaku",
@@ -692,16 +559,9 @@
     "block": "+3~+5",
     "hit": "+13~+15",
     "counter": "",
-    "alternateInputs": [
-      "f+4"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Balcony Break (airborne)",
-      "Homing"
-    ]
+    "alternateInputs": ["f+4"],
+    "categories": ["homing"],
+    "notes": ["Balcony Break (airborne)", "Homing"]
   },
   {
     "name": "Inner Peace",
@@ -712,12 +572,8 @@
     "block": "+2",
     "hit": "+26g",
     "counter": "+23",
-    "alternateInputs": [
-      "f+1+2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["f+1+2"],
+    "categories": ["parry"],
     "notes": [
       "Balcony Break (airborne)",
       "Transition to r20 MIA on hit only",
@@ -735,12 +591,8 @@
     "block": "+0",
     "hit": "+25a",
     "counter": "",
-    "alternateInputs": [
-      "f+2+3"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["f+2+3"],
+    "categories": ["parry"],
     "notes": [
       "Balcony Break (airborne)",
       "Punch sabaki",
@@ -756,13 +608,9 @@
     "block": "-3",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "df+1"
-    ],
+    "alternateInputs": ["df+1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Habotan",
@@ -773,14 +621,9 @@
     "block": "-11",
     "hit": "+2",
     "counter": "+13g",
-    "alternateInputs": [
-      "df+1,1"
-    ],
+    "alternateInputs": ["df+1,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit",
-      "Interrupt with i5 from 1st block"
-    ]
+    "notes": ["Combo from 1st hit", "Interrupt with i5 from 1st block"]
   },
   {
     "name": "Aya Stitch",
@@ -791,14 +634,9 @@
     "block": "-4",
     "hit": "+6",
     "counter": "+11",
-    "alternateInputs": [
-      "df+1,2"
-    ],
+    "alternateInputs": ["df+1,2"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit",
-      "Interrupt with i4 from 1st block"
-    ]
+    "notes": ["Combo from 1st hit", "Interrupt with i4 from 1st block"]
   },
   {
     "name": "Mizuho",
@@ -809,13 +647,9 @@
     "block": "-12",
     "hit": "+29a (+19)",
     "counter": "",
-    "alternateInputs": [
-      "df+2"
-    ],
+    "alternateInputs": ["df+2"],
     "categories": [],
-    "notes": [
-      "Launches crouching opponent"
-    ]
+    "notes": ["Launches crouching opponent"]
   },
   {
     "name": "Ame-no-Murakumo",
@@ -826,9 +660,7 @@
     "block": "-9",
     "hit": "+38a (+28)",
     "counter": "",
-    "alternateInputs": [
-      "df+2,1+2"
-    ],
+    "alternateInputs": ["df+2,1+2"],
     "categories": [],
     "notes": [
       "Combo from 1st hit",
@@ -846,16 +678,9 @@
     "block": "-8",
     "hit": "+19a (+10)",
     "counter": "",
-    "alternateInputs": [
-      "df+3"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Balcony Break"
-    ]
+    "alternateInputs": ["df+3"],
+    "categories": ["homing"],
+    "notes": ["Homing", "Balcony Break"]
   },
   {
     "name": "Katabami",
@@ -866,9 +691,7 @@
     "block": "-14",
     "hit": "+48a (+17)",
     "counter": "+52a",
-    "alternateInputs": [
-      "df+4"
-    ],
+    "alternateInputs": ["df+4"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -885,13 +708,9 @@
     "block": "-11",
     "hit": "+1",
     "counter": "",
-    "alternateInputs": [
-      "df+3+4"
-    ],
+    "alternateInputs": ["df+3+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Heavenly Sun Palm",
@@ -902,13 +721,9 @@
     "block": "-13",
     "hit": "+17a (+10)",
     "counter": "",
-    "alternateInputs": [
-      "df+3+4,1"
-    ],
+    "alternateInputs": ["df+3+4,1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Heavenly Moon Kick",
@@ -919,13 +734,9 @@
     "block": "-13",
     "hit": "+4c",
     "counter": "+26a",
-    "alternateInputs": [
-      "df+3+4,4"
-    ],
+    "alternateInputs": ["df+3+4,4"],
     "categories": [],
-    "notes": [
-      "Combo from 1st CH"
-    ]
+    "notes": ["Combo from 1st CH"]
   },
   {
     "name": "Narumi",
@@ -936,13 +747,9 @@
     "block": "-4c",
     "hit": "+9c",
     "counter": "+18a",
-    "alternateInputs": [
-      "d+2"
-    ],
+    "alternateInputs": ["d+2"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike"]
   },
   {
     "name": "",
@@ -953,13 +760,9 @@
     "block": "-12",
     "hit": "-1",
     "counter": "",
-    "alternateInputs": [
-      "d+4"
-    ],
+    "alternateInputs": ["d+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Suminagashi",
@@ -970,14 +773,9 @@
     "block": "-9",
     "hit": "+13a (+4)",
     "counter": "",
-    "alternateInputs": [
-      "d+4,4"
-    ],
+    "alternateInputs": ["d+4,4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 1st CH"
-    ]
+    "notes": ["Balcony Break", "Combo from 1st CH"]
   },
   {
     "name": "Kamudo-no-Tsurugi",
@@ -988,12 +786,8 @@
     "block": "-9",
     "hit": "+72a (+56)",
     "counter": "",
-    "alternateInputs": [
-      "d+1+2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["d+1+2"],
+    "categories": ["parry"],
     "notes": [
       "Tornado",
       "Chip damage (11) on block",
@@ -1010,9 +804,7 @@
     "block": "-25",
     "hit": "+30a (+20)",
     "counter": "",
-    "alternateInputs": [
-      "d+3+4"
-    ],
+    "alternateInputs": ["d+3+4"],
     "categories": [],
     "notes": [
       " ",
@@ -1031,13 +823,9 @@
     "block": "-8",
     "hit": "+1",
     "counter": "",
-    "alternateInputs": [
-      "db+1"
-    ],
+    "alternateInputs": ["db+1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1048,13 +836,9 @@
     "block": "-11",
     "hit": "+0",
     "counter": "",
-    "alternateInputs": [
-      "db+1,1"
-    ],
+    "alternateInputs": ["db+1,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit"
-    ]
+    "notes": ["Combo from 1st hit"]
   },
   {
     "name": "Hourai's Dance",
@@ -1065,12 +849,8 @@
     "block": "-15",
     "hit": "+21a (+11)",
     "counter": "",
-    "alternateInputs": [
-      "db+1,1,1+2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["db+1,1,1+2"],
+    "categories": ["parry"],
     "notes": [
       "Balcony Break",
       "Combo from any hit",
@@ -1087,13 +867,9 @@
     "block": "-12",
     "hit": "+2",
     "counter": "+14g",
-    "alternateInputs": [
-      "db+2"
-    ],
+    "alternateInputs": ["db+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Leg Scythe",
@@ -1104,13 +880,9 @@
     "block": "-12",
     "hit": "+2",
     "counter": "+6c",
-    "alternateInputs": [
-      "db+3"
-    ],
+    "alternateInputs": ["db+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1121,13 +893,9 @@
     "block": "-11~-9",
     "hit": "+0~+2",
     "counter": "+3~+5",
-    "alternateInputs": [
-      "db+4"
-    ],
+    "alternateInputs": ["db+4"],
     "categories": [],
-    "notes": [
-      "Transition to r28 FC with D"
-    ]
+    "notes": ["Transition to r28 FC with D"]
   },
   {
     "name": "",
@@ -1138,14 +906,9 @@
     "block": "-7~-5",
     "hit": "+4~+6",
     "counter": "+35a",
-    "alternateInputs": [
-      "db+4,4"
-    ],
+    "alternateInputs": ["db+4,4"],
     "categories": [],
-    "notes": [
-      "Combo from 1st CH",
-      "Transition to r28 FC with D"
-    ]
+    "notes": ["Combo from 1st CH", "Transition to r28 FC with D"]
   },
   {
     "name": "Kariashi",
@@ -1156,13 +919,9 @@
     "block": "-7~-5",
     "hit": "+4~+6",
     "counter": "+35a",
-    "alternateInputs": [
-      "db+4,4,4"
-    ],
+    "alternateInputs": ["db+4,4,4"],
     "categories": [],
-    "notes": [
-      "Transition to r28 FC with D"
-    ]
+    "notes": ["Transition to r28 FC with D"]
   },
   {
     "name": "Kariashi Hakuro",
@@ -1173,9 +932,7 @@
     "block": "-3",
     "hit": "-3",
     "counter": "+4",
-    "alternateInputs": [
-      "db+4,1+4"
-    ],
+    "alternateInputs": ["db+4,1+4"],
     "categories": [],
     "notes": [
       "Combo from 1st hit",
@@ -1195,9 +952,7 @@
     "block": "-10~-9",
     "hit": "+6~+7",
     "counter": "+0d",
-    "alternateInputs": [
-      "b+1"
-    ],
+    "alternateInputs": ["b+1"],
     "categories": [],
     "notes": [
       "Cancel to r39 FC with D on frame 25",
@@ -1214,13 +969,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "b+2"
-    ],
+    "alternateInputs": ["b+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1231,9 +982,7 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "b+2,1"
-    ],
+    "alternateInputs": ["b+2,1"],
     "categories": [],
     "notes": [
       "Elbow",
@@ -1251,9 +1000,7 @@
     "block": "-13",
     "hit": "+13a (+4)",
     "counter": "",
-    "alternateInputs": [
-      "b+2,1,1"
-    ],
+    "alternateInputs": ["b+2,1,1"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1270,12 +1017,8 @@
     "block": "-9",
     "hit": "+30a (+15)",
     "counter": "+69a (+53)",
-    "alternateInputs": [
-      "b+2,1,2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["b+2,1,2"],
+    "categories": ["parry"],
     "notes": [
       "Tornado",
       "Combo from 2nd CH with 6f delay",
@@ -1294,9 +1037,7 @@
     "block": "-8~-7",
     "hit": "+42a (-16)",
     "counter": "",
-    "alternateInputs": [
-      "b+2,1,4"
-    ],
+    "alternateInputs": ["b+2,1,4"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1313,13 +1054,9 @@
     "block": "-9",
     "hit": "+3",
     "counter": "",
-    "alternateInputs": [
-      "b+2,2"
-    ],
+    "alternateInputs": ["b+2,2"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit with 5f? delay"
-    ]
+    "notes": ["Combo from 1st hit with 5f? delay"]
   },
   {
     "name": "Dragon Wheel Kick",
@@ -1330,13 +1067,9 @@
     "block": "-19~-18",
     "hit": "+22a (+12)",
     "counter": "",
-    "alternateInputs": [
-      "b+3"
-    ],
+    "alternateInputs": ["b+3"],
     "categories": [],
-    "notes": [
-      "Sometimes written Backflip"
-    ]
+    "notes": ["Sometimes written Backflip"]
   },
   {
     "name": "Ryuusha Renken",
@@ -1347,12 +1080,8 @@
     "block": "-9",
     "hit": "+30a (+15)",
     "counter": "+69a (+53)",
-    "alternateInputs": [
-      "b+3,2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["b+3,2"],
+    "categories": ["parry"],
     "notes": [
       "Tornado",
       "Combo from 1st hit",
@@ -1370,9 +1099,7 @@
     "block": "-11",
     "hit": "+0~+2",
     "counter": "+3",
-    "alternateInputs": [
-      "b+3,4"
-    ],
+    "alternateInputs": ["b+3,4"],
     "categories": [],
     "notes": [
       "Combo from 1st hit",
@@ -1389,13 +1116,9 @@
     "block": "-7",
     "hit": "+5",
     "counter": "",
-    "alternateInputs": [
-      "b+4"
-    ],
+    "alternateInputs": ["b+4"],
     "categories": [],
-    "notes": [
-      "Knee"
-    ]
+    "notes": ["Knee"]
   },
   {
     "name": "Shirabyoushi",
@@ -1406,13 +1129,9 @@
     "block": "-13",
     "hit": "+5",
     "counter": "+28a (+18)",
-    "alternateInputs": [
-      "b+4,2"
-    ],
+    "alternateInputs": ["b+4,2"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit with 8f delay"
-    ]
+    "notes": ["Combo from 1st hit with 8f delay"]
   },
   {
     "name": "Omoikane",
@@ -1423,16 +1142,9 @@
     "block": "-12",
     "hit": "+9a (+0)",
     "counter": "",
-    "alternateInputs": [
-      "b+3+4"
-    ],
-    "categories": [
-      "powercrush"
-    ],
-    "notes": [
-      "Balcony Break",
-      "-8 on block after absorbing an attack"
-    ]
+    "alternateInputs": ["b+3+4"],
+    "categories": ["powercrush"],
+    "notes": ["Balcony Break", "-8 on block after absorbing an attack"]
   },
   {
     "name": "Shinki",
@@ -1443,13 +1155,9 @@
     "block": "",
     "hit": "+6a",
     "counter": "",
-    "alternateInputs": [
-      "b+2+3"
-    ],
+    "alternateInputs": ["b+2+3"],
     "categories": [],
-    "notes": [
-      "Balcony Break"
-    ]
+    "notes": ["Balcony Break"]
   },
   {
     "name": "Chikura",
@@ -1460,13 +1168,9 @@
     "block": "-3~-2",
     "hit": "+22a",
     "counter": "",
-    "alternateInputs": [
-      "u+4"
-    ],
+    "alternateInputs": ["u+4"],
     "categories": [],
-    "notes": [
-      "Balcony Break (airborne)"
-    ]
+    "notes": ["Balcony Break (airborne)"]
   },
   {
     "name": "Divine Exile - Heaven",
@@ -1477,9 +1181,7 @@
     "block": "-14",
     "hit": "+22a",
     "counter": "",
-    "alternateInputs": [
-      "uf+1"
-    ],
+    "alternateInputs": ["uf+1"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1498,12 +1200,8 @@
     "block": "-9",
     "hit": "+30a (+15)",
     "counter": "+69a (+53)",
-    "alternateInputs": [
-      "uf+2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["uf+2"],
+    "categories": ["parry"],
     "notes": [
       "Tornado",
       "Chip damage (9) on block",
@@ -1520,13 +1218,9 @@
     "block": "-6",
     "hit": "+5",
     "counter": "+30a",
-    "alternateInputs": [
-      "uf+3"
-    ],
+    "alternateInputs": ["uf+3"],
     "categories": [],
-    "notes": [
-      "Balcony Break (airborne)"
-    ]
+    "notes": ["Balcony Break (airborne)"]
   },
   {
     "name": "",
@@ -1537,13 +1231,9 @@
     "block": "-20",
     "hit": "-9",
     "counter": "",
-    "alternateInputs": [
-      "uf+4"
-    ],
+    "alternateInputs": ["uf+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Housenka - Misogi",
@@ -1554,9 +1244,7 @@
     "block": "-12",
     "hit": "+84a (+68)",
     "counter": "",
-    "alternateInputs": [
-      "uf+4,3"
-    ],
+    "alternateInputs": ["uf+4,3"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -1575,13 +1263,9 @@
     "block": "-8~-4",
     "hit": "+18a",
     "counter": "",
-    "alternateInputs": [
-      "uf+3+4"
-    ],
+    "alternateInputs": ["uf+3+4"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike"]
   },
   {
     "name": "",
@@ -1592,14 +1276,9 @@
     "block": "-12",
     "hit": "+3",
     "counter": "",
-    "alternateInputs": [
-      "f,F+2"
-    ],
+    "alternateInputs": ["f,F+2"],
     "categories": [],
-    "notes": [
-      "Enter GEN +1 +16g r18 wiith F",
-      "Enter GEN +1 +16g r18 wiith B"
-    ]
+    "notes": ["Enter GEN +1 +16g r18 wiith F", "Enter GEN +1 +16g r18 wiith B"]
   },
   {
     "name": "Suiei Ura Saika",
@@ -1610,9 +1289,7 @@
     "block": "-13",
     "hit": "+8a",
     "counter": "+7 +53a",
-    "alternateInputs": [
-      "f,F+2,2"
-    ],
+    "alternateInputs": ["f,F+2,2"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -1630,13 +1307,9 @@
     "block": "-8~-7",
     "hit": "+29a (+14)",
     "counter": "",
-    "alternateInputs": [
-      "f,F+2,3"
-    ],
+    "alternateInputs": ["f,F+2,3"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit with 8f delay"
-    ]
+    "notes": ["Combo from 1st hit with 8f delay"]
   },
   {
     "name": "",
@@ -1647,16 +1320,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "f,F+3"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Balcony Break (airborne)"
-    ]
+    "alternateInputs": ["f,F+3"],
+    "categories": ["homing"],
+    "notes": ["Homing", "Balcony Break (airborne)"]
   },
   {
     "name": "Yukimiguruma",
@@ -1667,9 +1333,7 @@
     "block": "+3",
     "hit": "+19a",
     "counter": "",
-    "alternateInputs": [
-      "f,F+3,3+4"
-    ],
+    "alternateInputs": ["f,F+3,3+4"],
     "categories": [],
     "notes": [
       "Spike",
@@ -1687,12 +1351,8 @@
     "block": "+6",
     "hit": "+23a (+13)",
     "counter": "",
-    "alternateInputs": [
-      "f,F+1+2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["f,F+1+2"],
+    "categories": ["parry"],
     "notes": [
       "Balcony Break",
       "Chip damage (6) on block; +5 chip damage in Heat",
@@ -1709,15 +1369,9 @@
     "block": "+3~+7",
     "hit": "+14a (+5)",
     "counter": "+46d (-1)",
-    "alternateInputs": [
-      "f,f,F+3"
-    ],
+    "alternateInputs": ["f,f,F+3"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Chip damage on block",
-      "Sometimes written wr3"
-    ]
+    "notes": ["Balcony Break", "Chip damage on block", "Sometimes written wr3"]
   },
   {
     "name": "",
@@ -1728,13 +1382,9 @@
     "block": "-6",
     "hit": "+5c",
     "counter": "",
-    "alternateInputs": [
-      "FC 3+4"
-    ],
+    "alternateInputs": ["FC 3+4"],
     "categories": [],
-    "notes": [
-      "Can recover in r24 FC with D"
-    ]
+    "notes": ["Can recover in r24 FC with D"]
   },
   {
     "name": "Twin Cloud Kicks",
@@ -1745,13 +1395,9 @@
     "block": "+0~+1",
     "hit": "+15a",
     "counter": "",
-    "alternateInputs": [
-      "FC 3+4,3"
-    ],
+    "alternateInputs": ["FC 3+4,3"],
     "categories": [],
-    "notes": [
-      "Can recover in r24 FC with D"
-    ]
+    "notes": ["Can recover in r24 FC with D"]
   },
   {
     "name": "Divine Exile - Earth",
@@ -1762,9 +1408,7 @@
     "block": "-19",
     "hit": "+26a (+11)",
     "counter": "",
-    "alternateInputs": [
-      "FC df+1"
-    ],
+    "alternateInputs": ["FC df+1"],
     "categories": [],
     "notes": [
       "Deals 18 damage to self (12 recoverable)",
@@ -1781,13 +1425,9 @@
     "block": "-11",
     "hit": "+0",
     "counter": "+18",
-    "alternateInputs": [
-      "FC df+2"
-    ],
+    "alternateInputs": ["FC df+2"],
     "categories": [],
-    "notes": [
-      "Only i14 or faster attacks guaranteed on CH"
-    ]
+    "notes": ["Only i14 or faster attacks guaranteed on CH"]
   },
   {
     "name": "Kanamegaeshi",
@@ -1798,14 +1438,9 @@
     "block": "-19",
     "hit": "+0c",
     "counter": "",
-    "alternateInputs": [
-      "FC df+3"
-    ],
+    "alternateInputs": ["FC df+3"],
     "categories": [],
-    "notes": [
-      "Clean hit +10a, 15 damage",
-      "Opponent recovers FDFA on CL"
-    ]
+    "notes": ["Clean hit +10a, 15 damage", "Opponent recovers FDFA on CL"]
   },
   {
     "name": "",
@@ -1816,13 +1451,9 @@
     "block": "-6",
     "hit": "+5",
     "counter": "",
-    "alternateInputs": [
-      "ws1"
-    ],
+    "alternateInputs": ["ws1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1833,9 +1464,7 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "ws1,1"
-    ],
+    "alternateInputs": ["ws1,1"],
     "categories": [],
     "notes": [
       "Elbow",
@@ -1853,9 +1482,7 @@
     "block": "-13",
     "hit": "+13a (+4)",
     "counter": "",
-    "alternateInputs": [
-      "ws1,1,1"
-    ],
+    "alternateInputs": ["ws1,1,1"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1872,12 +1499,8 @@
     "block": "-9",
     "hit": "+30a (+15)",
     "counter": "+69a (+53)",
-    "alternateInputs": [
-      "ws1,1,2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["ws1,1,2"],
+    "categories": ["parry"],
     "notes": [
       "Tornado",
       "Combo from 2nd CH with 6f delay",
@@ -1896,9 +1519,7 @@
     "block": "-8",
     "hit": "+42d (-16)",
     "counter": "",
-    "alternateInputs": [
-      "ws1,1,4"
-    ],
+    "alternateInputs": ["ws1,1,4"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1916,9 +1537,7 @@
     "block": "-11",
     "hit": "+0c",
     "counter": "",
-    "alternateInputs": [
-      "ws1,4"
-    ],
+    "alternateInputs": ["ws1,4"],
     "categories": [],
     "notes": [
       "Spike",
@@ -1936,14 +1555,9 @@
     "block": "-16",
     "hit": "+0c",
     "counter": "+13a",
-    "alternateInputs": [
-      "ws1,4,2"
-    ],
+    "alternateInputs": ["ws1,4,2"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "Combo from 2nd CH"
-    ]
+    "notes": ["Spike", "Combo from 2nd CH"]
   },
   {
     "name": "Tomoefuji",
@@ -1954,15 +1568,9 @@
     "block": "-20",
     "hit": "+16a (+11)",
     "counter": "",
-    "alternateInputs": [
-      "ws1,4,1+2"
-    ],
+    "alternateInputs": ["ws1,4,1+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Elbow",
-      "Combo from 2nd CH"
-    ]
+    "notes": ["Balcony Break", "Elbow", "Combo from 2nd CH"]
   },
   {
     "name": "",
@@ -1973,13 +1581,9 @@
     "block": "-8",
     "hit": "+5",
     "counter": "+32a",
-    "alternateInputs": [
-      "ws2"
-    ],
+    "alternateInputs": ["ws2"],
     "categories": [],
-    "notes": [
-      "Hits grounded up-close only"
-    ]
+    "notes": ["Hits grounded up-close only"]
   },
   {
     "name": "Hyakkaou",
@@ -1990,14 +1594,9 @@
     "block": "-12",
     "hit": "+19a (10)",
     "counter": "",
-    "alternateInputs": [
-      "ws2,1"
-    ],
+    "alternateInputs": ["ws2,1"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 1st hit"
-    ]
+    "notes": ["Balcony Break", "Combo from 1st hit"]
   },
   {
     "name": "Gioh",
@@ -2008,13 +1607,9 @@
     "block": "-13",
     "hit": "+25a (+5)",
     "counter": "",
-    "alternateInputs": [
-      "ws3"
-    ],
+    "alternateInputs": ["ws3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Ichikaku",
@@ -2025,13 +1620,9 @@
     "block": "-12",
     "hit": "+18a (+11)",
     "counter": "",
-    "alternateInputs": [
-      "ws4"
-    ],
+    "alternateInputs": ["ws4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Sudare Nagashi",
@@ -2042,14 +1633,9 @@
     "block": "-2",
     "hit": "+5",
     "counter": "+14 +63a",
-    "alternateInputs": [
-      "ws1+2"
-    ],
+    "alternateInputs": ["ws1+2"],
     "categories": [],
-    "notes": [
-      "Elbow",
-      "Cancel to r39 FC with D on frame 20"
-    ]
+    "notes": ["Elbow", "Cancel to r39 FC with D on frame 20"]
   },
   {
     "name": "Flowing Moon Scent",
@@ -2060,13 +1646,9 @@
     "block": "-21",
     "hit": "+38a (+28)",
     "counter": "",
-    "alternateInputs": [
-      "ws3+4"
-    ],
+    "alternateInputs": ["ws3+4"],
     "categories": [],
-    "notes": [
-      "Tornado"
-    ]
+    "notes": ["Tornado"]
   },
   {
     "name": "Izumo Strike",
@@ -2077,16 +1659,9 @@
     "block": "+6",
     "hit": "+11",
     "counter": "+20c",
-    "alternateInputs": [
-      "u+2"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Restores 2 health and 2 recoverable on hit"
-    ]
+    "alternateInputs": ["u+2"],
+    "categories": ["homing"],
+    "notes": ["Homing", "Restores 2 health and 2 recoverable on hit"]
   },
   {
     "name": "",
@@ -2097,13 +1672,9 @@
     "block": "-7",
     "hit": "+4",
     "counter": "",
-    "alternateInputs": [
-      "IZU 1"
-    ],
+    "alternateInputs": ["IZU 1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Haraede Kannagi",
@@ -2114,12 +1685,8 @@
     "block": "-4",
     "hit": "+30a (+20)",
     "counter": "",
-    "alternateInputs": [
-      "IZU 1,1"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["IZU 1,1"],
+    "categories": ["parry"],
     "notes": [
       "Balcony Break",
       "Tornado",
@@ -2138,9 +1705,7 @@
     "block": "-13",
     "hit": "+6a",
     "counter": "+15a",
-    "alternateInputs": [
-      "IZU 1,2"
-    ],
+    "alternateInputs": ["IZU 1,2"],
     "categories": [],
     "notes": [
       "Spike",
@@ -2157,12 +1722,8 @@
     "block": "-13~-11",
     "hit": "+34a (+24)",
     "counter": "",
-    "alternateInputs": [
-      "IZU 2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["IZU 2"],
+    "categories": ["parry"],
     "notes": [
       "Tornado",
       "Chip damage (9) on block",
@@ -2179,13 +1740,9 @@
     "block": "-37",
     "hit": "-1c",
     "counter": "+23a",
-    "alternateInputs": [
-      "IZU 4"
-    ],
+    "alternateInputs": ["IZU 4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Wakeikazuchi - Misogi",
@@ -2196,12 +1753,8 @@
     "block": "-14~-13",
     "hit": "+14a (+3)",
     "counter": "",
-    "alternateInputs": [
-      "IZU 4,1"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["IZU 4,1"],
+    "categories": ["parry"],
     "notes": [
       "Balcony Break",
       "Combo from 1st hit",
@@ -2219,12 +1772,8 @@
     "block": "-12",
     "hit": "+19a",
     "counter": "",
-    "alternateInputs": [
-      "IZU 1+2"
-    ],
-    "categories": [
-      "powercrush"
-    ],
+    "alternateInputs": ["IZU 1+2"],
+    "categories": ["powercrush"],
     "notes": [
       "Balcony Break",
       "Spike",
@@ -2240,15 +1789,9 @@
     "block": "-6",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "IZU 1+4"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1+2"
-    ]
+    "alternateInputs": ["IZU 1+4"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1+2"]
   },
   {
     "name": "Dianthus Garden",
@@ -2256,19 +1799,15 @@
     "hit_level": "m",
     "damage": "21",
     "startup": "i16~17",
-    "block": "-9",
+    "block": "-6",
     "hit": "+2",
-    "counter": "+23",
-    "alternateInputs": [
-      "IZU f+1+2"
-    ],
-    "categories": [
-      "homing"
-    ],
+    "counter": "+25",
+    "alternateInputs": ["IZU f+1+2"],
+    "categories": ["homing"],
     "notes": [
       "Homing",
       "Balcony Break (airborne)",
-      "Only i13 or faster attacks guaranteed on CH"
+      "Only i15 or faster attacks guaranteed on CH"
     ]
   },
   {
@@ -2280,12 +1819,8 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "f+3+4"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["f+3+4"],
+    "categories": ["parry"],
     "notes": [
       "Cancel to r34 FC with D on frame 16",
       "Parries low punches or kicks",
@@ -2301,16 +1836,9 @@
     "block": "",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "f+3+4,P (Low)"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Restores 14 health and 14 recoverable",
-      "Opponent recovers FDFA"
-    ]
+    "alternateInputs": ["f+3+4,P (Low)"],
+    "categories": ["throw"],
+    "notes": ["Restores 14 health and 14 recoverable", "Opponent recovers FDFA"]
   },
   {
     "name": "Throw Reversal",
@@ -2321,12 +1849,8 @@
     "block": "",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "f+3+4,P (Throw)"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["f+3+4,P (Throw)"],
+    "categories": ["throw"],
     "notes": [
       "Restores 8 health and 8 recoverable",
       "Opponent recovers FUFA (sideways)"
@@ -2341,13 +1865,9 @@
     "block": "-13",
     "hit": "+3c",
     "counter": "+26a",
-    "alternateInputs": [
-      "GEN 1"
-    ],
+    "alternateInputs": ["GEN 1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Kazama Style Spirit",
@@ -2358,12 +1878,8 @@
     "block": "-13~-12",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "GEN 2"
-    ],
-    "categories": [
-      "powercrush"
-    ],
+    "alternateInputs": ["GEN 2"],
+    "categories": ["powercrush"],
     "notes": [
       "Transition to attack throw on front standing or airborne hit",
       "Deals 12 damage to self (8 recoverable)",
@@ -2381,13 +1897,9 @@
     "block": "-4c~-1c",
     "hit": "+4c~+7c",
     "counter": "",
-    "alternateInputs": [
-      "GEN 3"
-    ],
+    "alternateInputs": ["GEN 3"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike"]
   },
   {
     "name": "Getsuun Renken",
@@ -2398,12 +1910,8 @@
     "block": "-9",
     "hit": "+33a (+18)",
     "counter": "",
-    "alternateInputs": [
-      "GEN 3,2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["GEN 3,2"],
+    "categories": ["parry"],
     "notes": [
       "Combo from 1st hit with 8f delay",
       "Input can be delayed 10f",
@@ -2420,16 +1928,9 @@
     "block": "+4~+6",
     "hit": "+26a (+17)",
     "counter": "",
-    "alternateInputs": [
-      "GEN 4"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Balcony Break"
-    ]
+    "alternateInputs": ["GEN 4"],
+    "categories": ["homing"],
+    "notes": ["Homing", "Balcony Break"]
   },
   {
     "name": "Miare",
@@ -2440,9 +1941,7 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "b+1+2"
-    ],
+    "alternateInputs": ["b+1+2"],
     "categories": [],
     "notes": [
       "Enter SS r16 with u_d",
@@ -2460,12 +1959,8 @@
     "block": "-9",
     "hit": "+72a (+56)",
     "counter": "",
-    "alternateInputs": [
-      "MIA 1"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["MIA 1"],
+    "categories": ["parry"],
     "notes": [
       "Tornado",
       "Chip damage (12) on block",
@@ -2482,16 +1977,9 @@
     "block": "+6",
     "hit": "+11",
     "counter": "+20c",
-    "alternateInputs": [
-      "MIA 1+2"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Restores 2 health and 2 recoverable on hit"
-    ]
+    "alternateInputs": ["MIA 1+2"],
+    "categories": ["homing"],
+    "notes": ["Homing", "Restores 2 health and 2 recoverable on hit"]
   },
   {
     "name": "Genjitsu",
@@ -2502,12 +1990,8 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "MIA F"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["MIA F"],
+    "categories": ["parry"],
     "notes": [
       "Cancel to r34 FC with D on frame 16",
       "Parries low punches or kicks",
@@ -2523,9 +2007,7 @@
     "block": "-15",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "in rage df+1+2"
-    ],
+    "alternateInputs": ["in rage df+1+2"],
     "categories": [],
     "notes": [
       "Rage Art",
@@ -2547,13 +2029,12 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "1+2+3+4"
-    ],
+    "alternateInputs": ["1+2+3+4"],
     "categories": [],
     "notes": [
       "Can't block for 5 seconds",
-      "CH state for 5 seconds"
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {
@@ -2565,9 +2046,7 @@
     "block": "-9",
     "hit": "+14a (+5)",
     "counter": "+34d (+26)",
-    "alternateInputs": [
-      "SS 2"
-    ],
+    "alternateInputs": ["SS 2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -2584,12 +2063,8 @@
     "block": "-4",
     "hit": "+7c",
     "counter": "",
-    "alternateInputs": [
-      "SS 1+2"
-    ],
-    "categories": [
-      "homing"
-    ],
+    "alternateInputs": ["SS 1+2"],
+    "categories": ["homing"],
     "notes": [
       "Homing",
       "Spike",
@@ -2606,15 +2081,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "b+1+3"
-    ],
-    "categories": [
-      "parry"
-    ],
-    "notes": [
-      "Parries mid or high punches or kicks"
-    ]
+    "alternateInputs": ["b+1+3"],
+    "categories": ["parry"],
+    "notes": ["Parries mid or high punches or kicks"]
   },
   {
     "name": "",
@@ -2625,15 +2094,9 @@
     "block": "",
     "hit": "-4d",
     "counter": "",
-    "alternateInputs": [
-      "b+1+3,P"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Opponent recovers FDFT"
-    ]
+    "alternateInputs": ["b+1+3,P"],
+    "categories": ["throw"],
+    "notes": ["Opponent recovers FDFT"]
   },
   {
     "name": "Back Handspring",
@@ -2644,13 +2107,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "UB,b"
-    ],
+    "alternateInputs": ["UB,b"],
     "categories": [],
-    "notes": [
-      "Can perform wr3 with input 3"
-    ]
+    "notes": ["Can perform wr3 with input 3"]
   },
   {
     "name": "Wall Jump Attack",
@@ -2661,13 +2120,9 @@
     "block": "+4c~+6c",
     "hit": "+22a",
     "counter": "",
-    "alternateInputs": [
-      "(Back to wall) b,b,UB"
-    ],
+    "alternateInputs": ["(Back to wall) b,b,UB"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Shiho Nage",
@@ -2678,17 +2133,9 @@
     "block": "+0",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "1+3"
-    ],
-    "categories": [
-      "throw",
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Throw break 1 or 2"
-    ]
+    "alternateInputs": ["1+3"],
+    "categories": ["throw", "homing"],
+    "notes": ["Homing", "Throw break 1 or 2"]
   },
   {
     "name": "Katanuki",
@@ -2699,18 +2146,9 @@
     "block": "",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "2+4"
-    ],
-    "categories": [
-      "throw",
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Throw break 1 or 2",
-      "Side switch on hit"
-    ]
+    "alternateInputs": ["2+4"],
+    "categories": ["throw", "homing"],
+    "notes": ["Homing", "Throw break 1 or 2", "Side switch on hit"]
   },
   {
     "name": "Cloud Taste",
@@ -2721,15 +2159,9 @@
     "block": "-3",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "Left throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1"
-    ]
+    "alternateInputs": ["Left throw"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1"]
   },
   {
     "name": "Wind Wheel",
@@ -2740,16 +2172,9 @@
     "block": "-3",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "Right throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 2",
-      "Side switch on hit"
-    ]
+    "alternateInputs": ["Right throw"],
+    "categories": ["throw"],
+    "notes": ["Throw break 2", "Side switch on hit"]
   },
   {
     "name": "Twisted Limbs",
@@ -2760,16 +2185,9 @@
     "block": "",
     "hit": "+7d",
     "counter": "",
-    "alternateInputs": [
-      "Back throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Unbreakable",
-      "Side switch"
-    ]
+    "alternateInputs": ["Back throw"],
+    "categories": ["throw"],
+    "notes": ["Unbreakable", "Side switch"]
   },
   {
     "name": "White Mountain",
@@ -2780,16 +2198,9 @@
     "block": "-6",
     "hit": "-6d",
     "counter": "",
-    "alternateInputs": [
-      "df+2+3"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 2",
-      "Floor Break"
-    ]
+    "alternateInputs": ["df+2+3"],
+    "categories": ["throw"],
+    "notes": ["Throw break 2", "Floor Break"]
   },
   {
     "name": "Riai",
@@ -2800,15 +2211,9 @@
     "block": "-6",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "uf+1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1+2"
-    ]
+    "alternateInputs": ["uf+1+2"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1+2"]
   },
   {
     "name": "Falling Rain",
@@ -2819,12 +2224,8 @@
     "block": "-6",
     "hit": "+56a (+28)",
     "counter": "",
-    "alternateInputs": [
-      "FC db+1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["FC db+1+2"],
+    "categories": ["throw"],
     "notes": [
       "Throw break 1+2",
       "Opponent can tech roll to reduce the landing damage"

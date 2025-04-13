@@ -8,12 +8,8 @@
     "block": "+1",
     "hit": "+2c",
     "counter": "",
-    "alternateInputs": [
-      "2+3"
-    ],
-    "categories": [
-      "powercrush"
-    ],
+    "alternateInputs": ["2+3"],
+    "categories": ["powercrush"],
     "notes": [
       "Heat Burst",
       "Cancel to r45 with b,b",
@@ -32,9 +28,7 @@
     "block": "+6",
     "hit": "+0a",
     "counter": "",
-    "alternateInputs": [
-      "in heat 2+3"
-    ],
+    "alternateInputs": ["in heat 2+3"],
     "categories": [],
     "notes": [
       "Heat Smash",
@@ -60,13 +54,9 @@
     "block": "",
     "hit": "+35a",
     "counter": "",
-    "alternateInputs": [
-      "in heat 2+3+4"
-    ],
+    "alternateInputs": ["in heat 2+3+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Libertador Revolución",
@@ -77,16 +67,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "in heat f+3+4"
-    ],
-    "categories": [
-      "parry"
-    ],
-    "notes": [
-      "Parries all high or low attacks",
-      "Cancel to r20 with DB"
-    ]
+    "alternateInputs": ["in heat f+3+4"],
+    "categories": ["parry"],
+    "notes": ["Parries all high or low attacks", "Cancel to r20 with DB"]
   },
   {
     "name": "Double Blend Tempestad > Nuevo Libertador",
@@ -97,14 +80,9 @@
     "block": "+7",
     "hit": "+54a (+34)",
     "counter": "",
-    "alternateInputs": [
-      "in heat b+1,1,2,F"
-    ],
+    "alternateInputs": ["in heat b+1,1,2,F"],
     "categories": [],
-    "notes": [
-      "Strong Aerial Tailspin",
-      "Chip damage on block"
-    ]
+    "notes": ["Strong Aerial Tailspin", "Chip damage on block"]
   },
   {
     "name": "Mil Nudillo > Nuevo Libertador",
@@ -115,12 +93,8 @@
     "block": "+7",
     "hit": "+54a (+34)",
     "counter": "",
-    "alternateInputs": [
-      "in heat b+2,F"
-    ],
-    "categories": [
-      "homing"
-    ],
+    "alternateInputs": ["in heat b+2,F"],
+    "categories": ["homing"],
     "notes": [
       "Strong Aerial Tailspin",
       "Balcony Break",
@@ -137,9 +111,7 @@
     "block": "",
     "hit": "+32a",
     "counter": "",
-    "alternateInputs": [
-      "in heat LIB P (High)"
-    ],
+    "alternateInputs": ["in heat LIB P (High)"],
     "categories": [],
     "notes": [
       "Regenerates heat",
@@ -156,15 +128,9 @@
     "block": "",
     "hit": "+58a (+42)",
     "counter": "",
-    "alternateInputs": [
-      "in heat LIB P (Low)"
-    ],
+    "alternateInputs": ["in heat LIB P (Low)"],
     "categories": [],
-    "notes": [
-      "Tornado",
-      "Regenerates heat",
-      "Restores recoverable health"
-    ]
+    "notes": ["Tornado", "Regenerates heat", "Restores recoverable health"]
   },
   {
     "name": "Blend Tempestad > Nuevo Libertador",
@@ -175,14 +141,9 @@
     "block": "+7",
     "hit": "+54a (+34)",
     "counter": "",
-    "alternateInputs": [
-      "in heat LIB 1,2,F"
-    ],
+    "alternateInputs": ["in heat LIB 1,2,F"],
     "categories": [],
-    "notes": [
-      "Strong Aerial Tailspin",
-      "Chip damage on block"
-    ]
+    "notes": ["Strong Aerial Tailspin", "Chip damage on block"]
   },
   {
     "name": "One Drip Cielo",
@@ -190,17 +151,16 @@
     "hit_level": "M",
     "damage": "27",
     "startup": "i16~18",
-    "block": "-9~-7",
+    "block": "+4",
     "hit": "+58a (+42)",
     "counter": "",
-    "alternateInputs": [
-      "in heat LIB d+3+4"
-    ],
+    "alternateInputs": ["in heat LIB d+3+4"],
     "categories": [],
     "notes": [
       "Tornado",
       "Uses heat gauge",
-      "Restores recoverable health"
+      "Restores recoverable health",
+      "Transition to FC with D"
     ]
   },
   {
@@ -212,15 +172,9 @@
     "block": "-8",
     "hit": "+22g",
     "counter": "",
-    "alternateInputs": [
-      "LIB 2"
-    ],
+    "alternateInputs": ["LIB 2"],
     "categories": [],
-    "notes": [
-      "Heat Engager",
-      "Heat Dash +5, +36a (+26)",
-      "Balcony Break"
-    ]
+    "notes": ["Heat Engager", "Heat Dash +5, +36a (+26)", "Balcony Break"]
   },
   {
     "name": "Tifón Patear",
@@ -231,9 +185,7 @@
     "block": "-7",
     "hit": "+19a (+10)",
     "counter": "",
-    "alternateInputs": [
-      "f+4,4"
-    ],
+    "alternateInputs": ["f+4,4"],
     "categories": [],
     "notes": [
       "Heat Engager",
@@ -252,14 +204,9 @@
     "block": "-9",
     "hit": "+41a (+17)",
     "counter": "",
-    "alternateInputs": [
-      "f+1+2"
-    ],
-    "categories": [
-      "powercrush"
-    ],
+    "alternateInputs": ["f+1+2"],
+    "categories": ["powercrush"],
     "notes": [
-      "Heat Engager",
       "Heat Dash +5, +43a (+35)",
       "Balcony Break",
       "+0 on block if an attack is absorbed"
@@ -270,13 +217,11 @@
     "input": "b+3",
     "hit_level": "m",
     "damage": "21",
-    "startup": "i22",
-    "block": "+4c",
+    "startup": "i19",
+    "block": "+2c",
     "hit": "+8c",
     "counter": "",
-    "alternateInputs": [
-      "b+3"
-    ],
+    "alternateInputs": ["b+3"],
     "categories": [],
     "notes": [
       "Heat Engager",
@@ -290,17 +235,13 @@
     "name": "Smell the Coffee",
     "input": "d+1+3",
     "hit_level": "t",
-    "damage": "30",
+    "damage": "35",
     "startup": "i12~13",
     "block": "",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "d+1+3"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["d+1+3", "d+2+4"],
+    "categories": ["throw"],
     "notes": [
       "Heat Engager",
       "Crouch throw",
@@ -317,13 +258,9 @@
     "block": "+1",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "1"
-    ],
+    "alternateInputs": ["1"],
     "categories": [],
-    "notes": [
-      "Recovers 2f faster on hit or block (t27 r17)"
-    ]
+    "notes": ["Recovers 2f faster on hit or block (t27 r17)"]
   },
   {
     "name": "High Mountain Combo",
@@ -334,9 +271,7 @@
     "block": "-10",
     "hit": "+8",
     "counter": "+18a",
-    "alternateInputs": [
-      "1,1"
-    ],
+    "alternateInputs": ["1,1"],
     "categories": [],
     "notes": [
       "Combo from 1st hit",
@@ -353,9 +288,7 @@
     "block": "-14",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "1,2"
-    ],
+    "alternateInputs": ["1,2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -372,13 +305,9 @@
     "block": "+0",
     "hit": "+9",
     "counter": "",
-    "alternateInputs": [
-      "2"
-    ],
+    "alternateInputs": ["2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -389,9 +318,7 @@
     "block": "-7",
     "hit": "+3",
     "counter": "",
-    "alternateInputs": [
-      "2,1"
-    ],
+    "alternateInputs": ["2,1"],
     "categories": [],
     "notes": [
       "Combo from 1st hit with 4f delay",
@@ -407,9 +334,7 @@
     "block": "-5",
     "hit": "+20a (+3)",
     "counter": "",
-    "alternateInputs": [
-      "2,1,2"
-    ],
+    "alternateInputs": ["2,1,2"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -427,26 +352,20 @@
     "block": "-7",
     "hit": "+4",
     "counter": "",
-    "alternateInputs": [
-      "3"
-    ],
+    "alternateInputs": ["3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Groovy Strike",
     "input": "3,2",
     "hit_level": "m,m",
-    "damage": "11,18",
+    "damage": "13,20",
     "startup": ",i23~24",
     "block": "-12",
-    "hit": "+6",
+    "hit": "+23g",
     "counter": "+33d (+25)",
-    "alternateInputs": [
-      "3,2"
-    ],
+    "alternateInputs": ["3,2"],
     "categories": [],
     "notes": [
       "Combo from 1st hit with 5f delay",
@@ -462,15 +381,9 @@
     "block": "-18",
     "hit": "-7",
     "counter": "",
-    "alternateInputs": [
-      "3,2~F"
-    ],
-    "categories": [
-      "parry"
-    ],
-    "notes": [
-      "Listed parry state is at earliest cancel"
-    ]
+    "alternateInputs": ["3,2~F"],
+    "categories": ["parry"],
+    "notes": ["Listed parry state is at earliest cancel"]
   },
   {
     "name": "Groovy Punalada",
@@ -481,11 +394,10 @@
     "block": "-1",
     "hit": "+43d (-15)",
     "counter": "",
-    "alternateInputs": [
-      "3,3"
-    ],
+    "alternateInputs": ["3,3"],
     "categories": [],
     "notes": [
+      "Heat Engager",
       "Balcony Break",
       "Combo from 1st hit with 6f delay"
     ]
@@ -499,13 +411,9 @@
     "block": "-8",
     "hit": "+3",
     "counter": "+8",
-    "alternateInputs": [
-      "4"
-    ],
+    "alternateInputs": ["4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Guapuño",
@@ -516,26 +424,20 @@
     "block": "-2",
     "hit": "+4",
     "counter": "+6~+7",
-    "alternateInputs": [
-      "4,1"
-    ],
+    "alternateInputs": ["4,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit"
-    ]
+    "notes": ["Combo from 1st hit"]
   },
   {
     "name": "Delfin Patadas",
     "input": "4,3",
-    "hit_level": "h,M",
-    "damage": "15,17",
+    "hit_level": "h,m",
+    "damage": "15,20",
     "startup": ",i26~27",
     "block": "-11",
-    "hit": "+19g",
-    "counter": "+37a",
-    "alternateInputs": [
-      "4,3"
-    ],
+    "hit": "+37a",
+    "counter": "",
+    "alternateInputs": ["4,3"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -553,13 +455,9 @@
     "block": "-8",
     "hit": "+13g",
     "counter": "+56a",
-    "alternateInputs": [
-      "1+2"
-    ],
+    "alternateInputs": ["1+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break"
-    ]
+    "notes": ["Balcony Break"]
   },
   {
     "name": "",
@@ -570,13 +468,9 @@
     "block": "-10",
     "hit": "+1",
     "counter": "",
-    "alternateInputs": [
-      "f+2"
-    ],
+    "alternateInputs": ["f+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -587,14 +481,9 @@
     "block": "-10",
     "hit": "+5",
     "counter": "",
-    "alternateInputs": [
-      "f+2,1"
-    ],
+    "alternateInputs": ["f+2,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit with 7f delay",
-      "Input can be delayed 8f"
-    ]
+    "notes": ["Combo from 1st hit with 7f delay", "Input can be delayed 8f"]
   },
   {
     "name": "Danza Del Cóndor",
@@ -605,14 +494,9 @@
     "block": "-14",
     "hit": "+19a (+9)",
     "counter": "",
-    "alternateInputs": [
-      "f+2,1,4"
-    ],
+    "alternateInputs": ["f+2,1,4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 2nd CH with 10f delay"
-    ]
+    "notes": ["Balcony Break", "Combo from 2nd CH with 10f delay"]
   },
   {
     "name": "",
@@ -623,13 +507,9 @@
     "block": "-4",
     "hit": "+5",
     "counter": "",
-    "alternateInputs": [
-      "f+3"
-    ],
+    "alternateInputs": ["f+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Sumatra Back Knuckle",
@@ -640,14 +520,22 @@
     "block": "-4",
     "hit": "+22a",
     "counter": "",
-    "alternateInputs": [
-      "f+3,2"
-    ],
+    "alternateInputs": ["f+3,2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 1st hit with 8f delay"
-    ]
+    "notes": ["Balcony Break", "Combo from 1st hit with 8f delay"]
+  },
+  {
+    "name": "Sumatra Patadas",
+    "input": "f+3,4",
+    "hit_level": "m,m",
+    "damage": "15,20",
+    "startup": ",i24~25",
+    "block": "-11",
+    "hit": "+8",
+    "counter": "+52a",
+    "alternateInputs": ["f+3,4"],
+    "categories": [],
+    "notes": ["Natural combo"]
   },
   {
     "name": "",
@@ -658,15 +546,9 @@
     "block": "-8",
     "hit": "+1",
     "counter": "",
-    "alternateInputs": [
-      "f+4"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Homing"
-    ]
+    "alternateInputs": ["f+4"],
+    "categories": ["homing"],
+    "notes": ["Homing"]
   },
   {
     "name": "Tifón Trueno",
@@ -677,9 +559,7 @@
     "block": "+1",
     "hit": "+52a",
     "counter": "",
-    "alternateInputs": [
-      "f+4,4~2"
-    ],
+    "alternateInputs": ["f+4,4~2"],
     "categories": [],
     "notes": [
       "6 chip damage on block",
@@ -696,9 +576,7 @@
     "block": "-9~-8",
     "hit": "+15a (+6)",
     "counter": "+70a (+54)",
-    "alternateInputs": [
-      "f+4,4~3"
-    ],
+    "alternateInputs": ["f+4,4~3"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -715,13 +593,9 @@
     "block": "-3",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "df+1"
-    ],
+    "alternateInputs": ["df+1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -732,14 +606,9 @@
     "block": "-7",
     "hit": "+4",
     "counter": "",
-    "alternateInputs": [
-      "df+1,4"
-    ],
+    "alternateInputs": ["df+1,4"],
     "categories": [],
-    "notes": [
-      "Jail from 1st attack with 1f delay",
-      "Enter BT -5 +6 r23 with B"
-    ]
+    "notes": ["Jail from 1st attack with 1f delay", "Enter BT -5 +6 r23 with B"]
   },
   {
     "name": "Grande Combo",
@@ -750,9 +619,7 @@
     "block": "-5",
     "hit": "+44d (-14)",
     "counter": "+56a",
-    "alternateInputs": [
-      "df+1,4,1"
-    ],
+    "alternateInputs": ["df+1,4,1"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -770,13 +637,9 @@
     "block": "-10",
     "hit": "+23d",
     "counter": "",
-    "alternateInputs": [
-      "df+1,4,1~2"
-    ],
+    "alternateInputs": ["df+1,4,1~2"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike"]
   },
   {
     "name": "Mount Rainier",
@@ -787,13 +650,9 @@
     "block": "-13",
     "hit": "+28a (+18)",
     "counter": "",
-    "alternateInputs": [
-      "df+2"
-    ],
+    "alternateInputs": ["df+2"],
     "categories": [],
-    "notes": [
-      "Launches crouching opponent"
-    ]
+    "notes": ["Launches crouching opponent"]
   },
   {
     "name": "Rodilla Shot",
@@ -804,13 +663,9 @@
     "block": "-5",
     "hit": "+5",
     "counter": "+59a",
-    "alternateInputs": [
-      "df+3"
-    ],
+    "alternateInputs": ["df+3"],
     "categories": [],
-    "notes": [
-      "Knee"
-    ]
+    "notes": ["Knee"]
   },
   {
     "name": "",
@@ -821,13 +676,9 @@
     "block": "-7",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "df+4"
-    ],
+    "alternateInputs": ["df+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Blue Mountain Combo",
@@ -838,9 +689,7 @@
     "block": "-5",
     "hit": "+20a (+3)",
     "counter": "",
-    "alternateInputs": [
-      "df+4,1"
-    ],
+    "alternateInputs": ["df+4,1"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -855,17 +704,12 @@
     "hit_level": "m",
     "damage": "20",
     "startup": "i20~21",
-    "block": "-2",
-    "hit": "+4c",
+    "block": "+4",
+    "hit": "+7c",
     "counter": "+44a",
-    "alternateInputs": [
-      "d+1"
-    ],
+    "alternateInputs": ["d+1"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "Elbow"
-    ]
+    "notes": ["Spike", "Elbow"]
   },
   {
     "name": "",
@@ -876,13 +720,9 @@
     "block": "-9",
     "hit": "+5",
     "counter": "",
-    "alternateInputs": [
-      "d+2"
-    ],
+    "alternateInputs": ["d+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "La Niña Kick Combo",
@@ -893,9 +733,7 @@
     "block": "+1",
     "hit": "+16g",
     "counter": "",
-    "alternateInputs": [
-      "d+2,3"
-    ],
+    "alternateInputs": ["d+2,3"],
     "categories": [],
     "notes": [
       "Strong Aerial Tailspin",
@@ -912,13 +750,9 @@
     "block": "-14",
     "hit": "-3",
     "counter": "",
-    "alternateInputs": [
-      "d+3"
-    ],
+    "alternateInputs": ["d+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -929,14 +763,9 @@
     "block": "-13",
     "hit": "+1",
     "counter": "",
-    "alternateInputs": [
-      "d+3,3"
-    ],
+    "alternateInputs": ["d+3,3"],
     "categories": [],
-    "notes": [
-      "Combo from 1st CH with 7f delay",
-      "Input can be delayed 10f"
-    ]
+    "notes": ["Combo from 1st CH with 7f delay", "Input can be delayed 10f"]
   },
   {
     "name": "Passionate Kick Combo",
@@ -947,45 +776,33 @@
     "block": "-14",
     "hit": "+15a (-2)",
     "counter": "",
-    "alternateInputs": [
-      "d+3,3,4"
-    ],
+    "alternateInputs": ["d+3,3,4"],
     "categories": [],
-    "notes": [
-      "Tornado",
-      "Balcony Break",
-      "Combo from 2nd CH with 10f delay"
-    ]
+    "notes": ["Tornado", "Balcony Break", "Combo from 2nd CH with 10f delay"]
   },
   {
     "name": "",
     "input": "d+4",
-    "hit_level": "L",
+    "hit_level": "l",
     "damage": "13",
     "startup": "i15~16",
     "block": "-13",
     "hit": "-2",
     "counter": "",
-    "alternateInputs": [
-      "d+4"
-    ],
+    "alternateInputs": ["d+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Roast Knuckle Combo",
     "input": "d+4,1",
-    "hit_level": "L,h",
+    "hit_level": "l,h",
     "damage": "13,5",
     "startup": ",i27~28",
     "block": "-1",
     "hit": "+3",
     "counter": "",
-    "alternateInputs": [
-      "d+4,1"
-    ],
+    "alternateInputs": ["d+4,1"],
     "categories": [],
     "notes": [
       "Combo from 1st CH with 2f delay",
@@ -996,20 +813,15 @@
   {
     "name": "Full City Roast Knuckle Combo",
     "input": "d+4,1~2",
-    "hit_level": "L,m",
+    "hit_level": "l,m",
     "damage": "13,20",
     "startup": ",i17~18",
     "block": "-8",
-    "hit": "+10g +22w",
+    "hit": "+20a (+11)",
     "counter": "+59a",
-    "alternateInputs": [
-      "d+4,1~2"
-    ],
+    "alternateInputs": ["d+4,1~2"],
     "categories": [],
-    "notes": [
-      "Wall Crush +22g on hit",
-      " "
-    ]
+    "notes": ["Balcony Break", "Strong Aerial Tailspin"]
   },
   {
     "name": "Crouch Jab",
@@ -1020,13 +832,9 @@
     "block": "-5",
     "hit": "+6",
     "counter": "",
-    "alternateInputs": [
-      "db+1"
-    ],
+    "alternateInputs": ["db+1"],
     "categories": [],
-    "notes": [
-      "Can recover standing with F"
-    ]
+    "notes": ["Can recover standing with F"]
   },
   {
     "name": "Crouch Straight",
@@ -1037,13 +845,9 @@
     "block": "-4",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "db+2"
-    ],
+    "alternateInputs": ["db+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1054,13 +858,9 @@
     "block": "-7",
     "hit": "+4",
     "counter": "",
-    "alternateInputs": [
-      "db+3"
-    ],
+    "alternateInputs": ["db+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Borrasca Kick Combo",
@@ -1071,9 +871,7 @@
     "block": "-13",
     "hit": "+66a (+50)",
     "counter": "",
-    "alternateInputs": [
-      "db+3,4"
-    ],
+    "alternateInputs": ["db+3,4"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -1091,13 +889,9 @@
     "block": "-14",
     "hit": "-3",
     "counter": "+12g",
-    "alternateInputs": [
-      "db+4"
-    ],
+    "alternateInputs": ["db+4"],
     "categories": [],
-    "notes": [
-      "(Ver.1.04.00) - Damage changed from 17."
-    ]
+    "notes": ["(Ver.1.04.00) - Damage changed from 17."]
   },
   {
     "name": "Kilimanjaro Uppercut",
@@ -1108,13 +902,9 @@
     "block": "-21",
     "hit": "+33a (+23)",
     "counter": "",
-    "alternateInputs": [
-      "db+1+2"
-    ],
+    "alternateInputs": ["db+1+2"],
     "categories": [],
-    "notes": [
-      "Steel pedal"
-    ]
+    "notes": ["Steel pedal"]
   },
   {
     "name": "El Cóndor Pasa",
@@ -1125,14 +915,9 @@
     "block": "-16~-12",
     "hit": "+15a (+5)",
     "counter": "",
-    "alternateInputs": [
-      "db+3+4"
-    ],
+    "alternateInputs": ["db+3+4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Backswing blow"
-    ]
+    "notes": ["Balcony Break", "Backswing blow"]
   },
   {
     "name": "",
@@ -1143,13 +928,9 @@
     "block": "-8",
     "hit": "+3",
     "counter": "",
-    "alternateInputs": [
-      "b+1"
-    ],
+    "alternateInputs": ["b+1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1157,12 +938,10 @@
     "hit_level": "h,h",
     "damage": "14,16",
     "startup": ",i23",
-    "block": "+3",
-    "hit": "+8",
+    "block": "-8",
+    "hit": "+3",
     "counter": "",
-    "alternateInputs": [
-      "b+1,1"
-    ],
+    "alternateInputs": ["b+1,1"],
     "categories": [],
     "notes": [
       "Combo from 1st hit with 6f delay",
@@ -1179,13 +958,11 @@
     "block": "-5",
     "hit": "+17a (+8)",
     "counter": "",
-    "alternateInputs": [
-      "b+1,1,2"
-    ],
+    "alternateInputs": ["b+1,1,2"],
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Combo from 2nd CH with 6f delay",
+      "Combo from 1st CH",
       "Input can be delayed 9f",
       "6 chip damage on block",
       "8 chip damage on block during heat",
@@ -1201,12 +978,8 @@
     "block": "+2",
     "hit": "+22a (+13)",
     "counter": "",
-    "alternateInputs": [
-      "b+2"
-    ],
-    "categories": [
-      "homing"
-    ],
+    "alternateInputs": ["b+2"],
+    "categories": ["homing"],
     "notes": [
       "Balcony Break",
       "Homing",
@@ -1223,13 +996,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "b+4"
-    ],
+    "alternateInputs": ["b+4"],
     "categories": [],
-    "notes": [
-      "Knee"
-    ]
+    "notes": ["Knee"]
   },
   {
     "name": "",
@@ -1240,14 +1009,9 @@
     "block": "-10",
     "hit": "+4",
     "counter": "",
-    "alternateInputs": [
-      "b+4,3"
-    ],
+    "alternateInputs": ["b+4,3"],
     "categories": [],
-    "notes": [
-      "Knee",
-      "Combo from 1st hit with 6f delay"
-    ]
+    "notes": ["Knee", "Combo from 1st hit with 6f delay"]
   },
   {
     "name": "",
@@ -1258,14 +1022,9 @@
     "block": "-10",
     "hit": "-2",
     "counter": "",
-    "alternateInputs": [
-      "b+4,3,4"
-    ],
+    "alternateInputs": ["b+4,3,4"],
     "categories": [],
-    "notes": [
-      "Knee",
-      "Combo from 2nd CH with 10f delay"
-    ]
+    "notes": ["Knee", "Combo from 2nd CH with 10f delay"]
   },
   {
     "name": "Seattle Skipper",
@@ -1276,9 +1035,7 @@
     "block": "-7",
     "hit": "+39d (-19)",
     "counter": "",
-    "alternateInputs": [
-      "b+4,3,4,3"
-    ],
+    "alternateInputs": ["b+4,3,4,3"],
     "categories": [],
     "notes": [
       "Knee",
@@ -1297,12 +1054,8 @@
     "block": "-9",
     "hit": "+7 +15w",
     "counter": "",
-    "alternateInputs": [
-      "uf+1"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["uf+1"],
+    "categories": ["parry"],
     "notes": [
       "Wall Crush +15g on hit",
       "Balcony break on airborne hit",
@@ -1318,32 +1071,22 @@
     "block": "",
     "hit": "-4d",
     "counter": "",
-    "alternateInputs": [
-      "uf+1,P"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Opponent recovers FUFA"
-    ]
+    "alternateInputs": ["uf+1,P"],
+    "categories": ["throw"],
+    "notes": ["Opponent recovers FUFA"]
   },
   {
     "name": "Rhythmic Hook",
     "input": "uf+2",
     "hit_level": "h",
-    "damage": "23",
+    "damage": "20",
     "startup": "i17~18",
-    "block": "-7",
-    "hit": "+15a (+6)",
-    "counter": "+51a",
-    "alternateInputs": [
-      "uf+2"
-    ],
+    "block": "-5",
+    "hit": "+14",
+    "counter": "",
+    "alternateInputs": ["uf+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break"
-    ]
+    "notes": ["Strong Aerial Tailspin", "Balcony Break"]
   },
   {
     "name": "",
@@ -1354,13 +1097,9 @@
     "block": "-16a",
     "hit": "+36a",
     "counter": "",
-    "alternateInputs": [
-      "uf+3"
-    ],
+    "alternateInputs": ["uf+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Daylight Disk",
@@ -1371,9 +1110,7 @@
     "block": "-14",
     "hit": "+15a (+6)",
     "counter": "+55a",
-    "alternateInputs": [
-      "uf+3,4"
-    ],
+    "alternateInputs": ["uf+3,4"],
     "categories": [],
     "notes": [
       "Strong Aerial Tailspin",
@@ -1390,14 +1127,9 @@
     "block": "-8",
     "hit": "+21a",
     "counter": "",
-    "alternateInputs": [
-      "uf+4"
-    ],
+    "alternateInputs": ["uf+4"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "20 damage when u+4 or ub+4 input is used"
-    ]
+    "notes": ["Spike", "20 damage when u+4 or ub+4 input is used"]
   },
   {
     "name": "Luna Llena",
@@ -1408,13 +1140,9 @@
     "block": "-14~-12",
     "hit": "+35a (+25)",
     "counter": "",
-    "alternateInputs": [
-      "f,F+3"
-    ],
+    "alternateInputs": ["f,F+3"],
     "categories": [],
-    "notes": [
-      "Tornado"
-    ]
+    "notes": ["Tornado"]
   },
   {
     "name": "Demitasse Molino",
@@ -1425,27 +1153,20 @@
     "block": "+0~+2",
     "hit": "+13c~+15c",
     "counter": "",
-    "alternateInputs": [
-      "f,F+4"
-    ],
+    "alternateInputs": ["f,F+4"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "Chip damage on block"
-    ]
+    "notes": ["Spike", "Chip damage on block"]
   },
   {
     "name": "Ortiz Molino",
-    "input": "f,F+3+4",
+    "input": "uf+3+4",
     "hit_level": "m,M",
     "damage": "10,18",
     "startup": "i21~22 i10~12",
     "block": "+4~+6",
-    "hit": "+5d",
+    "hit": "+8c",
     "counter": "",
-    "alternateInputs": [
-      "f,F+3+4"
-    ],
+    "alternateInputs": ["uf+3+4"],
     "categories": [],
     "notes": [
       "Spike",
@@ -1463,13 +1184,9 @@
     "block": "-14",
     "hit": "-9",
     "counter": "",
-    "alternateInputs": [
-      "f,f,F+3"
-    ],
+    "alternateInputs": ["f,f,F+3"],
     "categories": [],
-    "notes": [
-      "Knee"
-    ]
+    "notes": ["Knee"]
   },
   {
     "name": "Espresso Agresión",
@@ -1480,9 +1197,7 @@
     "block": "+2",
     "hit": "+28a (+2)",
     "counter": "",
-    "alternateInputs": [
-      "f,f,F+3,2"
-    ],
+    "alternateInputs": ["f,f,F+3,2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1490,7 +1205,8 @@
       "Jail from 1st attack",
       "8 chip damage on block",
       "(3)+9 chip damage on block during heat",
-      "Available only as combo from 1st hit"
+      "Available only as combo from 1st hit",
+      "Transition to LIB (+28a/+5) with F"
     ]
   },
   {
@@ -1502,13 +1218,9 @@
     "block": "-5",
     "hit": "+6",
     "counter": "",
-    "alternateInputs": [
-      "FC d+1"
-    ],
+    "alternateInputs": ["FC d+1"],
     "categories": [],
-    "notes": [
-      "Can recover standing with F"
-    ]
+    "notes": ["Can recover standing with F"]
   },
   {
     "name": "Crouch Straight",
@@ -1519,13 +1231,9 @@
     "block": "-4",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "FC d+2"
-    ],
+    "alternateInputs": ["FC d+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Crouch Spin Kick",
@@ -1536,13 +1244,9 @@
     "block": "-17",
     "hit": "-6",
     "counter": "",
-    "alternateInputs": [
-      "FC d+3"
-    ],
+    "alternateInputs": ["FC d+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Crouch Shin Kick",
@@ -1553,30 +1257,35 @@
     "block": "-15",
     "hit": "-4",
     "counter": "",
-    "alternateInputs": [
-      "FC d+4"
-    ],
+    "alternateInputs": ["FC d+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Cosecha Látigo",
     "input": "FC df+3",
-    "hit_level": "L",
+    "hit_level": "l",
     "damage": "17",
     "startup": "i18~19",
     "block": "-13",
     "hit": "+3c",
     "counter": "+13c",
-    "alternateInputs": [
-      "FC df+3"
-    ],
+    "alternateInputs": ["FC df+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
+  },
+  {
+    "name": "Etching Blade",
+    "input": "FC df+4",
+    "hit_level": "l",
+    "damage": "23",
+    "startup": "i17~18",
+    "block": "-15",
+    "hit": "+5",
+    "counter": "+24a",
+    "alternateInputs": ["FC df+4"],
+    "categories": [],
+    "notes": ["Transition to LIB on hit"]
   },
   {
     "name": "Gold Mountain Fist",
@@ -1587,13 +1296,9 @@
     "block": "-8",
     "hit": "+6",
     "counter": "+32a (+26)",
-    "alternateInputs": [
-      "ws1"
-    ],
+    "alternateInputs": ["ws1"],
     "categories": [],
-    "notes": [
-      "Only hits grounded up-close and off-axis"
-    ]
+    "notes": ["Only hits grounded up-close and off-axis"]
   },
   {
     "name": "Rainbow Mountain Swing",
@@ -1604,13 +1309,9 @@
     "block": "-13",
     "hit": "+32a (+22)",
     "counter": "",
-    "alternateInputs": [
-      "ws2"
-    ],
+    "alternateInputs": ["ws2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Viento Fuerte",
@@ -1621,9 +1322,7 @@
     "block": "+4",
     "hit": "+16g",
     "counter": "",
-    "alternateInputs": [
-      "ws3"
-    ],
+    "alternateInputs": ["ws3"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1641,13 +1340,9 @@
     "block": "-6",
     "hit": "+5",
     "counter": "",
-    "alternateInputs": [
-      "ws4"
-    ],
+    "alternateInputs": ["ws4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1658,26 +1353,23 @@
     "block": "-2",
     "hit": "+6",
     "counter": "",
-    "alternateInputs": [
-      "ws4,1"
-    ],
+    "alternateInputs": ["ws4,1"],
     "categories": [],
     "notes": [
-      "Combo from 1st hit with 6f delay"
+      "Combo from 1st hit with 6f delay",
+      "Transition to LIB (+8/+0) with F"
     ]
   },
   {
     "name": "Combo de Cantuta",
     "input": "ws4,1,3",
     "hit_level": "m,h,m",
-    "damage": "13,10,23",
+    "damage": "13,10,28",
     "startup": ",i22~23",
-    "block": "-14",
+    "block": "-13",
     "hit": "+10a (+1)",
     "counter": "+27a",
-    "alternateInputs": [
-      "ws4,1,3"
-    ],
+    "alternateInputs": ["ws4,1,3"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1695,16 +1387,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "f+3+4"
-    ],
-    "categories": [
-      "parry"
-    ],
-    "notes": [
-      "Parries all high/low attacks",
-      "Cancel to r20 with DB"
-    ]
+    "alternateInputs": ["f+3+4"],
+    "categories": ["parry"],
+    "notes": ["Parries all high/low attacks", "Cancel to r20 with DB"]
   },
   {
     "name": "Shuffle Jamboree",
@@ -1715,9 +1400,7 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "f+3+4*"
-    ],
+    "alternateInputs": ["f+3+4*"],
     "categories": [],
     "notes": [
       "Regenerates heat",
@@ -1731,14 +1414,13 @@
     "damage": "0",
     "startup": "",
     "block": "",
-    "hit": "Frame advantage depends on the move that gets parried.",
+    "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "LIB P (High)"
-    ],
+    "alternateInputs": ["LIB P (High)"],
     "categories": [],
     "notes": [
-      "Restores recoverable health"
+      "Restores recoverable health",
+      "Frame advantage depends on the move that gets parried"
     ]
   },
   {
@@ -1748,14 +1430,13 @@
     "damage": "15,20",
     "startup": "i7~8 i19~20",
     "block": "",
-    "hit": "+8 on standing lows, will cause a juggle on lows with float properties",
+    "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "LIB P (Low)"
-    ],
+    "alternateInputs": ["LIB P (Low)"],
     "categories": [],
     "notes": [
-      "Restores recoverable health"
+      "Restores recoverable health",
+      "+8 on standing lows, will cause a juggle on lows with float properties"
     ]
   },
   {
@@ -1767,14 +1448,9 @@
     "block": "+3",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "LIB 1"
-    ],
+    "alternateInputs": ["LIB 1"],
     "categories": [],
-    "notes": [
-      "4 chip damage on block",
-      "5 chip damage on block during heat"
-    ]
+    "notes": ["4 chip damage on block", "5 chip damage on block during heat"]
   },
   {
     "name": "Blend Tempestad",
@@ -1785,9 +1461,7 @@
     "block": "-5",
     "hit": "+17a (+8)",
     "counter": "",
-    "alternateInputs": [
-      "LIB 1,2"
-    ],
+    "alternateInputs": ["LIB 1,2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1807,13 +1481,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "LIB 3"
-    ],
+    "alternateInputs": ["LIB 3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Blend Reganar",
@@ -1824,15 +1494,13 @@
     "block": "-10",
     "hit": "+21d",
     "counter": "",
-    "alternateInputs": [
-      "LIB 3,1"
-    ],
+    "alternateInputs": ["LIB 3,1"],
     "categories": [],
     "notes": [
       "Spike",
       "Combo from 1st CH with 7f delay",
       "Input can be delayed 8f",
-      "On block only regular i10 punishers are guaranteed, even though she is backturned.}"
+      "On block only regular i10 punishers are guaranteed, even though she is backturned"
     ]
   },
   {
@@ -1844,13 +1512,9 @@
     "block": "-3",
     "hit": "+10",
     "counter": "+10a",
-    "alternateInputs": [
-      "LIB 4"
-    ],
+    "alternateInputs": ["LIB 4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1861,9 +1525,7 @@
     "block": "-1",
     "hit": "+5",
     "counter": "+10",
-    "alternateInputs": [
-      "LIB 4,1"
-    ],
+    "alternateInputs": ["LIB 4,1"],
     "categories": [],
     "notes": [
       "Combo from 1st hit with 9f delay",
@@ -1879,9 +1541,7 @@
     "block": "-10",
     "hit": "+67a (+51)",
     "counter": "",
-    "alternateInputs": [
-      "LIB 4,1,2"
-    ],
+    "alternateInputs": ["LIB 4,1,2"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -1899,9 +1559,7 @@
     "block": "-13",
     "hit": "+16a",
     "counter": "",
-    "alternateInputs": [
-      "LIB 4,2"
-    ],
+    "alternateInputs": ["LIB 4,2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1919,14 +1577,9 @@
     "block": "-14",
     "hit": "+38a (+28)",
     "counter": "",
-    "alternateInputs": [
-      "LIB 1+2"
-    ],
+    "alternateInputs": ["LIB 1+2"],
     "categories": [],
-    "notes": [
-      "Tornado",
-      "Cancel to r20 BT with B"
-    ]
+    "notes": ["Tornado", "Cancel to r20 BT with B"]
   },
   {
     "name": "El Niño High Kick",
@@ -1934,40 +1587,46 @@
     "hit_level": "h",
     "damage": "25",
     "startup": "i16~17",
-    "block": "-5",
+    "block": "-2",
     "hit": "+32a",
     "counter": "",
-    "alternateInputs": [
-      "LIB 3+4"
-    ],
-    "categories": [
-      "powercrush",
-      "homing"
-    ],
+    "alternateInputs": ["LIB 3+4"],
+    "categories": ["powercrush", "homing"],
     "notes": [
+      "Powercrush",
+      "Absorbs from frame 7",
       "Homing",
       "Balcony Break",
       "7 chip damage on block",
       "10 chip damge on block during heat",
-      "Frame advantage is +0 if an attack is absorbed"
+      "Frame advantage is +3 if an attack is absorbed"
     ]
+  },
+  {
+    "name": "Pedalada Tron",
+    "input": "LIB d+3",
+    "hit_level": "m",
+    "damage": "25",
+    "startup": "i24~26",
+    "block": "+2",
+    "hit": "+13a",
+    "counter": "+38a",
+    "alternateInputs": ["LIB d+3"],
+    "categories": [],
+    "notes": [""]
   },
   {
     "name": "",
     "input": "LIB d+4",
-    "hit_level": "L",
+    "hit_level": "l",
     "damage": "14",
     "startup": "i19~20",
     "block": "-31",
     "hit": "-2",
     "counter": "",
-    "alternateInputs": [
-      "LIB d+4"
-    ],
+    "alternateInputs": ["LIB d+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Blend Cortar",
@@ -1978,14 +1637,9 @@
     "block": "-7",
     "hit": "+14a (+5)",
     "counter": "",
-    "alternateInputs": [
-      "LIB d+4,4"
-    ],
+    "alternateInputs": ["LIB d+4,4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 1st hit"
-    ]
+    "notes": ["Balcony Break", "Combo from 1st hit"]
   },
   {
     "name": "Libertador (Varios)",
@@ -1996,13 +1650,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "LIB f,f"
-    ],
+    "alternateInputs": ["LIB f,f"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Caer Back Funnel",
@@ -2013,12 +1663,10 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "LIB b,b"
-    ],
+    "alternateInputs": ["LIB b,b"],
     "categories": [],
     "notes": [
-      "Can be canceled at r20 with 1, performs the same attack as uf+1"
+      "Can be canceled at r20 with b+1 or uf+1, performs the same attack as uf+1"
     ]
   },
   {
@@ -2030,12 +1678,8 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "LIB F"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["LIB F"],
+    "categories": ["parry"],
     "notes": [
       "Parries all high or low attacks",
       "Regenerates heat with each step"
@@ -2050,12 +1694,8 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "LIB U_D"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["LIB U_D"],
+    "categories": ["parry"],
     "notes": [
       "Parries all high or low attacks",
       "Regenerates heat with each step"
@@ -2070,15 +1710,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "LIB B"
-    ],
-    "categories": [
-      "parry"
-    ],
-    "notes": [
-      "Parries all high or low attacks"
-    ]
+    "alternateInputs": ["LIB B"],
+    "categories": ["parry"],
+    "notes": ["Parries all high or low attacks"]
   },
   {
     "name": "Hopping Turn",
@@ -2089,13 +1723,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "b+3+4"
-    ],
+    "alternateInputs": ["b+3+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Shuffle Carnival",
@@ -2106,13 +1736,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "b+3+4*"
-    ],
+    "alternateInputs": ["b+3+4*"],
     "categories": [],
-    "notes": [
-      "Regenerates heat"
-    ]
+    "notes": ["Regenerates heat"]
   },
   {
     "name": "",
@@ -2120,16 +1746,12 @@
     "hit_level": "h",
     "damage": "9",
     "startup": "i10~11",
-    "block": "+0",
+    "block": "+2",
     "hit": "+6",
     "counter": "+8",
-    "alternateInputs": [
-      "BT 1"
-    ],
+    "alternateInputs": ["BT 1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Mocha Attaque Matari",
@@ -2137,12 +1759,10 @@
     "hit_level": "h,h",
     "damage": "9,23",
     "startup": ",i22~23",
-    "block": "-7",
+    "block": "-1",
     "hit": "+19a (+10)",
     "counter": "",
-    "alternateInputs": [
-      "BT 1,2"
-    ],
+    "alternateInputs": ["BT 1,2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -2163,9 +1783,7 @@
     "block": "-11",
     "hit": "+8",
     "counter": "+53a",
-    "alternateInputs": [
-      "BT 1,4"
-    ],
+    "alternateInputs": ["BT 1,4"],
     "categories": [],
     "notes": [
       "Combo from 1st hit",
@@ -2183,9 +1801,7 @@
     "block": "-8",
     "hit": "+3",
     "counter": "",
-    "alternateInputs": [
-      "BT 2"
-    ],
+    "alternateInputs": ["BT 2"],
     "categories": [],
     "notes": [
       "Transition to attack throw on front standing hit by inputting 2 on frames 10~16"
@@ -2200,14 +1816,10 @@
     "block": "",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "BT 2:2"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["BT 2:2"],
+    "categories": [],
     "notes": [
-      ""
+      "Transition to attack throw on front standing hit by inputting 2 on frames 10~16"
     ]
   },
   {
@@ -2219,9 +1831,7 @@
     "block": "-13",
     "hit": "+4 LIB",
     "counter": "+14c",
-    "alternateInputs": [
-      "BT 3"
-    ],
+    "alternateInputs": ["BT 3"],
     "categories": [],
     "notes": [
       "Strong Aerial Tailspin",
@@ -2235,16 +1845,12 @@
     "hit_level": "m",
     "damage": "15",
     "startup": "i15~16",
-    "block": "-5",
+    "block": "-3",
     "hit": "+6",
     "counter": "",
-    "alternateInputs": [
-      "BT 4"
-    ],
+    "alternateInputs": ["BT 4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Upbeat Patadas",
@@ -2254,10 +1860,8 @@
     "startup": ",i23~24",
     "block": "-14",
     "hit": "+16a (-1)",
-    "counter": "",
-    "alternateInputs": [
-      "BT 4,3"
-    ],
+    "counter": "+70a (+54)",
+    "alternateInputs": ["BT 4,3"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -2276,30 +1880,22 @@
     "block": "-11",
     "hit": "+3",
     "counter": "+58a",
-    "alternateInputs": [
-      "BT 1+2"
-    ],
+    "alternateInputs": ["BT 1+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Foo Fighter",
     "input": "BT 3+4",
-    "hit_level": "M",
+    "hit_level": "m",
     "damage": "23",
     "startup": "i27~29",
     "block": "-5c~-3c",
     "hit": "+20a",
     "counter": "",
-    "alternateInputs": [
-      "BT 3+4"
-    ],
+    "alternateInputs": ["BT 3+4"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike", "Chip damage on block"]
   },
   {
     "name": "Libertador (Regreso)",
@@ -2310,13 +1906,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "BT f+3+4"
-    ],
+    "alternateInputs": ["BT f+3+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Shuffle Walk",
@@ -2327,13 +1919,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "BT b+3"
-    ],
+    "alternateInputs": ["BT b+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Runaway",
@@ -2344,15 +1932,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "BT b+1+2"
-    ],
-    "categories": [
-      "parry"
-    ],
-    "notes": [
-      "Parries all mids"
-    ]
+    "alternateInputs": ["BT b+1+2"],
+    "categories": ["parry"],
+    "notes": ["Parries all mids"]
   },
   {
     "name": "Hide Turn",
@@ -2363,13 +1945,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "BT b+3+4"
-    ],
+    "alternateInputs": ["BT b+3+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Alegría del Café",
@@ -2380,9 +1958,7 @@
     "block": "-15",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "in rage df+1+2"
-    ],
+    "alternateInputs": ["in rage df+1+2"],
     "categories": [],
     "notes": [
       "Rage Art",
@@ -2404,13 +1980,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "1+3+4"
-    ],
+    "alternateInputs": ["1+3+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Shuffle Recital",
@@ -2421,9 +1993,7 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "1+3+4*"
-    ],
+    "alternateInputs": ["1+3+4*"],
     "categories": [],
     "notes": [
       "Regenerates heat",
@@ -2439,13 +2009,9 @@
     "block": "",
     "hit": "-1",
     "counter": "",
-    "alternateInputs": [
-      "2+3+4"
-    ],
+    "alternateInputs": ["2+3+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Ki Charge",
@@ -2456,14 +2022,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "1+2+3+4"
-    ],
+    "alternateInputs": ["1+2+3+4"],
     "categories": [],
-    "notes": [
-      "Cannot block for 5 seconds",
-      "CH state for 5 seconds"
-    ]
+    "notes": ["Cannot block for 5 seconds", "CH state for 5 seconds"]
   },
   {
     "name": "Black Ivory Talon",
@@ -2474,13 +2035,9 @@
     "block": "",
     "hit": "-8a",
     "counter": "",
-    "alternateInputs": [
-      "1+2+3+4,3+4"
-    ],
+    "alternateInputs": ["1+2+3+4,3+4"],
     "categories": [],
-    "notes": [
-      "Base damage is 45"
-    ]
+    "notes": ["Base damage is 45"]
   },
   {
     "name": "Volterador",
@@ -2491,13 +2048,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "UB,b"
-    ],
+    "alternateInputs": ["UB,b"],
     "categories": [],
-    "notes": [
-      "Transition to r24 LIB with F"
-    ]
+    "notes": ["Transition to r24 LIB with F"]
   },
   {
     "name": "Wall Jump Attack",
@@ -2508,13 +2061,9 @@
     "block": "+1~+7",
     "hit": "+7a (-3)",
     "counter": "",
-    "alternateInputs": [
-      "(Back to wall) b,b,UB"
-    ],
+    "alternateInputs": ["(Back to wall) b,b,UB"],
     "categories": [],
-    "notes": [
-      "Balcony Break"
-    ]
+    "notes": ["Balcony Break"]
   },
   {
     "name": "Amaru Head Squeeze",
@@ -2525,15 +2074,9 @@
     "block": "-3",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "1+3"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1 or 2"
-    ]
+    "alternateInputs": ["1+3"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1 or 2"]
   },
   {
     "name": "El Dorado Neck Snap",
@@ -2544,16 +2087,9 @@
     "block": "-3",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "2+4"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1 or 2",
-      "Side switch on hit and break"
-    ]
+    "alternateInputs": ["2+4"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1 or 2", "Side switch on hit and break"]
   },
   {
     "name": "Urubamba Neck Lock",
@@ -2564,15 +2100,9 @@
     "block": "-3",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "Left throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1"
-    ]
+    "alternateInputs": ["Left throw"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1"]
   },
   {
     "name": "Giratorio Sleeper Throw",
@@ -2583,15 +2113,9 @@
     "block": "-3",
     "hit": "-3d",
     "counter": "",
-    "alternateInputs": [
-      "Right throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 2"
-    ]
+    "alternateInputs": ["Right throw"],
+    "categories": ["throw"],
+    "notes": ["Throw break 2"]
   },
   {
     "name": "Caffeine Abduction",
@@ -2602,16 +2126,9 @@
     "block": "",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "Back throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Unbreakable",
-      "Side switch"
-    ]
+    "alternateInputs": ["Back throw"],
+    "categories": ["throw"],
+    "notes": ["Unbreakable", "Side switch"]
   },
   {
     "name": "Inti Raymi Necklace",
@@ -2622,16 +2139,9 @@
     "block": "+0",
     "hit": "-3d",
     "counter": "",
-    "alternateInputs": [
-      "uf+1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1+2",
-      "side switch on hit"
-    ]
+    "alternateInputs": ["uf+1+2"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1+2", "side switch on hit"]
   },
   {
     "name": "UFO Roll",
@@ -2642,9 +2152,7 @@
     "block": "-4",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "d+1+2"
-    ],
+    "alternateInputs": ["d+1+2"],
     "categories": [],
     "notes": [
       "Transition to throw on front standing hit only",
@@ -2663,12 +2171,8 @@
     "block": "-5",
     "hit": "+3",
     "counter": "",
-    "alternateInputs": [
-      "FC 1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["FC 1+2"],
+    "categories": ["throw"],
     "notes": [
       "Throw break 1+2 in a 4f window, frames 1~4",
       "Reverse tackle with 1+2 in a 2f window, frames 18~19",
@@ -2684,12 +2188,8 @@
     "block": "",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "Tackle 2,1,2,1"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["Tackle 2,1,2,1"],
+    "categories": ["throw"],
     "notes": [
       "Throw break 1 for right punches",
       "Throw break 2 for left punches",
@@ -2710,15 +2210,8 @@
     "block": "-9",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "Tackle 1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1+2Sometimes written ",
-      "FC.1+2,1+2"
-    ]
+    "alternateInputs": ["Tackle 1+2"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1+2Sometimes written ", "FC.1+2,1+2"]
   }
 ]

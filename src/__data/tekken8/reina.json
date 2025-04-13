@@ -1514,14 +1514,14 @@
     "damage": "14",
     "startup": "i12",
     "block": "-9",
-    "hit": "+1",
+    "hit": "+2",
     "counter": "",
     "alternateInputs": [
       "f,F+2"
     ],
     "categories": [],
     "notes": [
-      "Can transition to SEN (+2/+12/+12) with input F",
+      "Can transition to SEN (+2/+13/+13) with input F",
       "Cannot block up to i12 on empty transition on block"
     ]
   },
@@ -2360,7 +2360,7 @@
     "hit_level": "M",
     "damage": "26",
     "startup": "i18~19",
-    "block": "-5",
+    "block": "+3",
     "hit": "+5d",
     "counter": "",
     "alternateInputs": [

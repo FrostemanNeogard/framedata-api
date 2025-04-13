@@ -111,7 +111,7 @@
     "input": "SLS 1+2",
     "hit_level": "m",
     "damage": "28",
-    "startup": "i15~16",
+    "startup": "i15",
     "block": "-9",
     "hit": "+23a (+13)",
     "counter": "",
@@ -564,6 +564,24 @@
     ]
   },
   {
+    "name": "Viper Bite",
+    "input": "4,1",
+    "hit_level": "h,h",
+    "damage": "15,15",
+    "startup": ",i23~24",
+    "block": "-1",
+    "hit": "+7",
+    "counter": "",
+    "alternateInputs": [
+      "4,1"
+    ],
+    "categories": [],
+    "notes": [
+      "Combo from 1st hit",
+      "Enter SWA +8 +0 with B"
+    ]
+  },
+  {
     "name": "",
     "input": "4,3",
     "hit_level": "h,m",
@@ -588,7 +606,7 @@
     "startup": ",i24~25",
     "block": "-12",
     "hit": "+14a (+5)",
-    "counter": "",
+    "counter": "+33a (+25)",
     "alternateInputs": [
       "4,3,4"
     ],
@@ -606,7 +624,7 @@
     "startup": ",i40~41",
     "block": "-6",
     "hit": "+35a (+9)",
-    "counter": "",
+    "counter": "+60a",
     "alternateInputs": [
       "4,3,4*"
     ],
@@ -807,7 +825,7 @@
     "categories": [],
     "notes": [
       "Spike",
-      "Combo from 1st hit with 5f delay",
+      "Combo from 1st hit",
       "Move can be delayed 4f"
     ]
   },
@@ -817,7 +835,7 @@
     "hit_level": "h",
     "damage": "22",
     "startup": "i20~21",
-    "block": "-9",
+    "block": "+1",
     "hit": "+44d (-14)",
     "counter": "",
     "alternateInputs": [
@@ -829,8 +847,7 @@
     "notes": [
       "Balcony Break",
       "Elbow",
-      "+1 on block after absorbing an attack",
-      "Deals chip damage on block after absorbing an attack"
+      "Chip damage on block"
     ]
   },
   {
@@ -1030,7 +1047,8 @@
     "categories": [],
     "notes": [
       "Spike",
-      "Elbow"
+      "Elbow",
+      "Transition to FC with D"
     ]
   },
   {
@@ -1739,6 +1757,27 @@
   },
   {
     "name": "",
+    "input": "uf+1",
+    "hit_level": "m",
+    "damage": "22",
+    "startup": "i20~21",
+    "block": "-13",
+    "hit": "+15a",
+    "counter": "",
+    "alternateInputs": [
+      "uf+1"
+    ],
+    "categories": [
+      "powercrush"
+    ],
+    "notes": [
+      "Balcony Break",
+      "-9 on block after absorbing an attack",
+      "Deals 8 chip damage after absorbing an attack"
+    ]
+  },
+  {
+    "name": "",
     "input": "uf+2",
     "hit_level": "m",
     "damage": "6",
@@ -2058,7 +2097,7 @@
     "startup": "i15~16",
     "block": "-10",
     "hit": "+13g",
-    "counter": "",
+    "counter": "+25a",
     "alternateInputs": [
       "FC df+4"
     ],
@@ -2190,7 +2229,8 @@
     "hit": "+35a (+9)",
     "counter": "",
     "alternateInputs": [
-      "3+4,SNE 2"
+      "3+4,SNE 2",
+      "SNE 3+4,2"
     ],
     "categories": [
       "parry"
@@ -2198,11 +2238,11 @@
     "notes": [
       "Balcony Break",
       "Combo from 1st hit",
+      "Can be partially charged",
       "Consumes SNE",
       "Chip damage on block (8)",
-      "Interrupt with i5 from 1st block",
       "Unparryable by traditional parries, Asuka, Nina, etc",
-      "Sometimes written SNE.3+4,2"
+      "Sometimes written SNE 3+4,2"
     ]
   },
   {
@@ -2346,7 +2386,7 @@
     "notes": [
       "Knee",
       "Combo from 3rd or 4th or 5th hit",
-      "Chip damage 9 (39%) on blockSometimes written SNE.uf+2,2,2,2,2,3"
+      "Chip damage 9 (39%) on blockSometimes written SNE uf+2,2,2,2,2,3"
     ]
   },
   {
@@ -2371,7 +2411,47 @@
       "Chip damage 14 (40%) on block",
       "Strong parry, parries all mid or high attacks except charge moves, throws and unlockables",
       "On a successful parry, the attack is canceled and Bryan automatically retaliates",
+      "On a successful parry, deals 30 damage",
       "Unparryable with traditional parries, Asuka, Nina, etc"
+    ]
+  },
+  {
+    "name": "Neo Murderous Strikes",
+    "input": "SNE b+1+2",
+    "hit_level": "m,m",
+    "damage": "9,15",
+    "startup": "i20~21,i14~15",
+    "block": "+7c",
+    "hit": "+33a (+25)",
+    "counter": "",
+    "alternateInputs": [
+      "SNE b+1+2",
+      "b+1+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Consumes SNE",
+      "Chip damage 6 (40%) on block",
+      "Transition to FC with D"
+    ]
+  },
+  {
+    "name": "Neo Grim Reaper",
+    "input": "SNE FC df+3",
+    "hit_level": "l",
+    "damage": "24",
+    "startup": "i20~21",
+    "block": "-12",
+    "hit": "+7",
+    "counter": "+25a",
+    "alternateInputs": [
+      "SNE FC df+3"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break on CH",
+      "Consumes SNE"
     ]
   },
   {
@@ -2614,7 +2694,7 @@
     "damage": "22",
     "startup": "i13~14",
     "block": "+5",
-    "hit": "+36a (+28)",
+    "hit": "+19a",
     "counter": "+72a (+56)",
     "alternateInputs": [
       "SWA 1",

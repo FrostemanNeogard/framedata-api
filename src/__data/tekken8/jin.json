@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -495,7 +495,7 @@
     "hit_level": "h,m,l",
     "damage": "9,9,20",
     "startup": ",i20~21",
-    "block": "-31",
+    "block": "-12",
     "hit": "+16a",
     "counter": "",
     "alternateInputs": [
@@ -2134,7 +2134,8 @@
     "categories": [],
     "notes": [
       "Can't block for 5 seconds",
-      "CH state for 5 seconds"
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {

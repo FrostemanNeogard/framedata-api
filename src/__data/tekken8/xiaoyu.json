@@ -46,8 +46,8 @@
     "hit_level": "m,t",
     "damage": "51",
     "startup": "i15",
-    "block": "+19",
-    "hit": "+16d",
+    "block": "+18",
+    "hit": "+20",
     "counter": "",
     "alternateInputs": [
       "in heat BT 2+3"
@@ -58,7 +58,8 @@
     "notes": [
       "Heat Smash",
       "Recovers in HYP, max level",
-      "Recover facing forward with F (+4) "
+      "Recover facing forward with F (+3, +5)",
+      "15 chip damage on block"
     ]
   },
   {

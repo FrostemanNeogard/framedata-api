@@ -8,12 +8,8 @@
     "block": "+1",
     "hit": "+2c",
     "counter": "",
-    "alternateInputs": [
-      "2+3"
-    ],
-    "categories": [
-      "powercrush"
-    ],
+    "alternateInputs": ["2+3"],
+    "categories": ["powercrush"],
     "notes": [
       "Heat Burst",
       "100% recoverable damage",
@@ -27,13 +23,11 @@
     "input": "in heat 2+3",
     "hit_level": "m,m,m",
     "damage": "25,14,23",
-    "startup": "i15~16,\n         i30~32,i31~32",
+    "startup": "i15~16,i30~32,i31~32",
     "block": "+6",
     "hit": "+3d",
     "counter": "",
-    "alternateInputs": [
-      "in heat 2+3"
-    ],
+    "alternateInputs": ["in heat 2+3"],
     "categories": [],
     "notes": [
       "Heat Smash",
@@ -52,16 +46,9 @@
     "block": "",
     "hit": "-2d",
     "counter": "",
-    "alternateInputs": [
-      "in heat 2+3,db+1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Heat Burst",
-      "Unbreakable on hit"
-    ]
+    "alternateInputs": ["in heat 2+3,db+1+2"],
+    "categories": ["throw"],
+    "notes": ["Heat Burst", "Unbreakable on hit"]
   },
   {
     "name": "Russian Hook Special > Ambush Tackle",
@@ -72,15 +59,9 @@
     "block": "",
     "hit": "-2d",
     "counter": "",
-    "alternateInputs": [
-      "f,f,F+2,in heat 1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Partially uses remaining Heat time"
-    ]
+    "alternateInputs": ["f,f,F+2,in heat 1+2"],
+    "categories": ["throw"],
+    "notes": ["Partially uses remaining Heat time"]
   },
   {
     "name": "Hail Slicer > Ambush Tackle",
@@ -91,15 +72,9 @@
     "block": "",
     "hit": "-2d",
     "counter": "",
-    "alternateInputs": [
-      "FC df+1,in heat 1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Partially uses remaining Heat time"
-    ]
+    "alternateInputs": ["FC df+1,in heat 1+2"],
+    "categories": ["throw"],
+    "notes": ["Partially uses remaining Heat time"]
   },
   {
     "name": "Salvo",
@@ -110,9 +85,7 @@
     "block": "-14",
     "hit": "+15g",
     "counter": "",
-    "alternateInputs": [
-      "1,2,1"
-    ],
+    "alternateInputs": ["1,2,1"],
     "categories": [],
     "notes": [
       "Heat Engager",
@@ -131,9 +104,7 @@
     "block": "-3",
     "hit": "+22a",
     "counter": "",
-    "alternateInputs": [
-      "f+3,1+2"
-    ],
+    "alternateInputs": ["f+3,1+2"],
     "categories": [],
     "notes": [
       "Heat Engager",
@@ -154,9 +125,7 @@
     "block": "-9",
     "hit": "+21a (+12)",
     "counter": "",
-    "alternateInputs": [
-      "b+4,3"
-    ],
+    "alternateInputs": ["b+4,3"],
     "categories": [],
     "notes": [
       "Heat Engager",
@@ -174,10 +143,7 @@
     "block": "+7",
     "hit": "+8c",
     "counter": "",
-    "alternateInputs": [
-      "SNK 4",
-      "qcf4"
-    ],
+    "alternateInputs": ["SNK 4", "qcf4"],
     "categories": [],
     "notes": [
       "Heat Engager",
@@ -196,17 +162,9 @@
     "block": "",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "d+1+3"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Heat Engager",
-      "Crouch throw",
-      "Can't Heat Dash"
-    ]
+    "alternateInputs": ["d+1+3"],
+    "categories": ["throw"],
+    "notes": ["Heat Engager", "Crouch throw", "Can't Heat Dash"]
   },
   {
     "name": "Feint & Low Catch",
@@ -217,12 +175,8 @@
     "block": "",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "db+3~1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["db+3~1+2"],
+    "categories": ["throw"],
     "notes": [
       "Heat Engager",
       "Side switch",
@@ -240,12 +194,8 @@
     "block": "+5",
     "hit": "-2d",
     "counter": "",
-    "alternateInputs": [
-      "1,3,2~1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["1,3,2~1+2"],
+    "categories": ["throw"],
     "notes": [
       "Throw break 1+2",
       "Unbreakable during Heat",
@@ -262,12 +212,8 @@
     "block": "-5",
     "hit": "+3d",
     "counter": "",
-    "alternateInputs": [
-      "b+4,2,1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["b+4,2,1+2"],
+    "categories": ["throw"],
     "notes": [
       "Throw break 1+2",
       "Recovery in BT",
@@ -290,13 +236,9 @@
     "block": "+1",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "1"
-    ],
+    "alternateInputs": ["1"],
     "categories": [],
-    "notes": [
-      "Recovers 2f faster on hit or block (t27 r17)"
-    ]
+    "notes": ["Recovers 2f faster on hit or block (t27 r17)"]
   },
   {
     "name": "",
@@ -307,13 +249,9 @@
     "block": "-4",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "1,1"
-    ],
+    "alternateInputs": ["1,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit"
-    ]
+    "notes": ["Combo from 1st hit"]
   },
   {
     "name": "Eye Gouge > Hilt",
@@ -324,9 +262,7 @@
     "block": "-9",
     "hit": "+15a (+6)",
     "counter": "+36a (+0)",
-    "alternateInputs": [
-      "1,1,3"
-    ],
+    "alternateInputs": ["1,1,3"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -343,14 +279,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "1,2"
-    ],
+    "alternateInputs": ["1,2"],
     "categories": [],
-    "notes": [
-      "Jail from 1st attack",
-      "Combo from 1st hit"
-    ]
+    "notes": ["Jail from 1st attack", "Combo from 1st hit"]
   },
   {
     "name": "",
@@ -361,14 +292,9 @@
     "block": "-7",
     "hit": "+1",
     "counter": "+9",
-    "alternateInputs": [
-      "1,3"
-    ],
+    "alternateInputs": ["1,3"],
     "categories": [],
-    "notes": [
-      "Jail from 1st attack",
-      "Combo from 1st hit"
-    ]
+    "notes": ["Jail from 1st attack", "Combo from 1st hit"]
   },
   {
     "name": "Hammer and Sickle",
@@ -379,14 +305,9 @@
     "block": "-13",
     "hit": "+41a",
     "counter": "",
-    "alternateInputs": [
-      "1,3,2"
-    ],
+    "alternateInputs": ["1,3,2"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "Combo from 2nd CH"
-    ]
+    "notes": ["Spike", "Combo from 2nd CH"]
   },
   {
     "name": "",
@@ -397,13 +318,9 @@
     "block": "+0",
     "hit": "+9",
     "counter": "",
-    "alternateInputs": [
-      "2"
-    ],
+    "alternateInputs": ["2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -414,9 +331,7 @@
     "block": "-3",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "2,1"
-    ],
+    "alternateInputs": ["2,1"],
     "categories": [],
     "notes": [
       "Jail from 1st attack",
@@ -433,9 +348,7 @@
     "block": "-9",
     "hit": "+40d (-18)",
     "counter": "",
-    "alternateInputs": [
-      "2,1,3"
-    ],
+    "alternateInputs": ["2,1,3"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -452,14 +365,9 @@
     "block": "-12",
     "hit": "+3c",
     "counter": "",
-    "alternateInputs": [
-      "2,1,4"
-    ],
+    "alternateInputs": ["2,1,4"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "Trades with i8 from 2nd block"
-    ]
+    "notes": ["Spike", "Trades with i8 from 2nd block"]
   },
   {
     "name": "",
@@ -470,13 +378,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "3"
-    ],
+    "alternateInputs": ["3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -487,14 +391,9 @@
     "block": "-2",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "3,1"
-    ],
+    "alternateInputs": ["3,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit",
-      "Enter SNK -3 +6 r23 with DF"
-    ]
+    "notes": ["Combo from 1st hit", "Enter SNK -3 +6 r23 with DF"]
   },
   {
     "name": "Disconnector Combo Middle",
@@ -505,9 +404,7 @@
     "block": "-12",
     "hit": "+12a (+3)",
     "counter": "",
-    "alternateInputs": [
-      "3,1,2"
-    ],
+    "alternateInputs": ["3,1,2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -525,9 +422,7 @@
     "block": "-9",
     "hit": "+42d (-16)",
     "counter": "",
-    "alternateInputs": [
-      "3,1,4"
-    ],
+    "alternateInputs": ["3,1,4"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -545,13 +440,9 @@
     "block": "-9",
     "hit": "-1",
     "counter": "+2",
-    "alternateInputs": [
-      "4"
-    ],
+    "alternateInputs": ["4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Karnov Hook",
@@ -562,14 +453,9 @@
     "block": "-4",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "4,1"
-    ],
+    "alternateInputs": ["4,1"],
     "categories": [],
-    "notes": [
-      "Balcony Break on airborne hit",
-      "Combo from 1st hit"
-    ]
+    "notes": ["Balcony Break on airborne hit", "Combo from 1st hit"]
   },
   {
     "name": "Karnov Kick",
@@ -580,14 +466,9 @@
     "block": "-12",
     "hit": "+13c",
     "counter": "",
-    "alternateInputs": [
-      "4,3"
-    ],
+    "alternateInputs": ["4,3"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "Combo from 1st CH"
-    ]
+    "notes": ["Spike", "Combo from 1st CH"]
   },
   {
     "name": "Karnov Avalanche",
@@ -598,9 +479,7 @@
     "block": "+5",
     "hit": "+29a (+20)",
     "counter": "+46a",
-    "alternateInputs": [
-      "4,4"
-    ],
+    "alternateInputs": ["4,4"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -617,12 +496,8 @@
     "block": "-14",
     "hit": "+19a",
     "counter": "",
-    "alternateInputs": [
-      "1+2"
-    ],
-    "categories": [
-      "powercrush"
-    ],
+    "alternateInputs": ["1+2"],
+    "categories": ["powercrush"],
     "notes": [
       "Balcony Break",
       "Spike",
@@ -638,13 +513,9 @@
     "block": "-13",
     "hit": "+41a",
     "counter": "",
-    "alternateInputs": [
-      "3+4"
-    ],
+    "alternateInputs": ["3+4"],
     "categories": [],
-    "notes": [
-      "Tech-rollable on frames 34~38"
-    ]
+    "notes": ["Tech-rollable on frames 34~38"]
   },
   {
     "name": "",
@@ -655,13 +526,9 @@
     "block": "-8",
     "hit": "+3",
     "counter": "+8",
-    "alternateInputs": [
-      "f+2"
-    ],
+    "alternateInputs": ["f+2"],
     "categories": [],
-    "notes": [
-      "Elbow"
-    ]
+    "notes": ["Elbow"]
   },
   {
     "name": "Stun Gun",
@@ -672,9 +539,7 @@
     "block": "-7",
     "hit": "+28a (+23)",
     "counter": "+31a (+25)",
-    "alternateInputs": [
-      "f+2,4"
-    ],
+    "alternateInputs": ["f+2,4"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -692,13 +557,9 @@
     "block": "-6",
     "hit": "+5",
     "counter": "",
-    "alternateInputs": [
-      "f+3"
-    ],
+    "alternateInputs": ["f+3"],
     "categories": [],
-    "notes": [
-      "Enter SNK +0 +11 r19 with DF"
-    ]
+    "notes": ["Enter SNK +0 +11 r19 with DF"]
   },
   {
     "name": "Step-in Mantis",
@@ -709,9 +570,7 @@
     "block": "-10",
     "hit": "+1",
     "counter": "",
-    "alternateInputs": [
-      "f+3,3"
-    ],
+    "alternateInputs": ["f+3,3"],
     "categories": [],
     "notes": [
       "Spike",
@@ -729,13 +588,9 @@
     "block": "-7",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "f+4"
-    ],
+    "alternateInputs": ["f+4"],
     "categories": [],
-    "notes": [
-      "Knee"
-    ]
+    "notes": ["Knee"]
   },
   {
     "name": "Falcon Combination",
@@ -746,9 +601,7 @@
     "block": "-9",
     "hit": "+20a",
     "counter": "",
-    "alternateInputs": [
-      "f+4,3"
-    ],
+    "alternateInputs": ["f+4,3"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -766,15 +619,9 @@
     "block": "-11",
     "hit": "+0",
     "counter": "+22a (+15)",
-    "alternateInputs": [
-      "f+4,4"
-    ],
+    "alternateInputs": ["f+4,4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Only on CH",
-      "Combo from 1st hit with 5f delay"
-    ]
+    "notes": ["Balcony Break", "Only on CH", "Combo from 1st hit with 5f delay"]
   },
   {
     "name": "Cougar Combination",
@@ -785,14 +632,9 @@
     "block": "-5",
     "hit": "+21a (+12)",
     "counter": "",
-    "alternateInputs": [
-      "f+4,4,3"
-    ],
+    "alternateInputs": ["f+4,4,3"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Interrupt with i6 from 2nd block"
-    ]
+    "notes": ["Balcony Break", "Interrupt with i6 from 2nd block"]
   },
   {
     "name": "Orca Combination",
@@ -803,14 +645,9 @@
     "block": "-12",
     "hit": "+3c",
     "counter": "",
-    "alternateInputs": [
-      "f+4,d+4"
-    ],
+    "alternateInputs": ["f+4,d+4"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "Combo from 1st hit with 5f delay"
-    ]
+    "notes": ["Spike", "Combo from 1st hit with 5f delay"]
   },
   {
     "name": "Scabbard",
@@ -821,14 +658,9 @@
     "block": "-9",
     "hit": "+35a",
     "counter": "",
-    "alternateInputs": [
-      "f+1+2"
-    ],
+    "alternateInputs": ["f+1+2"],
     "categories": [],
-    "notes": [
-      "Elbow",
-      "Balcony Break"
-    ]
+    "notes": ["Elbow", "Balcony Break"]
   },
   {
     "name": "",
@@ -839,13 +671,9 @@
     "block": "-2",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "df+1"
-    ],
+    "alternateInputs": ["df+1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Switchblade Ripper",
@@ -856,9 +684,7 @@
     "block": "-7",
     "hit": "+22a (+13)",
     "counter": "+58a",
-    "alternateInputs": [
-      "df+1,4"
-    ],
+    "alternateInputs": ["df+1,4"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -875,13 +701,9 @@
     "block": "-12",
     "hit": "+28a (+18)",
     "counter": "",
-    "alternateInputs": [
-      "df+2"
-    ],
+    "alternateInputs": ["df+2"],
     "categories": [],
-    "notes": [
-      "Launches crouching opponent"
-    ]
+    "notes": ["Launches crouching opponent"]
   },
   {
     "name": "Mantis Heel",
@@ -892,9 +714,7 @@
     "block": "-6~-3",
     "hit": "+5c~+8c",
     "counter": "",
-    "alternateInputs": [
-      "df+3"
-    ],
+    "alternateInputs": ["df+3"],
     "categories": [],
     "notes": [
       "Spike",
@@ -910,13 +730,9 @@
     "block": "-9",
     "hit": "+2",
     "counter": "",
-    "alternateInputs": [
-      "df+4"
-    ],
+    "alternateInputs": ["df+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Reaper Kick",
@@ -927,17 +743,9 @@
     "block": "-7",
     "hit": "+12g",
     "counter": "+24d",
-    "alternateInputs": [
-      "df+3+4"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Strong Aerial Tailspin",
-      "Homing",
-      "Balcony Break"
-    ]
+    "alternateInputs": ["df+3+4"],
+    "categories": ["homing"],
+    "notes": ["Strong Aerial Tailspin", "Homing", "Balcony Break"]
   },
   {
     "name": "Bunker-buster Elbow",
@@ -948,13 +756,9 @@
     "block": "+1c",
     "hit": "+8c",
     "counter": "+13d",
-    "alternateInputs": [
-      "d+1"
-    ],
+    "alternateInputs": ["d+1"],
     "categories": [],
-    "notes": [
-      "Elbow"
-    ]
+    "notes": ["Elbow"]
   },
   {
     "name": "Razer",
@@ -965,13 +769,9 @@
     "block": "-13",
     "hit": "-1c",
     "counter": "+13g",
-    "alternateInputs": [
-      "d+2"
-    ],
+    "alternateInputs": ["d+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -982,13 +782,9 @@
     "block": "-14",
     "hit": "-3",
     "counter": "+1c",
-    "alternateInputs": [
-      "d+3"
-    ],
+    "alternateInputs": ["d+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -999,13 +795,9 @@
     "block": "-8",
     "hit": "+6",
     "counter": "",
-    "alternateInputs": [
-      "d+3,2"
-    ],
+    "alternateInputs": ["d+3,2"],
     "categories": [],
-    "notes": [
-      "Combo from 1st CH"
-    ]
+    "notes": ["Combo from 1st CH"]
   },
   {
     "name": "Avalanche Hammer Rush",
@@ -1016,9 +808,7 @@
     "block": "-2c",
     "hit": "+20a",
     "counter": "",
-    "alternateInputs": [
-      "d+3,2,1+2"
-    ],
+    "alternateInputs": ["d+3,2,1+2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1036,14 +826,9 @@
     "block": "-11",
     "hit": "+5",
     "counter": "+23g",
-    "alternateInputs": [
-      "d+3,4"
-    ],
+    "alternateInputs": ["d+3,4"],
     "categories": [],
-    "notes": [
-      "Spike",
-      "Combo from 1st CH"
-    ]
+    "notes": ["Spike", "Combo from 1st CH"]
   },
   {
     "name": "",
@@ -1054,13 +839,9 @@
     "block": "-15",
     "hit": "-9",
     "counter": "-4",
-    "alternateInputs": [
-      "d+4"
-    ],
+    "alternateInputs": ["d+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1071,13 +852,9 @@
     "block": "-11",
     "hit": "+5",
     "counter": "",
-    "alternateInputs": [
-      "d+4,1"
-    ],
+    "alternateInputs": ["d+4,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st CH with 1f delay"
-    ]
+    "notes": ["Combo from 1st CH with 1f delay"]
   },
   {
     "name": "Separator",
@@ -1088,15 +865,9 @@
     "block": "-16",
     "hit": "+9a (+0)",
     "counter": "",
-    "alternateInputs": [
-      "d+4,1,3"
-    ],
+    "alternateInputs": ["d+4,1,3"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 2nd hit",
-      "Combo from 1st CH"
-    ]
+    "notes": ["Balcony Break", "Combo from 2nd hit", "Combo from 1st CH"]
   },
   {
     "name": "",
@@ -1107,14 +878,9 @@
     "block": "-14",
     "hit": "+16a (+6)",
     "counter": "",
-    "alternateInputs": [
-      "d+4,4"
-    ],
+    "alternateInputs": ["d+4,4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 1st CH"
-    ]
+    "notes": ["Balcony Break", "Combo from 1st CH"]
   },
   {
     "name": "Pit Fall",
@@ -1125,12 +891,8 @@
     "block": "",
     "hit": "+5d",
     "counter": "",
-    "alternateInputs": [
-      "d+1+2"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["d+1+2"],
+    "categories": ["parry"],
     "notes": [
       "Parries lows except weapons",
       "Can side switch on a successful parry",
@@ -1146,13 +908,9 @@
     "block": "-7",
     "hit": "+4",
     "counter": "",
-    "alternateInputs": [
-      "db+2"
-    ],
+    "alternateInputs": ["db+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1163,14 +921,9 @@
     "block": "-10",
     "hit": "+1",
     "counter": "+3",
-    "alternateInputs": [
-      "db+2,1"
-    ],
+    "alternateInputs": ["db+2,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit with 9f delay",
-      "Input can be delayed 11f"
-    ]
+    "notes": ["Combo from 1st hit with 9f delay", "Input can be delayed 11f"]
   },
   {
     "name": "Death's Door",
@@ -1181,14 +934,9 @@
     "block": "-14",
     "hit": "+29a (+23)",
     "counter": "",
-    "alternateInputs": [
-      "db+2,1,2"
-    ],
+    "alternateInputs": ["db+2,1,2"],
     "categories": [],
-    "notes": [
-      "Combo from 2nd CH with 6f delay",
-      "Input can be delayed 14f"
-    ]
+    "notes": ["Combo from 2nd CH with 6f delay", "Input can be delayed 14f"]
   },
   {
     "name": "Clipping Sweep",
@@ -1199,13 +947,9 @@
     "block": "-26",
     "hit": "-2c",
     "counter": "+67a (+51)",
-    "alternateInputs": [
-      "db+3"
-    ],
+    "alternateInputs": ["db+3"],
     "categories": [],
-    "notes": [
-      "Clean hit +67a (+51)"
-    ]
+    "notes": ["Clean hit +67a (+51)"]
   },
   {
     "name": "Deadly Scorpion",
@@ -1216,13 +960,9 @@
     "block": "-31",
     "hit": "+3g",
     "counter": "+20a",
-    "alternateInputs": [
-      "db+3+4"
-    ],
+    "alternateInputs": ["db+3+4"],
     "categories": [],
-    "notes": [
-      "Balcony break on airborne hit"
-    ]
+    "notes": ["Balcony break on airborne hit"]
   },
   {
     "name": "",
@@ -1233,13 +973,9 @@
     "block": "-10",
     "hit": "+1",
     "counter": "",
-    "alternateInputs": [
-      "b+1"
-    ],
+    "alternateInputs": ["b+1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Pommel Fling",
@@ -1250,9 +986,7 @@
     "block": "-12",
     "hit": "+18g",
     "counter": "",
-    "alternateInputs": [
-      "b+1,2"
-    ],
+    "alternateInputs": ["b+1,2"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -1270,13 +1004,9 @@
     "block": "-3",
     "hit": "+8",
     "counter": "",
-    "alternateInputs": [
-      "b+2"
-    ],
+    "alternateInputs": ["b+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1287,13 +1017,9 @@
     "block": "-5",
     "hit": "+6",
     "counter": "",
-    "alternateInputs": [
-      "b+2,1"
-    ],
+    "alternateInputs": ["b+2,1"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit"
-    ]
+    "notes": ["Combo from 1st hit"]
   },
   {
     "name": "Eye Gouge > Stingray",
@@ -1304,14 +1030,9 @@
     "block": "-26",
     "hit": "-2c",
     "counter": "+1d",
-    "alternateInputs": [
-      "b+2,1,3"
-    ],
+    "alternateInputs": ["b+2,1,3"],
     "categories": [],
-    "notes": [
-      "Clean hit +4",
-      "Shift to Clipping Heel Hook on close range CH"
-    ]
+    "notes": ["Clean hit +4", "Shift to Clipping Heel Hook on close range CH"]
   },
   {
     "name": "Serrated Edge",
@@ -1322,17 +1043,9 @@
     "block": "-9",
     "hit": "+11g",
     "counter": "",
-    "alternateInputs": [
-      "b+3"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Balcony Break",
-      "+18a (+9) on BT hit"
-    ]
+    "alternateInputs": ["b+3"],
+    "categories": ["homing"],
+    "notes": ["Homing", "Balcony Break", "+18a (+9) on BT hit"]
   },
   {
     "name": "",
@@ -1343,13 +1056,9 @@
     "block": "-7",
     "hit": "+4",
     "counter": "",
-    "alternateInputs": [
-      "b+4"
-    ],
+    "alternateInputs": ["b+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "",
@@ -1360,9 +1069,7 @@
     "block": "-7",
     "hit": "+4c",
     "counter": "",
-    "alternateInputs": [
-      "b+4,2"
-    ],
+    "alternateInputs": ["b+4,2"],
     "categories": [],
     "notes": [
       "Spike",
@@ -1380,9 +1087,7 @@
     "block": "+1",
     "hit": "+5",
     "counter": "+14c",
-    "alternateInputs": [
-      "b+4,2,1"
-    ],
+    "alternateInputs": ["b+4,2,1"],
     "categories": [],
     "notes": [
       "Combo from 2nd hit with 3f delay",
@@ -1399,13 +1104,9 @@
     "block": "+6",
     "hit": "+26d",
     "counter": "",
-    "alternateInputs": [
-      "b+1+2"
-    ],
+    "alternateInputs": ["b+1+2"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike"]
   },
   {
     "name": "Red Alert",
@@ -1416,12 +1117,8 @@
     "block": "",
     "hit": "-5d",
     "counter": "",
-    "alternateInputs": [
-      "b+1+3"
-    ],
-    "categories": [
-      "parry"
-    ],
+    "alternateInputs": ["b+1+3"],
+    "categories": ["parry"],
     "notes": [
       "Parries mid and high punches and kicks",
       "+1d on a successful kick parry",
@@ -1438,16 +1135,9 @@
     "block": "-2",
     "hit": "+26a",
     "counter": "",
-    "alternateInputs": [
-      "b+3+4"
-    ],
-    "categories": [
-      "parry"
-    ],
-    "notes": [
-      "Balcony break on airborne hit",
-      "Punch parry"
-    ]
+    "alternateInputs": ["b+3+4"],
+    "categories": ["parry"],
+    "notes": ["Balcony break on airborne hit", "Punch parry"]
   },
   {
     "name": "Counterstrike",
@@ -1458,13 +1148,9 @@
     "block": "-5",
     "hit": "+9",
     "counter": "+53a",
-    "alternateInputs": [
-      "ub+2"
-    ],
+    "alternateInputs": ["ub+2"],
     "categories": [],
-    "notes": [
-      "Sidesteps left"
-    ]
+    "notes": ["Sidesteps left"]
   },
   {
     "name": "",
@@ -1475,13 +1161,9 @@
     "block": "-17",
     "hit": "-6",
     "counter": "",
-    "alternateInputs": [
-      "ub+3"
-    ],
+    "alternateInputs": ["ub+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Slicing Sobat",
@@ -1492,14 +1174,9 @@
     "block": "-16~17",
     "hit": "+11a",
     "counter": "",
-    "alternateInputs": [
-      "ub+4"
-    ],
+    "alternateInputs": ["ub+4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "on airborne hit"
-    ]
+    "notes": ["Balcony Break", "on airborne hit"]
   },
   {
     "name": "Sub-Zero",
@@ -1510,14 +1187,9 @@
     "block": "",
     "hit": "+26d (-32)",
     "counter": "",
-    "alternateInputs": [
-      "ub+1+2"
-    ],
+    "alternateInputs": ["ub+1+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Unblockable"
-    ]
+    "notes": ["Balcony Break", "Unblockable"]
   },
   {
     "name": "",
@@ -1528,13 +1200,9 @@
     "block": "-13",
     "hit": "+14a (+4)",
     "counter": "",
-    "alternateInputs": [
-      "u+3"
-    ],
+    "alternateInputs": ["u+3"],
     "categories": [],
-    "notes": [
-      "Balcony Break"
-    ]
+    "notes": ["Balcony Break"]
   },
   {
     "name": "Slicing Sobat",
@@ -1545,14 +1213,9 @@
     "block": "-12~13",
     "hit": "+15a",
     "counter": "",
-    "alternateInputs": [
-      "u+4"
-    ],
+    "alternateInputs": ["u+4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "on airborne hit"
-    ]
+    "notes": ["Balcony Break", "on airborne hit"]
   },
   {
     "name": "Eye Blast",
@@ -1563,16 +1226,9 @@
     "block": "-9",
     "hit": "+37d (+29)",
     "counter": "",
-    "alternateInputs": [
-      "uf+1"
-    ],
+    "alternateInputs": ["uf+1"],
     "categories": [],
-    "notes": [
-      "Tornado",
-      "Balcony BreakSometimes written ",
-      "ub+1",
-      "u+1"
-    ]
+    "notes": ["Tornado", "Balcony BreakSometimes written ", "ub+1", "u+1"]
   },
   {
     "name": "Under Pressure",
@@ -1583,13 +1239,9 @@
     "block": "-5",
     "hit": "+42a",
     "counter": "",
-    "alternateInputs": [
-      "uf+2"
-    ],
+    "alternateInputs": ["uf+2"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike"]
   },
   {
     "name": "Breaching Charge Kick",
@@ -1600,13 +1252,9 @@
     "block": "-7",
     "hit": "+20a (+10)",
     "counter": "",
-    "alternateInputs": [
-      "uf+3"
-    ],
+    "alternateInputs": ["uf+3"],
     "categories": [],
-    "notes": [
-      "Balcony Break"
-    ]
+    "notes": ["Balcony Break"]
   },
   {
     "name": "Slicing Sobat",
@@ -1617,14 +1265,9 @@
     "block": "-9",
     "hit": "+19a",
     "counter": "",
-    "alternateInputs": [
-      "uf+4"
-    ],
+    "alternateInputs": ["uf+4"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "on airborne hit"
-    ]
+    "notes": ["Balcony Break", "on airborne hit"]
   },
   {
     "name": "Delayed Rising Toe Kick",
@@ -1635,13 +1278,9 @@
     "block": "-13",
     "hit": "+32a (+22a)",
     "counter": "",
-    "alternateInputs": [
-      "uf,n,4"
-    ],
+    "alternateInputs": ["uf,n,4"],
     "categories": [],
-    "notes": [
-      "Sometimes written Delayed Hopkick"
-    ]
+    "notes": ["Sometimes written Delayed Hopkick"]
   },
   {
     "name": "Russian Sickle",
@@ -1652,14 +1291,9 @@
     "block": "-12",
     "hit": "+15a",
     "counter": "+30d (+22)",
-    "alternateInputs": [
-      "f,F+2"
-    ],
+    "alternateInputs": ["f,F+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Spike"
-    ]
+    "notes": ["Balcony Break", "Spike"]
   },
   {
     "name": "Stinger Kick",
@@ -1670,17 +1304,9 @@
     "block": "+5",
     "hit": "+30a (+4)",
     "counter": "",
-    "alternateInputs": [
-      "f,F+3"
-    ],
-    "categories": [
-      "homing"
-    ],
-    "notes": [
-      "Homing",
-      "Balcony Break",
-      "Chip damage on block"
-    ]
+    "alternateInputs": ["f,F+3"],
+    "categories": ["homing"],
+    "notes": ["Homing", "Balcony Break", "Chip damage on block"]
   },
   {
     "name": "Rolling Thunder",
@@ -1691,13 +1317,9 @@
     "block": "-1",
     "hit": "+13c",
     "counter": "",
-    "alternateInputs": [
-      "f,F+4"
-    ],
+    "alternateInputs": ["f,F+4"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike"]
   },
   {
     "name": "Russian Hook Special",
@@ -1708,9 +1330,7 @@
     "block": "+4",
     "hit": "+32d (-26)",
     "counter": "+44a",
-    "alternateInputs": [
-      "f,f,F+2"
-    ],
+    "alternateInputs": ["f,f,F+2"],
     "categories": [],
     "notes": [
       "Balcony Break",
@@ -1729,9 +1349,7 @@
     "block": "-7",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "f,f,F+4"
-    ],
+    "alternateInputs": ["f,f,F+4"],
     "categories": [],
     "notes": [
       "Tornado",
@@ -1752,9 +1370,7 @@
     "block": "-15",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "Win rage F+3"
-    ],
+    "alternateInputs": ["Win rage F+3"],
     "categories": [],
     "notes": [
       "Transition to attack throw on front standing hit",
@@ -1772,15 +1388,9 @@
     "block": "-15",
     "hit": "+68a (+52)",
     "counter": "",
-    "alternateInputs": [
-      "qcb+2"
-    ],
+    "alternateInputs": ["qcb+2"],
     "categories": [],
-    "notes": [
-      "Tornado",
-      "Elbow",
-      "Sometimes written Backswing Blow"
-    ]
+    "notes": ["Tornado", "Elbow", "Sometimes written Backswing Blow"]
   },
   {
     "name": "",
@@ -1791,13 +1401,9 @@
     "block": "-13",
     "hit": "-4",
     "counter": "",
-    "alternateInputs": [
-      "FC df+1"
-    ],
+    "alternateInputs": ["FC df+1"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Hail Slicer",
@@ -1808,9 +1414,7 @@
     "block": "",
     "hit": "+7",
     "counter": "",
-    "alternateInputs": [
-      "FC df+1,4"
-    ],
+    "alternateInputs": ["FC df+1,4"],
     "categories": [],
     "notes": [
       "Knee",
@@ -1828,13 +1432,9 @@
     "block": "-3",
     "hit": "+4",
     "counter": "",
-    "alternateInputs": [
-      "ws1"
-    ],
+    "alternateInputs": ["ws1"],
     "categories": [],
-    "notes": [
-      "Enter SNK -5 +2 r22 with DF"
-    ]
+    "notes": ["Enter SNK -5 +2 r22 with DF"]
   },
   {
     "name": "Qullion",
@@ -1845,14 +1445,9 @@
     "block": "-7",
     "hit": "+10g",
     "counter": "",
-    "alternateInputs": [
-      "ws1,2"
-    ],
+    "alternateInputs": ["ws1,2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 1st hit"
-    ]
+    "notes": ["Balcony Break", "Combo from 1st hit"]
   },
   {
     "name": "Double Hilt",
@@ -1863,14 +1458,9 @@
     "block": "-13",
     "hit": "+15a (+6)",
     "counter": "+36a (+0)",
-    "alternateInputs": [
-      "ws1,3"
-    ],
+    "alternateInputs": ["ws1,3"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Combo from 1st hit"
-    ]
+    "notes": ["Balcony Break", "Combo from 1st hit"]
   },
   {
     "name": "Ballistic Upper",
@@ -1881,13 +1471,9 @@
     "block": "-12",
     "hit": "+28a (+18)",
     "counter": "",
-    "alternateInputs": [
-      "ws2"
-    ],
+    "alternateInputs": ["ws2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Glacial Hilt",
@@ -1898,13 +1484,9 @@
     "block": "-9",
     "hit": "+15a (+6)",
     "counter": "+36a (+0)",
-    "alternateInputs": [
-      "ws3"
-    ],
+    "alternateInputs": ["ws3"],
     "categories": [],
-    "notes": [
-      "Balcony Break"
-    ]
+    "notes": ["Balcony Break"]
   },
   {
     "name": "Gelid Smash",
@@ -1915,13 +1497,9 @@
     "block": "-5",
     "hit": "+6",
     "counter": "",
-    "alternateInputs": [
-      "ws4"
-    ],
+    "alternateInputs": ["ws4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Frost Tackle",
@@ -1932,14 +1510,9 @@
     "block": "-14",
     "hit": "+19a (+9)",
     "counter": "",
-    "alternateInputs": [
-      "ws1+2"
-    ],
+    "alternateInputs": ["ws1+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "Shoulder"
-    ]
+    "notes": ["Balcony Break", "Shoulder"]
   },
   {
     "name": "Sneak",
@@ -1950,9 +1523,7 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "SNK "
-    ],
+    "alternateInputs": ["SNK "],
     "categories": [],
     "notes": [
       "Lapses to standing",
@@ -1969,16 +1540,9 @@
     "block": "-3",
     "hit": "+51a",
     "counter": "",
-    "alternateInputs": [
-      "SNK 1",
-      "qcf1"
-    ],
+    "alternateInputs": ["SNK 1", "qcf1"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "on airborne hit",
-      "Sometimes written qcf+1"
-    ]
+    "notes": ["Balcony Break", "on airborne hit", "Sometimes written qcf+1"]
   },
   {
     "name": "Stinger Elbow",
@@ -1989,16 +1553,9 @@
     "block": "-14",
     "hit": "+36a (+26)",
     "counter": "",
-    "alternateInputs": [
-      "SNK 2",
-      "qcf2"
-    ],
+    "alternateInputs": ["SNK 2", "qcf2"],
     "categories": [],
-    "notes": [
-      "Tornado",
-      "Elbow",
-      "Sometimes written qcf+2"
-    ]
+    "notes": ["Tornado", "Elbow", "Sometimes written qcf+2"]
   },
   {
     "name": "Slay Ride",
@@ -2009,13 +1566,8 @@
     "block": "-16",
     "hit": "+0",
     "counter": "+1d",
-    "alternateInputs": [
-      "SNK 3",
-      "qcf3"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["SNK 3", "qcf3"],
+    "categories": ["throw"],
     "notes": [
       "Throw when CH from the front",
       "Called \"Needle Hold\" in-gameSometimes written qcf+3"
@@ -2030,15 +1582,9 @@
     "block": "-14",
     "hit": "+19 (+9)",
     "counter": "",
-    "alternateInputs": [
-      "SNK 1+2",
-      "qcf1+2"
-    ],
+    "alternateInputs": ["SNK 1+2", "qcf1+2"],
     "categories": [],
-    "notes": [
-      "Balcony Break",
-      "ShoulderSometimes written qcf+1+2 or ws1+2"
-    ]
+    "notes": ["Balcony Break", "ShoulderSometimes written qcf+1+2 or ws1+2"]
   },
   {
     "name": "Snap Knee",
@@ -2049,13 +1595,8 @@
     "block": "-13",
     "hit": "+27g",
     "counter": "",
-    "alternateInputs": [
-      "SNK 3+4",
-      "qcf3+4"
-    ],
-    "categories": [
-      "powercrush"
-    ],
+    "alternateInputs": ["SNK 3+4", "qcf3+4"],
+    "categories": ["powercrush"],
     "notes": [
       "Knee",
       "Absorb a hit to transition to Snap Knee AssaultSometimes written qcf+3+4"
@@ -2070,9 +1611,7 @@
     "block": "-15",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "in rage df+1+2"
-    ],
+    "alternateInputs": ["in rage df+1+2"],
     "categories": [],
     "notes": [
       "Rage Art",
@@ -2086,7 +1625,7 @@
     ]
   },
   {
-    "name": "\nKi Charge\nSupercharger\n",
+    "name": "Ki Charge",
     "input": "1+2+3+4",
     "hit_level": "",
     "damage": "",
@@ -2094,13 +1633,12 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "1+2+3+4"
-    ],
+    "alternateInputs": ["1+2+3+4"],
     "categories": [],
     "notes": [
       "Can't block for 5 seconds",
-      "CH state for 5 seconds"
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {
@@ -2112,13 +1650,9 @@
     "block": "-10",
     "hit": "+1",
     "counter": "",
-    "alternateInputs": [
-      "SS 2"
-    ],
+    "alternateInputs": ["SS 2"],
     "categories": [],
-    "notes": [
-      "Spike"
-    ]
+    "notes": ["Spike"]
   },
   {
     "name": "Integral Slicer Clutch",
@@ -2129,12 +1663,8 @@
     "block": "-9",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "SS 2,3"
-    ],
-    "categories": [
-      "throw"
-    ],
+    "alternateInputs": ["SS 2,3"],
+    "categories": ["throw"],
     "notes": [
       "Throw when hit from the front",
       "Side switch on front hit",
@@ -2151,13 +1681,9 @@
     "block": "-4",
     "hit": "+2c",
     "counter": "",
-    "alternateInputs": [
-      "SS 2,1+2"
-    ],
+    "alternateInputs": ["SS 2,1+2"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit"
-    ]
+    "notes": ["Combo from 1st hit"]
   },
   {
     "name": "Integral Blitz",
@@ -2168,13 +1694,9 @@
     "block": "-10",
     "hit": "+45a",
     "counter": "",
-    "alternateInputs": [
-      "SS 2,1+2,4"
-    ],
+    "alternateInputs": ["SS 2,1+2,4"],
     "categories": [],
-    "notes": [
-      "Combo from 1st hit"
-    ]
+    "notes": ["Combo from 1st hit"]
   },
   {
     "name": "Pigeon Roll",
@@ -2185,13 +1707,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "SS 3+4"
-    ],
+    "alternateInputs": ["SS 3+4"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Cane Stab",
@@ -2202,13 +1720,9 @@
     "block": "-11",
     "hit": "+10d",
     "counter": "",
-    "alternateInputs": [
-      "BT d+3"
-    ],
+    "alternateInputs": ["BT d+3"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Clipping Heel Hook",
@@ -2219,15 +1733,9 @@
     "block": "-9",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "FDFT 3"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "On close hit"
-    ]
+    "alternateInputs": ["FDFT 3"],
+    "categories": ["throw"],
+    "notes": ["On close hit"]
   },
   {
     "name": "Six Feet Under",
@@ -2238,14 +1746,9 @@
     "block": "-11",
     "hit": "+0",
     "counter": "",
-    "alternateInputs": [
-      "OTG d+3+4"
-    ],
+    "alternateInputs": ["OTG d+3+4"],
     "categories": [],
-    "notes": [
-      "Floor Break",
-      "+0a (-8) on grounded"
-    ]
+    "notes": ["Floor Break", "+0a (-8) on grounded"]
   },
   {
     "name": "Living Dead",
@@ -2256,13 +1759,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "(Face down) 1+2"
-    ],
+    "alternateInputs": ["(Face down) 1+2"],
     "categories": [],
-    "notes": [
-      ""
-    ]
+    "notes": [""]
   },
   {
     "name": "Volk Clutch",
@@ -2273,17 +1772,9 @@
     "block": "-2",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "1+3"
-    ],
-    "categories": [
-      "throw",
-      "homing"
-    ],
-    "notes": [
-      "Throw break 1 or 2",
-      "Homing"
-    ]
+    "alternateInputs": ["1+3"],
+    "categories": ["throw", "homing"],
+    "notes": ["Throw break 1 or 2", "Homing"]
   },
   {
     "name": "Purge Slam",
@@ -2294,18 +1785,9 @@
     "block": "-2",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "2+4"
-    ],
-    "categories": [
-      "throw",
-      "homing"
-    ],
-    "notes": [
-      "Throw break 1 or 2",
-      "Homing",
-      "Side switch on hit or break"
-    ]
+    "alternateInputs": ["2+4"],
+    "categories": ["throw", "homing"],
+    "notes": ["Throw break 1 or 2", "Homing", "Side switch on hit or break"]
   },
   {
     "name": "Tarantula Sting",
@@ -2316,15 +1798,9 @@
     "block": "-3",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "Left throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1"
-    ]
+    "alternateInputs": ["Left throw"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1"]
   },
   {
     "name": "Reverse Fracture",
@@ -2335,15 +1811,9 @@
     "block": "-3",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "Right throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 2"
-    ]
+    "alternateInputs": ["Right throw"],
+    "categories": ["throw"],
+    "notes": ["Throw break 2"]
   },
   {
     "name": "Absolute Silence",
@@ -2354,15 +1824,9 @@
     "block": "",
     "hit": "+1d",
     "counter": "",
-    "alternateInputs": [
-      "Back throw"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Unbreakable"
-    ]
+    "alternateInputs": ["Back throw"],
+    "categories": ["throw"],
+    "notes": ["Unbreakable"]
   },
   {
     "name": "Reverse Victor Clutch",
@@ -2373,16 +1837,9 @@
     "block": "-2",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "f+1+4"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1",
-      "Side switch on hit"
-    ]
+    "alternateInputs": ["f+1+4"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1", "Side switch on hit"]
   },
   {
     "name": "Victor Clutch",
@@ -2393,15 +1850,9 @@
     "block": "-2",
     "hit": "-1d",
     "counter": "",
-    "alternateInputs": [
-      "f+2+3"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 2"
-    ]
+    "alternateInputs": ["f+2+3"],
+    "categories": ["throw"],
+    "notes": ["Throw break 2"]
   },
   {
     "name": "Blizzard Rush",
@@ -2412,17 +1863,9 @@
     "block": "-6",
     "hit": "-5d",
     "counter": "",
-    "alternateInputs": [
-      "uf+1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Floor Break",
-      "Throw break 1+2",
-      "Side switch on hit"
-    ]
+    "alternateInputs": ["uf+1+2"],
+    "categories": ["throw"],
+    "notes": ["Floor Break", "Throw break 1+2", "Side switch on hit"]
   },
   {
     "name": "Scorpion Scissors",
@@ -2433,15 +1876,9 @@
     "block": "",
     "hit": "-12d",
     "counter": "",
-    "alternateInputs": [
-      "uf+3+4"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Unbreakable (avoid by ducking)"
-    ]
+    "alternateInputs": ["uf+3+4"],
+    "categories": ["throw"],
+    "notes": ["Unbreakable (avoid by ducking)"]
   },
   {
     "name": "Snap Knee Assault",
@@ -2452,16 +1889,9 @@
     "block": "",
     "hit": "",
     "counter": "",
-    "alternateInputs": [
-      "(During enemy wall stun) f,f,F+4"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Tornado",
-      "Deals maximum 32 (20) damage due to scaling"
-    ]
+    "alternateInputs": ["(During enemy wall stun) f,f,F+4"],
+    "categories": ["throw"],
+    "notes": ["Tornado", "Deals maximum 32 (20) damage due to scaling"]
   },
   {
     "name": "Frost Bite",
@@ -2472,16 +1902,9 @@
     "block": "",
     "hit": "+0d",
     "counter": "",
-    "alternateInputs": [
-      "Tackle 1"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1",
-      "Removes Recoverable Health"
-    ]
+    "alternateInputs": ["Tackle 1"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1", "Removes Recoverable Health"]
   },
   {
     "name": "Achilles' Hold",
@@ -2492,15 +1915,9 @@
     "block": "",
     "hit": "+3d",
     "counter": "",
-    "alternateInputs": [
-      "Tackle 2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 2"
-    ]
+    "alternateInputs": ["Tackle 2"],
+    "categories": ["throw"],
+    "notes": ["Throw break 2"]
   },
   {
     "name": "Iron Curtain",
@@ -2511,14 +1928,8 @@
     "block": "",
     "hit": "+3d",
     "counter": "",
-    "alternateInputs": [
-      "Tackle 1+2"
-    ],
-    "categories": [
-      "throw"
-    ],
-    "notes": [
-      "Throw break 1+2"
-    ]
+    "alternateInputs": ["Tackle 1+2"],
+    "categories": ["throw"],
+    "notes": ["Throw break 1+2"]
   }
 ]

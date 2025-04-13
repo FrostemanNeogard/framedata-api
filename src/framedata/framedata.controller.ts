@@ -14,9 +14,9 @@ import { CharacterCodesService } from '../characterCodes/characterCodes.service'
 import {
   TekkenMoveCategory,
   tekkenMoveCategories,
-} from '../__types/moveCategories';
-import { FramedataPatchDto } from 'src/__dtos/frameDataDto';
-import { FrameData } from './schemas/framedata.schema';
+} from 'src/__types/moveCategories';
+import { FrameData } from 'src/__types/frameData';
+import { GameCodeValidationPipe } from 'src/__pipes/gameCodeValidation.pipe';
 
 @Controller('framedata')
 export class FramedataController {
@@ -29,7 +29,7 @@ export class FramedataController {
 
   @Get(':gameCode/:characterCode')
   public async getFramedataForCharacter(
-    @Param('gameCode') gameCode: GameCode,
+    @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterName: string,
   ) {
     const characterCode = this.characterCodesService.getCharacterCode(
@@ -58,7 +58,7 @@ export class FramedataController {
 
   @Get(':gameCode/:characterCode/categories/:category')
   public async getMoveCategoryForCharacter(
-    @Param('gameCode') gameCode: GameCode,
+    @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterCode: string,
     @Param('category') category: TekkenMoveCategory,
   ) {
@@ -100,7 +100,7 @@ export class FramedataController {
 
   @Get(':gameCode/:characterCode/moves/:input')
   public async getFrameDataSingle(
-    @Param('gameCode') gameCode: GameCode,
+    @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterCode: string,
     @Param('input') input: string,
   ) {
@@ -134,7 +134,7 @@ export class FramedataController {
 
   @Patch(':gameCode/:characterCode/moves/:input')
   public async updateMoveData(
-    @Param('gameCode') gameCode: GameCode,
+    @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterCode: string,
     @Param('input') input: string,
     @Body() patchBody: FramedataPatchDto,

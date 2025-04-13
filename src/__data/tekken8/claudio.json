@@ -16,7 +16,7 @@
     ],
     "notes": [
       "Heat Burst",
-      "Cancel to r45 with b,b",
+      "Cancel to r45 with b,b on frame 42",
       "3 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
@@ -489,7 +489,7 @@
     "startup": "i18",
     "block": "+0",
     "hit": "+15g",
-    "counter": "+15",
+    "counter": "+14",
     "alternateInputs": [
       "f+3"
     ],
@@ -893,7 +893,7 @@
     "hit_level": "L",
     "damage": "23",
     "startup": "i24~25",
-    "block": "-15",
+    "block": "-14~15",
     "hit": "+3c",
     "counter": "+27a",
     "alternateInputs": [
@@ -998,9 +998,15 @@
     "alternateInputs": [
       "b+2"
     ],
-    "categories": [],
+    "categories": [
+      "homing"
+    ],
     "notes": [
-      "Tornado"
+      "Tornado",
+      "Tracking notes:",
+      "Effectively homing?",
+      "Can be sidewalked right at +2 only?",
+      "Can be sidewalked left at +6 and +8 only?"
     ]
   },
   {
@@ -1193,7 +1199,8 @@
     "notes": [
       "Homing",
       "Balcony Break",
-      "Backswing blow"
+      "Backswing blow",
+      "Max distance from opponent when performed from tip range: 3.07-3.09 (frames 10-13?)"
     ]
   },
   {
@@ -1231,6 +1238,8 @@
       "21 damage with input u+3",
       "6 chip damage on block",
       "9 chip damage on block in heat",
+      "Range notes:",
+      "Assuming uf+3 input",
       "Tracking notes:",
       "Linear move",
       "No tracking to SSL/SWL side?"
@@ -1303,7 +1312,7 @@
     "categories": [],
     "notes": [
       "Elbow",
-      "Cannot be buffered"
+      "i15 fastest startup when buffered during blockstun. i17 fastest startup when unbuffered"
     ]
   },
   {
@@ -1745,7 +1754,8 @@
     "categories": [],
     "notes": [
       "Can't block for 5 seconds",
-      "CH state for 5 seconds"
+      "CH state on you for 5 seconds",
+      "50% damage increase on the next attack for 5 seconds"
     ]
   },
   {
@@ -1763,6 +1773,11 @@
     "categories": [],
     "notes": [
       "Side step takes 9f, effective startup i29",
+      "Range notes:",
+      "Assuming i29 startup (9f sidestep)",
+      "SSL4 range: 2.45",
+      "SSR4 range: 2.39",
+      "Range increases with sidestep delay",
       "Tracking notes:",
       "Assuming i29 startup (9f sidestep)",
       "Can be sidewalked left from -11 to +2 (SSL4)",
@@ -1899,7 +1914,7 @@
     "damage": "40",
     "startup": "i12",
     "block": "-6",
-    "hit": "",
+    "hit": "+1d",
     "counter": "",
     "alternateInputs": [
       "uf+1+2"
