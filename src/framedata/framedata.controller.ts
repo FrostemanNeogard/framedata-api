@@ -32,7 +32,7 @@ export class FramedataController {
     @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterName: string,
   ) {
-    const characterCode = this.characterCodesService.getCharacterCode(
+    const characterCode = await this.characterCodesService.getCharacterCode(
       characterName,
       gameCode,
     );
@@ -62,10 +62,11 @@ export class FramedataController {
     @Param('characterCode') characterCode: string,
     @Param('category') category: TekkenMoveCategory,
   ) {
-    const characterCodeResolved = this.characterCodesService.getCharacterCode(
-      characterCode,
-      gameCode,
-    );
+    const characterCodeResolved =
+      await this.characterCodesService.getCharacterCode(
+        characterCode,
+        gameCode,
+      );
 
     if (!characterCodeResolved) {
       this.logger.log(
@@ -104,10 +105,11 @@ export class FramedataController {
     @Param('characterCode') characterCode: string,
     @Param('input') input: string,
   ) {
-    const characterCodeResolved = this.characterCodesService.getCharacterCode(
-      characterCode,
-      gameCode,
-    );
+    const characterCodeResolved =
+      await this.characterCodesService.getCharacterCode(
+        characterCode,
+        gameCode,
+      );
 
     if (!characterCodeResolved) {
       this.logger.log(
@@ -139,10 +141,11 @@ export class FramedataController {
     @Param('input') input: string,
     @Body() updates: Partial<FrameData>,
   ) {
-    const characterCodeResolved = this.characterCodesService.getCharacterCode(
-      characterCode,
-      gameCode,
-    );
+    const characterCodeResolved =
+      await this.characterCodesService.getCharacterCode(
+        characterCode,
+        gameCode,
+      );
 
     if (!characterCodeResolved) {
       this.logger.log(
