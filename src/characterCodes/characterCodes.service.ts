@@ -1,45 +1,29 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { CharacterCodesForGameMap } from 'src/__types/characterCode';
-import * as CharacterCodesData from '../__data/characterCodes.json';
-import { GameCode } from 'src/__types/gameCode';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import {
+  CharacterCodes,
+  CharacterCodesDocument,
+} from './schemas/character-codes.schema';
+import { Injectable } from '@nestjs/common';
 
 @Injectable()
 export class CharacterCodesService {
-  private readonly logger: Logger;
-  private readonly allCharacterCodesMap: CharacterCodesForGameMap[];
+  constructor(
+    @InjectModel(CharacterCodes.name)
+    private readonly characterCodesModel: Model<CharacterCodesDocument>,
+  ) {}
 
-  constructor() {
-    this.logger = new Logger();
-    this.allCharacterCodesMap = this.generateCharacterCodesMap();
-  }
+  async getCharacterCode(alias: string, game: string): Promise<string | null> {
+    const record = await this.characterCodesModel.findOne({ game }).exec();
 
-  private generateCharacterCodesMap(): CharacterCodesForGameMap[] {
-    const result: CharacterCodesForGameMap[] = [];
+    if (!record) return null;
 
-    for (const [game, characters] of Object.entries(CharacterCodesData)) {
-      result[game] = {};
-      for (const [groupKey, names] of Object.entries(characters)) {
-        for (const name of names) {
-          result[game][name] = groupKey;
-        }
+    for (const [code, aliases] of record.characters.entries()) {
+      if (aliases.map((a) => a.toLowerCase()).includes(alias.toLowerCase())) {
+        return code;
       }
     }
 
-    return result;
-  }
-
-  public getCharacterCode(characterName: string, gameCode: GameCode) {
-    this.logger.log(
-      `Fetching character code for ${characterName} in ${gameCode}`,
-    );
-
-    const formattedCharacterName =
-      this.allCharacterCodesMap[gameCode][characterName];
-    if (!formattedCharacterName) {
-      this.logger.error(`Couldn't format character name: ${characterName}.`);
-      return null;
-    }
-
-    return formattedCharacterName;
+    return null;
   }
 }
