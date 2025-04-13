@@ -8,9 +8,11 @@ import { GameCodesModule } from './gameCodes/gameCodes.module';
 import { GameCodesService } from './gameCodes/gameCodes.service';
 import { GameCodesController } from './gameCodes/gameCodes.controller';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     FramedataModule,
     CharacterCodesModule,
     GameCodesModule,
