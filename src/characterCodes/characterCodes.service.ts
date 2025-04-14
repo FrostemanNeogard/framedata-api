@@ -1,25 +1,20 @@
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
-import {
-  CharacterCodes,
-  CharacterCodesDocument,
-} from './schemas/character-codes.schema';
 import { Injectable } from '@nestjs/common';
+import { CharacterCodesRepository } from './characterCodes.repository';
 
 @Injectable()
 export class CharacterCodesService {
-  constructor(
-    @InjectModel(CharacterCodes.name)
-    private readonly characterCodesModel: Model<CharacterCodesDocument>,
-  ) {}
+  constructor(private readonly repository: CharacterCodesRepository) {}
 
   async getCharacterCode(alias: string, game: string): Promise<string | null> {
-    const record = await this.characterCodesModel.findOne({ game }).exec();
-
+    const record = await this.repository.findByGame(game);
     if (!record) return null;
 
     for (const [code, aliases] of record.characters.entries()) {
-      if (aliases.map((a) => a.toLowerCase()).includes(alias.toLowerCase())) {
+      if (
+        aliases
+          .map((a: string) => a.toLowerCase())
+          .includes(alias.toLowerCase())
+      ) {
         return code;
       }
     }
