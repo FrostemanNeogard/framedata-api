@@ -21,11 +21,12 @@ export class FramedataService {
     try {
       const doc = await this.repo.findByCharacter(game, characterCode);
 
-      if (!doc || !doc.moves) {
+      if (!doc?.moves) {
         throw new BadRequestException(
           `No framedata was found for the given character and game combo.`,
         );
       }
+
       return doc.moves;
     } catch (error) {
       this.logger.error(
@@ -58,6 +59,7 @@ export class FramedataService {
       if (!!attackInfo[0]) {
         break;
       }
+
       this.logger.log(`Formatting notation, iteration: ${i}`);
       const removePlus = i > 0;
       const formattedNotation = this.formatNotation(notation, removePlus);
@@ -66,12 +68,14 @@ export class FramedataService {
         const moveData = frameData[y];
         moveData.alternateInputs.forEach((input) => {
           const formattedInput = this.formatNotation(input, removePlus);
+
           if (
             formattedNotation == formattedInput ||
             formattedNotation == this.formatNotation(moveData.name, removePlus)
           ) {
             attackInfo.push(moveData);
           }
+
           const similarity = this.calculateSimilarity(input, notation);
           similarityMap.push({ move: moveData, similarity });
         });
@@ -112,6 +116,7 @@ export class FramedataService {
       this.logger.error(
         `Failed to save frame data for ${characterCode} in ${game}. ${error.message}`,
       );
+
       throw new BadRequestException(
         `Failed to save frame data for character: ${characterCode}`,
       );
