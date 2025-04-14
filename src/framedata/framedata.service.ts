@@ -4,28 +4,22 @@ import {
   BadRequestException,
   NotFoundException,
 } from '@nestjs/common';
-import { InjectConnection } from '@nestjs/mongoose';
-import { Connection } from 'mongoose';
 import { FrameData } from 'src/__types/frameData';
 import { GameCode } from 'src/__types/gameCode';
+import { FramedataRepository } from './framedata.repository';
 
 @Injectable()
 export class FramedataService {
   private readonly logger = new Logger(FramedataService.name);
 
-  constructor(@InjectConnection() private readonly connection: Connection) {}
-
-  private getCollection(game: string) {
-    return this.connection.collection(game.toLowerCase());
-  }
+  constructor(private readonly repo: FramedataRepository) {}
 
   async getCharacterFrameData(
     characterCode: string,
     game: GameCode,
   ): Promise<FrameData[]> {
     try {
-      const collection = this.getCollection(game);
-      const doc = await collection.findOne({ character: characterCode });
+      const doc = await this.repo.findByCharacter(game, characterCode);
 
       if (!doc || !doc.moves) {
         throw new BadRequestException(
@@ -112,13 +106,7 @@ export class FramedataService {
     frameData: FrameData[],
   ): Promise<void> {
     try {
-      const collection = this.getCollection(game);
-      await collection.updateOne(
-        { character: characterCode },
-        { $set: { moves: frameData } },
-        { upsert: true },
-      );
-
+      await this.repo.saveCharacter(game, characterCode, frameData);
       this.logger.log(`Frame data saved for ${characterCode} in ${game}.`);
     } catch (error) {
       this.logger.error(
