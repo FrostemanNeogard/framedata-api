@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { BadRequestException, Injectable } from '@nestjs/common';
 import { CharacterCodesRepository } from './characterCodes.repository';
 import { GameCode } from 'src/__types/gameCode';
 
@@ -23,6 +23,6 @@ export class CharacterCodesService {
       }
     }
 
-    return null;
+    throw new BadRequestException(`Invalid character code: ${alias}`);
   }
 }

@@ -1,4 +1,4 @@
-import { Injectable, Logger } from '@nestjs/common';
+import { BadRequestException, Injectable, Logger } from '@nestjs/common';
 import { GameCodesRepository } from './gameCodes.repository';
 import { GameCode } from 'src/__types/gameCode';
 
@@ -17,7 +17,7 @@ export class GameCodesService {
 
     if (!codes.includes(gameName)) {
       this.logger.warn(`Invalid gameCode: ${gameName}`);
-      return null;
+      throw new BadRequestException(`Invalid gameCode: ${gameName}`);
     }
 
     return gameName as GameCode;
