@@ -4,36 +4,38 @@ import {
   Logger,
   NotFoundException,
 } from '@nestjs/common';
-import * as fs from 'fs';
 import { FrameData } from 'src/__types/frameData';
-import { promisify } from 'util';
-import { InjectConnection } from '@nestjs/mongoose';
-import { Connection } from 'mongoose';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { GameCode } from 'src/__types/gameCode';
+import { Framedata, FramedataDocument } from './schemas/framedata.schema';
 
 @Injectable()
 export class FramedataService {
   private readonly logger = new Logger(FramedataService.name);
 
-  constructor(@InjectConnection() private readonly connection: Connection) {}
+  constructor(
+    @InjectModel(Framedata.name)
+    private readonly framedataModel: Model<FramedataDocument>,
+  ) {}
 
   async getCharacterFrameData(
     characterCode: string,
     game: string,
   ): Promise<FrameData[]> {
     try {
-      const collection = this.connection.collection(game.toLowerCase());
-
-      const query = { [characterCode.toLowerCase()]: { $exists: true } };
-      const result = await collection.findOne(query);
-
-      if (!result || !result[characterCode]) {
-        throw new Error('Character data not found');
+      const doc = await this.framedataModel
+        .findOne({ character: characterCode })
+        .exec();
+      if (!doc) {
+        throw new BadRequestException(
+          `No framedata was found for the given character and game combo.`,
+        );
       }
-
-      return result[characterCode];
+      return doc.moves;
     } catch (error) {
       this.logger.error(
-        `An error occurred fetching frame data for ${characterCode} in ${game}. ${error.message}`,
+        `Failed to fetch frame data for ${characterCode} in ${game}. ${error.message}`,
       );
       throw new BadRequestException(
         `No framedata was found for the given character and game combo.`,
@@ -104,26 +106,26 @@ export class FramedataService {
     return [attackInfo[0]];
   }
 
-  // TODO: Update this to use database
   async saveCharacterFrameData(
     characterCode: string,
-    game: string,
+    game: GameCode,
     frameData: FrameData[],
-  ) {
-    const filePath = `src/__data/${game}/${characterCode}.json`;
-
+  ): Promise<void> {
     try {
-      const writeFileAsync = promisify(fs.writeFile);
-      await writeFileAsync(
-        filePath,
-        JSON.stringify(frameData, null, 2),
-        'utf8',
-      );
+      await this.framedataModel
+        .findOneAndUpdate(
+          { character: characterCode },
+          { $set: { moves: frameData } },
+          { upsert: true, new: true },
+        )
+        .exec();
+
+      this.logger.log(`Frame data saved for ${characterCode} in ${game}.`);
     } catch (error) {
       this.logger.error(
-        `Failed to save frame data to ${filePath}. ${error.message}`,
+        `Failed to save frame data for ${characterCode} in ${game}. ${error.message}`,
       );
-      throw new Error(
+      throw new BadRequestException(
         `Failed to save frame data for character: ${characterCode}`,
       );
     }
