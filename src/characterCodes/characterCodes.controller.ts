@@ -2,13 +2,15 @@ import {
   Controller,
   Get,
   Logger,
-  NotFoundException,
   Param,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { CharacterCodesService } from './characterCodes.service';
 import { CharacterCodeDto } from './dtos/characterCodeDto';
 import { GameCodesService } from 'src/gameCodes/gameCodes.service';
 import { GameCode } from 'src/__types/gameCode';
+import { ValidateCharacterCodeDto } from './dtos/validateCharacterCodeDto';
 
 @Controller('charactercodes')
 export class CharacterCodesController {
@@ -20,31 +22,23 @@ export class CharacterCodesController {
   ) {}
 
   @Get(':gameName/:characterName')
+  @UsePipes(new ValidationPipe({ transform: true }))
   public async formatCharacterName(
     @Param('gameName') gameName: string,
     @Param('characterName') characterName: string,
   ): Promise<CharacterCodeDto> {
-    this.logger.log(
-      `Attempting to get characterCode for: ${characterName} in game: ${gameName}`,
+    const dto = new ValidateCharacterCodeDto();
+    dto.game = gameName;
+    dto.character = characterName;
+
+    const gameCode: GameCode | null = this.gameCodesService.getGameCode(
+      dto.game,
     );
-
-    const gameCode: GameCode | null =
-      this.gameCodesService.getGameCode(gameName);
-
-    if (gameCode == null) {
-      throw new NotFoundException("Couldn't find the given game.");
-    }
 
     const characterCode = await this.characterCodesService.getCharacterCode(
-      characterName,
+      dto.character,
       gameCode,
     );
-
-    if (characterCode == null) {
-      throw new NotFoundException(
-        "Couldn't find the given character for the given game.",
-      );
-    }
 
     return new CharacterCodeDto(characterCode);
   }
