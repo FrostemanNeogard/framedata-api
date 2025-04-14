@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { FramedataController } from './framedata/framedata.controller';
-import { FramedataService } from './framedata/framedata.service';
 import { FramedataModule } from './framedata/framedata.module';
 import { CharacterCodesController } from './characterCodes/characterCodes.controller';
 import { CharacterCodesModule } from './characterCodes/characterCodes.module';
@@ -23,6 +22,6 @@ import { ConfigModule } from '@nestjs/config';
     CharacterCodesController,
     GameCodesController,
   ],
-  providers: [FramedataService, GameCodesService],
+  providers: [GameCodesService],
 })
 export class AppModule {}
