@@ -4,7 +4,6 @@ import { FramedataModule } from './framedata/framedata.module';
 import { CharacterCodesController } from './characterCodes/characterCodes.controller';
 import { CharacterCodesModule } from './characterCodes/characterCodes.module';
 import { GameCodesModule } from './gameCodes/gameCodes.module';
-import { GameCodesService } from './gameCodes/gameCodes.service';
 import { GameCodesController } from './gameCodes/gameCodes.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
@@ -22,6 +21,6 @@ import { ConfigModule } from '@nestjs/config';
     CharacterCodesController,
     GameCodesController,
   ],
-  providers: [GameCodesService],
+  providers: [],
 })
 export class AppModule {}
