@@ -40,6 +40,10 @@ export class CharacterCodesController {
       gameCode,
     );
 
+    this.logger.log(
+      `Found characterCode for "${characterName}" in "${gameName}": ${characterCode}`,
+    );
+
     return new CharacterCodeDto(characterCode);
   }
 }
