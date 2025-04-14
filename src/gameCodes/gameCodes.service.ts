@@ -1,26 +1,29 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { GameCodesRepository } from './gameCodes.repository';
+import { GameCode } from 'src/__types/gameCode';
 
 @Injectable()
 export class GameCodesService {
   private readonly logger = new Logger(GameCodesService.name);
 
-  constructor(private readonly gameCodesRepo: GameCodesRepository) {}
+  constructor(private readonly repo: GameCodesRepository) {}
 
-  public async getAllGameCodes(): Promise<string[]> {
-    const codes = await this.gameCodesRepo.findAllGameCodes();
-    this.logger.log(`Found gameCodes: ${codes.join(', ')}`);
-    return codes;
+  public getAllGameCodes(): GameCode[] {
+    return this.repo.findAllGameCodes() as GameCode[];
   }
 
-  public async getGameCode(gameName: string): Promise<string | null> {
-    const exists = await this.gameCodesRepo.exists(gameName);
+  public getGameCode(gameName: string): GameCode | null {
+    const codes = this.repo.findAllGameCodes();
 
-    if (!exists) {
-      this.logger.warn(`Couldn't find gameCode for gameName: ${gameName}`);
+    if (!codes.includes(gameName)) {
+      this.logger.warn(`Invalid gameCode: ${gameName}`);
       return null;
     }
 
-    return gameName;
+    return gameName as GameCode;
+  }
+
+  public isValidGameCode(gameCode: string): boolean {
+    return this.repo.findAllGameCodes().includes(gameCode);
   }
 }
