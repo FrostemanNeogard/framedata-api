@@ -7,6 +7,6 @@ export class GameCodesController {
 
   @Get()
   public async getAllGameCodes(): Promise<string[]> {
-    return await this.gameCodesService.getAllGameCodes();
+    return this.gameCodesService.getAllGameCodes();
   }
 }
