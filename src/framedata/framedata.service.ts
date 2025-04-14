@@ -1,33 +1,33 @@
 import {
-  BadRequestException,
   Injectable,
   Logger,
+  BadRequestException,
   NotFoundException,
 } from '@nestjs/common';
+import { InjectConnection } from '@nestjs/mongoose';
+import { Connection } from 'mongoose';
 import { FrameData } from 'src/__types/frameData';
-import { InjectModel } from '@nestjs/mongoose';
-import { Model } from 'mongoose';
 import { GameCode } from 'src/__types/gameCode';
-import { Framedata, FramedataDocument } from './schemas/framedata.schema';
 
 @Injectable()
 export class FramedataService {
   private readonly logger = new Logger(FramedataService.name);
 
-  constructor(
-    @InjectModel(Framedata.name)
-    private readonly framedataModel: Model<FramedataDocument>,
-  ) {}
+  constructor(@InjectConnection() private readonly connection: Connection) {}
+
+  private getCollection(game: string) {
+    return this.connection.collection(game.toLowerCase());
+  }
 
   async getCharacterFrameData(
     characterCode: string,
-    game: string,
+    game: GameCode,
   ): Promise<FrameData[]> {
     try {
-      const doc = await this.framedataModel
-        .findOne({ character: characterCode })
-        .exec();
-      if (!doc) {
+      const collection = this.getCollection(game);
+      const doc = await collection.findOne({ character: characterCode });
+
+      if (!doc || !doc.moves) {
         throw new BadRequestException(
           `No framedata was found for the given character and game combo.`,
         );
@@ -45,7 +45,7 @@ export class FramedataService {
 
   async getSingleMoveFrameDataOrSimilarMoves(
     character: string,
-    game: string,
+    game: GameCode,
     notation: string,
   ) {
     this.logger.log(
@@ -112,13 +112,12 @@ export class FramedataService {
     frameData: FrameData[],
   ): Promise<void> {
     try {
-      await this.framedataModel
-        .findOneAndUpdate(
-          { character: characterCode },
-          { $set: { moves: frameData } },
-          { upsert: true, new: true },
-        )
-        .exec();
+      const collection = this.getCollection(game);
+      await collection.updateOne(
+        { character: characterCode },
+        { $set: { moves: frameData } },
+        { upsert: true },
+      );
 
       this.logger.log(`Frame data saved for ${characterCode} in ${game}.`);
     } catch (error) {
