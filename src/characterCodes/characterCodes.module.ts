@@ -6,6 +6,7 @@ import {
 import { Module } from '@nestjs/common';
 import { CharacterCodesService } from './characterCodes.service';
 import { CharacterCodesRepository } from './characterCodes.repository';
+import { IsCharacterCodeForGame } from 'src/__validators/isCharacterCode.validator';
 
 @Module({
   imports: [
@@ -13,7 +14,11 @@ import { CharacterCodesRepository } from './characterCodes.repository';
       { name: CharacterCodes.name, schema: CharacterCodesSchema },
     ]),
   ],
-  providers: [CharacterCodesService, CharacterCodesRepository],
+  providers: [
+    CharacterCodesService,
+    CharacterCodesRepository,
+    IsCharacterCodeForGame,
+  ],
   exports: [CharacterCodesService],
 })
 export class CharacterCodesModule {}
