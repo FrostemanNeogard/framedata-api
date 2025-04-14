@@ -5,6 +5,7 @@ import {
 } from './schemas/character-codes.schema';
 import { Module } from '@nestjs/common';
 import { CharacterCodesService } from './characterCodes.service';
+import { CharacterCodesRepository } from './characterCodes.repository';
 
 @Module({
   imports: [
@@ -12,7 +13,7 @@ import { CharacterCodesService } from './characterCodes.service';
       { name: CharacterCodes.name, schema: CharacterCodesSchema },
     ]),
   ],
-  providers: [CharacterCodesService],
+  providers: [CharacterCodesService, CharacterCodesRepository],
   exports: [CharacterCodesService],
 })
 export class CharacterCodesModule {}

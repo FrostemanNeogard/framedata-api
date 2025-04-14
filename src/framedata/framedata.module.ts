@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FramedataService } from './framedata.service';
 import { Framedata, FramedataSchema } from './schemas/framedata.schema';
+import { FramedataRepository } from './framedata.repository';
 
 @Module({
   imports: [
@@ -9,7 +10,7 @@ import { Framedata, FramedataSchema } from './schemas/framedata.schema';
       { name: Framedata.name, schema: FramedataSchema },
     ]),
   ],
-  providers: [FramedataService],
+  providers: [FramedataService, FramedataRepository],
   exports: [FramedataService],
 })
 export class FramedataModule {}
