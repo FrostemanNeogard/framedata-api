@@ -1,11 +1,15 @@
 import { Injectable } from '@nestjs/common';
 import { CharacterCodesRepository } from './characterCodes.repository';
+import { GameCode } from 'src/__types/gameCode';
 
 @Injectable()
 export class CharacterCodesService {
   constructor(private readonly repository: CharacterCodesRepository) {}
 
-  async getCharacterCode(alias: string, game: string): Promise<string | null> {
+  async getCharacterCode(
+    alias: string,
+    game: GameCode,
+  ): Promise<string | null> {
     const record = await this.repository.findByGame(game);
     if (!record) return null;
 
