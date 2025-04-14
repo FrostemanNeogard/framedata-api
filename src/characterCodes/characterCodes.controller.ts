@@ -6,7 +6,6 @@ import {
   Param,
 } from '@nestjs/common';
 import { CharacterCodesService } from './characterCodes.service';
-import { GameCode } from 'src/__types/gameCode';
 import { CharacterCodeDto } from './dtos/characterCodeDto';
 import { GameCodesService } from 'src/gameCodes/gameCodes.service';
 
@@ -28,8 +27,8 @@ export class CharacterCodesController {
       `Attempting to get characterCode for: ${characterName} in game: ${gameName}`,
     );
 
-    const gameCode: GameCode | null =
-      this.gameCodesService.getGameCode(gameName);
+    const gameCode: string | null =
+      await this.gameCodesService.getGameCode(gameName);
 
     if (gameCode == null) {
       throw new NotFoundException("Couldn't find the given game.");
