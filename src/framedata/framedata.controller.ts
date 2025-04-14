@@ -20,7 +20,7 @@ import { GameCodeValidationPipe } from 'src/__pipes/gameCodeValidation.pipe';
 
 @Controller('framedata')
 export class FramedataController {
-  private readonly logger = new Logger();
+  private readonly logger = new Logger(FramedataController.name);
 
   constructor(
     private readonly framedataService: FramedataService,

@@ -3,11 +3,7 @@ import { GameCode, validGameCodes } from 'src/__types/gameCode';
 
 @Injectable()
 export class GameCodesService {
-  private readonly logger: Logger;
-
-  constructor() {
-    this.logger = new Logger();
-  }
+  private readonly logger = new Logger(GameCodesService.name);
 
   public getAllGameCodes(): GameCode[] {
     return [...validGameCodes];

@@ -12,14 +12,12 @@ import { GameCodesService } from 'src/gameCodes/gameCodes.service';
 
 @Controller('charactercodes')
 export class CharacterCodesController {
-  private readonly logger: Logger;
+  private readonly logger = new Logger(CharacterCodesController.name);
 
   constructor(
     private characterCodesService: CharacterCodesService,
     private gameCodesService: GameCodesService,
-  ) {
-    this.logger = new Logger();
-  }
+  ) {}
 
   @Get(':gameName/:characterName')
   public async formatCharacterName(
