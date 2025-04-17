@@ -965,7 +965,6 @@
     "notes": [
       "Tornado",
       "Balcony Break",
-      "Wall Crush +20g on block",
       "Input can be partially held from i? to i?",
       "10 chip damage on block",
       "11 chip damage on block in heat"
@@ -1768,7 +1767,7 @@
     "name": "Rimfire",
     "input": "DEN 2",
     "hit_level": "m",
-    "damage": "19",
+    "damage": "17",
     "startup": "i17~19",
     "block": "-7",
     "hit": "+7",
@@ -1980,7 +1979,7 @@
     "name": "Electric Volley",
     "input": "SEN 4",
     "hit_level": "h",
-    "damage": "28",
+    "damage": "19",
     "startup": "i17~18",
     "block": "-9",
     "hit": "+18 (+9)",

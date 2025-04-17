@@ -249,7 +249,7 @@
     "hit_level": "h,h,h",
     "damage": "5,8,17",
     "startup": ",i16~17",
-    "block": "+6",
+    "block": "+4",
     "hit": "+11",
     "counter": "+20c",
     "alternateInputs": [
@@ -2173,9 +2173,9 @@
   {
     "name": "",
     "input": "IZU 4",
-    "hit_level": "L",
+    "hit_level": "l",
     "damage": "15",
-    "startup": "i21~22",
+    "startup": "i19",
     "block": "-37",
     "hit": "-1c",
     "counter": "+23a",
@@ -2479,9 +2479,9 @@
     "hit_level": "h",
     "damage": "17",
     "startup": "i23~24",
-    "block": "+6",
+    "block": "+4",
     "hit": "+11",
-    "counter": "+20c",
+    "counter": "",
     "alternateInputs": [
       "MIA 1+2"
     ],

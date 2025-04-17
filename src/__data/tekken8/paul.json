@@ -234,7 +234,6 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Wall Crush +17g",
       "Consumes Heat unless canceled",
       "Chip damage (16)",
       "Move can be delayed 21f (i67)",
@@ -1007,7 +1006,6 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Wall Crush +16g",
       "H.d+1,2* with Heat",
       "Chip damage (11)",
       "Charge begins on frame 16",
@@ -2200,7 +2198,6 @@
     "notes": [
       "Tornado",
       "Balcony Break",
-      "Wall Crush +7g",
       "Move can be delayed 10f",
       "Input can be delayed 17f",
       "Combo from 1st hit with 10f delay",
@@ -2323,7 +2320,7 @@
   {
     "name": "Rapid Fire",
     "input": "SWA 3",
-    "hit_level": "L",
+    "hit_level": "l",
     "damage": "14",
     "startup": "i18~19",
     "block": "-21c",
@@ -2341,7 +2338,7 @@
   {
     "name": "",
     "input": "SWA 3,2",
-    "hit_level": "L,m",
+    "hit_level": "l,m",
     "damage": "14,20",
     "startup": ",i27~28",
     "block": "-10",
@@ -2360,7 +2357,7 @@
   {
     "name": "Petal Strike",
     "input": "SWA 3,2,1",
-    "hit_level": "L,m,h",
+    "hit_level": "l,m,h",
     "damage": "14,20,25",
     "startup": ",i18~19",
     "block": "-5",
@@ -2373,7 +2370,6 @@
     "categories": [],
     "notes": [
       "Tornado",
-      "Wall Crush +7g",
       "Combo from 1st CH +63a (+47) T!",
       "Sometimes written qcb+3,2,1"
     ]
@@ -2381,7 +2377,7 @@
   {
     "name": "Lightning Breaker",
     "input": "SWA 3,2,3",
-    "hit_level": "L,m,M",
+    "hit_level": "l,m,M",
     "damage": "14,20,22",
     "startup": ",i25~26",
     "block": "-13c",

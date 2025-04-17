@@ -2101,7 +2101,7 @@
     ]
   },
   {
-    "name": "\nState of Zanshin\nMental Alertness\n",
+    "name": "Mental Alertness",
     "input": "1+3+4",
     "hit_level": "",
     "damage": "",
@@ -2118,7 +2118,7 @@
     ]
   },
   {
-    "name": "\nKi Charge\nSupercharger\n",
+    "name": "Ki Charge",
     "input": "1+2+3+4",
     "hit_level": "",
     "damage": "",

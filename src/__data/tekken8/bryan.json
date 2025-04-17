@@ -841,9 +841,7 @@
     "alternateInputs": [
       "f+1+2"
     ],
-    "categories": [
-      "powercrush"
-    ],
+    "categories": [],
     "notes": [
       "Balcony Break",
       "Elbow",
@@ -1945,7 +1943,7 @@
     "hit_level": "m",
     "damage": "33",
     "startup": "i34~35",
-    "block": "+8 +14w",
+    "block": "+8",
     "hit": "+71a",
     "counter": "",
     "alternateInputs": [
@@ -2442,7 +2440,7 @@
     "hit_level": "l",
     "damage": "24",
     "startup": "i20~21",
-    "block": "-12",
+    "block": "-13",
     "hit": "+7",
     "counter": "+25a",
     "alternateInputs": [
@@ -2471,7 +2469,6 @@
     ],
     "notes": [
       "Balcony Break",
-      "Wall Crush  +21g on block",
       "Chip damage on block (8)",
       "Consumes SNE",
       "Initial attack absorbing animating takes 9 frames (pc1~9), effective startup is i22~23"
