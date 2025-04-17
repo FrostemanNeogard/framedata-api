@@ -7,6 +7,8 @@ import {
   Param,
   NotFoundException,
   Patch,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { FramedataService } from './framedata.service';
 import { GameCode } from 'src/__types/gameCode';
@@ -135,6 +137,7 @@ export class FramedataController {
   }
 
   @Patch(':gameCode/:characterCode/moves/:input')
+  @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }))
   public async updateMoveData(
     @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterCode: string,
