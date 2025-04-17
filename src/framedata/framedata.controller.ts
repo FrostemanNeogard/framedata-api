@@ -163,7 +163,8 @@ export class FramedataController {
     }
 
     const moveToUpdate = frameData[moveIndex];
-    frameData[moveIndex] = { ...moveToUpdate, ...updates };
+    const newMoveData = { ...moveToUpdate, ...updates };
+    frameData[moveIndex] = newMoveData;
 
     try {
       await this.framedataService.saveCharacterFrameData(
@@ -174,7 +175,7 @@ export class FramedataController {
       this.logger.log(
         `Successfully updated move "${input}" for character "${characterCode}" in game "${gameCode}".`,
       );
-      return updates;
+      return newMoveData;
     } catch (error) {
       this.logger.error(
         `Failed to update move "${input}" for character "${characterCode}" in game "${gameCode}". ${error.message}`,
