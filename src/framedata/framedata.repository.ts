@@ -17,7 +17,7 @@ export class FramedataRepository {
     return collection.findOne({ character });
   }
 
-  async saveCharacter(game: string, character: string, moves: FrameData[]) {
+  async saveCharacter(game: GameCode, character: string, moves: FrameData[]) {
     const collection = this.getCollection(game);
     return collection.updateOne(
       { character },
