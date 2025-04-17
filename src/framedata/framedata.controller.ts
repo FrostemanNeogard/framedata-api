@@ -10,6 +10,9 @@ import {
   UsePipes,
   ValidationPipe,
   Delete,
+  Post,
+  ConflictException,
+  InternalServerErrorException,
 } from '@nestjs/common';
 import { FramedataService } from './framedata.service';
 import { GameCode } from 'src/__types/gameCode';
@@ -20,6 +23,7 @@ import {
 } from 'src/__types/moveCategories';
 import { GameCodeValidationPipe } from 'src/__pipes/gameCodeValidation.pipe';
 import { FramedataPatchDto } from './dtos/framedataPatchDto';
+import { FramedataPostDto } from './dtos/framedataPostDto';
 
 @Controller('framedata')
 export class FramedataController {
@@ -57,6 +61,39 @@ export class FramedataController {
       characterCode,
       gameCode,
     );
+  }
+
+  @Post(':gameCode/:characterCode')
+  @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }))
+  public async addMoveData(
+    @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
+    @Param('characterCode') characterCode: string,
+    @Body() data: FramedataPostDto,
+  ) {
+    try {
+      await this.framedataService.addCharacterFramedata(
+        characterCode,
+        gameCode,
+        data,
+      );
+      this.logger.log(
+        `Successfully added move "${data.input}" for character "${characterCode}" in game "${gameCode}".`,
+      );
+    } catch (error) {
+      this.logger.error(
+        `Failed to add move "${data.input}" for character "${characterCode}" in game "${gameCode}". ${error.message}`,
+      );
+
+      if (error instanceof ConflictException) {
+        throw error;
+      }
+
+      if (error instanceof BadRequestException) {
+        throw error;
+      }
+
+      throw new InternalServerErrorException();
+    }
   }
 
   @Get(':gameCode/:characterCode/categories/:category')
