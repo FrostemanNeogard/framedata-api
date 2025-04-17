@@ -17,7 +17,7 @@
     "notes": [
       "Heat Burst",
       "Cancel to r45 with b,b on frame 42",
-      "3 chip damage on block",
+      "2 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
       "Cannot cause a K.O."
@@ -169,7 +169,6 @@
     "categories": [],
     "notes": [
       "Weapon",
-      "Wall Crush +5g~ minimum",
       "Combo from 3rd CH",
       "Jails from 4th hit",
       "Partially uses remaining Heat time",
@@ -237,9 +236,7 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony Break",
       "Weapon",
-      "Wall Crush +2g~ minimum",
       "Combo from 1st CH",
       "Jails from 2nd hit",
       "Chip damage on block",
@@ -284,9 +281,7 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony Break",
       "Weapon",
-      "Wall Crush +5g~ minimum",
       "Combo from 1st hit",
       "Jails from 2nd hit",
       "Chip damage on block",
@@ -362,7 +357,6 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony Break",
       "Weapon",
       "Combo from 3rd CH",
       "Chip damage on block"
@@ -492,7 +486,7 @@
     "categories": [],
     "notes": [
       "Jail from 1st attack",
-      "Combo from 1st CH with 2f delay",
+      "Combo from 1st hit with ?f delay",
       "Input can be delayed 2f"
     ]
   },
@@ -1903,7 +1897,6 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony Break",
       "Weapon",
       "Combo from 1st CH",
       "Chip damage on block",
@@ -2369,7 +2362,6 @@
     ],
     "categories": [],
     "notes": [
-      "Balcony Break",
       "Weapon",
       "Combo from 1st hit",
       "Chip damage on block"

@@ -17,7 +17,7 @@
     "notes": [
       "Heat Burst",
       "Cancel to r45 with b,b on frame 42",
-      "3 chip damage on block",
+      "2 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
       "Cannot cause a K.O."
@@ -68,29 +68,6 @@
     ]
   },
   {
-    "name": "Blonde Bomb",
-    "input": "f+1+2",
-    "hit_level": "m",
-    "damage": "24",
-    "startup": "i17",
-    "block": "-14",
-    "hit": "+11a (+2)",
-    "counter": "",
-    "alternateInputs": [
-      "f+1+2"
-    ],
-    "categories": [
-      "powercrush"
-    ],
-    "notes": [
-      "Heat Engager",
-      "Heat Dash +5, +43a (+35)",
-      "Balcony Break",
-      "Frame advantage is -8 if an attack is absorbed",
-      "Deals chip damage if an attack is absorbed"
-    ]
-  },
-  {
     "name": "Reverberation Palm Bomb",
     "input": "db+1+2",
     "hit_level": "h,m",
@@ -136,7 +113,7 @@
     "input": "CD 2",
     "hit_level": "M",
     "damage": "25",
-    "startup": "i17~18",
+    "startup": "i16~17",
     "block": "-8",
     "hit": "+32a (+17)",
     "counter": "",
@@ -367,7 +344,7 @@
     "startup": ",i23",
     "block": "-14",
     "hit": "+11a (+2)",
-    "counter": "+10 +56a",
+    "counter": "+36d (+28)",
     "alternateInputs": [
       "1,2,1+2"
     ],
@@ -725,6 +702,7 @@
     "categories": [],
     "notes": [
       "Spike",
+      "Transition to CD with F",
       "Second hit is +7c on CH if the first hit whiffs"
     ]
   },
@@ -843,10 +821,31 @@
     ]
   },
   {
+    "name": "Blonde Bomb",
+    "input": "f+1+2",
+    "hit_level": "m",
+    "damage": "24",
+    "startup": "i17",
+    "block": "-14",
+    "hit": "+11a (+2)",
+    "counter": "",
+    "alternateInputs": [
+      "f+1+2"
+    ],
+    "categories": [
+      "powercrush"
+    ],
+    "notes": [
+      "Balcony Break",
+      "Frame advantage is -8 if an attack is absorbed",
+      "Deals chip damage if an attack is absorbed"
+    ]
+  },
+  {
     "name": "Uppercut",
     "input": "df+1",
     "hit_level": "m",
-    "damage": "13",
+    "damage": "10",
     "startup": "i13~14",
     "block": "-1",
     "hit": "+5",
@@ -863,9 +862,9 @@
     "name": "Uppercut > Jab",
     "input": "df+1,2",
     "hit_level": "m,h",
-    "damage": "13,10",
+    "damage": "10,10",
     "startup": ",i16",
-    "block": "-3",
+    "block": "-5",
     "hit": "+2",
     "counter": "+9",
     "alternateInputs": [
@@ -874,8 +873,8 @@
     "categories": [],
     "notes": [
       "Jail from 1st attack with 1f delay",
-      "Enter SS -1 +4 +11 with D_U",
-      "Enter CD +0 +5 +12g with F",
+      "Enter SS -1 +6 +13 with D_U",
+      "Enter CD +0 +7 +14 with F",
       "Links to 1 jab extensions"
     ]
   },
@@ -990,6 +989,45 @@
     "notes": [
       "Combo from 2nd CH with 9f delay",
       "Jail from 2nd block with 3f delay"
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1,2",
+    "hit_level": "m,h,h,h",
+    "damage": "13,12,6,6",
+    "startup": ",i16",
+    "block": "",
+    "hit": "+1",
+    "counter": "",
+    "alternateInputs": [
+      "df+3,2,1,2"
+    ],
+    "categories": [],
+    "notes": [
+      "Combo from 3th CH with ?f delay",
+      "Input can be delayed ?f",
+      "Interrupt with i? from 3th block"
+    ]
+  },
+  {
+    "name": "",
+    "input": "df+3,2,1,2,1+2",
+    "hit_level": "m,h,h,h,m",
+    "damage": "13,12,6,6,22",
+    "startup": ",i23",
+    "block": "-14",
+    "hit": "+11a (+2)",
+    "counter": "+36d (+28)",
+    "alternateInputs": [
+      "df+3,2,1,2,1+2"
+    ],
+    "categories": [],
+    "notes": [
+      "Balcony Break",
+      "Combo from 4th CH with ?f delay",
+      "Input can be delayed 10f",
+      "Interrupt with i? from 4th block"
     ]
   },
   {
@@ -1146,7 +1184,7 @@
     ],
     "categories": [],
     "notes": [
-      ""
+      "Transition to CD with F"
     ]
   },
   {
@@ -1486,7 +1524,7 @@
     "damage": "10,17",
     "startup": "i20~21",
     "block": "-8",
-    "hit": "+19a",
+    "hit": "+14c",
     "counter": "+45a",
     "alternateInputs": [
       "b+3,4"
@@ -1520,7 +1558,7 @@
     "hit_level": "m,m",
     "damage": "5,20",
     "startup": "i16 i8~10",
-    "block": "-7",
+    "block": "-4",
     "hit": "+5a",
     "counter": "",
     "alternateInputs": [
@@ -1542,7 +1580,7 @@
     "hit_level": "h",
     "damage": "16",
     "startup": "i14~15",
-    "block": "-9",
+    "block": "-5",
     "hit": "+6",
     "counter": "",
     "alternateInputs": [
@@ -1925,7 +1963,8 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Cannot be buffered"
+      "Cannot be buffered",
+      "Transition to CD with F"
     ]
   },
   {
@@ -2037,7 +2076,8 @@
     "categories": [],
     "notes": [
       "Spike",
-      "Combo from 1st hitSometimes written wr3,3"
+      "Combo from 1st hit",
+      "Chip damage on blockSometimes written wr3,3"
     ]
   },
   {
@@ -2461,7 +2501,7 @@
     "hit_level": "m",
     "damage": "22",
     "startup": "i19",
-    "block": "-9",
+    "block": "-8",
     "hit": "+36a",
     "counter": "",
     "alternateInputs": [
@@ -2508,7 +2548,7 @@
     ],
     "categories": [],
     "notes": [
-      "Chip damage on blockSometimes written ",
+      "5 chip damage on blockSometimes written ",
       "qcf+1",
       "d,df,F+1"
     ]
@@ -2719,7 +2759,7 @@
     "name": "Twisted Mind",
     "input": "OTG d+3+4",
     "hit_level": "L",
-    "damage": "20",
+    "damage": "30",
     "startup": "i17~18",
     "block": "-17",
     "hit": "-7d",

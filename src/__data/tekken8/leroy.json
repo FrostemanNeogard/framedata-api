@@ -1968,26 +1968,7 @@
     ],
     "categories": [],
     "notes": [
-      ""
-    ]
-  },
-  {
-    "name": "Chain Punch: Seed",
-    "input": "HRM SS 1+2",
-    "hit_level": "h",
-    "damage": "26",
-    "startup": "i14",
-    "block": "+7",
-    "hit": "+30g",
-    "counter": "",
-    "alternateInputs": [
-      "HRM SS 1+2"
-    ],
-    "categories": [],
-    "notes": [
-      "chip damage on block",
-      "power up during Heat (partially uses remaining Heat time)",
-      "Delayable"
+      "Can access sidestep movesSometimes written NMS"
     ]
   },
   {
@@ -2086,20 +2067,21 @@
   {
     "name": "Chain Punch: Seed",
     "input": "SS 1+2",
-    "hit_level": "h",
-    "damage": "26",
-    "startup": "i14",
+    "hit_level": "h,h,h",
+    "damage": "3, 3, 20",
+    "startup": "i14, i6, i6",
     "block": "+7",
-    "hit": "+30g",
+    "hit": "+25g",
     "counter": "",
     "alternateInputs": [
       "SS 1+2"
     ],
     "categories": [],
     "notes": [
-      "chip damage on block",
-      "power up during Heat (partially uses remaining Heat time)",
-      "Can be delayed"
+      "Balcony Break",
+      "Opponent recovers crouching on hit",
+      "8 chip damage on block",
+      "Power up during Heat (partially uses remaining Heat time)"
     ]
   },
   {

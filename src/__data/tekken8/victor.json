@@ -172,7 +172,8 @@
     "notes": [
       "Heat Engager",
       "Heat Dash +5, +42a (+27a)",
-      "Deals 7 chip damage on block"
+      "Balcony Break",
+      "7 chip damage on block"
     ]
   },
   {
@@ -1136,7 +1137,8 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Deals 7 chip damage on block"
+      "7 chip damage on block",
+      "9 chip damage on block in heat"
     ]
   },
   {
@@ -1309,7 +1311,7 @@
     "input": "f,f,F+1+2",
     "hit_level": "l,l",
     "damage": "10,14",
-    "startup": "i18",
+    "startup": "i18, i14~15",
     "block": "-14",
     "hit": "+4 IAI",
     "counter": "+15g",
@@ -1318,7 +1320,7 @@
     ],
     "categories": [],
     "notes": [
-      "Transition to IAI at +4 on hit"
+      "Transition to r18 IAI at +4 on hit"
     ]
   },
   {
