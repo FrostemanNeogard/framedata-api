@@ -17,7 +17,7 @@
     "notes": [
       "Heat Burst",
       "Cancel to r45 with b,b on frame 42",
-      "3 chip damage on block",
+      "2 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
       "Cannot cause a K.O."
@@ -42,7 +42,7 @@
       "Transition to attack throw on hit",
       "Transition to MCR on block only",
       "Can cancel transition to MCR on block with B at +2~+12",
-      "7 chip damage on block"
+      "5 chip damage on block"
     ]
   },
   {
@@ -97,7 +97,7 @@
     ],
     "categories": [],
     "notes": [
-      "5 chip damage on block",
+      "4 chip damage on block",
       "Available only as combo from 1st hit",
       "Unavailable on whiff",
       "Transition to attack throw on hit",
@@ -140,6 +140,7 @@
     "categories": [],
     "notes": [
       "Tornado",
+      "Spike",
       "Available only on hit",
       "18dmg with combo scaling from 1st",
       "Sometimes written CD.DF+4,H.3"
@@ -161,7 +162,7 @@
     "notes": [
       "Tornado",
       "Weapon",
-      "5 chip damage on block",
+      "4 chip damage on block",
       "Consumes 220F of remaining heat time",
       "No pushback on 1st CH"
     ]
@@ -183,7 +184,7 @@
       "Heat Engager",
       "Heat Dash +5, +62a (+42)",
       "Balcony Break",
-      "12 chip damage on Heat Dash",
+      "6 chip damage on heat dash",
       "Combo from 1st hit with 5f delay",
       "Move can be delayed 3f"
     ]
@@ -205,7 +206,7 @@
       "Heat Engager",
       "Heat Dash +5, +43d (+35)",
       "Balcony Break",
-      "13 chip damage on Heat Dash",
+      "6 chip damage on heat dash",
       "Backsway",
       "Max distance from opponent when performed at tip range: ~3.82-3.83 (frames 16-19?)"
     ]
@@ -227,7 +228,7 @@
       "Heat Engager",
       "Heat Dash +5, +62a (+42)",
       "Balcony Break",
-      "12 chip damage on Heat Dash"
+      "6 chip damage on heat dash"
     ]
   },
   {
@@ -249,8 +250,7 @@
       "Balcony Break",
       "i18 startup when unbuffered, and i16 startup when buffered",
       "7 chip damage on block",
-      "8 chip damage on block while in heat",
-      "15 chip damage on Heat Dash"
+      "9 chip damage on heat dash"
     ]
   },
   {
@@ -270,7 +270,7 @@
       "Heat Engager",
       "Heat Dash +5, +67a (+50)",
       "Spike",
-      "12 chip damage on blocked Heat Dash",
+      "6 chip damage on blocked Heat Dash",
       "Combo from 1st hit",
       "Opponent recovers FDFA on hit"
     ]
@@ -561,8 +561,7 @@
     "notes": [
       "Homing",
       "Balcony Break",
-      "7 chip damage on block",
-      "8 chip damage on block in heat"
+      "7 chip damage on block"
     ]
   },
   {
@@ -637,8 +636,7 @@
     "notes": [
       "Tornado",
       "Combo from 2nd CH",
-      "6 chip damage on block",
-      "7 chip damage on block in heat"
+      "6 chip damage on block"
     ]
   },
   {
@@ -942,8 +940,7 @@
       "Balcony Break",
       "Damage taken during power crush state is recoverable.",
       "-9 on block if an attack is absorbed",
-      "10 Chip Damage on block after absorbing an attack in power crush state",
-      "11 Chip Damage on block while in heat after absorbing an attack in power crush state"
+      "10 chip damage on block after absorbing an attack in power crush state"
     ]
   },
   {
@@ -1047,8 +1044,7 @@
     ],
     "categories": [],
     "notes": [
-      "4 chip damage on block",
-      "5 chip damage on block in heat"
+      "4 chip damage on block"
     ]
   },
   {
@@ -1092,7 +1088,7 @@
     "hit_level": "m",
     "damage": "25",
     "startup": "i39~60",
-    "block": "+17g +24w",
+    "block": "+17g",
     "hit": "+7",
     "counter": "+37d (+29)",
     "alternateInputs": [
@@ -1100,7 +1096,6 @@
     ],
     "categories": [],
     "notes": [
-      "Wall Crush +24g on block",
       "Balcony Break on CH or air hit",
       "Cancel to r27 MCR with F (js27~)",
       "10 chip damage on block"
@@ -1123,8 +1118,7 @@
       "Balcony Break",
       "Guard Break",
       "Cancel to r27 MCR with F (js27~)",
-      "16 chip damage on block",
-      "17 chip damage on block while in heat"
+      "16 chip damage on block"
     ]
   },
   {
@@ -1255,8 +1249,7 @@
     "notes": [
       "Spike",
       "Opponent recovers FDFA on CH",
-      "4 chip damage on block",
-      "6 chip damage on block while in heat"
+      "4 chip damage on block"
     ]
   },
   {
@@ -1331,8 +1324,7 @@
       "Transition to r20 MCR on hit or block only",
       "r47 opponent hitstun",
       "Only deals recoverable damage.",
-      "2 chip damage on block",
-      "3 chip damage on block while in heat"
+      "2 chip damage on block"
     ]
   },
   {
@@ -1494,8 +1486,7 @@
       "Combo on 2nd CH with 8f delay",
       "Input can be delayed 20f",
       "Move can be delayed 15f",
-      "7 chip damage on block",
-      "8 chip damage on block"
+      "7 chip damage on block"
     ]
   },
   {
@@ -1580,7 +1571,7 @@
     "name": "Gates of Hades",
     "input": "b,f+1+2,2",
     "hit_level": "m,M",
-    "damage": "6,6,6,6,6,6,30",
+    "damage": "6,6,6,6,6,6,30 (9)",
     "startup": ",i28~31",
     "block": "-31",
     "hit": "-14a (-23)",
@@ -1591,7 +1582,8 @@
     "categories": [],
     "notes": [
       "Balcony break on standing hit only",
-      "Combo from 1st hit"
+      "Combo from 1st hit",
+      "9 damage with scaling from 1st"
     ]
   },
   {
@@ -1610,7 +1602,6 @@
     "notes": [
       "Balcony Break",
       "9 chip damage on block",
-      "11 chip damage on block while in heat",
       "Sometimes written wr3"
     ]
   },
@@ -1650,8 +1641,7 @@
       "Weapon",
       "Combo from 1st CH with 1f delay",
       "Transition to MCR on hit or block only",
-      "2 chip damage on block",
-      "3 chip damage on block while in heat"
+      "2 chip damage on block"
     ]
   },
   {
@@ -1690,8 +1680,7 @@
     "categories": [],
     "notes": [
       "Tornado",
-      "6 chip damage on block",
-      "7 chip damage on block while in heat"
+      "6 chip damage on block"
     ]
   },
   {
@@ -1843,7 +1832,7 @@
     "notes": [
       "Turns into EWGF (f,n,d,df#2) while in heat",
       "Consumes 70F of remaining heat time while in heat",
-      "7 chip damage on block while in heat",
+      "4 chip damage on block while in heat",
       "Sometimes written ",
       "WGF",
       "CD.df+2"
@@ -1864,7 +1853,6 @@
     "categories": [],
     "notes": [
       "4 chip damage on block",
-      "7 chip damage on block while in heat",
       "Can also be performed with f,n,df#2 (i13~)",
       "Sometimes written ",
       "EWGF",
@@ -1888,7 +1876,6 @@
     "notes": [
       "Spike",
       "7 chip damage on block",
-      "9 chip damage on block while in heat",
       "Sometimes written CD.df+3"
     ]
   },
@@ -1950,7 +1937,7 @@
     "name": "Spinning Demon Hellfire Beam",
     "input": "f,n,d,DF+4,1+2",
     "hit_level": "L,SM",
-    "damage": "7,9",
+    "damage": "7,14 (9)",
     "startup": ",i29~40",
     "block": "",
     "hit": "+58a (+42)",
@@ -1963,6 +1950,7 @@
       "Tornado",
       "Available only on hit",
       "Opponent recovers FUFA on hit",
+      "9 damage with scaling from previous hit",
       "Sometimes written CD.DF+4,1+2"
     ]
   },
@@ -1985,7 +1973,6 @@
       "Homing",
       "Balcony Break",
       "7 chip damage on block",
-      "9 chip damage on block while in heat",
       "Opponent recovers FUFA on CH",
       "Sometimes written CD.df+1+2"
     ]
@@ -2208,8 +2195,7 @@
     "notes": [
       "Spike",
       "Opponent recovers FDFA on hit",
-      "6 chip damage on block",
-      "7 chip damage on block while in heat"
+      "6 chip damage on block"
     ]
   },
   {
@@ -2247,8 +2233,7 @@
     "notes": [
       "Tornado",
       "Balcony Break",
-      "7 chip damage on block",
-      "9 chip damage on block while in heat"
+      "7 chip damage on block"
     ]
   },
   {
@@ -2426,7 +2411,7 @@
     "name": "Hell's Gate",
     "input": "SS 2,U",
     "hit_level": ",m!,M!",
-    "damage": "37,27",
+    "damage": "35 (24), 40 (20)",
     "startup": "i37~38 i22~60",
     "block": "",
     "hit": "-5a",
@@ -2437,7 +2422,7 @@
     "categories": [],
     "notes": [
       "Only available as combo from 1st hit",
-      "48 damage with scaling"
+      "44 damage with scaling"
     ]
   },
   {
@@ -2459,8 +2444,7 @@
       "Balcony Break",
       "50% damage reduction when absorbing attacks",
       "Damage taken during power crush is recoverable",
-      "12 Chip Damage on block after absorbing an attack",
-      "13 Chip Damage on block while in heat after absorbing an attack",
+      "12 chip damage on block after absorbing an attack in power crush state",
       "r34 on hit"
     ]
   },

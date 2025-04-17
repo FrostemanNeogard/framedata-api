@@ -37,7 +37,6 @@
     "notes": [
       "Heat Smash",
       "Balcony Break",
-      "Wall Crush +10g on block",
       "Transition to attack throw on 1st hit",
       "45 damage Balcony Break on 1st whiff",
       "Recover 27-45 recoverable health on hit:",
@@ -326,7 +325,9 @@
       "Weapon",
       "Combo from 1st CH",
       "Combo from 2nd hit",
-      "Interrupt with i8 from 2nd block"
+      "Interrupt with i8 from 2nd block",
+      "Input can be delayed by 8F",
+      "Move cannot be delayed"
     ]
   },
   {
@@ -822,7 +823,9 @@
       "Interrupt with i8 from 2nd block",
       "Increases ZAN gauge by 0.30 on hit",
       "Increases ZAN gauge by 0.10 on block",
-      "Only deals recoverable damage"
+      "Only deals recoverable damage",
+      "Input can be delayed by 8F",
+      "Move cannot be delayed"
     ]
   },
   {

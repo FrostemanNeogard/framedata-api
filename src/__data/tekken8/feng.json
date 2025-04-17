@@ -17,7 +17,7 @@
     "notes": [
       "Heat Burst",
       "Cancel to r45 with b,b on frame 42",
-      "3 chip damage on block",
+      "2 chip damage on block",
       "12 chip damage on hit",
       "Only deals recoverable damage",
       "Cannot cause a K.O."
@@ -41,7 +41,6 @@
     "notes": [
       "Heat Smash",
       "Balcony Break",
-      "Wall Crush  +24g STC on block",
       "11 chip damage on block",
       "3 additional chip damage on block on wall crush",
       "Transitions to STC on block, can cancel with b at +7 on block or +19g on wall crush."
@@ -457,7 +456,6 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Wall Crush +19g on block",
       "14 Chip Damage on block",
       "16 Chip Damage on block in heat"
     ]
@@ -1644,7 +1642,6 @@
     "categories": [],
     "notes": [
       "Balcony Break",
-      "Wall Crush +18g",
       "Becomes  Essence of Nian Zhang Mie Ba in Heat"
     ]
   },
