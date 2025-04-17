@@ -15,8 +15,8 @@ import {
   TekkenMoveCategory,
   tekkenMoveCategories,
 } from 'src/__types/moveCategories';
-import { FrameData } from 'src/__types/frameData';
 import { GameCodeValidationPipe } from 'src/__pipes/gameCodeValidation.pipe';
+import { FramedataPatchDto } from './dtos/framedataPatchDto';
 
 @Controller('framedata')
 export class FramedataController {
@@ -139,25 +139,10 @@ export class FramedataController {
     @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterCode: string,
     @Param('input') input: string,
-    @Body() updates: Partial<FrameData>,
+    @Body() updates: FramedataPatchDto,
   ) {
-    const characterCodeResolved =
-      await this.characterCodesService.getCharacterCode(
-        characterCode,
-        gameCode,
-      );
-
-    if (!characterCodeResolved) {
-      this.logger.log(
-        `Couldn't find character code for: ${characterCode} in game: ${gameCode}`,
-      );
-      throw new NotFoundException(
-        'The given character was not found for the specified game.',
-      );
-    }
-
     const frameData = await this.framedataService.getCharacterFrameData(
-      characterCodeResolved,
+      characterCode,
       gameCode,
     );
 
@@ -166,6 +151,9 @@ export class FramedataController {
     );
 
     if (moveIndex === -1) {
+      this.logger.error(
+        `Couldn't update framedata due to missing move "${input}" for "${characterCode}" in "${gameCode}".`,
+      );
       throw new NotFoundException(
         `Move with input "${input}" not found for character "${characterCode}" in game "${gameCode}".`,
       );
@@ -176,14 +164,14 @@ export class FramedataController {
 
     try {
       await this.framedataService.saveCharacterFrameData(
-        characterCodeResolved,
+        characterCode,
         gameCode,
         frameData,
       );
       this.logger.log(
         `Successfully updated move "${input}" for character "${characterCode}" in game "${gameCode}".`,
       );
-      return frameData[moveIndex];
+      return updates;
     } catch (error) {
       this.logger.error(
         `Failed to update move "${input}" for character "${characterCode}" in game "${gameCode}". ${error.message}`,
