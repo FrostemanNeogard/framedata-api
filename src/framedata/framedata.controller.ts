@@ -9,6 +9,7 @@ import {
   Patch,
   UsePipes,
   ValidationPipe,
+  Delete,
 } from '@nestjs/common';
 import { FramedataService } from './framedata.service';
 import { GameCode } from 'src/__types/gameCode';
@@ -181,6 +182,29 @@ export class FramedataController {
         `Failed to update move "${input}" for character "${characterCode}" in game "${gameCode}". ${error.message}`,
       );
       throw new BadRequestException('Failed to update move data.');
+    }
+  }
+
+  @Delete(':gameCode/:characterCode/moves/:input')
+  public async deleteMoveData(
+    @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
+    @Param('characterCode') characterCode: string,
+    @Param('input') input: string,
+  ) {
+    try {
+      await this.framedataService.deleteCharacterFramedata(
+        characterCode,
+        gameCode,
+        input,
+      );
+      this.logger.log(
+        `Successfully deleted move "${input}" for character "${characterCode}" in game "${gameCode}".`,
+      );
+    } catch (error) {
+      this.logger.error(
+        `Failed to delete move "${input}" for character "${characterCode}" in game "${gameCode}". ${error.message}`,
+      );
+      throw new BadRequestException('Failed to delete move data.');
     }
   }
 }

@@ -123,6 +123,41 @@ export class FramedataService {
     }
   }
 
+  async deleteCharacterFramedata(
+    characterCode: string,
+    gameCode: GameCode,
+    input: string,
+  ) {
+    const frameData = await this.getCharacterFrameData(characterCode, gameCode);
+
+    const moveIndex = frameData.findIndex(
+      (move) => move.input === input || move.alternateInputs.includes(input),
+    );
+
+    if (moveIndex === -1) {
+      this.logger.error(
+        `Couldn't delete framedata due to missing move "${input}" for "${characterCode}" in "${gameCode}".`,
+      );
+      throw new NotFoundException(
+        `Move with input "${input}" not found for character "${characterCode}" in game "${gameCode}".`,
+      );
+    }
+
+    frameData.splice(moveIndex, 1);
+
+    try {
+      this.repo.saveCharacter(gameCode, characterCode, frameData);
+    } catch (error) {
+      this.logger.error(
+        `Failed to save frame data for ${characterCode} in ${gameCode}. ${error.message}`,
+      );
+
+      throw new BadRequestException(
+        `Failed to save frame data for character: ${characterCode}`,
+      );
+    }
+  }
+
   private calculateSimilarity(input1: string, input2: string): number {
     const set1 = new Set(input1.split(''));
     const set2 = new Set(input2.split(''));
