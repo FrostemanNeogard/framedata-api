@@ -3,6 +3,7 @@ import {
   Logger,
   BadRequestException,
   NotFoundException,
+  ConflictException,
 } from '@nestjs/common';
 import { FrameData } from 'src/__types/frameData';
 import { GameCode } from 'src/__types/gameCode';
@@ -147,6 +148,40 @@ export class FramedataService {
 
     try {
       this.repo.saveCharacter(gameCode, characterCode, frameData);
+    } catch (error) {
+      this.logger.error(
+        `Failed to save frame data for ${characterCode} in ${gameCode}. ${error.message}`,
+      );
+
+      throw new BadRequestException(
+        `Failed to save frame data for character: ${characterCode}`,
+      );
+    }
+  }
+
+  async addCharacterFramedata(
+    characterCode: string,
+    gameCode: GameCode,
+    data: FrameData,
+  ) {
+    try {
+      const isMoveDuplicate = this.getSingleMoveFrameDataOrSimilarMoves(
+        characterCode,
+        gameCode,
+        data.input,
+      );
+      if (isMoveDuplicate) {
+        throw new ConflictException(
+          'Data already exists for the given attack.',
+        );
+      }
+    } catch {}
+
+    const frameData = await this.getCharacterFrameData(characterCode, gameCode);
+    const newData = [...frameData, data];
+
+    try {
+      this.repo.saveCharacter(gameCode, characterCode, newData);
     } catch (error) {
       this.logger.error(
         `Failed to save frame data for ${characterCode} in ${gameCode}. ${error.message}`,
