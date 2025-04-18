@@ -33,6 +33,7 @@ export class SuggestionsController {
     const suggestion = await this.suggestionsService.findOne(id);
 
     if (!suggestion) {
+      this.logger.error(`Couldn't find suggestion with id: ${id}`);
       throw new NotFoundException('Suggestion not found.');
     }
 
