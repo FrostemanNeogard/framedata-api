@@ -2,7 +2,10 @@ import { Test, TestingModule } from '@nestjs/testing';
 import { CharacterCodesService } from './characterCodes.service';
 import { CharacterCodesRepository } from './characterCodes.repository';
 import { GameCode } from '../__types/gameCode';
-import { BadRequestException } from '@nestjs/common';
+import {
+  BadRequestException,
+  InternalServerErrorException,
+} from '@nestjs/common';
 
 describe('CharacterCodesService', () => {
   let service: CharacterCodesService;
@@ -61,14 +64,14 @@ describe('CharacterCodesService', () => {
       expect(repository.findByGame).toHaveBeenCalledWith(game);
     });
 
-    it('should return null when no character codes found for game', async () => {
+    it('should return throw InternalServerErrorException no character codes found for game', async () => {
       const alias = 'kaz';
       const game: GameCode = 'tekken8';
       mockRepository.findByGame.mockResolvedValue(null);
 
-      const result = await service.getCharacterCode(alias, game);
-
-      expect(result).toBeNull();
+      await expect(service.getCharacterCode(alias, game)).rejects.toThrow(
+        InternalServerErrorException,
+      );
     });
 
     it('should throw BadRequestException when alias is not found', async () => {
