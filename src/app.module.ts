@@ -7,6 +7,8 @@ import { GameCodesModule } from './gameCodes/gameCodes.module';
 import { GameCodesController } from './gameCodes/gameCodes.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
+import { SuggestionsModule } from './suggestions/suggestions.module';
+import { SuggestionsController } from './suggestions/suggestions.controller';
 
 @Module({
   imports: [
@@ -15,11 +17,13 @@ import { ConfigModule } from '@nestjs/config';
     CharacterCodesModule,
     GameCodesModule,
     MongooseModule.forRoot(process.env.MONGODB_URI),
+    SuggestionsModule,
   ],
   controllers: [
     FramedataController,
     CharacterCodesController,
     GameCodesController,
+    SuggestionsController,
   ],
   providers: [],
 })
