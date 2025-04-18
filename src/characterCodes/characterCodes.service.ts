@@ -1,4 +1,8 @@
-import { BadRequestException, Injectable } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  InternalServerErrorException,
+} from '@nestjs/common';
 import { CharacterCodesRepository } from './characterCodes.repository';
 import { GameCode } from 'src/__types/gameCode';
 
@@ -11,7 +15,9 @@ export class CharacterCodesService {
     game: GameCode,
   ): Promise<string | null> {
     const record = await this.repository.findByGame(game);
-    if (!record) return null;
+    if (!record) {
+      throw new InternalServerErrorException("Couldn't fetch game data.");
+    }
 
     for (const [code, aliases] of record.characters.entries()) {
       if (
