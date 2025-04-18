@@ -163,6 +163,7 @@ export class FramedataService {
     characterCode: string,
     gameCode: GameCode,
     data: FrameData,
+    index?: number,
   ) {
     let isDuplicate = false;
     try {
@@ -180,10 +181,16 @@ export class FramedataService {
     }
 
     const frameData = await this.getCharacterFrameData(characterCode, gameCode);
-    const newData = [...frameData, data];
+    const insertionIndex = index ?? Math.max(0, frameData.length - 1);
+
+    if (insertionIndex < 0 || insertionIndex >= frameData.length) {
+      throw new BadRequestException('Invalid insertion index');
+    }
+
+    frameData.splice(insertionIndex, 0, data);
 
     try {
-      this.repo.saveCharacter(gameCode, characterCode, newData);
+      this.repo.saveCharacter(gameCode, characterCode, frameData);
     } catch (error) {
       this.logger.error(
         `Failed to save frame data for ${characterCode} in ${gameCode}. ${error.message}`,

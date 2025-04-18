@@ -23,7 +23,7 @@ import {
 } from 'src/__types/moveCategories';
 import { GameCodeValidationPipe } from 'src/__pipes/gameCodeValidation.pipe';
 import { FramedataPatchDto } from './dtos/framedataPatchDto';
-import { FramedataDto } from './dtos/framedataDto';
+import { FramedataPostDto } from './dtos/framedataPostDto';
 
 @Controller('framedata')
 export class FramedataController {
@@ -68,20 +68,21 @@ export class FramedataController {
   public async addMoveData(
     @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterCode: string,
-    @Body() data: FramedataDto,
+    @Body() body: FramedataPostDto,
   ) {
     try {
       await this.framedataService.addCharacterFramedata(
         characterCode,
         gameCode,
-        data,
+        body.data,
+        body.index,
       );
       this.logger.log(
-        `Successfully added move "${data.input}" for character "${characterCode}" in game "${gameCode}".`,
+        `Successfully added move "${body.data.input}" for character "${characterCode}" in game "${gameCode}".`,
       );
     } catch (error) {
       this.logger.error(
-        `Failed to add move "${data.input}" for character "${characterCode}" in game "${gameCode}". ${error.message}`,
+        `Failed to add move "${body.data.input}" for character "${characterCode}" in game "${gameCode}". ${error.message}`,
       );
 
       if (error instanceof ConflictException) {
