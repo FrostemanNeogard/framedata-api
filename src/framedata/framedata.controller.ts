@@ -48,7 +48,7 @@ export class FramedataController {
       this.logger.log(
         `Couldn't find character code for: ${characterName} in game: ${gameCode}`,
       );
-      throw new NotFoundException(
+      throw new BadRequestException(
         'The given character was not found for the given game.',
       );
     }
@@ -155,7 +155,7 @@ export class FramedataController {
       this.logger.log(
         `Couldn't find character code for: ${characterCode} in game: ${gameCode}`,
       );
-      throw new NotFoundException(
+      throw new BadRequestException(
         'The given character was not found for the specified game.',
       );
     }
