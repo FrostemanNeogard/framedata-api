@@ -2,7 +2,7 @@ import { IsString, IsArray } from 'class-validator';
 import { FrameData } from 'src/__types/frameData';
 import { TekkenMoveCategory } from 'src/__types/moveCategories';
 
-export class FramedataPostDto implements FrameData {
+export class FramedataDto implements FrameData {
   @IsString()
   input: string;
 

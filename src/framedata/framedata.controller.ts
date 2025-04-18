@@ -23,7 +23,7 @@ import {
 } from 'src/__types/moveCategories';
 import { GameCodeValidationPipe } from 'src/__pipes/gameCodeValidation.pipe';
 import { FramedataPatchDto } from './dtos/framedataPatchDto';
-import { FramedataPostDto } from './dtos/framedataPostDto';
+import { FramedataDto } from './dtos/framedataDto';
 
 @Controller('framedata')
 export class FramedataController {
@@ -68,7 +68,7 @@ export class FramedataController {
   public async addMoveData(
     @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
     @Param('characterCode') characterCode: string,
-    @Body() data: FramedataPostDto,
+    @Body() data: FramedataDto,
   ) {
     try {
       await this.framedataService.addCharacterFramedata(
