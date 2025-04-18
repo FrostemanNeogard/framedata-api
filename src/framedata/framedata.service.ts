@@ -164,18 +164,20 @@ export class FramedataService {
     gameCode: GameCode,
     data: FrameData,
   ) {
+    let isDuplicate = false;
     try {
-      const isMoveDuplicate = this.getSingleMoveFrameDataOrSimilarMoves(
+      const existingData = await this.getSingleMoveFrameDataOrSimilarMoves(
         characterCode,
         gameCode,
         data.input,
       );
-      if (isMoveDuplicate) {
-        throw new ConflictException(
-          'Data already exists for the given attack.',
-        );
-      }
+
+      isDuplicate = existingData.length == 1;
     } catch {}
+
+    if (isDuplicate) {
+      throw new ConflictException('Data already exists for the given attack.');
+    }
 
     const frameData = await this.getCharacterFrameData(characterCode, gameCode);
     const newData = [...frameData, data];
