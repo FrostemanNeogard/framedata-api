@@ -9,6 +9,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule } from '@nestjs/config';
 import { SuggestionsModule } from './suggestions/suggestions.module';
 import { SuggestionsController } from './suggestions/suggestions.controller';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { SuggestionsController } from './suggestions/suggestions.controller';
     GameCodesModule,
     MongooseModule.forRoot(process.env.MONGODB_URI),
     SuggestionsModule,
+    AuthModule,
   ],
   controllers: [
     FramedataController,
