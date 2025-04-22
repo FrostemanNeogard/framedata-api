@@ -4,10 +4,18 @@ import { AuthController } from './auth.controller';
 import { ConfigModule } from '@nestjs/config';
 import googleOauthConfig from './config/google-oauth.config';
 import { GoogleStrategy } from './strategies/google.strategy';
+import { JwtModule, JwtService } from '@nestjs/jwt';
+import { JwtStrategy } from './strategies/jwt.strategy';
 
 @Module({
-  imports: [ConfigModule.forFeature(googleOauthConfig)],
+  imports: [
+    ConfigModule.forFeature(googleOauthConfig),
+    JwtModule.register({
+      secret: process.env.JWT_SECRET,
+      signOptions: { expiresIn: '1d' },
+    }),
+  ],
   controllers: [AuthController],
-  providers: [AuthService, GoogleStrategy],
+  providers: [AuthService, GoogleStrategy, JwtService, JwtStrategy],
 })
 export class AuthModule {}

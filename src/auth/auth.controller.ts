@@ -13,6 +13,6 @@ export class AuthController {
   @UseGuards(GoogleAuthGuard)
   @Get('google/callback')
   googleCallback(@Req() req) {
-    return this.authService.googleLogin(req);
+    return this.authService.loginWithGoogle(req);
   }
 }

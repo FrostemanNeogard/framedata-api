@@ -1,16 +1,18 @@
-import { Injectable, InternalServerErrorException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 
 @Injectable()
 export class AuthService {
-  googleLogin(req: any) {
-    if (!req?.user) {
-      throw new InternalServerErrorException(
-        'No user object provided from Google.',
-      );
-    }
+  constructor(private jwtService: JwtService) {}
+
+  async loginWithGoogle(user: any) {
+    const payload = { email: user.email, sub: user.email };
+    const token = this.jwtService.sign(payload, {
+      secret: process.env.JWT_SECRET,
+    });
 
     return {
-      user: req?.user,
+      access_token: token,
     };
   }
 }
