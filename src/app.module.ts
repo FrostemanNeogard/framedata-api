@@ -10,7 +10,6 @@ import { ConfigModule } from '@nestjs/config';
 import { SuggestionsModule } from './suggestions/suggestions.module';
 import { SuggestionsController } from './suggestions/suggestions.controller';
 import { AuthModule } from './auth/auth.module';
-import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -23,7 +22,6 @@ import { UsersModule } from './users/users.module';
     MongooseModule.forRoot(process.env.MONGODB_URI),
     SuggestionsModule,
     AuthModule,
-    UsersModule,
   ],
   controllers: [
     FramedataController,
