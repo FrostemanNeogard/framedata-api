@@ -18,10 +18,10 @@ import configuration from './__config/configuration';
     FramedataModule,
     CharacterCodesModule,
     GameCodesModule,
-    MongooseModule.forRoot(process.env.DATABASE_URI),
     SuggestionsModule,
     AuthModule,
     ConfigModule.forRoot({ isGlobal: true, load: [configuration] }),
+    MongooseModule.forRoot(process.env.DATABASE_URI),
   ],
   controllers: [
     FramedataController,
