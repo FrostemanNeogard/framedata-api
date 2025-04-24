@@ -11,18 +11,17 @@ import { SuggestionsModule } from './suggestions/suggestions.module';
 import { SuggestionsController } from './suggestions/suggestions.controller';
 import { AuthModule } from './auth/auth.module';
 import { JwtService } from '@nestjs/jwt';
+import configuration from './__config/configuration';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-    }),
     FramedataModule,
     CharacterCodesModule,
     GameCodesModule,
-    MongooseModule.forRoot(process.env.MONGODB_URI),
+    MongooseModule.forRoot(process.env.DATABASE_URI),
     SuggestionsModule,
     AuthModule,
+    ConfigModule.forRoot({ isGlobal: true, load: [configuration] }),
   ],
   controllers: [
     FramedataController,
