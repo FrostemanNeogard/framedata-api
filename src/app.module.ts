@@ -10,6 +10,7 @@ import { ConfigModule } from '@nestjs/config';
 import { SuggestionsModule } from './suggestions/suggestions.module';
 import { SuggestionsController } from './suggestions/suggestions.controller';
 import { AuthModule } from './auth/auth.module';
+import { JwtService } from '@nestjs/jwt';
 
 @Module({
   imports: [
@@ -29,6 +30,6 @@ import { AuthModule } from './auth/auth.module';
     GameCodesController,
     SuggestionsController,
   ],
-  providers: [],
+  providers: [JwtService],
 })
 export class AppModule {}
