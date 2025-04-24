@@ -5,6 +5,7 @@ import { CharacterCodesService } from '../characterCodes/characterCodes.service'
 import { GameCode } from '../__types/gameCode';
 import { FrameData } from '../__types/frameData';
 import { NotFoundException, BadRequestException } from '@nestjs/common';
+import { JwtService } from '@nestjs/jwt';
 
 describe('FramedataController', () => {
   let controller: FramedataController;
@@ -82,6 +83,7 @@ describe('FramedataController', () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [FramedataController],
       providers: [
+        JwtService,
         {
           provide: FramedataService,
           useValue: mockFramedataService,
