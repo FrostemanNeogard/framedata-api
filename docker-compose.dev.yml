@@ -1,0 +1,17 @@
+services:
+  api_dev:
+    build: .
+    volumes:
+      - /usr/src/app
+    ports:
+      - '${PORT}:3000'
+    command: npm run start:dev
+    networks:
+      - framedata_network
+    restart: always
+    expose:
+      - 3000
+
+networks:
+  framedata_network:
+    external: true
