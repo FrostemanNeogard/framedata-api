@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - dev
 
 jobs:
-  deploy:
+  deploy-prod:
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
 
     steps:
@@ -23,6 +25,28 @@ jobs:
           ssh -o StrictHostKeyChecking=no -p 2222 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "
             cd ~/projects/FramedataAPI &&
             git pull &&
+            sudo docker-compose -f docker-compose.yml down &&
+            sudo docker-compose -f docker-compose.yml up --build -d
+          "
+
+  deploy-dev:
+    if: github.ref == 'refs/heads/dev'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up SSH
+        uses: webfactory/ssh-agent@v0.5.3
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy API
+        run: |
+          ssh -o StrictHostKeyChecking=no -p 2222 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "
+            cd ~/projects/FramedataAPI_Dev &&
+            git pull origin dev &&
             sudo docker-compose -f docker-compose.yml down &&
             sudo docker-compose -f docker-compose.yml up --build -d
           "
