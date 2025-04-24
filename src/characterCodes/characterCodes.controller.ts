@@ -2,51 +2,47 @@ import {
   Controller,
   Get,
   Logger,
-  NotFoundException,
   Param,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { CharacterCodesService } from './characterCodes.service';
-import { GameCode } from 'src/__types/gameCode';
 import { CharacterCodeDto } from './dtos/characterCodeDto';
 import { GameCodesService } from 'src/gameCodes/gameCodes.service';
+import { GameCode } from 'src/__types/gameCode';
+import { ValidateCharacterCodeDto } from './dtos/validateCharacterCodeDto';
 
 @Controller('charactercodes')
 export class CharacterCodesController {
-  private readonly logger: Logger;
+  private readonly logger = new Logger(CharacterCodesController.name);
 
   constructor(
     private characterCodesService: CharacterCodesService,
     private gameCodesService: GameCodesService,
-  ) {
-    this.logger = new Logger();
-  }
+  ) {}
 
   @Get(':gameName/:characterName')
-  public formatCharacterName(
+  @UsePipes(new ValidationPipe({ transform: true }))
+  public async formatCharacterName(
     @Param('gameName') gameName: string,
     @Param('characterName') characterName: string,
-  ): CharacterCodeDto {
-    this.logger.log(
-      `Attempting to get characterCode for: ${characterName} in game: ${gameName}`,
+  ): Promise<CharacterCodeDto> {
+    const dto = new ValidateCharacterCodeDto();
+    dto.game = gameName;
+    dto.character = characterName;
+
+    const gameCode: GameCode | null = this.gameCodesService.getGameCode(
+      dto.game,
     );
 
-    const gameCode: GameCode | null =
-      this.gameCodesService.getGameCode(gameName);
-
-    if (gameCode == null) {
-      throw new NotFoundException("Couldn't find the given game.");
-    }
-
-    const characterCode = this.characterCodesService.getCharacterCode(
-      characterName,
+    const characterCode = await this.characterCodesService.getCharacterCode(
+      dto.character,
       gameCode,
     );
 
-    if (characterCode == null) {
-      throw new NotFoundException(
-        "Couldn't find the given character for the given game.",
-      );
-    }
+    this.logger.log(
+      `Found characterCode for "${characterName}" in "${gameName}": ${characterCode}`,
+    );
 
     return new CharacterCodeDto(characterCode);
   }

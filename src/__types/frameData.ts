@@ -3,11 +3,11 @@ import { TekkenMoveCategory } from './moveCategories';
 export type FrameData = {
   input: string;
   hit_level: string;
-  damage: number;
-  startup: number;
-  block: number;
-  hit: number;
-  counter: number;
+  damage: string;
+  startup: string;
+  block: string;
+  hit: string;
+  counter: string;
   notes: string[];
   name: string;
   alternateInputs: string[];

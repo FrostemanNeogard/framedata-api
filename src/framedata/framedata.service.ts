@@ -1,31 +1,37 @@
 import {
-  BadRequestException,
   Injectable,
   Logger,
+  BadRequestException,
   NotFoundException,
+  ConflictException,
 } from '@nestjs/common';
-import * as fs from 'fs';
 import { FrameData } from 'src/__types/frameData';
-import { promisify } from 'util';
+import { GameCode } from 'src/__types/gameCode';
+import { FramedataRepository } from './framedata.repository';
 
 @Injectable()
 export class FramedataService {
-  private readonly logger = new Logger();
+  private readonly logger = new Logger(FramedataService.name);
+
+  constructor(private readonly repo: FramedataRepository) {}
 
   async getCharacterFrameData(
     characterCode: string,
-    game: string,
+    game: GameCode,
   ): Promise<FrameData[]> {
-    const filePath = `src/__data/${game}/${characterCode}.json`;
-
     try {
-      const readFileAsync = promisify(fs.readFile);
-      const data = await readFileAsync(filePath, 'utf8');
-      const jsonData = JSON.parse(data);
-      return jsonData;
+      const doc = await this.repo.findByCharacter(game, characterCode);
+
+      if (!doc?.moves) {
+        throw new BadRequestException(
+          `No framedata was found for the given character and game combo.`,
+        );
+      }
+
+      return doc.moves;
     } catch (error) {
       this.logger.error(
-        `An error occurred when reading ${filePath}. ${error.code}: ${error.message}`,
+        `Failed to fetch frame data for ${characterCode} in ${game}. ${error.message}`,
       );
       throw new BadRequestException(
         `No framedata was found for the given character and game combo.`,
@@ -35,7 +41,7 @@ export class FramedataService {
 
   async getSingleMoveFrameDataOrSimilarMoves(
     character: string,
-    game: string,
+    game: GameCode,
     notation: string,
   ) {
     this.logger.log(
@@ -54,6 +60,7 @@ export class FramedataService {
       if (!!attackInfo[0]) {
         break;
       }
+
       this.logger.log(`Formatting notation, iteration: ${i}`);
       const removePlus = i > 0;
       const formattedNotation = this.formatNotation(notation, removePlus);
@@ -62,12 +69,14 @@ export class FramedataService {
         const moveData = frameData[y];
         moveData.alternateInputs.forEach((input) => {
           const formattedInput = this.formatNotation(input, removePlus);
+
           if (
             formattedNotation == formattedInput ||
             formattedNotation == this.formatNotation(moveData.name, removePlus)
           ) {
             attackInfo.push(moveData);
           }
+
           const similarity = this.calculateSimilarity(input, notation);
           similarityMap.push({ move: moveData, similarity });
         });
@@ -98,23 +107,96 @@ export class FramedataService {
 
   async saveCharacterFrameData(
     characterCode: string,
-    game: string,
+    game: GameCode,
     frameData: FrameData[],
-  ) {
-    const filePath = `src/__data/${game}/${characterCode}.json`;
-
+  ): Promise<void> {
     try {
-      const writeFileAsync = promisify(fs.writeFile);
-      await writeFileAsync(
-        filePath,
-        JSON.stringify(frameData, null, 2),
-        'utf8',
-      );
+      await this.repo.saveCharacter(game, characterCode, frameData);
+      this.logger.log(`Frame data saved for ${characterCode} in ${game}.`);
     } catch (error) {
       this.logger.error(
-        `Failed to save frame data to ${filePath}. ${error.message}`,
+        `Failed to save frame data for ${characterCode} in ${game}. ${error.message}`,
       );
-      throw new Error(
+
+      throw new BadRequestException(
+        `Failed to save frame data for character: ${characterCode}`,
+      );
+    }
+  }
+
+  async deleteCharacterFramedata(
+    characterCode: string,
+    gameCode: GameCode,
+    input: string,
+  ) {
+    const frameData = await this.getCharacterFrameData(characterCode, gameCode);
+
+    const moveIndex = frameData.findIndex(
+      (move) => move.input === input || move.alternateInputs.includes(input),
+    );
+
+    if (moveIndex === -1) {
+      this.logger.error(
+        `Couldn't delete framedata due to missing move "${input}" for "${characterCode}" in "${gameCode}".`,
+      );
+      throw new NotFoundException(
+        `Move with input "${input}" not found for character "${characterCode}" in game "${gameCode}".`,
+      );
+    }
+
+    frameData.splice(moveIndex, 1);
+
+    try {
+      this.repo.saveCharacter(gameCode, characterCode, frameData);
+    } catch (error) {
+      this.logger.error(
+        `Failed to save frame data for ${characterCode} in ${gameCode}. ${error.message}`,
+      );
+
+      throw new BadRequestException(
+        `Failed to save frame data for character: ${characterCode}`,
+      );
+    }
+  }
+
+  async addCharacterFramedata(
+    characterCode: string,
+    gameCode: GameCode,
+    data: FrameData,
+    index?: number,
+  ) {
+    let isDuplicate = false;
+    try {
+      const existingData = await this.getSingleMoveFrameDataOrSimilarMoves(
+        characterCode,
+        gameCode,
+        data.input,
+      );
+
+      isDuplicate = existingData.length == 1;
+    } catch {}
+
+    if (isDuplicate) {
+      throw new ConflictException('Data already exists for the given attack.');
+    }
+
+    const frameData = await this.getCharacterFrameData(characterCode, gameCode);
+    const insertionIndex = index ?? Math.max(0, frameData.length - 1);
+
+    if (insertionIndex < 0 || insertionIndex >= frameData.length) {
+      throw new BadRequestException('Invalid insertion index');
+    }
+
+    frameData.splice(insertionIndex, 0, data);
+
+    try {
+      this.repo.saveCharacter(gameCode, characterCode, frameData);
+    } catch (error) {
+      this.logger.error(
+        `Failed to save frame data for ${characterCode} in ${gameCode}. ${error.message}`,
+      );
+
+      throw new BadRequestException(
         `Failed to save frame data for character: ${characterCode}`,
       );
     }
