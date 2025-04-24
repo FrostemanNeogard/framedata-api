@@ -13,6 +13,7 @@ import {
   Post,
   ConflictException,
   InternalServerErrorException,
+  UseGuards,
 } from '@nestjs/common';
 import { FramedataService } from './framedata.service';
 import { GameCode } from 'src/__types/gameCode';
@@ -24,6 +25,7 @@ import {
 import { GameCodeValidationPipe } from 'src/__pipes/gameCodeValidation.pipe';
 import { FramedataPatchDto } from './dtos/framedataPatchDto';
 import { FramedataPostDto } from './dtos/framedataPostDto';
+import { OwnerAuthGuard } from 'src/auth/guards/owner-auth.guard';
 
 @Controller('framedata')
 export class FramedataController {
@@ -63,6 +65,7 @@ export class FramedataController {
     );
   }
 
+  @UseGuards(OwnerAuthGuard)
   @Post(':gameCode/:characterCode')
   @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }))
   public async addMoveData(
@@ -175,6 +178,7 @@ export class FramedataController {
     return frameData;
   }
 
+  @UseGuards(OwnerAuthGuard)
   @Patch(':gameCode/:characterCode/moves/:input')
   @UsePipes(new ValidationPipe({ whitelist: true, forbidNonWhitelisted: true }))
   public async updateMoveData(
@@ -223,6 +227,7 @@ export class FramedataController {
     }
   }
 
+  @UseGuards(OwnerAuthGuard)
   @Delete(':gameCode/:characterCode/moves/:input')
   public async deleteMoveData(
     @Param('gameCode', GameCodeValidationPipe) gameCode: GameCode,
