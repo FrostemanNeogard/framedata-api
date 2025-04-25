@@ -4,13 +4,13 @@ services:
     volumes:
       - /usr/src/app
     ports:
-      - '${PORT}:3000'
+      - '${PORT}:4000'
     command: npm run start:dev
     networks:
       - framedata_network
     restart: always
     expose:
-      - 3000
+      - 4000
 
 networks:
   framedata_network:
