@@ -7,11 +7,11 @@ services:
       - '${PORT}:4000'
     command: npm run start:dev
     networks:
-      - framedata_network
+      - framedata_network_dev
     restart: always
     expose:
       - 4000
 
 networks:
-  framedata_network:
+  framedata_network_dev:
     external: true
