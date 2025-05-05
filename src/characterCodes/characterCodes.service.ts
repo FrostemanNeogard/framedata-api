@@ -10,6 +10,17 @@ import { GameCode } from 'src/__types/gameCode';
 export class CharacterCodesService {
   constructor(private readonly repository: CharacterCodesRepository) {}
 
+  async getAllCharacterCodesForGame(game: GameCode): Promise<string[] | null> {
+    const record = await this.repository.findByGame(game);
+
+    if (!record) {
+      throw new InternalServerErrorException("Couldn't fetch game data.");
+    }
+
+    const characters = Array.from(record.characters.keys());
+    return characters;
+  }
+
   async getCharacterCode(
     alias: string,
     game: GameCode,

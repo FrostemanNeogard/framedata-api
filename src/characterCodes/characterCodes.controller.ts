@@ -21,6 +21,20 @@ export class CharacterCodesController {
     private gameCodesService: GameCodesService,
   ) {}
 
+  @Get(':gameName')
+  @UsePipes(new ValidationPipe({ transform: true }))
+  public async getAllCharacterCodesForGame(
+    @Param('gameName') gameName: string,
+  ): Promise<string[]> {
+    const gameCode: GameCode | null =
+      this.gameCodesService.getGameCode(gameName);
+
+    const characters =
+      await this.characterCodesService.getAllCharacterCodesForGame(gameCode);
+
+    return characters;
+  }
+
   @Get(':gameName/:characterName')
   @UsePipes(new ValidationPipe({ transform: true }))
   public async formatCharacterName(
