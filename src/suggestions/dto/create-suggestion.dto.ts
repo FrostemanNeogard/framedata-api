@@ -1,4 +1,5 @@
 import {
+  IsBoolean,
   IsEnum,
   IsObject,
   IsOptional,
@@ -15,6 +16,13 @@ export class SuggestionTargetDto {
 
   @IsString()
   character: string;
+
+  @IsBoolean()
+  @IsOptional()
+  insertAbove: boolean;
+
+  @IsOptional()
+  insertionIndex: number;
 
   @IsString()
   input: string;
