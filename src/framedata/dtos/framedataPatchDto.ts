@@ -9,7 +9,7 @@ export class FramedataPatchDto implements Partial<FrameData> {
 
   @IsOptional()
   @IsString()
-  hit_level?: string;
+  hitLevel?: string;
 
   @IsOptional()
   @IsString()

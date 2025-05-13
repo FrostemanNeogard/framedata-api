@@ -7,7 +7,7 @@ export class FramedataDto implements FrameData {
   input: string;
 
   @IsString()
-  hit_level: string;
+  hitLevel: string;
 
   @IsString()
   damage: string;

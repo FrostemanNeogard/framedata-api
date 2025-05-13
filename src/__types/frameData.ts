@@ -2,7 +2,7 @@ import { TekkenMoveCategory } from './moveCategories';
 
 export type FrameData = {
   input: string;
-  hit_level: string;
+  hitLevel: string;
   damage: string;
   startup: string;
   block: string;

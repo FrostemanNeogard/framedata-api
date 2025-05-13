@@ -17,7 +17,7 @@ describe('FramedataService', () => {
     {
       name: 'One Two Punch',
       input: '1,2',
-      hit_level: 'h,h',
+      hitLevel: 'h,h',
       damage: '5,8',
       startup: ',i10',
       block: '-1',
@@ -33,7 +33,7 @@ describe('FramedataService', () => {
     },
     {
       input: 'df+2',
-      hit_level: 'm',
+      hitLevel: 'm',
       damage: '20',
       startup: '15',
       block: '-12',
@@ -46,7 +46,7 @@ describe('FramedataService', () => {
     },
     {
       input: 'df+3',
-      hit_level: 'm',
+      hitLevel: 'm',
       damage: '20',
       startup: '15',
       block: '-12',
@@ -216,7 +216,7 @@ describe('FramedataService', () => {
       const game: GameCode = 'tekken8';
       const newMove: FrameData = {
         input: 'uf+4,4',
-        hit_level: 'm, l',
+        hitLevel: 'm, l',
         damage: '',
         startup: '18',
         block: '',
