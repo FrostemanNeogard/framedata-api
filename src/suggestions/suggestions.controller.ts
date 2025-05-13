@@ -1,12 +1,4 @@
-import {
-  Controller,
-  Get,
-  Post,
-  Body,
-  Param,
-  NotFoundException,
-  Logger,
-} from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Logger } from '@nestjs/common';
 import { SuggestionsService } from './suggestions.service';
 import { CreateSuggestionDto } from './dto/create-suggestion.dto';
 import { Suggestion } from './entities/suggestion.entity';
@@ -30,13 +22,6 @@ export class SuggestionsController {
 
   @Get(':id')
   async findOne(@Param('id') id: string) {
-    const suggestion = await this.suggestionsService.findOne(id);
-
-    if (!suggestion) {
-      this.logger.error(`Couldn't find suggestion with id: ${id}`);
-      throw new NotFoundException('Suggestion not found.');
-    }
-
-    return suggestion;
+    return this.suggestionsService.findOne(id);
   }
 }
