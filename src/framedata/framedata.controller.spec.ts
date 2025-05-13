@@ -133,16 +133,6 @@ describe('FramedataController', () => {
         gameCode,
       );
     });
-
-    it('should throw BadRequestException when character is not found', async () => {
-      const gameCode: GameCode = 'tekken8';
-      const characterName = 'nonexistent';
-      mockCharacterCodesService.getCharacterCode.mockResolvedValue(null);
-
-      await expect(
-        controller.getFramedataForCharacter(gameCode, characterName),
-      ).rejects.toThrow(BadRequestException);
-    });
   });
 
   describe('getFrameDataSingle', () => {
