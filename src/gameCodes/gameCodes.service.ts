@@ -1,24 +1,29 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { GameCode, validGameCodes } from 'src/__types/gameCode';
+import { BadRequestException, Injectable, Logger } from '@nestjs/common';
+import { GameCodesRepository } from './gameCodes.repository';
+import { GameCode } from 'src/__types/gameCode';
 
 @Injectable()
 export class GameCodesService {
-  private readonly logger: Logger;
+  private readonly logger = new Logger(GameCodesService.name);
 
-  constructor() {
-    this.logger = new Logger();
-  }
+  constructor(private readonly repo: GameCodesRepository) {}
 
   public getAllGameCodes(): GameCode[] {
-    return [...validGameCodes];
+    return this.repo.findAllGameCodes() as GameCode[];
   }
 
   public getGameCode(gameName: string): GameCode | null {
-    if (![...validGameCodes].includes(gameName as GameCode)) {
-      this.logger.log(`Couldn't find gameCode for gameName: ${gameName}`);
-      return null;
+    const codes = this.repo.findAllGameCodes();
+
+    if (!codes.includes(gameName)) {
+      this.logger.warn(`Invalid gameCode: ${gameName}`);
+      throw new BadRequestException(`Invalid gameCode: ${gameName}`);
     }
 
-    return validGameCodes[validGameCodes.indexOf(gameName as GameCode)];
+    return gameName as GameCode;
+  }
+
+  public isValidGameCode(gameCode: string): boolean {
+    return this.repo.findAllGameCodes().includes(gameCode);
   }
 }
