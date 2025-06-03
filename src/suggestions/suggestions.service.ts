@@ -40,9 +40,11 @@ export class SuggestionsService {
   async approveSuggestion(suggestion: Suggestion) {
     const { character, game, input } = suggestion.target;
 
+    const resolvedCharacterCode = character.toLowerCase();
+
     const existingFramedata =
       await this.framedataService.getSingleMoveFrameDataOrSimilarMoves(
-        character,
+        resolvedCharacterCode,
         game,
         input,
       );
@@ -56,7 +58,7 @@ export class SuggestionsService {
         }
 
         return await this.framedataService.deleteCharacterFramedata(
-          character,
+          resolvedCharacterCode,
           game,
           input,
         );
@@ -73,7 +75,7 @@ export class SuggestionsService {
         };
 
         return await this.framedataService.addCharacterFramedata(
-          character,
+          resolvedCharacterCode,
           game,
           newCreateFramedata,
         );
@@ -90,10 +92,14 @@ export class SuggestionsService {
         };
 
         return await this.framedataService.saveCharacterFrameData(
-          character,
+          resolvedCharacterCode,
           game,
           [newUpdateFramedata],
         );
     }
+  }
+
+  async rejectSuggestion(id: string) {
+    return this.repo.deleteById(id);
   }
 }
