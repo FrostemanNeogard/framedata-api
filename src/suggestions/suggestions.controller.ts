@@ -4,12 +4,15 @@ import {
   Post,
   Body,
   Param,
-  NotFoundException,
   Logger,
+  UseGuards,
+  NotFoundException,
+  Delete,
 } from '@nestjs/common';
 import { SuggestionsService } from './suggestions.service';
 import { CreateSuggestionDto } from './dto/create-suggestion.dto';
 import { Suggestion } from './entities/suggestion.entity';
+import { OwnerAuthGuard } from 'src/auth/guards/owner-auth.guard';
 
 @Controller('suggestions')
 export class SuggestionsController {
@@ -20,12 +23,14 @@ export class SuggestionsController {
   @Post()
   async create(@Body() createSuggestionDto: CreateSuggestionDto) {
     const suggestion = new Suggestion(createSuggestionDto);
-    return this.suggestionsService.create(suggestion);
+    const createdSuggestion = await this.suggestionsService.create(suggestion);
+    return createdSuggestion;
   }
 
   @Get()
   async findAll() {
-    return this.suggestionsService.findAll();
+    const suggestions = await this.suggestionsService.findAll();
+    return suggestions;
   }
 
   @Get(':id')
@@ -33,10 +38,31 @@ export class SuggestionsController {
     const suggestion = await this.suggestionsService.findOne(id);
 
     if (!suggestion) {
-      this.logger.error(`Couldn't find suggestion with id: ${id}`);
-      throw new NotFoundException('Suggestion not found.');
+      throw new NotFoundException(`No suggestion found with id "${id}".`);
     }
 
     return suggestion;
+  }
+
+  @UseGuards(OwnerAuthGuard)
+  @Get('approve/:id')
+  async approveSuggestion(@Param('id') id: string) {
+    const suggestion = await this.suggestionsService.findOne(id);
+
+    if (!suggestion) {
+      throw new NotFoundException(`No suggestion found with id "${id}".`);
+    }
+
+    await this.suggestionsService.approveSuggestion(suggestion);
+
+    return suggestion;
+  }
+
+  @UseGuards(OwnerAuthGuard)
+  @Delete('reject/:id')
+  async rejectSuggestion(@Param('id') id: string) {
+    await this.suggestionsService.rejectSuggestion(id);
+
+    return;
   }
 }

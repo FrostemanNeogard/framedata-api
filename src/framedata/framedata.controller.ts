@@ -46,15 +46,6 @@ export class FramedataController {
       gameCode,
     );
 
-    if (characterCode == null) {
-      this.logger.log(
-        `Couldn't find character code for: ${characterName} in game: ${gameCode}`,
-      );
-      throw new BadRequestException(
-        'The given character was not found for the given game.',
-      );
-    }
-
     this.logger.log(
       `Returning all character data for character: ${characterName} in game: ${gameCode}`,
     );
@@ -112,15 +103,6 @@ export class FramedataController {
         gameCode,
       );
 
-    if (!characterCodeResolved) {
-      this.logger.log(
-        `Couldn't find character code for: ${characterCode} in game: ${gameCode}`,
-      );
-      throw new NotFoundException(
-        'The given character was not found for the specified game.',
-      );
-    }
-
     if (!tekkenMoveCategories.includes(category)) {
       throw new BadRequestException('Invalid category.');
     }
@@ -154,15 +136,6 @@ export class FramedataController {
         characterCode,
         gameCode,
       );
-
-    if (!characterCodeResolved) {
-      this.logger.log(
-        `Couldn't find character code for: ${characterCode} in game: ${gameCode}`,
-      );
-      throw new BadRequestException(
-        'The given character was not found for the specified game.',
-      );
-    }
 
     const frameData =
       await this.framedataService.getSingleMoveFrameDataOrSimilarMoves(

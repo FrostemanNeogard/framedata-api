@@ -18,11 +18,12 @@ export class IsCharacterCodeForGame implements ValidatorConstraintInterface {
     const game = (args.object as any).game;
     if (!game || !character) return false;
 
-    const code = await this.characterCodesService.getCharacterCode(
-      character,
-      game,
-    );
-    return !!code;
+    try {
+      await this.characterCodesService.getCharacterCode(character, game);
+      return true;
+    } catch {
+      return false;
+    }
   }
 
   defaultMessage(args: ValidationArguments): string {

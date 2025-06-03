@@ -15,7 +15,7 @@ describe('FramedataController', () => {
   const mockFrameData: FrameData[] = [
     {
       input: '1,2',
-      hit_level: 'h,h',
+      hitLevel: 'h,h',
       damage: '10,12',
       startup: '10',
       block: '-1',
@@ -28,7 +28,7 @@ describe('FramedataController', () => {
     },
     {
       input: '2,1,1',
-      hit_level: 'h,h',
+      hitLevel: 'h,h',
       damage: '10,12',
       startup: '10',
       block: '-1',
@@ -41,7 +41,7 @@ describe('FramedataController', () => {
     },
     {
       input: '1,1,2',
-      hit_level: 'h,h,m',
+      hitLevel: 'h,h,m',
       damage: '10,12,20',
       startup: '10',
       block: '-17',
@@ -54,7 +54,7 @@ describe('FramedataController', () => {
     },
     {
       input: 'existent',
-      hit_level: 'm',
+      hitLevel: 'm',
       damage: '20',
       startup: '9',
       block: '-17',
@@ -132,16 +132,6 @@ describe('FramedataController', () => {
         characterCode,
         gameCode,
       );
-    });
-
-    it('should throw BadRequestException when character is not found', async () => {
-      const gameCode: GameCode = 'tekken8';
-      const characterName = 'nonexistent';
-      mockCharacterCodesService.getCharacterCode.mockResolvedValue(null);
-
-      await expect(
-        controller.getFramedataForCharacter(gameCode, characterName),
-      ).rejects.toThrow(BadRequestException);
     });
   });
 
