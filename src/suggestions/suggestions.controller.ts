@@ -7,6 +7,7 @@ import {
   Logger,
   UseGuards,
   NotFoundException,
+  Delete,
 } from '@nestjs/common';
 import { SuggestionsService } from './suggestions.service';
 import { CreateSuggestionDto } from './dto/create-suggestion.dto';
@@ -55,5 +56,13 @@ export class SuggestionsController {
     await this.suggestionsService.approveSuggestion(suggestion);
 
     return suggestion;
+  }
+
+  @UseGuards(OwnerAuthGuard)
+  @Delete('reject/:id')
+  async rejectSuggestion(@Param('id') id: string) {
+    await this.suggestionsService.rejectSuggestion(id);
+
+    return;
   }
 }
