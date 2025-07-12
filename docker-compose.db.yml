@@ -1,0 +1,15 @@
+services:
+  mongo:
+    image: mongo:4.4.18
+    container_name: framedata_db_local
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongodb-data:/data/db
+    networks:
+      - framedata_network_local
+    restart: never
+
+networks:
+  framedata_network_local:
+    external: true
