@@ -1,4 +1,5 @@
 import {
+  BadRequestException,
   ConflictException,
   Injectable,
   Logger,
@@ -19,6 +20,27 @@ export class SuggestionsService {
   ) {}
 
   async create(suggestion: Suggestion) {
+    const foundTarget =
+      await this.framedataService.getSingleMoveFrameDataOrSimilarMoves(
+        suggestion.target.character,
+        suggestion.target.game,
+        suggestion.target.input,
+      );
+
+    if (suggestion.action == 'create') {
+      this.logger.log(`Creating with length: ${foundTarget.length}`);
+      if (foundTarget.length == 1) {
+        throw new BadRequestException('Attack already exists.');
+      }
+    } else {
+      this.logger.log(
+        `Modifying or deleting with length: ${foundTarget.length}`,
+      );
+      if (foundTarget.length != 1) {
+        throw new BadRequestException("Attack doesn't exist.");
+      }
+    }
+
     return this.repo.create(suggestion);
   }
 
