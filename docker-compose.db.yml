@@ -6,10 +6,4 @@ services:
       - '27017:27017'
     volumes:
       - ./mongodb-data:/data/db
-    networks:
-      - framedata_network_local
-    restart: never
-
-networks:
-  framedata_network_local:
-    external: true
+    restart: no
