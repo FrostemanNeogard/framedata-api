@@ -1,0 +1,9 @@
+services:
+  mongo:
+    image: mongo:4.4.18
+    container_name: framedata_db_local
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./mongodb-data:/data/db
+    restart: no
