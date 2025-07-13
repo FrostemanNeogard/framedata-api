@@ -11,7 +11,7 @@ import { Type } from 'class-transformer';
 import { GameCode, validGameCodes } from 'src/__types/gameCode';
 import { FramedataPostDto } from 'src/framedata/dtos/framedataPostDto';
 
-export class SuggestionTargetDto {
+export class CreateSuggestionTargetDto {
   @IsEnum(validGameCodes)
   game: GameCode;
 
@@ -23,11 +23,11 @@ export class SuggestionTargetDto {
 
   @IsBoolean()
   @IsOptional()
-  insertAbove: boolean;
+  insertAbove?: boolean;
 
   @IsOptional()
   @IsNumber()
-  insertionIndex: number;
+  insertionIndex?: number;
 }
 
 export class CreateSuggestionDto {
@@ -35,8 +35,8 @@ export class CreateSuggestionDto {
   action: 'modify' | 'delete' | 'create';
 
   @ValidateNested()
-  @Type(() => SuggestionTargetDto)
-  target: SuggestionTargetDto;
+  @Type(() => CreateSuggestionTargetDto)
+  target: CreateSuggestionTargetDto;
 
   @IsOptional()
   @IsObject()
