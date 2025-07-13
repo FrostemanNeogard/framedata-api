@@ -20,11 +20,25 @@ export class SuggestionsService {
   ) {}
 
   async create(suggestion: Suggestion) {
+    if (suggestion.action == 'modify' || suggestion.action == 'create') {
+      if (
+        (!suggestion.payload.data ||
+          Object.keys(suggestion.payload.data).length == 0) &&
+        !suggestion.payload.index
+      ) {
+        throw new BadRequestException(
+          `Cannot ${suggestion.action} entry without data.`,
+        );
+      }
+    }
+
     const foundTarget =
       await this.framedataService.getSingleMoveFrameDataOrSimilarMoves(
         suggestion.target.character.toLowerCase(),
         suggestion.target.game,
-        suggestion.target.input,
+        suggestion.action == 'create'
+          ? suggestion.payload.data.input
+          : suggestion.target.input,
       );
 
     if (suggestion.action == 'create') {
@@ -44,7 +58,7 @@ export class SuggestionsService {
     if (
       foundTarget.length == 1 &&
       suggestion.action == 'modify' &&
-      this.isSubset(foundTarget[0], suggestion.payload)
+      this.isSubset(foundTarget[0], suggestion.payload.data)
     ) {
       this.logger.error(`Rejected modification due to identical data.`);
       throw new BadRequestException('Cannot create duplicate entry.');
@@ -55,7 +69,11 @@ export class SuggestionsService {
 
   isSubset(superObj: Record<any, any>, subObj: Record<any, any>) {
     return Object.entries(subObj).every(([key, value]) => {
-      if (superObj[key] == value) {
+      if (key == 'notes') {
+        if (JSON.stringify(superObj[key]) == JSON.stringify(value)) {
+          return true;
+        }
+      } else if (superObj[key] == value) {
         return true;
       }
 
@@ -112,7 +130,17 @@ export class SuggestionsService {
         }
 
         const newCreateFramedata: FrameData = {
-          ...suggestion.payload.data,
+          input: suggestion.payload.data.input ?? suggestion.target.input ?? '',
+          hitLevel: suggestion.payload.data.hitLevel ?? '',
+          damage: suggestion.payload.data.damage ?? '',
+          startup: suggestion.payload.data.startup ?? '',
+          block: suggestion.payload.data.block ?? '',
+          hit: suggestion.payload.data.hit ?? '',
+          counter: suggestion.payload.data.counter ?? '',
+          notes: suggestion.payload.data.notes ?? [],
+          name: suggestion.payload.data.name ?? '',
+          alternateInputs: suggestion.payload.data.alternateInputs ?? [],
+          categories: suggestion.payload.data.categories ?? [],
         };
 
         return await this.framedataService.addCharacterFramedata(
@@ -129,7 +157,17 @@ export class SuggestionsService {
         }
 
         const newUpdateFramedata: FrameData = {
-          ...suggestion.payload.data,
+          input: suggestion.payload.data.input ?? '',
+          hitLevel: suggestion.payload.data.hitLevel ?? '',
+          damage: suggestion.payload.data.damage ?? '',
+          startup: suggestion.payload.data.startup ?? '',
+          block: suggestion.payload.data.block ?? '',
+          hit: suggestion.payload.data.hit ?? '',
+          counter: suggestion.payload.data.counter ?? '',
+          notes: suggestion.payload.data.notes ?? [],
+          name: suggestion.payload.data.name ?? '',
+          alternateInputs: suggestion.payload.data.alternateInputs ?? [],
+          categories: suggestion.payload.data.categories ?? [],
         };
 
         return await this.framedataService.saveCharacterFrameData(

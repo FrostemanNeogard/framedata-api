@@ -8,6 +8,7 @@ import {
   UseGuards,
   NotFoundException,
   Delete,
+  BadRequestException,
 } from '@nestjs/common';
 import { SuggestionsService } from './suggestions.service';
 import { CreateSuggestionDto } from './dto/create-suggestion.dto';
@@ -22,6 +23,24 @@ export class SuggestionsController {
 
   @Post()
   async create(@Body() createSuggestionDto: CreateSuggestionDto) {
+    if (createSuggestionDto.target.input == '') {
+      throw new BadRequestException('No target input provided');
+    }
+
+    if (
+      createSuggestionDto.action == 'create' &&
+      !createSuggestionDto.payload.data.input
+    ) {
+      throw new BadRequestException('No input provided');
+    }
+
+    if (
+      createSuggestionDto.action == 'modify' &&
+      createSuggestionDto.payload.data.input == ''
+    ) {
+      throw new BadRequestException('Cannot modify attack to have empty input');
+    }
+
     const suggestion = new Suggestion(createSuggestionDto);
     const createdSuggestion = await this.suggestionsService.create(suggestion);
     return createdSuggestion;
