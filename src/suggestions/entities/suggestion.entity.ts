@@ -11,7 +11,7 @@ export class Suggestion {
     input: string;
   };
 
-  payload: Partial<FramedataPostDto>;
+  payload?: Partial<FramedataPostDto>;
 
   constructor(dto: CreateSuggestionDto) {
     this.action = dto.action;
