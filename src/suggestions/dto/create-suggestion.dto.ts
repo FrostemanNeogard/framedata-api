@@ -1,6 +1,7 @@
 import {
   IsBoolean,
   IsEnum,
+  IsNumber,
   IsObject,
   IsOptional,
   IsString,
@@ -17,15 +18,16 @@ export class SuggestionTargetDto {
   @IsString()
   character: string;
 
+  @IsString()
+  input: string;
+
   @IsBoolean()
   @IsOptional()
   insertAbove: boolean;
 
   @IsOptional()
+  @IsNumber()
   insertionIndex: number;
-
-  @IsString()
-  input: string;
 }
 
 export class CreateSuggestionDto {
@@ -40,5 +42,5 @@ export class CreateSuggestionDto {
   @IsObject()
   @ValidateNested()
   @Type(() => FramedataPostDto)
-  payload?: Partial<FramedataPostDto>;
+  payload?: FramedataPostDto;
 }
