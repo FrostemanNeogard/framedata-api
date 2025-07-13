@@ -1,41 +1,52 @@
-import { IsString, IsArray } from 'class-validator';
+import { IsString, IsArray, IsOptional } from 'class-validator';
 import { FrameData } from 'src/__types/frameData';
 import { TekkenMoveCategory } from 'src/__types/moveCategories';
 
 export class FramedataDto implements FrameData {
   @IsString()
-  input: string;
+  @IsOptional()
+  input?: string;
 
   @IsString()
-  hitLevel: string;
+  @IsOptional()
+  hitLevel?: string;
 
   @IsString()
-  damage: string;
+  @IsOptional()
+  damage?: string;
 
   @IsString()
-  startup: string;
+  @IsOptional()
+  startup?: string;
 
   @IsString()
-  block: string;
+  @IsOptional()
+  block?: string;
 
   @IsString()
-  hit: string;
+  @IsOptional()
+  hit?: string;
 
   @IsString()
-  counter: string;
+  @IsOptional()
+  counter?: string;
 
   @IsArray()
   @IsString({ each: true })
-  notes: string[];
+  @IsOptional()
+  notes?: string[];
 
   @IsString()
-  name: string;
+  @IsOptional()
+  name?: string;
 
   @IsArray()
   @IsString({ each: true })
-  alternateInputs: string[];
+  @IsOptional()
+  alternateInputs?: string[];
 
   @IsArray()
   @IsString({ each: true })
-  categories: TekkenMoveCategory[];
+  @IsOptional()
+  categories?: TekkenMoveCategory[];
 }
