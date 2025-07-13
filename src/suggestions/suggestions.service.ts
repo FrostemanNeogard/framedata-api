@@ -22,7 +22,7 @@ export class SuggestionsService {
   async create(suggestion: Suggestion) {
     const foundTarget =
       await this.framedataService.getSingleMoveFrameDataOrSimilarMoves(
-        suggestion.target.character,
+        suggestion.target.character.toLowerCase(),
         suggestion.target.game,
         suggestion.target.input,
       );
@@ -41,7 +41,21 @@ export class SuggestionsService {
       }
     }
 
+    if (foundTarget.length == 1 && suggestion.action != 'delete') {
+      throw new BadRequestException('Cannot create duplicate entry.');
+    }
+
     return this.repo.create(suggestion);
+  }
+
+  isSubset(superObj, subObj) {
+    for (const key in Object.keys(subObj)) {
+      if (superObj[key] != subObj[key]) {
+        return false;
+      }
+    }
+
+    return true;
   }
 
   async findAll() {
