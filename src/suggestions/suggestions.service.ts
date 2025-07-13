@@ -41,21 +41,26 @@ export class SuggestionsService {
       }
     }
 
-    if (foundTarget.length == 1 && suggestion.action != 'delete') {
+    if (
+      foundTarget.length == 1 &&
+      suggestion.action == 'modify' &&
+      this.isSubset(foundTarget[0], suggestion.payload)
+    ) {
+      this.logger.error(`Rejected modification due to identical data.`);
       throw new BadRequestException('Cannot create duplicate entry.');
     }
 
     return this.repo.create(suggestion);
   }
 
-  isSubset(superObj, subObj) {
-    for (const key in Object.keys(subObj)) {
-      if (superObj[key] != subObj[key]) {
-        return false;
+  isSubset(superObj: Record<any, any>, subObj: Record<any, any>) {
+    return Object.entries(subObj).every(([key, value]) => {
+      if (superObj[key] == value) {
+        return true;
       }
-    }
 
-    return true;
+      return false;
+    });
   }
 
   async findAll() {
