@@ -9,11 +9,13 @@ import {
   NotFoundException,
   Delete,
   BadRequestException,
+  Query,
 } from '@nestjs/common';
 import { SuggestionsService } from './suggestions.service';
 import { CreateSuggestionDto } from './dto/create-suggestion.dto';
 import { Suggestion } from './entities/suggestion.entity';
 import { OwnerAuthGuard } from 'src/auth/guards/owner-auth.guard';
+import { PaginatedResponse } from 'src/__types/responses';
 
 @Controller('suggestions')
 export class SuggestionsController {
@@ -47,9 +49,35 @@ export class SuggestionsController {
   }
 
   @Get()
-  async findAll() {
-    const suggestions = await this.suggestionsService.findAll();
-    return suggestions;
+  async findAll(@Query('page') page: number): Promise<PaginatedResponse> {
+    if (!page) {
+      throw new BadRequestException('The "Page" query parameter must be set.');
+    }
+
+    if (page <= 0) {
+      throw new BadRequestException('"Page" must be greater than 0.');
+    }
+
+    const allSuggestions = await this.suggestionsService.findAll();
+    const totalPages = Math.ceil(allSuggestions.length / 10);
+    const startIndex = Math.max((page - 1) * 10, 0);
+    const paginatedSuggestions = allSuggestions.slice(
+      startIndex,
+      startIndex + 10,
+    );
+
+    const response: PaginatedResponse = {
+      data: paginatedSuggestions,
+      pagination: {
+        currentPage: page,
+        nextPage: page >= totalPages ? null : page + 1,
+        previousPage: page <= 1 ? null : page - 1,
+        totalPages: totalPages,
+        totalEntries: allSuggestions.length,
+      },
+    };
+
+    return response;
   }
 
   @Get(':id')
