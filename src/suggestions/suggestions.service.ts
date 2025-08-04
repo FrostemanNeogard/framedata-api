@@ -157,23 +157,39 @@ export class SuggestionsService {
         }
 
         const newUpdateFramedata: FrameData = {
-          input: suggestion.payload.data.input ?? '',
-          hitLevel: suggestion.payload.data.hitLevel ?? '',
-          damage: suggestion.payload.data.damage ?? '',
-          startup: suggestion.payload.data.startup ?? '',
-          block: suggestion.payload.data.block ?? '',
-          hit: suggestion.payload.data.hit ?? '',
-          counter: suggestion.payload.data.counter ?? '',
-          notes: suggestion.payload.data.notes ?? [],
-          name: suggestion.payload.data.name ?? '',
-          alternateInputs: suggestion.payload.data.alternateInputs ?? [],
-          categories: suggestion.payload.data.categories ?? [],
+          input: suggestion.payload.data.input ?? existingFramedata[0].input,
+          hitLevel:
+            suggestion.payload.data.hitLevel ?? existingFramedata[0].hitLevel,
+          damage: suggestion.payload.data.damage ?? existingFramedata[0].damage,
+          startup:
+            suggestion.payload.data.startup ?? existingFramedata[0].startup,
+          block: suggestion.payload.data.block ?? existingFramedata[0].block,
+          hit: suggestion.payload.data.hit ?? existingFramedata[0].hit,
+          counter:
+            suggestion.payload.data.counter ?? existingFramedata[0].counter,
+          notes: suggestion.payload.data.notes ?? existingFramedata[0].notes,
+          name: suggestion.payload.data.name ?? existingFramedata[0].name,
+          alternateInputs:
+            suggestion.payload.data.alternateInputs ??
+            existingFramedata[0].alternateInputs,
+          categories:
+            suggestion.payload.data.categories ??
+            existingFramedata[0].categories,
         };
+
+        const allMovesData = await this.framedataService.getCharacterFrameData(
+          resolvedCharacterCode,
+          game,
+        );
+
+        const newFramedataArray: FrameData[] = allMovesData.map((data) =>
+          data.input == newUpdateFramedata.input ? newUpdateFramedata : data,
+        );
 
         return await this.framedataService.saveCharacterFrameData(
           resolvedCharacterCode,
           game,
-          [newUpdateFramedata],
+          newFramedataArray,
         );
     }
   }
