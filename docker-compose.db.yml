@@ -1,9 +1,8 @@
 services:
-  mongo:
-    image: mongo:4.4.18
-    container_name: framedata_db_local
+  postgres:
+    image: postgres:14-alpine
     ports:
-      - '27017:27017'
+      - 5432:5432
     volumes:
-      - ./mongodb-data:/data/db
-    restart: always
+      - ./postgres-data:/var/lib/postgresql/data
+    env_file: "./.env.springboot"
