@@ -30,4 +30,9 @@ public class ApiResponse<T> {
     public static <T> ApiResponse<T> error(HttpStatus status, String errorMessage) {
         return new ApiResponse<>(status.value(), errorMessage, null);
     }
+
+    public static <T> ApiResponse<T> created() {
+        return new ApiResponse<>(HttpStatus.CREATED, null, null);
+    }
+
 }

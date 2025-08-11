@@ -17,7 +17,7 @@ public class ApiResponseEntity<T> {
     }
 
     public static <T> ResponseEntity<ApiResponse<T>> created(URI location) {
-        return ResponseEntity.created(location).build();
+        return ResponseEntity.created(location).body(ApiResponse.created());
     }
 
     public static <T> ResponseEntity<ApiResponse<T>> status(HttpStatus status, T data) {
