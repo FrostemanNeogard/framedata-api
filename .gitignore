@@ -4,6 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 node_modules
+mongodb-data
 .env
 .env.*
 
