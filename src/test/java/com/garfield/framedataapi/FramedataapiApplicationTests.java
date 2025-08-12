@@ -6,8 +6,10 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class FramedataapiApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+    @Test
+    void main_runsWithoutException() {
+        String[] args = {};
+        FramedataapiApplication.main(args);
+    }
 
 }
