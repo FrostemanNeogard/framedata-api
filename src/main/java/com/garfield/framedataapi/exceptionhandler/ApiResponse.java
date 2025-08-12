@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @Getter
 public class ApiResponse<T> {
+
     private final int status;
     private final String error;
     private final T data;

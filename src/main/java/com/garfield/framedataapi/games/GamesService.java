@@ -9,6 +9,7 @@ import java.util.UUID;
 
 @Service
 public class GamesService {
+
     private final GamesRepository gamesRepo;
 
     public GamesService(GamesRepository gamesRepo) {

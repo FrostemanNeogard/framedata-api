@@ -27,4 +27,5 @@ public class ApiResponseEntity<T> {
     public static <T> ResponseEntity<ApiResponse<T>> error(HttpStatus status, String errorMessage) {
         return ResponseEntity.status(status).body(ApiResponse.error(status, errorMessage));
     }
+
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
+
     @ExceptionHandler({GameNotFoundException.class})
     public ResponseEntity<ApiResponse<String>> handleGameNotFoundException(GameNotFoundException e) {
         return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
@@ -18,4 +19,5 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ApiResponse<String>> handleGameAlreadyExistsException(GameAlreadyExistsException e) {
         return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
     }
+
 }

@@ -11,6 +11,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 public class Game {
+
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;

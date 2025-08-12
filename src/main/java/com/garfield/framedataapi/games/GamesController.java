@@ -16,6 +16,7 @@ import java.util.UUID;
 @Controller
 @RequestMapping(GamesController.REQUEST_MAPPING)
 public class GamesController extends BaseApiController {
+
     public static final String REQUEST_MAPPING = "games";
 
     private final GamesService gamesService;
@@ -54,4 +55,5 @@ public class GamesController extends BaseApiController {
         this.gamesService.createGame(newGame);
         return ApiResponseEntity.created(createControllerUri(newGame.getId().toString()));
     }
+
 }
