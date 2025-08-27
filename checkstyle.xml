@@ -1,0 +1,9 @@
+<module name="Checker">
+    <module name="TreeWalker">
+        <module name="UnusedImports"/>
+        <module name="WhitespaceAround"/>
+        <module name="LineLength">
+            <property name="max" value="110"/>
+        </module>
+    </module>
+</module>
