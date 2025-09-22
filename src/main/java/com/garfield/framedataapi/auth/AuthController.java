@@ -1,6 +1,7 @@
 package com.garfield.framedataapi.auth;
 
 import com.garfield.framedataapi.base.BaseApiController;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,14 +20,9 @@ public class AuthController extends BaseApiController {
         return REQUEST_MAPPING;
     }
 
-    @GetMapping("public")
-    private String getPublic() {
-        return "success public";
-    }
-
-    @GetMapping("private")
-    private String getPrivate() {
-        return "success private";
+    @GetMapping("test")
+    private ResponseEntity<String> getPublic() {
+        return ResponseEntity.ok("hello");
     }
 
 }
