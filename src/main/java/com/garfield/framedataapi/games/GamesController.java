@@ -39,7 +39,7 @@ public class GamesController extends BaseApiController {
 
     @GetMapping("{nameOrUuid}")
     public ResponseEntity<ApiResponse<GameDto>> getGameByNameOrUuid(@PathVariable String nameOrUuid) {
-        Game game = null;
+        Game game;
         try {
             game = this.gamesService.getGameByIdentifier(UUID.fromString(nameOrUuid));
         } catch (IllegalArgumentException e) {
