@@ -37,7 +37,7 @@ public class GamesController extends BaseApiController {
         return ApiResponseEntity.ok(gameDtos);
     }
 
-    @GetMapping("{nameOrUuid}")
+    @GetMapping("name/{nameOrUuid}")
     public ResponseEntity<ApiResponse<GameDto>> getGameByNameOrUuid(@PathVariable String nameOrUuid) {
         Game game;
         try {
