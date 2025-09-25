@@ -37,6 +37,8 @@ public class JwtRequestFilter extends OncePerRequestFilter {
             idToken = authorizationHeader.substring(7);
         }
 
+        // TODO: Check for authenticated user's roles.
+
         if (idToken != null && SecurityContextHolder.getContext().getAuthentication() == null) {
             var payload = googleTokenVerifier.verify(idToken);
             if (payload != null) {
@@ -55,5 +57,5 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
         filterChain.doFilter(request, response);
     }
-    
+
 }
