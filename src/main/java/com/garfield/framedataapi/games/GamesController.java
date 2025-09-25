@@ -1,6 +1,7 @@
 package com.garfield.framedataapi.games;
 
 import com.garfield.framedataapi.base.BaseApiController;
+import com.garfield.framedataapi.config.Admin;
 import com.garfield.framedataapi.exceptionhandler.ApiResponse;
 import com.garfield.framedataapi.exceptionhandler.ApiResponseEntity;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
@@ -32,6 +33,14 @@ public class GamesController extends BaseApiController {
 
     @GetMapping()
     public ResponseEntity<ApiResponse<List<GameDto>>> getAllGames() {
+        List<Game> games = this.gamesService.getAllGames();
+        List<GameDto> gameDtos = games.stream().map(GameDto::fromEntity).toList();
+        return ApiResponseEntity.ok(gameDtos);
+    }
+
+    @Admin
+    @GetMapping("/admin")
+    public ResponseEntity<ApiResponse<List<GameDto>>> getAllGamesAdmin() {
         List<Game> games = this.gamesService.getAllGames();
         List<GameDto> gameDtos = games.stream().map(GameDto::fromEntity).toList();
         return ApiResponseEntity.ok(gameDtos);
