@@ -1,22 +1,23 @@
 package com.garfield.framedataapi.users;
 
+import com.garfield.framedataapi.bannedUsers.BannedUser;
+import com.garfield.framedataapi.bannedUsers.BannedUsersService;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
 public class UsersService {
 
     private final UsersRepository usersRepository;
+    private final BannedUsersService bannedUsersService;
 
-    public UsersService(UsersRepository userRepository) {
+    public UsersService(UsersRepository userRepository, BannedUsersService bannedUsersService) {
         this.usersRepository = userRepository;
+        this.bannedUsersService = bannedUsersService;
     }
 
     public Optional<User> findByEmail(String email) {
@@ -35,4 +36,13 @@ public class UsersService {
                 .map(role -> new SimpleGrantedAuthority("ROLE_" + role.getName().toUpperCase()))
                 .collect(Collectors.toList());
     }
+
+    public void banUser(User user, Date bannedUntil) {
+        this.banUser(user, bannedUntil, null);
+    }
+
+    public void banUser(User user, Date bannedUntil, String reason) {
+        this.bannedUsersService.createBannedUser(new BannedUser(user, bannedUntil, reason));
+    }
+
 }
