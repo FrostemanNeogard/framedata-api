@@ -1,6 +1,8 @@
 package com.garfield.framedataapi.games;
 
 import com.garfield.framedataapi.base.BaseApiController;
+import com.garfield.framedataapi.config.Admin;
+import com.garfield.framedataapi.config.Public;
 import com.garfield.framedataapi.exceptionhandler.ApiResponse;
 import com.garfield.framedataapi.exceptionhandler.ApiResponseEntity;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
@@ -30,6 +32,7 @@ public class GamesController extends BaseApiController {
         return REQUEST_MAPPING;
     }
 
+    @Public
     @GetMapping()
     public ResponseEntity<ApiResponse<List<GameDto>>> getAllGames() {
         List<Game> games = this.gamesService.getAllGames();
@@ -37,6 +40,7 @@ public class GamesController extends BaseApiController {
         return ApiResponseEntity.ok(gameDtos);
     }
 
+    @Public
     @GetMapping("name/{nameOrUuid}")
     public ResponseEntity<ApiResponse<GameDto>> getGameByNameOrUuid(@PathVariable String nameOrUuid) {
         Game game;
@@ -50,6 +54,7 @@ public class GamesController extends BaseApiController {
         return ApiResponseEntity.ok(GameDto.fromEntity(game));
     }
 
+    @Admin
     @PostMapping()
     public ResponseEntity<ApiResponse<Game>> createGame(@Valid @RequestBody CreateGameDto dto) {
         Game newGame = new Game(dto.name());
