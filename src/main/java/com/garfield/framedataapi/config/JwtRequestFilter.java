@@ -83,9 +83,9 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                     });
 
                 }
-
-                filterChain.doFilter(request, response);
             }
+            
+            filterChain.doFilter(request, response);
         } catch (UserBannedException ex) {
             ApiResponse<String> errorResponse = ApiResponse.error(HttpStatus.FORBIDDEN, ex.getMessage());
 
