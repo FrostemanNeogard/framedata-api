@@ -1,7 +1,6 @@
 package com.garfield.framedataapi.games;
 
 import com.garfield.framedataapi.base.BaseApiController;
-import com.garfield.framedataapi.config.Admin;
 import com.garfield.framedataapi.exceptionhandler.ApiResponse;
 import com.garfield.framedataapi.exceptionhandler.ApiResponseEntity;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
@@ -38,24 +37,17 @@ public class GamesController extends BaseApiController {
         return ApiResponseEntity.ok(gameDtos);
     }
 
-    @Admin
-    @GetMapping("/admin")
-    public ResponseEntity<ApiResponse<List<GameDto>>> getAllGamesAdmin() {
-        List<Game> games = this.gamesService.getAllGames();
-        List<GameDto> gameDtos = games.stream().map(GameDto::fromEntity).toList();
-        return ApiResponseEntity.ok(gameDtos);
-    }
-
     @GetMapping("name/{nameOrUuid}")
     public ResponseEntity<ApiResponse<GameDto>> getGameByNameOrUuid(@PathVariable String nameOrUuid) {
         Game game;
+
         try {
             game = this.gamesService.getGameByIdentifier(UUID.fromString(nameOrUuid));
         } catch (IllegalArgumentException e) {
             game = this.gamesService.getGameByIdentifier(nameOrUuid);
         }
-        GameDto dto = GameDto.fromEntity(game);
-        return ApiResponseEntity.ok(dto);
+
+        return ApiResponseEntity.ok(GameDto.fromEntity(game));
     }
 
     @PostMapping()
