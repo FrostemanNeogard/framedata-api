@@ -55,6 +55,23 @@ public class GameCharactersController extends BaseApiController {
         );
     }
 
+    @Public
+    @GetMapping("game/{gameNameOrUuid}")
+    public ResponseEntity<ApiResponse<Set<GameCharacterDto>>> getGameCharactersByGame(
+            @PathVariable("gameNameOrUuid") String nameOrUuid) {
+        Game game;
+
+        try {
+            game = this.gamesService.getGameByIdentifier(UUID.fromString(nameOrUuid));
+        } catch (IllegalArgumentException e) {
+            game = this.gamesService.getGameByIdentifier(nameOrUuid);
+        }
+
+        return ApiResponseEntity.ok(
+                game.getGameCharacters().stream().map(GameCharacterDto::fromEntity).collect(Collectors.toSet())
+        );
+    }
+
     @Admin
     @PostMapping
     public ResponseEntity<ApiResponse<GameCharacterDto>> createGameCharacter(
