@@ -3,11 +3,11 @@ package com.garfield.framedataapi.aliases;
 import com.garfield.framedataapi.aliases.dtos.AliasDto;
 import com.garfield.framedataapi.aliases.dtos.CreateAliasDto;
 import com.garfield.framedataapi.aliases.exceptions.AmbiguousCharacterNameException;
-import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.config.authorization.Admin;
 import com.garfield.framedataapi.config.authorization.Public;
 import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
+import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharactersService;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
@@ -79,8 +79,10 @@ public class AliasesController extends BaseApiController {
         Game game = this.gamesService.getGameByIdentifier(createAliasDto.gameId());
         GameCharacter gameCharacter = this.gameCharactersService.getGameCharactersById(createAliasDto.characterId());
         Alias alias = new Alias(createAliasDto.aliasName(), game, gameCharacter);
+
         this.aliasesService.createAlias(alias);
-        return ApiResponseEntity.ok(AliasDto.fromEntity(alias));
+
+        return ApiResponseEntity.created(createControllerUri(alias.getId()));
     }
 
 }
