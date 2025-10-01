@@ -3,6 +3,8 @@ package com.garfield.framedataapi.config.exceptionHandler;
 import com.garfield.framedataapi.aliases.exceptions.AmbiguousCharacterNameException;
 import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
+import com.garfield.framedataapi.framedata.exceptions.FramedataAlreadyExistsException;
+import com.garfield.framedataapi.framedata.exceptions.FramedataNotFoundException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyExistsException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
@@ -44,6 +46,16 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({UserBannedException.class})
     public ResponseEntity<ApiResponse<String>> handleUserBannedException(UserBannedException e) {
         return ApiResponseEntity.error(HttpStatus.FORBIDDEN, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataNotFoundException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataNotFoundException(FramedataNotFoundException e) {
+        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataAlreadyExistsException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataAlreadyExistsException(FramedataAlreadyExistsException e) {
+        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
     }
 
 }
