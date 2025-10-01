@@ -5,7 +5,7 @@ import org.springframework.http.ResponseEntity;
 
 import java.net.URI;
 
-public class ApiResponseEntity<T> {
+public class ApiResponseEntity {
 
     public static <T> ResponseEntity<ApiResponse<T>> ok(T data) {
         return ResponseEntity.ok(ApiResponse.success(HttpStatus.OK, data));
