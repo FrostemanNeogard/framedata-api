@@ -2,12 +2,10 @@ package com.garfield.framedataapi.aliases;
 
 import com.garfield.framedataapi.aliases.exceptions.AliasAlreadyExistsException;
 import com.garfield.framedataapi.aliases.exceptions.AliasNotFoundException;
-import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.games.Game;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
-import java.util.Set;
 import java.util.UUID;
 
 @Service
@@ -17,10 +15,6 @@ public class AliasesService {
 
     public AliasesService(AliasesRepository aliasesRepository) {
         this.aliasesRepository = aliasesRepository;
-    }
-
-    public Set<Alias> getAliasesForGameCharacter(GameCharacter gameCharacter) {
-        return this.aliasesRepository.findAllByGameCharacter(gameCharacter);
     }
 
     public void createAlias(Alias alias) {
