@@ -1,9 +1,11 @@
 package com.garfield.framedataapi.games;
 
+import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -16,8 +18,11 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @Column
+    @Column(unique = true)
     private String name;
+
+    @OneToMany(mappedBy = "game")
+    private Set<GameCharacter> gameCharacters;
 
     public Game(String name) {
         this.name = name;
