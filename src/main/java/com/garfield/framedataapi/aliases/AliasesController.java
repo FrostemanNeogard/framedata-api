@@ -11,8 +11,6 @@ import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharactersService;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
-import com.garfield.framedataapi.games.Game;
-import com.garfield.framedataapi.games.GamesService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -29,15 +27,12 @@ public class AliasesController extends BaseApiController {
 
     private final AliasesService aliasesService;
     private final GameCharactersService gameCharactersService;
-    private final GamesService gamesService;
 
     public AliasesController(
             AliasesService aliasesService,
-            GameCharactersService gameCharactersService,
-            GamesService gamesService) {
+            GameCharactersService gameCharactersService) {
         this.aliasesService = aliasesService;
         this.gameCharactersService = gameCharactersService;
-        this.gamesService = gamesService;
     }
 
     @Override
@@ -76,9 +71,8 @@ public class AliasesController extends BaseApiController {
     @PostMapping
     public ResponseEntity<ApiResponse<AliasDto>> createAlias(
             @RequestBody CreateAliasDto createAliasDto) {
-        Game game = this.gamesService.getGameByIdentifier(createAliasDto.gameId());
         GameCharacter gameCharacter = this.gameCharactersService.getGameCharactersById(createAliasDto.characterId());
-        Alias alias = new Alias(createAliasDto.aliasName(), game, gameCharacter);
+        Alias alias = new Alias(createAliasDto.aliasName(), gameCharacter);
 
         this.aliasesService.createAlias(alias);
 

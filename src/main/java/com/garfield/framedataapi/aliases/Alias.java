@@ -29,9 +29,9 @@ public class Alias {
     @JoinColumn(name = "game_character_id")
     private GameCharacter gameCharacter;
 
-    public Alias(String aliasName, Game game, GameCharacter gameCharacter) {
+    public Alias(String aliasName, GameCharacter gameCharacter) {
         this.aliasName = aliasName;
-        this.game = game;
+        this.game = gameCharacter.getGame();
         this.gameCharacter = gameCharacter;
     }
 
