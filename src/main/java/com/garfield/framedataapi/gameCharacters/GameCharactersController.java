@@ -1,10 +1,10 @@
 package com.garfield.framedataapi.gameCharacters;
 
-import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.config.authorization.Admin;
 import com.garfield.framedataapi.config.authorization.Public;
 import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
+import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.dtos.CreateGameCharacterDto;
 import com.garfield.framedataapi.gameCharacters.dtos.GameCharacterDto;
 import com.garfield.framedataapi.games.Game;
@@ -64,7 +64,7 @@ public class GameCharactersController extends BaseApiController {
 
         this.gameCharactersService.createGameCharacter(newGameCharacter);
 
-        return ApiResponseEntity.ok(GameCharacterDto.fromEntity(newGameCharacter));
+        return ApiResponseEntity.created(createControllerUri(String.format("name/%s", newGameCharacter.getId())));
     }
 
 }
