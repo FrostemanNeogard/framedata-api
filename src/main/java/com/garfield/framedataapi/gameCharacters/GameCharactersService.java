@@ -3,6 +3,7 @@ package com.garfield.framedataapi.gameCharacters;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyExistsException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -11,13 +12,10 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class GameCharactersService {
 
     private final GameCharactersRepository gameCharactersRepository;
-
-    public GameCharactersService(GameCharactersRepository gameCharactersRepository) {
-        this.gameCharactersRepository = gameCharactersRepository;
-    }
 
     public GameCharacter getGameCharactersById(UUID id) throws GameNotFoundException {
         Optional<GameCharacter> gameCharacter = this.gameCharactersRepository.findById(id);

@@ -2,6 +2,7 @@ package com.garfield.framedataapi.users;
 
 import com.garfield.framedataapi.bannedUsers.BannedUser;
 import com.garfield.framedataapi.bannedUsers.BannedUsersService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.stereotype.Service;
@@ -10,15 +11,11 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 @Service
+@RequiredArgsConstructor
 public class UsersService {
 
     private final UsersRepository usersRepository;
     private final BannedUsersService bannedUsersService;
-
-    public UsersService(UsersRepository userRepository, BannedUsersService bannedUsersService) {
-        this.usersRepository = userRepository;
-        this.bannedUsersService = bannedUsersService;
-    }
 
     public Optional<User> findByEmail(String email) {
         return usersRepository.findByEmail(email);

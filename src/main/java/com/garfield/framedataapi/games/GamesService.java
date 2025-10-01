@@ -2,19 +2,17 @@ package com.garfield.framedataapi.games;
 
 import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.UUID;
 
 @Service
+@RequiredArgsConstructor
 public class GamesService {
 
     private final GamesRepository gamesRepo;
-
-    public GamesService(GamesRepository gamesRepo) {
-        this.gamesRepo = gamesRepo;
-    }
 
     public Game getGameByIdentifier(UUID id) throws GameNotFoundException {
         Game game = this.gamesRepo.getById(id);

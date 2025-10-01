@@ -1,6 +1,7 @@
 package com.garfield.framedataapi.bannedUsers;
 
 import com.garfield.framedataapi.users.User;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -8,13 +9,10 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Service
+@RequiredArgsConstructor
 public class BannedUsersService {
 
     private final BannedUsersRepository bannedUsersRepository;
-
-    public BannedUsersService(BannedUsersRepository bannedUsersRepository) {
-        this.bannedUsersRepository = bannedUsersRepository;
-    }
 
     public boolean isUserBanned(User user) {
         AtomicBoolean isBanned = new AtomicBoolean(false);

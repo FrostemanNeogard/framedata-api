@@ -12,6 +12,7 @@ import com.garfield.framedataapi.gameCharacters.GameCharactersService;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import com.garfield.framedataapi.games.Game;
 import com.garfield.framedataapi.games.GamesService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -22,6 +23,7 @@ import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(AliasesController.REQUEST_MAPPING)
+@RequiredArgsConstructor
 public class AliasesController extends BaseApiController {
 
     public static final String REQUEST_MAPPING = "aliases";
@@ -29,15 +31,6 @@ public class AliasesController extends BaseApiController {
     private final AliasesService aliasesService;
     private final GameCharactersService gameCharactersService;
     private final GamesService gamesService;
-
-    public AliasesController(
-            AliasesService aliasesService,
-            GameCharactersService gameCharactersService,
-            GamesService gamesService) {
-        this.aliasesService = aliasesService;
-        this.gameCharactersService = gameCharactersService;
-        this.gamesService = gamesService;
-    }
 
     @Override
     public String getRequestMapping() {

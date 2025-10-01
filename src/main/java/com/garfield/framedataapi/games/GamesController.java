@@ -8,6 +8,7 @@ import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
 import com.garfield.framedataapi.games.dto.GameDto;
 import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -17,15 +18,12 @@ import java.util.UUID;
 
 @Controller
 @RequestMapping(GamesController.REQUEST_MAPPING)
+@RequiredArgsConstructor
 public class GamesController extends BaseApiController {
 
     public static final String REQUEST_MAPPING = "games";
 
     private final GamesService gamesService;
-
-    public GamesController(GamesService gamesService) {
-        this.gamesService = gamesService;
-    }
 
     @Override
     public String getRequestMapping() {

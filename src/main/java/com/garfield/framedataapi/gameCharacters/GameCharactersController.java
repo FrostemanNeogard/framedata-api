@@ -9,6 +9,7 @@ import com.garfield.framedataapi.gameCharacters.dtos.CreateGameCharacterDto;
 import com.garfield.framedataapi.gameCharacters.dtos.GameCharacterDto;
 import com.garfield.framedataapi.games.Game;
 import com.garfield.framedataapi.games.GamesService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -19,19 +20,13 @@ import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(GameCharactersController.REQUEST_MAPPING)
+@RequiredArgsConstructor
 public class GameCharactersController extends BaseApiController {
 
     public static final String REQUEST_MAPPING = "characters";
 
     private final GameCharactersService gameCharactersService;
     private final GamesService gamesService;
-
-    public GameCharactersController(
-            GameCharactersService gameCharactersService,
-            GamesService gamesService) {
-        this.gameCharactersService = gameCharactersService;
-        this.gamesService = gamesService;
-    }
 
     @Override
     public String getRequestMapping() {

@@ -1,9 +1,10 @@
 package com.garfield.framedataapi.users;
 
-import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
+import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.users.dtos.UserDto;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,15 +14,12 @@ import java.util.List;
 
 @Controller
 @RequestMapping(UsersController.REQUEST_MAPPING)
+@RequiredArgsConstructor
 public class UsersController extends BaseApiController {
 
     public static final String REQUEST_MAPPING = "users";
 
     private final UsersService usersService;
-
-    public UsersController(UsersService usersService) {
-        this.usersService = usersService;
-    }
 
     @Override
     public String getRequestMapping() {
