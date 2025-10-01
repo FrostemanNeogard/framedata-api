@@ -1,5 +1,6 @@
 package com.garfield.framedataapi.gameCharacters;
 
+import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyExistsException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
 import org.springframework.stereotype.Service;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 @Service
 public class GameCharactersService {
@@ -38,6 +40,14 @@ public class GameCharactersService {
     }
 
     public void createGameCharacter(GameCharacter gameCharacter) {
+        Set<GameCharacter> existingCharacter = gameCharacter.getGame().getGameCharacters()
+                .stream()
+                .filter(gc -> gc.getName().equals(gameCharacter.getName())).collect(Collectors.toSet());
+
+        if (!existingCharacter.isEmpty()) {
+            throw new GameCharacterAlreadyExistsException(gameCharacter);
+        }
+
         this.gameCharactersRepository.save(gameCharacter);
     }
 }
