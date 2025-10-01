@@ -1,4 +1,4 @@
-package com.garfield.framedataapi.config;
+package com.garfield.framedataapi.config.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.garfield.framedataapi.bannedUsers.BannedUsersService;

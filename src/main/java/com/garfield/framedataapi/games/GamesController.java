@@ -1,8 +1,8 @@
 package com.garfield.framedataapi.games;
 
 import com.garfield.framedataapi.base.BaseApiController;
-import com.garfield.framedataapi.config.Admin;
-import com.garfield.framedataapi.config.Public;
+import com.garfield.framedataapi.config.authorization.Admin;
+import com.garfield.framedataapi.config.authorization.Public;
 import com.garfield.framedataapi.exceptionhandler.ApiResponse;
 import com.garfield.framedataapi.exceptionhandler.ApiResponseEntity;
 import com.garfield.framedataapi.games.dto.CreateGameDto;

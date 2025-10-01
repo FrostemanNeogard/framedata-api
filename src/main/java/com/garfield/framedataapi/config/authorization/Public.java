@@ -1,4 +1,4 @@
-package com.garfield.framedataapi.config;
+package com.garfield.framedataapi.config.authorization;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 
@@ -8,6 +8,6 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
-@PreAuthorize("hasRole('ROLE_STAFF')")
-public @interface Staff {
+@PreAuthorize("permitAll()")
+public @interface Public {
 }
