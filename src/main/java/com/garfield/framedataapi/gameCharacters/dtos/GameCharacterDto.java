@@ -4,7 +4,7 @@ import com.garfield.framedataapi.gameCharacters.GameCharacter;
 
 import java.util.UUID;
 
-public record GameCharacterDto(UUID characterId, String characterMame, UUID gameId, String gameName) {
+public record GameCharacterDto(UUID characterId, String characterName, UUID gameId, String gameName) {
 
     public static GameCharacterDto fromEntity(GameCharacter gameCharacter) {
         return new GameCharacterDto(
