@@ -6,7 +6,7 @@ import com.garfield.framedataapi.games.dto.GameDto;
 
 import java.util.UUID;
 
-public record AliasDto(UUID id, String name, GameCharacterDto character, GameDto game) {
+public record AliasDto(UUID id, String aliasName, GameCharacterDto character, GameDto game) {
 
     public static AliasDto fromEntity(Alias alias) {
         return new AliasDto(
