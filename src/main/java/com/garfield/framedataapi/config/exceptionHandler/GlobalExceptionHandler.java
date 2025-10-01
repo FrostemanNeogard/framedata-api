@@ -2,7 +2,6 @@ package com.garfield.framedataapi.config.exceptionHandler;
 
 import com.garfield.framedataapi.aliases.exceptions.AliasAlreadyExistsException;
 import com.garfield.framedataapi.aliases.exceptions.AliasNotFoundException;
-import com.garfield.framedataapi.aliases.exceptions.AmbiguousCharacterNameException;
 import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import com.garfield.framedataapi.framedata.exceptions.FramedataAlreadyExistsException;
@@ -19,11 +18,6 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
-    @ExceptionHandler({AmbiguousCharacterNameException.class})
-    public ResponseEntity<ApiResponse<String>> handleAmbiguousCharacterNameException(AmbiguousCharacterNameException e) {
-        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
-    }
 
     @ExceptionHandler({GameCharacterAlreadyExistsException.class})
     public ResponseEntity<ApiResponse<String>> handleGameCharacterAlreadyExistsException(GameCharacterAlreadyExistsException e) {

@@ -2,7 +2,6 @@ package com.garfield.framedataapi.aliases;
 
 import com.garfield.framedataapi.aliases.dtos.AliasDto;
 import com.garfield.framedataapi.aliases.dtos.CreateAliasDto;
-import com.garfield.framedataapi.aliases.exceptions.AmbiguousCharacterNameException;
 import com.garfield.framedataapi.config.authorization.Admin;
 import com.garfield.framedataapi.config.authorization.Public;
 import com.garfield.framedataapi.config.structure.ApiResponse;
@@ -71,7 +70,7 @@ public class AliasesController extends BaseApiController {
 
     @Public
     @GetMapping("character/{characterNameOrUuid}")
-    public ResponseEntity<ApiResponse<Set<AliasDto>>> getAliasesForCharacter(
+    public ResponseEntity<ApiResponse<Set<Set<AliasDto>>>> getAliasesForCharacter(
             @PathVariable String characterNameOrUuid) {
         Set<GameCharacter> gameCharacters;
 
@@ -81,18 +80,16 @@ public class AliasesController extends BaseApiController {
             gameCharacters = this.gameCharactersService.getGameCharactersByName(characterNameOrUuid);
         }
 
-        if (gameCharacters.size() > 1) {
-            throw new AmbiguousCharacterNameException(characterNameOrUuid);
-        }
-
-        if (gameCharacters.stream().findFirst().isEmpty()) {
+        if (gameCharacters.isEmpty()) {
             throw new GameCharacterNotFoundException(characterNameOrUuid);
         }
 
-        Set<Alias> aliases = this.aliasesService.getAliasesForGameCharacter(gameCharacters.stream().findFirst().get());
+        Set<Set<Alias>> aliases = gameCharacters.stream().map(GameCharacter::getAliases).collect(Collectors.toSet());
 
-        return ApiResponseEntity.ok(
-                aliases.stream().map(AliasDto::fromEntity).collect(Collectors.toSet())
+        return ApiResponseEntity.ok(aliases.stream()
+                .map(a -> a.stream()
+                        .map(AliasDto::fromEntity).collect(Collectors.toSet()))
+                .collect(Collectors.toSet())
         );
     }
 
