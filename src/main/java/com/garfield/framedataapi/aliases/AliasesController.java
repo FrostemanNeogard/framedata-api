@@ -11,6 +11,8 @@ import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharactersService;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
+import com.garfield.framedataapi.games.Game;
+import com.garfield.framedataapi.games.GamesService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -27,17 +29,44 @@ public class AliasesController extends BaseApiController {
 
     private final AliasesService aliasesService;
     private final GameCharactersService gameCharactersService;
+    private final GamesService gamesService;
 
     public AliasesController(
             AliasesService aliasesService,
-            GameCharactersService gameCharactersService) {
+            GameCharactersService gameCharactersService,
+            GamesService gamesService) {
         this.aliasesService = aliasesService;
         this.gameCharactersService = gameCharactersService;
+        this.gamesService = gamesService;
     }
 
     @Override
     public String getRequestMapping() {
         return REQUEST_MAPPING;
+    }
+
+    @Public
+    @GetMapping("game/{gameNameOrUuid}/alias/{aliasNameOrUuid}")
+    public ResponseEntity<ApiResponse<AliasDto>> getAliasByIdentifier(
+            @PathVariable("gameNameOrUuid") String gameNameOrUuid,
+            @PathVariable("aliasNameOrUuid") String aliasNameOrUuid) {
+        Game game;
+
+        try {
+            game = this.gamesService.getGameByIdentifier(UUID.fromString(gameNameOrUuid));
+        } catch (IllegalArgumentException e) {
+            game = this.gamesService.getGameByIdentifier(gameNameOrUuid);
+        }
+
+        Alias alias;
+
+        try {
+            alias = this.aliasesService.getAliasByIdentifier(UUID.fromString(aliasNameOrUuid));
+        } catch (IllegalArgumentException e) {
+            alias = this.aliasesService.getAliasByIdentifier(game, aliasNameOrUuid);
+        }
+
+        return ApiResponseEntity.ok(AliasDto.fromEntity(alias));
     }
 
     @Public
