@@ -1,7 +1,6 @@
 package com.garfield.framedataapi.gameCharacters;
 
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
-import com.garfield.framedataapi.games.Game;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
 import org.springframework.stereotype.Service;
 

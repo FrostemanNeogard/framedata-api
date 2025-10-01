@@ -27,7 +27,7 @@ class GamesControllerTest {
 
         gamesController = new GamesController(gamesService) {
             @Override
-            protected URI createControllerUri(String path) {
+            public URI createControllerUri(String path) {
                 return URI.create(String.format("/api/v1/%s/%s", getRequestMapping(), path));
             }
         };
