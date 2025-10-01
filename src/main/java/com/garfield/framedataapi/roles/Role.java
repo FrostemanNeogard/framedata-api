@@ -1,6 +1,5 @@
 package com.garfield.framedataapi.roles;
 
-import com.garfield.framedataapi.privileges.Privilege;
 import com.garfield.framedataapi.users.User;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -24,12 +23,5 @@ public class Role {
 
     @ManyToMany(mappedBy = "roles")
     private Collection<User> users;
-
-    @ManyToMany
-    @JoinTable(name = "roles_privileges",
-            joinColumns = @JoinColumn(name = "roleId"),
-            inverseJoinColumns = @JoinColumn(name = "privilegeId")
-    )
-    private Collection<Privilege> privileges;
 
 }
