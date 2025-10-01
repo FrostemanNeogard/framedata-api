@@ -3,6 +3,7 @@ package com.garfield.framedataapi.config.exceptionHandler;
 import com.garfield.framedataapi.aliases.exceptions.AmbiguousCharacterNameException;
 import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
+import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyExistsException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
@@ -17,6 +18,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({AmbiguousCharacterNameException.class})
     public ResponseEntity<ApiResponse<String>> handleAmbiguousCharacterNameException(AmbiguousCharacterNameException e) {
+        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
+    }
+
+    @ExceptionHandler({GameCharacterAlreadyExistsException.class})
+    public ResponseEntity<ApiResponse<String>> handleGameCharacterAlreadyExistsException(GameCharacterAlreadyExistsException e) {
         return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
     }
 
