@@ -1,10 +1,10 @@
 package com.garfield.framedataapi.gameCharacters;
 
-import com.garfield.framedataapi.base.BaseApiController;
+import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.config.authorization.Admin;
 import com.garfield.framedataapi.config.authorization.Public;
-import com.garfield.framedataapi.exceptionhandler.ApiResponse;
-import com.garfield.framedataapi.exceptionhandler.ApiResponseEntity;
+import com.garfield.framedataapi.config.structure.ApiResponse;
+import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import com.garfield.framedataapi.gameCharacters.dtos.CreateGameCharacterDto;
 import com.garfield.framedataapi.gameCharacters.dtos.GameCharacterDto;
 import com.garfield.framedataapi.games.Game;

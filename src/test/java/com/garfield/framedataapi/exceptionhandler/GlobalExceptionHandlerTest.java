@@ -1,5 +1,7 @@
 package com.garfield.framedataapi.exceptionhandler;
 
+import com.garfield.framedataapi.config.structure.ApiResponse;
+import com.garfield.framedataapi.config.exceptionHandler.GlobalExceptionHandler;
 import com.garfield.framedataapi.games.Game;
 import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;

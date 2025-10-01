@@ -2,6 +2,7 @@ package com.garfield.framedataapi.exceptionhandler;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.games.Game;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;

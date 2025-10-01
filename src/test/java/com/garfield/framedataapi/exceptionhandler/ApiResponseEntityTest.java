@@ -1,5 +1,7 @@
 package com.garfield.framedataapi.exceptionhandler;
 
+import com.garfield.framedataapi.config.structure.ApiResponse;
+import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

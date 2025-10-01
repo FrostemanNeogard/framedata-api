@@ -2,7 +2,7 @@ package com.garfield.framedataapi.config.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.garfield.framedataapi.bannedUsers.BannedUsersService;
-import com.garfield.framedataapi.exceptionhandler.ApiResponse;
+import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.users.User;
 import com.garfield.framedataapi.users.UsersService;
 import com.garfield.framedataapi.users.exceptions.UserBannedException;

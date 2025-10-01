@@ -1,4 +1,4 @@
-package com.garfield.framedataapi.base;
+package com.garfield.framedataapi.config.structure;
 
 import com.garfield.framedataapi.config.authorization.Authenticated;
 import org.springframework.beans.factory.annotation.Value;

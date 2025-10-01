@@ -1,5 +1,7 @@
-package com.garfield.framedataapi.exceptionhandler;
+package com.garfield.framedataapi.config.exceptionHandler;
 
+import com.garfield.framedataapi.config.structure.ApiResponse;
+import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
 import org.springframework.http.HttpStatus;

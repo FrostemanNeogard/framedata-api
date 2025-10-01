@@ -1,8 +1,8 @@
 package com.garfield.framedataapi.users;
 
-import com.garfield.framedataapi.base.BaseApiController;
-import com.garfield.framedataapi.exceptionhandler.ApiResponse;
-import com.garfield.framedataapi.exceptionhandler.ApiResponseEntity;
+import com.garfield.framedataapi.config.structure.BaseApiController;
+import com.garfield.framedataapi.config.structure.ApiResponse;
+import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import com.garfield.framedataapi.users.dtos.UserDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;

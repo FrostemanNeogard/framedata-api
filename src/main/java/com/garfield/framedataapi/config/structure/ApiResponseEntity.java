@@ -1,4 +1,4 @@
-package com.garfield.framedataapi.exceptionhandler;
+package com.garfield.framedataapi.config.structure;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

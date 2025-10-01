@@ -1,6 +1,6 @@
 package com.garfield.framedataapi.games;
 
-import com.garfield.framedataapi.exceptionhandler.ApiResponse;
+import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
 import com.garfield.framedataapi.games.dto.GameDto;
 import org.junit.jupiter.api.BeforeEach;
