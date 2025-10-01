@@ -13,7 +13,7 @@ public abstract class BaseApiController {
 
     protected abstract String getRequestMapping();
 
-    protected URI createControllerUri(String path) {
+    public URI createControllerUri(String path) {
         return URI.create(String.format("%s/%s/%s", basePath, getRequestMapping(), path));
     }
 
