@@ -1,6 +1,7 @@
 package com.garfield.framedataapi.gameCharacters;
 
 import com.garfield.framedataapi.aliases.Alias;
+import com.garfield.framedataapi.framedata.Framedata;
 import com.garfield.framedataapi.games.Game;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -28,6 +29,9 @@ public class GameCharacter {
 
     @OneToMany(mappedBy = "gameCharacter")
     private Set<Alias> aliases;
+
+    @OneToMany(mappedBy = "gameCharacter")
+    private Set<Framedata> framedata;
 
     public GameCharacter(String name, Game game) {
         this.name = name;
