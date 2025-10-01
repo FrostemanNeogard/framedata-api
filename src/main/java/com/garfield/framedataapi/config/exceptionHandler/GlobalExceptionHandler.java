@@ -1,5 +1,6 @@
 package com.garfield.framedataapi.config.exceptionHandler;
 
+import com.garfield.framedataapi.aliases.exceptions.AliasAlreadyExistsException;
 import com.garfield.framedataapi.aliases.exceptions.AmbiguousCharacterNameException;
 import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
@@ -55,6 +56,11 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler({FramedataAlreadyExistsException.class})
     public ResponseEntity<ApiResponse<String>> handleFramedataAlreadyExistsException(FramedataAlreadyExistsException e) {
+        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
+    }
+
+    @ExceptionHandler({AliasAlreadyExistsException.class})
+    public ResponseEntity<ApiResponse<String>> handleAliasAlreadyExistsException(AliasAlreadyExistsException e) {
         return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
     }
 
