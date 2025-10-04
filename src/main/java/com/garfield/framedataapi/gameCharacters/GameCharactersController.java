@@ -40,7 +40,7 @@ public class GameCharactersController extends BaseApiController {
         Set<GameCharacter> gameCharacters;
 
         try {
-            gameCharacters = Set.of(this.gameCharactersService.getGameCharactersById(UUID.fromString(nameOrUuid)));
+            gameCharacters = Set.of(this.gameCharactersService.getGameCharacterById(UUID.fromString(nameOrUuid)));
         } catch (IllegalArgumentException e) {
             gameCharacters = this.gameCharactersService.getGameCharactersByName(nameOrUuid);
         }

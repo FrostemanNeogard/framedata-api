@@ -17,7 +17,7 @@ public class GameCharactersService {
 
     private final GameCharactersRepository gameCharactersRepository;
 
-    public GameCharacter getGameCharactersById(UUID id) throws GameNotFoundException {
+    public GameCharacter getGameCharacterById(UUID id) throws GameNotFoundException {
         Optional<GameCharacter> gameCharacter = this.gameCharactersRepository.findById(id);
 
         if (gameCharacter.isEmpty()) {
@@ -48,4 +48,5 @@ public class GameCharactersService {
 
         this.gameCharactersRepository.save(gameCharacter);
     }
+    
 }

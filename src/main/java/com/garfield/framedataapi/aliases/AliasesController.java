@@ -68,7 +68,7 @@ public class AliasesController extends BaseApiController {
         Set<GameCharacter> gameCharacters;
 
         try {
-            gameCharacters = Set.of(this.gameCharactersService.getGameCharactersById(UUID.fromString(characterNameOrUuid)));
+            gameCharacters = Set.of(this.gameCharactersService.getGameCharacterById(UUID.fromString(characterNameOrUuid)));
         } catch (IllegalArgumentException e) {
             gameCharacters = this.gameCharactersService.getGameCharactersByName(characterNameOrUuid);
         }
@@ -90,7 +90,7 @@ public class AliasesController extends BaseApiController {
     @PostMapping
     public ResponseEntity<ApiResponse<AliasDto>> createAlias(
             @RequestBody CreateAliasDto createAliasDto) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharactersById(createAliasDto.characterId());
+        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterById(createAliasDto.characterId());
         Alias alias = new Alias(createAliasDto.aliasName(), gameCharacter);
 
         this.aliasesService.createAlias(alias);
