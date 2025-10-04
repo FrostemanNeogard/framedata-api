@@ -1,6 +1,7 @@
 package com.garfield.framedataapi.games;
 
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
+import com.garfield.framedataapi.gameMetadata.GameMetadata;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,6 +24,9 @@ public class Game {
 
     @OneToMany(mappedBy = "game")
     private Set<GameCharacter> gameCharacters;
+
+    @OneToOne(mappedBy = "game")
+    private GameMetadata gameMetadata;
 
     public Game(String name) {
         this.name = name;
