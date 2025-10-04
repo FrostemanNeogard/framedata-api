@@ -1,7 +1,7 @@
 package com.garfield.framedataapi.games;
 
+import com.garfield.framedataapi.framedata.Framedata;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
-import com.garfield.framedataapi.gameMetadata.GameMetadata;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,11 +22,14 @@ public class Game {
     @Column(unique = true)
     private String name;
 
+    @Column(columnDefinition = "jsonb")
+    private String attributesTemplate;
+
     @OneToMany(mappedBy = "game")
     private Set<GameCharacter> gameCharacters;
 
-    @OneToOne(mappedBy = "game")
-    private GameMetadata gameMetadata;
+    @OneToMany(mappedBy = "game")
+    private Set<Framedata> framedata;
 
     public Game(String name) {
         this.name = name;
