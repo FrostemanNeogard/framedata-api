@@ -3,18 +3,13 @@ package com.garfield.framedataapi.framedata;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.garfield.framedataapi.framedata.exceptions.FramedataJsonInvalidFieldTypeException;
-import com.garfield.framedataapi.framedata.exceptions.FramedataJsonMissingRequiredFieldException;
-import com.garfield.framedataapi.framedata.exceptions.InvalidFramedataJsonFormatException;
-import com.garfield.framedataapi.framedata.exceptions.UnknownInternalErrorException;
+import com.garfield.framedataapi.framedata.exceptions.*;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -22,6 +17,16 @@ public class FramedataService {
 
     private final FramedataRepository framedataRepository;
     private final ObjectMapper objectMapper;
+
+    public Framedata getFramedataById(UUID id) {
+        Optional<Framedata> framedata = this.framedataRepository.findById(id);
+
+        if (framedata.isEmpty()) {
+            throw new FramedataNotFoundException(id);
+        }
+
+        return framedata.get();
+    }
 
     public Set<Framedata> getFramedataForCharacter(GameCharacter gameCharacter) {
         return this.framedataRepository.findAllByGameCharacter(gameCharacter);
