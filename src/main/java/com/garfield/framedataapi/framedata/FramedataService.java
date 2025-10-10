@@ -50,20 +50,20 @@ public class FramedataService {
 
     public void createFramedata(Framedata framedata) {
         validateAttributesAgainstTemplate(
-                this.convertFramedataAttributeStringToMap(framedata.getAttributes()),
+                framedata.getAttributes(),
                 framedata.getGame().getAttributesTemplate()
         );
 
         this.framedataRepository.save(framedata);
     }
 
-    private void validateAttributesAgainstTemplate(Map<String, Object> attributes, String templateJson) {
+    private void validateAttributesAgainstTemplate(Map<String, Object> attributes, Map<String, Object> templateJson) {
         try {
-            JsonNode templateNode = objectMapper.readTree(templateJson);
+            JsonNode templateNode = objectMapper.valueToTree(templateJson);
             JsonNode dataNode = objectMapper.valueToTree(attributes);
 
             if (!templateNode.isObject()) {
-                throw new InvalidAttributesTemplateJson(templateJson);
+                throw new InvalidFramedataJsonFormatException(templateJson);
             }
 
             if (!dataNode.isObject()) {
@@ -85,7 +85,7 @@ public class FramedataService {
                 }
 
                 if (templateField.isObject()) {
-                    throw new InvalidAttributesTemplateJson(templateJson);
+                    throw new InvalidFramedataJsonFormatException(templateJson);
                 }
             }
 

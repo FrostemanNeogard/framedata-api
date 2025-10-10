@@ -49,7 +49,7 @@ public class FramedataController extends BaseApiController {
         Framedata framedata = this.framedataService.getFramedataById(framedataId);
 
         return ApiResponseEntity.ok(FramedataDto.fromEntityAndAttributesMap(
-                framedata, this.framedataService.convertFramedataAttributeStringToMap(framedata.getAttributes())));
+                framedata, framedata.getAttributes()));
     }
 
     @Public
@@ -75,7 +75,7 @@ public class FramedataController extends BaseApiController {
                 .stream()
                 .map(fd -> FramedataDto.fromEntityAndAttributesMap(
                         fd,
-                        this.framedataService.convertFramedataAttributeStringToMap(fd.getAttributes())))
+                        fd.getAttributes()))
                 .collect(Collectors.toSet()));
     }
 
@@ -86,7 +86,7 @@ public class FramedataController extends BaseApiController {
 
         Framedata framedata = new Framedata(
                 gameCharacter,
-                this.framedataService.convertFramedataAttributeMapToString(dto.attributes()));
+                dto.attributes());
 
         this.framedataService.createFramedata(framedata);
 
