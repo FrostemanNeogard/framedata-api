@@ -1,6 +1,5 @@
 package com.garfield.framedataapi.framedata;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.garfield.framedataapi.framedata.exceptions.*;
@@ -9,7 +8,10 @@ import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJson;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.Iterator;
+import java.util.Optional;
+import java.util.Set;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -32,22 +34,6 @@ public class FramedataService {
         return this.framedataRepository.findAllByGameCharacter(gameCharacter);
     }
 
-    public Map<String, Object> convertFramedataAttributeStringToMap(String attributes) {
-        try {
-            return this.objectMapper.readValue(attributes, Map.class);
-        } catch (JsonProcessingException e) {
-            throw new InvalidFramedataJsonFormatException(attributes);
-        }
-    }
-
-    public String convertFramedataAttributeMapToString(Map<String, Object> attributes) {
-        try {
-            return this.objectMapper.writeValueAsString(attributes);
-        } catch (JsonProcessingException e) {
-            throw new InvalidFramedataJsonFormatException(attributes);
-        }
-    }
-
     public void createFramedata(Framedata framedata) {
         validateAttributesAgainstTemplate(
                 framedata.getAttributes(),
@@ -57,17 +43,17 @@ public class FramedataService {
         this.framedataRepository.save(framedata);
     }
 
-    private void validateAttributesAgainstTemplate(Map<String, Object> attributes, Map<String, Object> templateJson) {
+    private void validateAttributesAgainstTemplate(FramedataAttributes attributes, FramedataAttributes templateJson) {
         try {
             JsonNode templateNode = objectMapper.valueToTree(templateJson);
             JsonNode dataNode = objectMapper.valueToTree(attributes);
 
             if (!templateNode.isObject()) {
-                throw new InvalidFramedataJsonFormatException(templateJson);
+                throw new InvalidAttributesTemplateJson(templateJson.toString());
             }
 
             if (!dataNode.isObject()) {
-                throw new InvalidFramedataJsonFormatException(attributes);
+                throw new JsonFormatException(attributes.toString());
             }
 
             for (Iterator<String> it = templateNode.fieldNames(); it.hasNext(); ) {
@@ -85,13 +71,13 @@ public class FramedataService {
                 }
 
                 if (templateField.isObject()) {
-                    throw new InvalidFramedataJsonFormatException(templateJson);
+                    throw new InvalidAttributesTemplateJson(templateJson.toString());
                 }
             }
 
         } catch (InvalidAttributesTemplateJson |
+                 JsonFormatException |
                  FramedataJsonMissingRequiredFieldException |
-                 InvalidFramedataJsonFormatException |
                  FramedataJsonInvalidFieldTypeException e) {
             throw e;
         } catch (Exception e) {
