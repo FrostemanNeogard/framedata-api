@@ -9,7 +9,7 @@ import jakarta.persistence.Converter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@Converter(autoApply = false)
+@Converter
 public class JsonbConverter implements AttributeConverter<FramedataAttributes, String> {
 
     private final Logger logger = LoggerFactory.getLogger(JsonbConverter.class);
