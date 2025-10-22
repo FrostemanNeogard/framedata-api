@@ -28,4 +28,7 @@ public class ApiResponseEntity {
         return ResponseEntity.status(status).body(ApiResponse.error(status, errorMessage));
     }
 
+    public static ResponseEntity<ApiResponse<Void>> deleted() {
+        return ResponseEntity.noContent().build();
+    }
 }
