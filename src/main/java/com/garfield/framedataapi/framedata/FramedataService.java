@@ -90,6 +90,7 @@ public class FramedataService {
             }
 
         } catch (InvalidAttributesTemplateJson |
+                 FramedataJsonMissingRequiredFieldException |
                  InvalidFramedataJsonFormatException |
                  FramedataJsonInvalidFieldTypeException e) {
             throw e;
