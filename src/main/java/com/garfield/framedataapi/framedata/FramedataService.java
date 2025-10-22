@@ -49,7 +49,7 @@ public class FramedataService {
             JsonNode dataNode = objectMapper.valueToTree(attributes);
 
             if (!templateNode.isObject()) {
-                throw new InvalidAttributesTemplateJson(templateJson.toString());
+                throw new InvalidAttributesTemplateJson(templateJson);
             }
 
             if (!dataNode.isObject()) {
@@ -71,7 +71,7 @@ public class FramedataService {
                 }
 
                 if (templateField.isObject()) {
-                    throw new InvalidAttributesTemplateJson(templateJson.toString());
+                    throw new InvalidAttributesTemplateJson(templateJson);
                 }
             }
 
