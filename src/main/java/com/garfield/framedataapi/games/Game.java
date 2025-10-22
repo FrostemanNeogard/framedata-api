@@ -1,6 +1,7 @@
 package com.garfield.framedataapi.games;
 
 import com.garfield.framedataapi.framedata.Framedata;
+import com.garfield.framedataapi.framedata.FramedataAttributes;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.vladmihalcea.hibernate.type.json.JsonType;
 import jakarta.persistence.*;
@@ -8,7 +9,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
-import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
@@ -27,7 +27,7 @@ public class Game {
 
     @Type(JsonType.class)
     @Column(columnDefinition = "jsonb")
-    private Map<String, Object> attributesTemplate;
+    private FramedataAttributes attributesTemplate;
 
     @OneToMany(mappedBy = "game")
     private Set<GameCharacter> gameCharacters;
@@ -35,7 +35,7 @@ public class Game {
     @OneToMany(mappedBy = "game")
     private Set<Framedata> framedata;
 
-    public Game(String name, Map<String, Object> attributesTemplate) {
+    public Game(String name, FramedataAttributes attributesTemplate) {
         this.name = name;
         this.attributesTemplate = attributesTemplate;
     }
