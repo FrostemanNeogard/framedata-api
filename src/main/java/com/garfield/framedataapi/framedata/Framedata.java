@@ -1,14 +1,16 @@
 package com.garfield.framedataapi.framedata;
 
+import com.garfield.framedataapi.framedata.converters.JsonbConverter;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.games.Game;
 import com.vladmihalcea.hibernate.type.json.JsonType;
 import jakarta.persistence.*;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
-import java.util.Map;
 import java.util.UUID;
 
 @Entity
@@ -31,15 +33,18 @@ public class Framedata {
 
     @Type(JsonType.class)
     @Column(columnDefinition = "jsonb")
-    private Map<String, Object> attributes;
+    @Convert(converter = JsonbConverter.class)
+    @Valid
+    @NotNull(message = "Framedata attributes must be provided")
+    private FramedataAttributes attributes;
 
-    public Framedata(Game game, GameCharacter gameCharacter, Map<String, Object> attributes) {
+    public Framedata(Game game, GameCharacter gameCharacter, FramedataAttributes attributes) {
         this.game = game;
         this.gameCharacter = gameCharacter;
         this.attributes = attributes;
     }
 
-    public Framedata(GameCharacter gameCharacter, Map<String, Object> attributes) {
+    public Framedata(GameCharacter gameCharacter, FramedataAttributes attributes) {
         this(gameCharacter.getGame(), gameCharacter, attributes);
     }
 
