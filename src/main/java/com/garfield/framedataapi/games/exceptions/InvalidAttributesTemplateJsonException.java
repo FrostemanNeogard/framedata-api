@@ -2,16 +2,16 @@ package com.garfield.framedataapi.games.exceptions;
 
 import com.garfield.framedataapi.framedata.FramedataAttributes;
 
-public class InvalidAttributesTemplateJson extends RuntimeException {
+public class InvalidAttributesTemplateJsonException extends RuntimeException {
 
-    public InvalidAttributesTemplateJson(FramedataAttributes attributesTemplateJson) {
+    public InvalidAttributesTemplateJsonException(FramedataAttributes attributesTemplateJson) {
         super(String.format(
                 "Attributes template was not valid: \"%s\". Please report this to an admin.",
                 attributesTemplateJson.toString()
         ));
     }
 
-    public InvalidAttributesTemplateJson(String disallowedFieldKey) {
+    public InvalidAttributesTemplateJsonException(String disallowedFieldKey) {
         super(String.format(
                 "Attributes template may not contain reserved key \"%s\".",
                 disallowedFieldKey

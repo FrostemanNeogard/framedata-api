@@ -10,7 +10,7 @@ import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyE
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
-import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJson;
+import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJsonException;
 import com.garfield.framedataapi.users.exceptions.UserBannedException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -97,8 +97,8 @@ public class GlobalExceptionHandler {
         return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
     }
 
-    @ExceptionHandler({InvalidAttributesTemplateJson.class})
-    public ResponseEntity<ApiResponse<String>> handleInvalidAttributesTemplateJson(InvalidAttributesTemplateJson e) {
+    @ExceptionHandler({InvalidAttributesTemplateJsonException.class})
+    public ResponseEntity<ApiResponse<String>> handleInvalidAttributesTemplateJson(InvalidAttributesTemplateJsonException e) {
         return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
     }
 

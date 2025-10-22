@@ -4,7 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.garfield.framedataapi.framedata.exceptions.*;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
-import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJson;
+import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJsonException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -49,7 +49,7 @@ public class FramedataService {
             JsonNode dataNode = objectMapper.valueToTree(attributes);
 
             if (!templateNode.isObject()) {
-                throw new InvalidAttributesTemplateJson(templateJson);
+                throw new InvalidAttributesTemplateJsonException(templateJson);
             }
 
             if (!dataNode.isObject()) {
@@ -71,11 +71,11 @@ public class FramedataService {
                 }
 
                 if (templateField.isObject()) {
-                    throw new InvalidAttributesTemplateJson(templateJson);
+                    throw new InvalidAttributesTemplateJsonException(templateJson);
                 }
             }
 
-        } catch (InvalidAttributesTemplateJson |
+        } catch (InvalidAttributesTemplateJsonException |
                  JsonFormatException |
                  FramedataJsonMissingRequiredFieldException |
                  FramedataJsonInvalidFieldTypeException e) {
