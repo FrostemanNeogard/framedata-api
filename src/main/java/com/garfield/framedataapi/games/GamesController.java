@@ -1,5 +1,16 @@
 package com.garfield.framedataapi.games;
 
+import java.util.List;
+import java.util.UUID;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+
 import com.garfield.framedataapi.config.authorization.Admin;
 import com.garfield.framedataapi.config.authorization.Public;
 import com.garfield.framedataapi.config.structure.ApiResponse;
@@ -7,14 +18,9 @@ import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
 import com.garfield.framedataapi.games.dto.GameDto;
+
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.UUID;
 
 @Controller
 @RequestMapping(GamesController.REQUEST_MAPPING)
@@ -53,10 +59,15 @@ public class GamesController extends BaseApiController {
     }
 
     @Admin
+    @Public
     @PostMapping()
     public ResponseEntity<ApiResponse<Game>> createGame(@Valid @RequestBody CreateGameDto dto) {
-        Game newGame = new Game(dto.name());
+        Game newGame = new Game(
+                dto.name(),
+                dto.attributesTemplate());
+
         this.gamesService.createGame(newGame);
+
         return ApiResponseEntity.created(createControllerUri(newGame.getId().toString()));
     }
 
