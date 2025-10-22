@@ -29,10 +29,10 @@ public class Game {
     @Column(columnDefinition = "jsonb")
     private FramedataAttributes attributesTemplate;
 
-    @OneToMany(mappedBy = "game")
+    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
     private Set<GameCharacter> gameCharacters;
 
-    @OneToMany(mappedBy = "game")
+    @OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
     private Set<Framedata> framedata;
 
     public Game(String name, FramedataAttributes attributesTemplate) {

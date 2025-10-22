@@ -27,10 +27,10 @@ public class GameCharacter {
     @JoinColumn(name = "game_id")
     private Game game;
 
-    @OneToMany(mappedBy = "gameCharacter")
+    @OneToMany(mappedBy = "gameCharacter", cascade = CascadeType.ALL)
     private Set<Alias> aliases;
 
-    @OneToMany(mappedBy = "gameCharacter")
+    @OneToMany(mappedBy = "gameCharacter", cascade = CascadeType.ALL)
     private Set<Framedata> framedata;
 
     public GameCharacter(String name, Game game) {
