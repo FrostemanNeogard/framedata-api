@@ -64,4 +64,12 @@ public class GamesController extends BaseApiController {
         return ApiResponseEntity.created(createControllerUri(newGame.getId().toString()));
     }
 
+    @Admin
+    @DeleteMapping("{gameId}")
+    public ResponseEntity<ApiResponse<Void>> deleteGame(@PathVariable UUID gameId) {
+        this.gamesService.deleteGameById(gameId);
+
+        return ApiResponseEntity.deleted();
+    }
+
 }

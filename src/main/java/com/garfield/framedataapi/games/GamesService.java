@@ -47,4 +47,9 @@ public class GamesService {
         }
     }
 
+    public void deleteGameById(UUID id) {
+        Game game = this.gamesRepo.findById(id).orElseThrow(() -> new GameNotFoundException(id));
+
+        this.gamesRepo.delete(game);
+    }
 }
