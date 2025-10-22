@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Type;
 
+import java.util.Map;
 import java.util.Set;
 import java.util.UUID;
 
@@ -38,6 +39,11 @@ public class Game {
     public Game(String name, FramedataAttributes attributesTemplate) {
         this.name = name;
         this.attributesTemplate = attributesTemplate;
+    }
+
+    public Game(String name, Map<String, Object> attributesTemplate) {
+        this.name = name;
+        this.attributesTemplate = new FramedataAttributes(attributesTemplate);
     }
 
 }
