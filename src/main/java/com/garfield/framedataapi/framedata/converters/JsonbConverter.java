@@ -20,6 +20,7 @@ public class JsonbConverter implements AttributeConverter<FramedataAttributes, S
         if (attribute == null) {
             return null;
         }
+        
         try {
             return objectMapper.writeValueAsString(attribute);
         } catch (JsonProcessingException e) {
@@ -33,6 +34,7 @@ public class JsonbConverter implements AttributeConverter<FramedataAttributes, S
         if (dbData == null || dbData.trim().isEmpty()) {
             return null;
         }
+
         try {
             return objectMapper.readValue(dbData, FramedataAttributes.class);
         } catch (JsonFormatException | JsonProcessingException e) {
