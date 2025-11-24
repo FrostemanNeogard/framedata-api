@@ -10,6 +10,7 @@ import com.garfield.framedataapi.framedata.dtos.FramedataDto;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharactersService;
 import com.garfield.framedataapi.gameCharacters.exceptions.AmbiguousGameCharacterNameException;
+import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -58,6 +59,10 @@ public class FramedataController extends BaseApiController {
             gameCharacter = this.gameCharactersService.getGameCharactersByName(characterNameOrUuid);
         }
 
+        if (gameCharacter.isEmpty()) {
+            throw new GameCharacterNotFoundException(characterNameOrUuid);
+        }
+
         if (gameCharacter.size() > 1) {
             throw new AmbiguousGameCharacterNameException(characterNameOrUuid);
         }
@@ -77,6 +82,7 @@ public class FramedataController extends BaseApiController {
 
         Framedata framedata = new Framedata(
                 gameCharacter,
+                dto.identity(),
                 dto.attributes());
 
         this.framedataService.createFramedata(framedata);

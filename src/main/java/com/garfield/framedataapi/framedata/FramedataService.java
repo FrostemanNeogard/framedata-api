@@ -1,24 +1,21 @@
 package com.garfield.framedataapi.framedata;
 
-import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.garfield.framedataapi.framedata.exceptions.*;
+import com.garfield.framedataapi.framedata.exceptions.FramedataDoesNotMatchGameTemplateException;
+import com.garfield.framedataapi.framedata.exceptions.FramedataEmptyException;
+import com.garfield.framedataapi.framedata.exceptions.FramedataJsonInvalidFieldTypeException;
+import com.garfield.framedataapi.framedata.exceptions.FramedataNotFoundException;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
-import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJsonException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Iterator;
-import java.util.Optional;
-import java.util.Set;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
 public class FramedataService {
 
     private final FramedataRepository framedataRepository;
-    private final ObjectMapper objectMapper;
 
     public Framedata getFramedataById(UUID id) {
         Optional<Framedata> framedata = this.framedataRepository.findById(id);
@@ -34,54 +31,72 @@ public class FramedataService {
         return this.framedataRepository.findAllByGameCharacter(gameCharacter);
     }
 
+    @Transactional
     public void createFramedata(Framedata framedata) {
-        validateAttributesAgainstTemplate(
-                framedata.getAttributes(),
-                framedata.getGame().getAttributesTemplate()
-        );
-
+        this.validateFramedataContainsOnlyStringsAndMatchesTemplate(framedata);
         this.framedataRepository.save(framedata);
     }
 
-    private void validateAttributesAgainstTemplate(FramedataAttributes attributes, FramedataAttributes templateJson) {
-        try {
-            JsonNode templateNode = objectMapper.valueToTree(templateJson);
-            JsonNode dataNode = objectMapper.valueToTree(attributes);
+    private void validateFramedataContainsOnlyStringsAndMatchesTemplate(Framedata framedata) {
+        this.validateOnlyStrings(framedata.getData().getAttributes());
+        this.validateFramedataMatchesTemplate(framedata);
+    }
 
-            if (!templateNode.isObject()) {
-                throw new InvalidAttributesTemplateJsonException(templateJson);
+    private void validateFramedataMatchesTemplate(Framedata framedata) {
+        this.validateFramedataMatchesTemplate(
+                framedata.getData().getAttributes(),
+                framedata.getGame().getAttributesTemplate().getAttributes()
+        );
+    }
+
+    private void validateFramedataMatchesTemplate(Map<String, Object> incoming, Map<String, Object> template) {
+        if (incoming == null || incoming.isEmpty()) {
+            throw new FramedataEmptyException();
+        }
+
+        for (String key : incoming.keySet()) {
+            if (!template.containsKey(key)) {
+                throw new FramedataDoesNotMatchGameTemplateException(key);
             }
 
-            if (!dataNode.isObject()) {
-                throw new JsonFormatException(attributes.toString());
+            Object incomingValue = incoming.get(key);
+            Object templateValue = template.get(key);
+
+            if (incomingValue instanceof Map) {
+                if (!(templateValue instanceof Map)) {
+                    throw new FramedataDoesNotMatchGameTemplateException(key);
+                }
+
+                validateFramedataMatchesTemplate(
+                        (Map<String, Object>) incomingValue,
+                        (Map<String, Object>) templateValue
+                );
             }
+        }
+    }
 
-            for (Iterator<String> it = templateNode.fieldNames(); it.hasNext(); ) {
-                String fieldName = it.next();
+    public void validateOnlyStrings(List<?> list) {
+        this.validateNodeOnlyContainsStrings(list);
+    }
 
-                if (!dataNode.has(fieldName)) {
-                    throw new FramedataJsonMissingRequiredFieldException(fieldName);
-                }
+    public void validateOnlyStrings(Map<?, ?> map) {
+        this.validateNodeOnlyContainsStrings(map);
+    }
 
-                JsonNode templateField = templateNode.get(fieldName);
-                JsonNode dataField = dataNode.get(fieldName);
+    public void validateOnlyStrings(String string) {
+        this.validateNodeOnlyContainsStrings(string);
+    }
 
-                if (templateField.getNodeType() != dataField.getNodeType()) {
-                    throw new FramedataJsonInvalidFieldTypeException(fieldName, dataField.getNodeType());
-                }
-
-                if (templateField.isObject()) {
-                    throw new InvalidAttributesTemplateJsonException(templateJson);
-                }
+    private void validateNodeOnlyContainsStrings(Object node) {
+        switch (node) {
+            case String ignored -> {
             }
-
-        } catch (InvalidAttributesTemplateJsonException |
-                 JsonFormatException |
-                 FramedataJsonMissingRequiredFieldException |
-                 FramedataJsonInvalidFieldTypeException e) {
-            throw e;
-        } catch (Exception e) {
-            throw new UnknownInternalErrorException(e);
+            case Map<?, ?> map -> map.values().forEach(this::validateNodeOnlyContainsStrings);
+            case List<?> list -> list.forEach(this::validateNodeOnlyContainsStrings);
+            default -> throw new FramedataJsonInvalidFieldTypeException(
+                    node.getClass().getSimpleName(),
+                    node.getClass().getTypeName()
+            );
         }
     }
 
