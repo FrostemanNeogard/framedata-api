@@ -1,5 +1,6 @@
 package com.garfield.framedataapi.games;
 
+import com.garfield.framedataapi.framedata.FramedataService;
 import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +14,7 @@ import java.util.UUID;
 public class GamesService {
 
     private final GamesRepository gamesRepo;
+    private final FramedataService framedataService;
 
     public Game getGameByIdentifier(UUID id) throws GameNotFoundException {
         Game game = this.gamesRepo.getById(id);
@@ -43,6 +45,7 @@ public class GamesService {
             this.getGameByIdentifier(game.getName());
             throw new GameAlreadyExistsException(game);
         } catch (GameNotFoundException e) {
+            this.framedataService.validateOnlyStrings(game.getAttributesTemplate().getAttributes());
             this.gamesRepo.save(game);
         }
     }

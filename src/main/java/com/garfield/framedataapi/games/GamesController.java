@@ -5,6 +5,7 @@ import com.garfield.framedataapi.config.authorization.Public;
 import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import com.garfield.framedataapi.config.structure.BaseApiController;
+import com.garfield.framedataapi.framedata.FramedataTemplate;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
 import com.garfield.framedataapi.games.dto.GameDto;
 import jakarta.validation.Valid;
@@ -55,9 +56,11 @@ public class GamesController extends BaseApiController {
     @Admin
     @PostMapping()
     public ResponseEntity<ApiResponse<Game>> createGame(@Valid @RequestBody CreateGameDto dto) {
+        FramedataTemplate template = new FramedataTemplate(dto.attributesTemplate());
+
         Game newGame = new Game(
                 dto.name(),
-                dto.attributesTemplate());
+                template);
 
         this.gamesService.createGame(newGame);
 
