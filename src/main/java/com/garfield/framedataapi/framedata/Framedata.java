@@ -1,15 +1,10 @@
 package com.garfield.framedataapi.framedata;
 
-import com.garfield.framedataapi.framedata.converters.JsonbConverter;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.games.Game;
-import com.vladmihalcea.hibernate.type.json.JsonType;
 import jakarta.persistence.*;
-import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.Type;
 
 import java.util.UUID;
 
@@ -23,29 +18,25 @@ public class Framedata {
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "character_id")
     private GameCharacter gameCharacter;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "game_id")
     private Game game;
 
-    @Type(JsonType.class)
-    @Column(columnDefinition = "jsonb")
-    @Convert(converter = JsonbConverter.class)
-    @Valid
-    @NotNull(message = "Framedata attributes must be provided")
-    private FramedataAttributes attributes;
+    @Embedded
+    private FramedataIdentity identity;
 
-    public Framedata(Game game, GameCharacter gameCharacter, FramedataAttributes attributes) {
-        this.game = game;
+    @Embedded
+    private FramedataTemplate data;
+
+    public Framedata(GameCharacter gameCharacter, FramedataIdentity identity, FramedataTemplate data) {
         this.gameCharacter = gameCharacter;
-        this.attributes = attributes;
-    }
-
-    public Framedata(GameCharacter gameCharacter, FramedataAttributes attributes) {
-        this(gameCharacter.getGame(), gameCharacter, attributes);
+        this.identity = identity;
+        this.data = data;
+        this.game = gameCharacter.getGame();
     }
 
 }
