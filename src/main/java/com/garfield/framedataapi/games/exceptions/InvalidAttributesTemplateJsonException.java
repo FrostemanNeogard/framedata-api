@@ -1,10 +1,10 @@
 package com.garfield.framedataapi.games.exceptions;
 
-import com.garfield.framedataapi.framedata.FramedataAttributes;
+import com.garfield.framedataapi.framedata.FramedataTemplate;
 
 public class InvalidAttributesTemplateJsonException extends RuntimeException {
 
-    public InvalidAttributesTemplateJsonException(FramedataAttributes attributesTemplateJson) {
+    public InvalidAttributesTemplateJsonException(FramedataTemplate attributesTemplateJson) {
         super(String.format(
                 "Attributes template was not valid: \"%s\". Please report this to an admin.",
                 attributesTemplateJson.toString()
