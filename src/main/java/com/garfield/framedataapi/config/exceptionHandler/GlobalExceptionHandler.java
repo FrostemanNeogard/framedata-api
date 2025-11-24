@@ -56,6 +56,18 @@ public class GlobalExceptionHandler {
         return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
     }
 
+    @ExceptionHandler({FramedataDoesNotMatchGameTemplateException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataDoesNotMatchGameTemplateException(FramedataDoesNotMatchGameTemplateException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataEmptyException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataEmptyException(FramedataEmptyException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
     @ExceptionHandler({FramedataJsonInvalidFieldTypeException.class})
     public ResponseEntity<ApiResponse<String>> handleFramedataJsonInvalidFieldTypeException(FramedataJsonInvalidFieldTypeException e) {
         logError(e);
