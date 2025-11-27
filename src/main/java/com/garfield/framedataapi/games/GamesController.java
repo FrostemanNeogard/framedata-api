@@ -34,9 +34,9 @@ public class GamesController extends BaseApiController {
     @Public
     @GetMapping()
     public ResponseEntity<ApiResponse<List<GameDto>>> getAllGames() {
-        List<Game> games = this.gamesService.getAllGames();
-        List<GameDto> gameDtos = games.stream().map(GameDto::fromEntity).toList();
-        return ApiResponseEntity.ok(gameDtos);
+        return ApiResponseEntity.ok(
+                this.gamesService.getAllGames().stream().map(GameDto::fromEntity).toList()
+        );
     }
 
     @Public
