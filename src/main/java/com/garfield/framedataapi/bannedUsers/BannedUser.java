@@ -1,22 +1,18 @@
 package com.garfield.framedataapi.bannedUsers;
 
+import com.garfield.framedataapi.core.BaseEntity;
 import com.garfield.framedataapi.users.User;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.UUID;
 
 @Entity
 @Table(name = "banned_users")
 @NoArgsConstructor
 @Getter
-public class BannedUser {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+public class BannedUser extends BaseEntity {
 
     @Column(nullable = false)
     private String reason;

@@ -1,5 +1,6 @@
 package com.garfield.framedataapi.users;
 
+import com.garfield.framedataapi.core.BaseEntity;
 import com.garfield.framedataapi.roles.Role;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,17 +8,12 @@ import lombok.Setter;
 
 import java.util.Collection;
 import java.util.Date;
-import java.util.UUID;
 
 @Entity
 @Table(name = "users")
 @Getter
 @Setter
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+public class User extends BaseEntity {
 
     @Column
     private String username;

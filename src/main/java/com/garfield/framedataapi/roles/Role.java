@@ -1,22 +1,21 @@
 package com.garfield.framedataapi.roles;
 
+import com.garfield.framedataapi.core.BaseEntity;
 import com.garfield.framedataapi.users.User;
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.Setter;
 
 import java.util.Collection;
-import java.util.UUID;
 
 @Entity
 @Table(name = "roles")
 @Getter
 @Setter
-public class Role {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+public class Role extends BaseEntity {
 
     @Column(unique = true)
     private String name;

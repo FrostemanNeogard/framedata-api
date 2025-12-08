@@ -1,22 +1,17 @@
 package com.garfield.framedataapi.framedata;
 
+import com.garfield.framedataapi.core.BaseEntity;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.games.Game;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-import java.util.UUID;
-
 @Entity
 @Table(name = "framedata")
 @Getter
 @NoArgsConstructor
-public class Framedata {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+public class Framedata extends BaseEntity {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "character_id")

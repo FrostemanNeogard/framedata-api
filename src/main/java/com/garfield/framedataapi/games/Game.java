@@ -1,5 +1,6 @@
 package com.garfield.framedataapi.games;
 
+import com.garfield.framedataapi.core.BaseEntity;
 import com.garfield.framedataapi.framedata.Framedata;
 import com.garfield.framedataapi.framedata.FramedataTemplate;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
@@ -9,17 +10,12 @@ import lombok.NoArgsConstructor;
 
 import java.util.Map;
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Table(name = "games")
 @NoArgsConstructor
 @Getter
-public class Game {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+public class Game extends BaseEntity {
 
     @Column(unique = true)
     private String name;

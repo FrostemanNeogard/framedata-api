@@ -1,6 +1,7 @@
 package com.garfield.framedataapi.gameCharacters;
 
 import com.garfield.framedataapi.aliases.Alias;
+import com.garfield.framedataapi.core.BaseEntity;
 import com.garfield.framedataapi.framedata.Framedata;
 import com.garfield.framedataapi.games.Game;
 import jakarta.persistence.*;
@@ -8,17 +9,12 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.Set;
-import java.util.UUID;
 
 @Entity
 @Table(name = "game_characters")
 @Getter
 @NoArgsConstructor
-public class GameCharacter {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.UUID)
-    private UUID id;
+public class GameCharacter extends BaseEntity {
 
     @Column
     private String name;
