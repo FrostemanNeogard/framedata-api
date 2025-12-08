@@ -17,6 +17,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Controller
@@ -35,15 +36,27 @@ public class AliasController extends BaseApiController {
         return REQUEST_MAPPING;
     }
 
-    @Public
-    @GetMapping("game/{gameNameOrUuid}/alias/{aliasNameOrUuid}")
-    public ResponseEntity<ApiResponse<AliasDto>> getAliasByIdentifier(
-            @PathVariable String gameNameOrUuid,
-            @PathVariable String aliasNameOrUuid) {
-        Game game = this.gameService.getGameByIdentifier(gameNameOrUuid);
-        Alias alias = this.aliasService.getAliasByGameAndIdentifier(game, aliasNameOrUuid);
+    @Admin
+    @PostMapping
+    public ResponseEntity<ApiResponse<AliasDto>> createAlias(
+            @RequestBody CreateAliasDto createAliasDto) {
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterById(createAliasDto.characterId());
+        Alias alias = new Alias(createAliasDto.aliasName(), gameCharacter);
 
-        return ApiResponseEntity.ok(AliasDto.fromEntity(alias));
+        this.aliasService.createAlias(alias);
+
+        return ApiResponseEntity.created(createControllerUri(alias.getId()));
+    }
+
+    @Admin
+    @DeleteMapping("identifier/{aliasId}")
+    public ResponseEntity<ApiResponse<Void>> deleteAliasByIdentifier(
+            @PathVariable UUID aliasId) {
+        Alias alias = this.aliasService.getAliasById(aliasId);
+
+        this.aliasService.deleteAlias(alias);
+
+        return ApiResponseEntity.deleted();
     }
 
     @Public
@@ -57,16 +70,15 @@ public class AliasController extends BaseApiController {
         );
     }
 
-    @Admin
-    @PostMapping
-    public ResponseEntity<ApiResponse<AliasDto>> createAlias(
-            @RequestBody CreateAliasDto createAliasDto) {
-        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterById(createAliasDto.characterId());
-        Alias alias = new Alias(createAliasDto.aliasName(), gameCharacter);
+    @Public
+    @GetMapping("game/{gameNameOrUuid}/alias/{aliasNameOrUuid}")
+    public ResponseEntity<ApiResponse<AliasDto>> getAliasByIdentifier(
+            @PathVariable String gameNameOrUuid,
+            @PathVariable String aliasNameOrUuid) {
+        Game game = this.gameService.getGameByIdentifier(gameNameOrUuid);
+        Alias alias = this.aliasService.getAliasByGameAndIdentifier(game, aliasNameOrUuid);
 
-        this.aliasService.createAlias(alias);
-
-        return ApiResponseEntity.created(createControllerUri(alias.getId()));
+        return ApiResponseEntity.ok(AliasDto.fromEntity(alias));
     }
 
 }

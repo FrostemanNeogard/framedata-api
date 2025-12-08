@@ -56,4 +56,8 @@ public class AliasService {
         return alias.get();
     }
 
+    public void deleteAlias(Alias alias) {
+        this.aliasRepository.delete(alias);
+    }
+
 }
