@@ -1,11 +1,11 @@
 insert into roles (id, name) values
-('21e94ecc-eda2-4740-97ee-10894e993e7a', 'user'),
-('41d97ecc-eda2-4740-97ee-10894e993e6e', 'admin');
+('00000000-0000-0000-0000-000000000000', 'admin'),
+('11111111-1111-1111-1111-111111111111', 'user');
 
 insert into users (id, name, email) values
-('11e94ecc-eda2-4740-97ee-10894e993e7a', 'random', 'random@gmail.com'),
-('11d97ecc-eda2-4740-97ee-10894e993e6e', 'liam', 'liamfrostemanneogard@gmail.com');
+('00000000-0000-0000-0000-000000000000', 'liam', 'liamfrostemanneogard@gmail.com');
+('11111111-1111-1111-1111-111111111111', 'random', 'funnyorangcat@gmail.com'),
 
 insert into users_roles (user_id, role_id) values
-('11e94ecc-eda2-4740-97ee-10894e993e7a', '21e94ecc-eda2-4740-97ee-10894e993e7a'),
-('11d97ecc-eda2-4740-97ee-10894e993e6e', '41d97ecc-eda2-4740-97ee-10894e993e6e');
+('00000000-0000-0000-0000-000000000000', '00000000-0000-0000-0000-000000000000'),
+('11111111-1111-1111-1111-111111111111', '11111111-1111-1111-1111-111111111111');
