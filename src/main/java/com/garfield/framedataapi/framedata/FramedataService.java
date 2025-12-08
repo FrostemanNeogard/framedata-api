@@ -1,12 +1,14 @@
 package com.garfield.framedataapi.framedata;
 
 import com.garfield.framedataapi.framedata.exceptions.*;
-import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.*;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
+import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
@@ -22,10 +24,6 @@ public class FramedataService {
         }
 
         return framedata.get();
-    }
-
-    public Set<Framedata> getFramedataForCharacter(GameCharacter gameCharacter) {
-        return this.framedataRepository.findAllByGameCharacter(gameCharacter);
     }
 
     @Transactional
@@ -72,16 +70,8 @@ public class FramedataService {
         }
     }
 
-    public void validateOnlyEmptyStrings(List<?> list) {
-        this.validateNodeOnlyContainsEmptyStrings(list);
-    }
-
     public void validateOnlyEmptyStrings(Map<?, ?> map) {
         this.validateNodeOnlyContainsEmptyStrings(map);
-    }
-
-    public void validateOnlyEmptyStrings(String string) {
-        this.validateNodeOnlyContainsEmptyStrings(string);
     }
 
     private void validateNodeOnlyContainsEmptyStrings(Object node) {
