@@ -2,9 +2,9 @@ package com.garfield.framedataapi.advice.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.garfield.framedataapi.advice.responses.ApiResponse;
-import com.garfield.framedataapi.bannedUsers.BannedUsersService;
+import com.garfield.framedataapi.bannedUsers.BannedUserService;
 import com.garfield.framedataapi.users.User;
-import com.garfield.framedataapi.users.UsersService;
+import com.garfield.framedataapi.users.UserService;
 import com.garfield.framedataapi.users.exceptions.UserBannedException;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -25,19 +25,19 @@ import java.util.Optional;
 public class JwtRequestFilter extends OncePerRequestFilter {
 
     private final GoogleTokenVerifier googleTokenVerifier;
-    private final UsersService usersService;
-    private final BannedUsersService bannedUsersService;
+    private final UserService userService;
+    private final BannedUserService bannedUserService;
     private final ObjectMapper objectMapper;
 
     public JwtRequestFilter(
             GoogleTokenVerifier googleTokenVerifier,
-            UsersService usersService,
-            BannedUsersService bannedUsersService,
+            UserService userService,
+            BannedUserService bannedUserService,
             ObjectMapper objectMapper
     ) {
         this.googleTokenVerifier = googleTokenVerifier;
-        this.usersService = usersService;
-        this.bannedUsersService = bannedUsersService;
+        this.userService = userService;
+        this.bannedUserService = bannedUserService;
         this.objectMapper = objectMapper;
     }
 
@@ -61,14 +61,14 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 if (payload != null) {
                     String userEmail = payload.getEmail();
 
-                    Optional<User> userOptional = usersService.findByEmail(userEmail);
+                    Optional<User> userOptional = userService.findByEmail(userEmail);
 
                     userOptional.ifPresent(user -> {
-                        if (bannedUsersService.isUserBanned(user)) {
+                        if (bannedUserService.isUserBanned(user)) {
                             throw new UserBannedException();
                         }
 
-                        var authorities = usersService.getAuthorities(user);
+                        var authorities = userService.getAuthorities(user);
 
                         UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
                                 user,

@@ -14,9 +14,9 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class GameCharactersService {
+public class GameCharacterService {
 
-    private final GameCharactersRepository gameCharactersRepository;
+    private final GameCharacterRepository gameCharacterRepository;
 
     public void createGameCharacter(GameCharacter gameCharacter) {
         Set<GameCharacter> existingCharacter = gameCharacter.getGame().getGameCharacters()
@@ -27,7 +27,7 @@ public class GameCharactersService {
             throw new GameCharacterAlreadyExistsException(gameCharacter);
         }
 
-        this.gameCharactersRepository.save(gameCharacter);
+        this.gameCharacterRepository.save(gameCharacter);
     }
 
     public GameCharacter getGameCharacterByIdentifier(String input) {
@@ -52,7 +52,7 @@ public class GameCharactersService {
     }
 
     public GameCharacter getGameCharacterById(UUID id) throws GameNotFoundException {
-        Optional<GameCharacter> gameCharacter = this.gameCharactersRepository.findById(id);
+        Optional<GameCharacter> gameCharacter = this.gameCharacterRepository.findById(id);
 
         if (gameCharacter.isEmpty()) {
             throw new GameCharacterNotFoundException(id);
@@ -62,7 +62,7 @@ public class GameCharactersService {
     }
 
     private Set<GameCharacter> getGameCharactersByName(String name) throws GameNotFoundException {
-        Set<GameCharacter> gameCharacter = this.gameCharactersRepository.findAllByName(name);
+        Set<GameCharacter> gameCharacter = this.gameCharacterRepository.findAllByName(name);
 
         if (gameCharacter.isEmpty()) {
             throw new GameCharacterNotFoundException(name);

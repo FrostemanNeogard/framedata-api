@@ -10,7 +10,7 @@ import java.util.Collection;
 import java.util.Date;
 
 @Entity
-@Table(name = "users")
+@Table(name = "user")
 @Getter
 @Setter
 public class User extends BaseEntity {

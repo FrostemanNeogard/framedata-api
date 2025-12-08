@@ -8,7 +8,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.UUID;
 
-public interface AliasesRepository extends ListCrudRepository<Alias, UUID> {
+public interface AliasRepository extends ListCrudRepository<Alias, UUID> {
     Set<Alias> findAllByGameCharacter(GameCharacter gameCharacter);
 
     Optional<Alias> findByGameCharacterAndAliasName(GameCharacter gameCharacter, String aliasName);

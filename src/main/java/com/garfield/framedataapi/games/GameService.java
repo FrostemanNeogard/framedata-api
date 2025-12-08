@@ -11,9 +11,9 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class GamesService {
+public class GameService {
 
-    private final GamesRepository gamesRepo;
+    private final GameRepository gameRepository;
     private final FramedataService framedataService;
 
     public Game getGameByIdentifier(String identifier) throws GameNotFoundException {
@@ -25,7 +25,7 @@ public class GamesService {
     }
 
     public Game getGameById(UUID id) throws GameNotFoundException {
-        Game game = this.gamesRepo.getById(id);
+        Game game = this.gameRepository.getById(id);
 
         if (game == null) {
             throw new GameNotFoundException(id);
@@ -35,7 +35,7 @@ public class GamesService {
     }
 
     private Game getGameByName(String name) throws GameNotFoundException {
-        Game game = this.gamesRepo.getByNameIgnoreCase(name);
+        Game game = this.gameRepository.getByNameIgnoreCase(name);
 
         if (game == null) {
             throw new GameNotFoundException(name);
@@ -45,7 +45,7 @@ public class GamesService {
     }
 
     public List<Game> getAllGames() {
-        return this.gamesRepo.findAll();
+        return this.gameRepository.findAll();
     }
 
     public void createGame(Game game) {
@@ -54,13 +54,13 @@ public class GamesService {
             throw new GameAlreadyExistsException(game);
         } catch (GameNotFoundException e) {
             this.framedataService.validateOnlyStrings(game.getAttributesTemplate().getAttributes());
-            this.gamesRepo.save(game);
+            this.gameRepository.save(game);
         }
     }
 
     public void deleteGameById(UUID id) {
-        Game game = this.gamesRepo.findById(id).orElseThrow(() -> new GameNotFoundException(id));
+        Game game = this.gameRepository.findById(id).orElseThrow(() -> new GameNotFoundException(id));
 
-        this.gamesRepo.delete(game);
+        this.gameRepository.delete(game);
     }
 }

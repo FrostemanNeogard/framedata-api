@@ -9,7 +9,7 @@ import com.garfield.framedataapi.framedata.dtos.CreateFramedataDto;
 import com.garfield.framedataapi.framedata.dtos.FramedataResponseDto;
 import com.garfield.framedataapi.framedata.exceptions.FramedataNotFoundException;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
-import com.garfield.framedataapi.gameCharacters.GameCharactersService;
+import com.garfield.framedataapi.gameCharacters.GameCharacterService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -29,7 +29,7 @@ public class FramedataController extends BaseApiController {
     public static final String REQUEST_MAPPING = "framedata";
 
     private final FramedataService framedataService;
-    private final GameCharactersService gameCharactersService;
+    private final GameCharacterService gameCharacterService;
 
     @Override
     public String getRequestMapping() {
@@ -41,7 +41,7 @@ public class FramedataController extends BaseApiController {
     public ResponseEntity<ApiResponse<FramedataResponseDto>> createFramedata(
             @PathVariable String characterNameOrUuid,
             @Valid @RequestBody CreateFramedataDto dto) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
 
         Framedata framedata = new Framedata(
                 gameCharacter,
@@ -75,7 +75,7 @@ public class FramedataController extends BaseApiController {
     @GetMapping("character/{characterNameOrUuid}")
     public ResponseEntity<ApiResponse<FramedataResponseDto>> getAllFramedataForCharacter(
             @PathVariable String characterNameOrUuid) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
         Set<Framedata> framedata = gameCharacter.getFramedata();
 
         return ApiResponseEntity.ok(new FramedataResponseDto(framedata));
@@ -86,7 +86,7 @@ public class FramedataController extends BaseApiController {
     public ResponseEntity<ApiResponse<List<FramedataResponseDto>>> getFramedataByInput(
             @PathVariable String characterNameOrUuid,
             @PathVariable String input) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
         Set<Framedata> characterFramedata = gameCharacter.getFramedata().stream()
                 .filter(fd -> fd
                         .getIdentity()

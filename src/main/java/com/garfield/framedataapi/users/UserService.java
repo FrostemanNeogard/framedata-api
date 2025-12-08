@@ -1,7 +1,7 @@
 package com.garfield.framedataapi.users;
 
 import com.garfield.framedataapi.bannedUsers.BannedUser;
-import com.garfield.framedataapi.bannedUsers.BannedUsersService;
+import com.garfield.framedataapi.bannedUsers.BannedUserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -12,17 +12,17 @@ import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
-public class UsersService {
+public class UserService {
 
-    private final UsersRepository usersRepository;
-    private final BannedUsersService bannedUsersService;
+    private final UserRepository userRepository;
+    private final BannedUserService bannedUserService;
 
     public Optional<User> findByEmail(String email) {
-        return usersRepository.findByEmail(email);
+        return userRepository.findByEmail(email);
     }
 
     public List<User> getAllUsers() {
-        return usersRepository.findAll();
+        return userRepository.findAll();
     }
 
     public Collection<? extends GrantedAuthority> getAuthorities(User user) {
@@ -39,7 +39,7 @@ public class UsersService {
     }
 
     public void banUser(User user, Date bannedUntil, String reason) {
-        this.bannedUsersService.createBannedUser(new BannedUser(user, bannedUntil, reason));
+        this.bannedUserService.createBannedUser(new BannedUser(user, bannedUntil, reason));
     }
 
 }

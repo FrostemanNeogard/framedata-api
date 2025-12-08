@@ -8,9 +8,9 @@ import com.garfield.framedataapi.aliases.dtos.AliasDto;
 import com.garfield.framedataapi.aliases.dtos.CreateAliasDto;
 import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
-import com.garfield.framedataapi.gameCharacters.GameCharactersService;
+import com.garfield.framedataapi.gameCharacters.GameCharacterService;
 import com.garfield.framedataapi.games.Game;
-import com.garfield.framedataapi.games.GamesService;
+import com.garfield.framedataapi.games.GameService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -20,15 +20,15 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Controller
-@RequestMapping(AliasesController.REQUEST_MAPPING)
+@RequestMapping(AliasController.REQUEST_MAPPING)
 @RequiredArgsConstructor
-public class AliasesController extends BaseApiController {
+public class AliasController extends BaseApiController {
 
     public static final String REQUEST_MAPPING = "aliases";
 
-    private final AliasesService aliasesService;
-    private final GameCharactersService gameCharactersService;
-    private final GamesService gamesService;
+    private final AliasService aliasService;
+    private final GameCharacterService gameCharacterService;
+    private final GameService gameService;
 
     @Override
     public String getRequestMapping() {
@@ -40,8 +40,8 @@ public class AliasesController extends BaseApiController {
     public ResponseEntity<ApiResponse<AliasDto>> getAliasByIdentifier(
             @PathVariable String gameNameOrUuid,
             @PathVariable String aliasNameOrUuid) {
-        Game game = this.gamesService.getGameByIdentifier(gameNameOrUuid);
-        Alias alias = this.aliasesService.getAliasByGameAndIdentifier(game, aliasNameOrUuid);
+        Game game = this.gameService.getGameByIdentifier(gameNameOrUuid);
+        Alias alias = this.aliasService.getAliasByGameAndIdentifier(game, aliasNameOrUuid);
 
         return ApiResponseEntity.ok(AliasDto.fromEntity(alias));
     }
@@ -50,7 +50,7 @@ public class AliasesController extends BaseApiController {
     @GetMapping("character/{characterNameOrUuid}")
     public ResponseEntity<ApiResponse<Set<AliasDto>>> getAliasesForCharacter(
             @PathVariable String characterNameOrUuid) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
 
         return ApiResponseEntity.ok(gameCharacter.getAliases().stream()
                 .map(AliasDto::fromEntity).collect(Collectors.toSet())
@@ -61,10 +61,10 @@ public class AliasesController extends BaseApiController {
     @PostMapping
     public ResponseEntity<ApiResponse<AliasDto>> createAlias(
             @RequestBody CreateAliasDto createAliasDto) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterById(createAliasDto.characterId());
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterById(createAliasDto.characterId());
         Alias alias = new Alias(createAliasDto.aliasName(), gameCharacter);
 
-        this.aliasesService.createAlias(alias);
+        this.aliasService.createAlias(alias);
 
         return ApiResponseEntity.created(createControllerUri(alias.getId()));
     }

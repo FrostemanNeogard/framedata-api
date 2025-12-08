@@ -1,7 +1,7 @@
 package com.garfield.framedataapi.roles;
 
 import com.garfield.framedataapi.users.User;
-import com.garfield.framedataapi.users.UsersRepository;
+import com.garfield.framedataapi.users.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -10,17 +10,17 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-public class RolesService {
+public class RoleService {
 
-    private final RolesRepository rolesRepository;
-    private final UsersRepository usersRepository;
+    private final RoleRepository roleRepository;
+    private final UserRepository userRepository;
 
     public Optional<Role> findByName(String name) {
-        return rolesRepository.findByName(name);
+        return roleRepository.findByName(name);
     }
 
     public List<User> getUsersByRole(Role role) {
-        return usersRepository.findByRoles(role);
+        return userRepository.findByRoles(role);
     }
 
 }

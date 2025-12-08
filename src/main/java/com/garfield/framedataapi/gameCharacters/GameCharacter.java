@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 import java.util.Set;
 
 @Entity
-@Table(name = "game_characters")
+@Table(name = "game_character")
 @Getter
 @NoArgsConstructor
 public class GameCharacter extends BaseEntity {

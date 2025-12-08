@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.util.Date;
 
 @Entity
-@Table(name = "banned_users")
+@Table(name = "banned_user")
 @NoArgsConstructor
 @Getter
 public class BannedUser extends BaseEntity {

@@ -10,14 +10,14 @@ import java.util.concurrent.atomic.AtomicBoolean;
 
 @Service
 @RequiredArgsConstructor
-public class BannedUsersService {
+public class BannedUserService {
 
-    private final BannedUsersRepository bannedUsersRepository;
+    private final BannedUserRepository bannedUserRepository;
 
     public boolean isUserBanned(User user) {
         AtomicBoolean isBanned = new AtomicBoolean(false);
 
-        this.bannedUsersRepository.findAllByUser(user).forEach(bannedUser -> {
+        this.bannedUserRepository.findAllByUser(user).forEach(bannedUser -> {
             if (bannedUser.getBannedUntil().after(new Date())) {
                 isBanned.set(true);
             }
@@ -27,11 +27,11 @@ public class BannedUsersService {
     }
 
     public List<BannedUser> getAllBannedUsers() {
-        return this.bannedUsersRepository.findAll();
+        return this.bannedUserRepository.findAll();
     }
 
     public void createBannedUser(BannedUser bannedUser) {
-        this.bannedUsersRepository.save(bannedUser);
+        this.bannedUserRepository.save(bannedUser);
     }
 
 }

@@ -11,12 +11,12 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class AliasesService {
+public class AliasService {
 
-    private final AliasesRepository aliasesRepository;
+    private final AliasRepository aliasRepository;
 
     public void createAlias(Alias alias) {
-        Optional<Alias> existingAlias = this.aliasesRepository.findByGameCharacterAndAliasName(
+        Optional<Alias> existingAlias = this.aliasRepository.findByGameCharacterAndAliasName(
                 alias.getGameCharacter(),
                 alias.getAliasName()
         );
@@ -25,7 +25,7 @@ public class AliasesService {
             throw new AliasAlreadyExistsException(existingAlias.get());
         }
 
-        this.aliasesRepository.save(alias);
+        this.aliasRepository.save(alias);
     }
 
     public Alias getAliasByGameAndIdentifier(Game game, String identifier) throws AliasNotFoundException {
@@ -37,7 +37,7 @@ public class AliasesService {
     }
 
     public Alias getAliasById(UUID uuid) {
-        Optional<Alias> alias = this.aliasesRepository.findById(uuid);
+        Optional<Alias> alias = this.aliasRepository.findById(uuid);
 
         if (alias.isEmpty()) {
             throw new AliasNotFoundException(uuid);
@@ -47,7 +47,7 @@ public class AliasesService {
     }
 
     private Alias getAliasByName(Game game, String name) {
-        Optional<Alias> alias = this.aliasesRepository.findByGameAndAliasName(game, name);
+        Optional<Alias> alias = this.aliasRepository.findByGameAndAliasName(game, name);
 
         if (alias.isEmpty()) {
             throw new AliasNotFoundException(game, name);

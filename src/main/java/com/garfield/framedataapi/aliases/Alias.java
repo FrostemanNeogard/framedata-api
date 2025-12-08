@@ -8,7 +8,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "aliases")
+@Table(name = "alias")
 @Getter
 @NoArgsConstructor
 public class Alias extends BaseEntity {

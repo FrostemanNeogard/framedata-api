@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.List;
 
 @Controller
-@RequestMapping(UsersController.REQUEST_MAPPING)
+@RequestMapping(UserController.REQUEST_MAPPING)
 @RequiredArgsConstructor
-public class UsersController extends BaseApiController {
+public class UserController extends BaseApiController {
 
     public static final String REQUEST_MAPPING = "users";
 
-    private final UsersService usersService;
+    private final UserService userService;
 
     @Override
     public String getRequestMapping() {
@@ -28,6 +28,6 @@ public class UsersController extends BaseApiController {
 
     @GetMapping
     public ResponseEntity<ApiResponse<List<UserDto>>> getUsers() {
-        return ApiResponseEntity.ok(UserDto.fromEntityList(this.usersService.getAllUsers()));
+        return ApiResponseEntity.ok(UserDto.fromEntityList(this.userService.getAllUsers()));
     }
 }

@@ -18,13 +18,13 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller
-@RequestMapping(GamesController.REQUEST_MAPPING)
+@RequestMapping(GameController.REQUEST_MAPPING)
 @RequiredArgsConstructor
-public class GamesController extends BaseApiController {
+public class GameController extends BaseApiController {
 
     public static final String REQUEST_MAPPING = "games";
 
-    private final GamesService gamesService;
+    private final GameService gameService;
 
     @Override
     public String getRequestMapping() {
@@ -35,14 +35,14 @@ public class GamesController extends BaseApiController {
     @GetMapping()
     public ResponseEntity<ApiResponse<List<GameDto>>> getAllGames() {
         return ApiResponseEntity.ok(
-                this.gamesService.getAllGames().stream().map(GameDto::fromEntity).toList()
+                this.gameService.getAllGames().stream().map(GameDto::fromEntity).toList()
         );
     }
 
     @Public
     @GetMapping("identifier/{nameOrUuid}")
     public ResponseEntity<ApiResponse<GameDto>> getGameByNameOrUuid(@PathVariable String nameOrUuid) {
-        Game game = this.gamesService.getGameByIdentifier(nameOrUuid);
+        Game game = this.gameService.getGameByIdentifier(nameOrUuid);
 
         return ApiResponseEntity.ok(GameDto.fromEntity(game));
     }
@@ -56,7 +56,7 @@ public class GamesController extends BaseApiController {
                 dto.name(),
                 template);
 
-        this.gamesService.createGame(newGame);
+        this.gameService.createGame(newGame);
 
         return ApiResponseEntity.created(createControllerUri(newGame.getId().toString()));
     }
@@ -64,7 +64,7 @@ public class GamesController extends BaseApiController {
     @Admin
     @DeleteMapping("identifier/{gameId}")
     public ResponseEntity<ApiResponse<Void>> deleteGame(@PathVariable UUID gameId) {
-        this.gamesService.deleteGameById(gameId);
+        this.gameService.deleteGameById(gameId);
 
         return ApiResponseEntity.deleted();
     }

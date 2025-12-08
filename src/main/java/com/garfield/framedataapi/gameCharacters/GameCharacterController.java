@@ -8,7 +8,7 @@ import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.dtos.CreateGameCharacterDto;
 import com.garfield.framedataapi.gameCharacters.dtos.GameCharacterDto;
 import com.garfield.framedataapi.games.Game;
-import com.garfield.framedataapi.games.GamesService;
+import com.garfield.framedataapi.games.GameService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -18,14 +18,14 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Controller
-@RequestMapping(GameCharactersController.REQUEST_MAPPING)
+@RequestMapping(GameCharacterController.REQUEST_MAPPING)
 @RequiredArgsConstructor
-public class GameCharactersController extends BaseApiController {
+public class GameCharacterController extends BaseApiController {
 
     public static final String REQUEST_MAPPING = "characters";
 
-    private final GameCharactersService gameCharactersService;
-    private final GamesService gamesService;
+    private final GameCharacterService gameCharacterService;
+    private final GameService gameService;
 
     @Override
     public String getRequestMapping() {
@@ -36,7 +36,7 @@ public class GameCharactersController extends BaseApiController {
     @GetMapping("name/{nameOrUuidd}")
     public ResponseEntity<ApiResponse<GameCharacterDto>> getGameCharacterByNameOrUuid(
             @PathVariable String nameOrUuid) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(nameOrUuid);
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(nameOrUuid);
 
         return ApiResponseEntity.ok(GameCharacterDto.fromEntity(gameCharacter));
     }
@@ -45,7 +45,7 @@ public class GameCharactersController extends BaseApiController {
     @GetMapping("game/{gameNameOrUuid}")
     public ResponseEntity<ApiResponse<Set<GameCharacterDto>>> getGameCharactersByGame(
             @PathVariable String gameNameOrUuid) {
-        Game game = this.gamesService.getGameByIdentifier(gameNameOrUuid);
+        Game game = this.gameService.getGameByIdentifier(gameNameOrUuid);
 
         return ApiResponseEntity.ok(
                 game.getGameCharacters().stream().map(GameCharacterDto::fromEntity).collect(Collectors.toSet())
@@ -56,10 +56,10 @@ public class GameCharactersController extends BaseApiController {
     @PostMapping
     public ResponseEntity<ApiResponse<GameCharacterDto>> createGameCharacter(
             @RequestBody CreateGameCharacterDto dto) {
-        Game game = this.gamesService.getGameById(dto.gameId());
+        Game game = this.gameService.getGameById(dto.gameId());
         GameCharacter newGameCharacter = new GameCharacter(dto.name(), game);
 
-        this.gameCharactersService.createGameCharacter(newGameCharacter);
+        this.gameCharacterService.createGameCharacter(newGameCharacter);
 
         return ApiResponseEntity.created(createControllerUri(String.format("name/%s", newGameCharacter.getId())));
     }
