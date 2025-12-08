@@ -6,17 +6,17 @@ import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import com.garfield.framedataapi.config.structure.BaseApiController;
 import com.garfield.framedataapi.framedata.dtos.CreateFramedataDto;
-import com.garfield.framedataapi.framedata.dtos.FramedataDto;
+import com.garfield.framedataapi.framedata.dtos.FramedataResponseDto;
+import com.garfield.framedataapi.framedata.exceptions.FramedataNotFoundException;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharactersService;
-import com.garfield.framedataapi.gameCharacters.exceptions.AmbiguousGameCharacterNameException;
-import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -36,58 +36,71 @@ public class FramedataController extends BaseApiController {
         return REQUEST_MAPPING;
     }
 
-    @Public
-    @GetMapping("{framedataId}")
-    public ResponseEntity<ApiResponse<FramedataDto>> getFramedataById(
-            @PathVariable("framedataId")
-            UUID framedataId) {
-        Framedata framedata = this.framedataService.getFramedataById(framedataId);
-
-        return ApiResponseEntity.ok(FramedataDto.fromEntity(framedata));
-    }
-
-    @Public
-    @GetMapping("character/{characterNameOrUuid}")
-    public ResponseEntity<ApiResponse<Set<FramedataDto>>> getAllFramedataForCharacter(
-            @PathVariable("characterNameOrUuid") String characterNameOrUuid) {
-        Set<GameCharacter> gameCharacter;
-
-        try {
-            gameCharacter = Set
-                    .of(this.gameCharactersService.getGameCharacterById(UUID.fromString(characterNameOrUuid)));
-        } catch (IllegalArgumentException e) {
-            gameCharacter = this.gameCharactersService.getGameCharactersByName(characterNameOrUuid);
-        }
-
-        if (gameCharacter.isEmpty()) {
-            throw new GameCharacterNotFoundException(characterNameOrUuid);
-        }
-
-        if (gameCharacter.size() > 1) {
-            throw new AmbiguousGameCharacterNameException(characterNameOrUuid);
-        }
-
-        Set<Framedata> framedata = this.framedataService.getFramedataForCharacter(gameCharacter.iterator().next());
-
-        return ApiResponseEntity.ok(framedata
-                .stream()
-                .map(FramedataDto::fromEntity)
-                .collect(Collectors.toSet()));
-    }
-
     @Admin
     @PostMapping
-    public ResponseEntity<ApiResponse<FramedataDto>> createFramedata(@Valid @RequestBody CreateFramedataDto dto) {
+    public ResponseEntity<ApiResponse<FramedataResponseDto>> createFramedata(@Valid @RequestBody CreateFramedataDto dto) {
         GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterById(dto.characterId());
 
         Framedata framedata = new Framedata(
                 gameCharacter,
                 dto.identity(),
-                dto.attributes());
+                dto.data());
 
         this.framedataService.createFramedata(framedata);
 
         return ApiResponseEntity.created(createControllerUri(framedata.getId()));
+    }
+
+    @Admin
+    @DeleteMapping("{framedataId}")
+    public ResponseEntity<ApiResponse<Void>> deleteFramedata(@PathVariable("framedataId") UUID framedataId) {
+        Framedata framedata = this.framedataService.getFramedataById(framedataId);
+
+        this.framedataService.deleteFramedata(framedata);
+
+        return ApiResponseEntity.deleted();
+    }
+
+    @Public
+    @GetMapping("{framedataId}")
+    public ResponseEntity<ApiResponse<FramedataResponseDto>> getFramedataById(
+            @PathVariable("framedataId")
+            UUID framedataId) {
+        Framedata framedata = this.framedataService.getFramedataById(framedataId);
+
+        return ApiResponseEntity.ok(new FramedataResponseDto(framedata));
+    }
+
+    @Public
+    @GetMapping("character/{characterNameOrUuid}")
+    public ResponseEntity<ApiResponse<FramedataResponseDto>> getAllFramedataForCharacter(
+            @PathVariable("characterNameOrUuid") String characterNameOrUuid) {
+        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
+        Set<Framedata> framedata = gameCharacter.getFramedata();
+
+        return ApiResponseEntity.ok(new FramedataResponseDto(framedata));
+    }
+
+    @Public
+    @GetMapping("character/{characterNameOrUuid}/identifier/{input}")
+    public ResponseEntity<ApiResponse<List<FramedataResponseDto>>> getFramedataByInput(
+            @PathVariable("characterNameOrUuid") String characterNameOrUuid,
+            @PathVariable("input") String input) {
+        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
+        Set<Framedata> characterFramedata = gameCharacter.getFramedata().stream()
+                .filter(fd -> fd
+                        .getIdentity()
+                        .getIdentifiers()
+                        .contains(input)
+                ).collect(Collectors.toSet());
+
+        if (characterFramedata.isEmpty()) {
+            throw new FramedataNotFoundException(gameCharacter, input);
+        }
+
+        List<FramedataResponseDto> framedataResponseDtos = characterFramedata.stream().map(FramedataResponseDto::new).toList();
+
+        return ApiResponseEntity.ok(framedataResponseDtos);
     }
 
 }
