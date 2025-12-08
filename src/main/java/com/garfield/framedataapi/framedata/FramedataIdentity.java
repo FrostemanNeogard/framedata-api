@@ -2,6 +2,7 @@ package com.garfield.framedataapi.framedata;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,6 +22,7 @@ public class FramedataIdentity {
 
     @JdbcTypeCode(SqlTypes.JSON)
     @Column(columnDefinition = "jsonb")
+    @NotEmpty
     private List<String> identifiers = new ArrayList<>();
 
     @JdbcTypeCode(SqlTypes.JSON)
