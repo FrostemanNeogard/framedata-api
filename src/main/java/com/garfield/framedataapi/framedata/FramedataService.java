@@ -1,9 +1,6 @@
 package com.garfield.framedataapi.framedata;
 
-import com.garfield.framedataapi.framedata.exceptions.FramedataDoesNotMatchGameTemplateException;
-import com.garfield.framedataapi.framedata.exceptions.FramedataEmptyException;
-import com.garfield.framedataapi.framedata.exceptions.FramedataJsonInvalidFieldTypeException;
-import com.garfield.framedataapi.framedata.exceptions.FramedataNotFoundException;
+import com.garfield.framedataapi.framedata.exceptions.*;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
@@ -38,7 +35,7 @@ public class FramedataService {
     }
 
     private void validateFramedataContainsOnlyStringsAndMatchesTemplate(Framedata framedata) {
-        this.validateOnlyStrings(framedata.getData().getAttributes());
+        this.validateOnlyEmptyStrings(framedata.getData().getAttributes());
         this.validateFramedataMatchesTemplate(framedata);
     }
 
@@ -75,24 +72,27 @@ public class FramedataService {
         }
     }
 
-    public void validateOnlyStrings(List<?> list) {
-        this.validateNodeOnlyContainsStrings(list);
+    public void validateOnlyEmptyStrings(List<?> list) {
+        this.validateNodeOnlyContainsEmptyStrings(list);
     }
 
-    public void validateOnlyStrings(Map<?, ?> map) {
-        this.validateNodeOnlyContainsStrings(map);
+    public void validateOnlyEmptyStrings(Map<?, ?> map) {
+        this.validateNodeOnlyContainsEmptyStrings(map);
     }
 
-    public void validateOnlyStrings(String string) {
-        this.validateNodeOnlyContainsStrings(string);
+    public void validateOnlyEmptyStrings(String string) {
+        this.validateNodeOnlyContainsEmptyStrings(string);
     }
 
-    private void validateNodeOnlyContainsStrings(Object node) {
+    private void validateNodeOnlyContainsEmptyStrings(Object node) {
         switch (node) {
-            case String ignored -> {
+            case String s -> {
+                if (!s.isEmpty()) {
+                    throw new FramedataTemplateJsonInvalidFieldValueException(s);
+                }
             }
-            case Map<?, ?> map -> map.values().forEach(this::validateNodeOnlyContainsStrings);
-            case List<?> list -> list.forEach(this::validateNodeOnlyContainsStrings);
+            case Map<?, ?> map -> map.values().forEach(this::validateNodeOnlyContainsEmptyStrings);
+            case List<?> list -> list.forEach(this::validateNodeOnlyContainsEmptyStrings);
             default -> throw new FramedataJsonInvalidFieldTypeException(
                     node.getClass().getSimpleName(),
                     node.getClass().getTypeName()

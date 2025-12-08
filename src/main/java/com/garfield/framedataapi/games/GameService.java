@@ -53,7 +53,7 @@ public class GameService {
             this.getGameByIdentifier(game.getName());
             throw new GameAlreadyExistsException(game);
         } catch (GameNotFoundException e) {
-            this.framedataService.validateOnlyStrings(game.getAttributesTemplate().getAttributes());
+            this.framedataService.validateOnlyEmptyStrings(game.getAttributesTemplate().getAttributes());
             this.gameRepository.save(game);
         }
     }
