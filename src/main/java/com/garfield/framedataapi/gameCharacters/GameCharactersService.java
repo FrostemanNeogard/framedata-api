@@ -1,5 +1,6 @@
 package com.garfield.framedataapi.gameCharacters;
 
+import com.garfield.framedataapi.gameCharacters.exceptions.AmbiguousGameCharacterNameException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyExistsException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
@@ -48,5 +49,26 @@ public class GameCharactersService {
 
         this.gameCharactersRepository.save(gameCharacter);
     }
-    
+
+    public GameCharacter getGameCharacterByIdentifier(String input) {
+        Set<GameCharacter> gameCharacter;
+
+        try {
+            gameCharacter = Set
+                    .of(getGameCharacterById(UUID.fromString(input)));
+        } catch (IllegalArgumentException e) {
+            gameCharacter = getGameCharactersByName(input);
+        }
+
+        if (gameCharacter.isEmpty()) {
+            throw new GameCharacterNotFoundException(input);
+        }
+
+        if (gameCharacter.size() > 1) {
+            throw new AmbiguousGameCharacterNameException(input);
+        }
+
+        return gameCharacter.iterator().next();
+    }
+
 }
