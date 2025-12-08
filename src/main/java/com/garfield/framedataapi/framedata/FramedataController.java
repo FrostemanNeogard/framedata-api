@@ -37,9 +37,11 @@ public class FramedataController extends BaseApiController {
     }
 
     @Admin
-    @PostMapping
-    public ResponseEntity<ApiResponse<FramedataResponseDto>> createFramedata(@Valid @RequestBody CreateFramedataDto dto) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterById(dto.characterId());
+    @PostMapping("character/{characterNameOrUuid}")
+    public ResponseEntity<ApiResponse<FramedataResponseDto>> createFramedata(
+            @PathVariable("characterNameOrUuid") String characterId,
+            @Valid @RequestBody CreateFramedataDto dto) {
+        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterId);
 
         Framedata framedata = new Framedata(
                 gameCharacter,
@@ -52,7 +54,7 @@ public class FramedataController extends BaseApiController {
     }
 
     @Admin
-    @DeleteMapping("{framedataId}")
+    @DeleteMapping("identifier/{framedataId}")
     public ResponseEntity<ApiResponse<Void>> deleteFramedata(@PathVariable("framedataId") UUID framedataId) {
         Framedata framedata = this.framedataService.getFramedataById(framedataId);
 
@@ -62,7 +64,7 @@ public class FramedataController extends BaseApiController {
     }
 
     @Public
-    @GetMapping("{framedataId}")
+    @GetMapping("identifier/{framedataId}")
     public ResponseEntity<ApiResponse<FramedataResponseDto>> getFramedataById(
             @PathVariable("framedataId")
             UUID framedataId) {
