@@ -100,4 +100,8 @@ public class FramedataService {
         }
     }
 
+    public void deleteFramedata(Framedata framedata) {
+        this.framedataRepository.delete(framedata);
+    }
+
 }
