@@ -6,8 +6,10 @@ import java.util.List;
 import java.util.UUID;
 
 public interface GamesRepository extends ListCrudRepository<Game, UUID> {
-    Game getByName(String name);
+    Game getByNameIgnoreCase(String name);
+
     List<Game> findAll();
+
     Game getById(UUID id);
 }
 

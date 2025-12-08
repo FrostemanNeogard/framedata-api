@@ -16,7 +16,15 @@ public class GamesService {
     private final GamesRepository gamesRepo;
     private final FramedataService framedataService;
 
-    public Game getGameByIdentifier(UUID id) throws GameNotFoundException {
+    public Game getGameByIdentifier(String identifier) throws GameNotFoundException {
+        try {
+            return getGameById(UUID.fromString(identifier));
+        } catch (IllegalArgumentException e) {
+            return getGameByName(identifier);
+        }
+    }
+
+    public Game getGameById(UUID id) throws GameNotFoundException {
         Game game = this.gamesRepo.getById(id);
 
         if (game == null) {
@@ -26,8 +34,8 @@ public class GamesService {
         return game;
     }
 
-    public Game getGameByIdentifier(String name) throws GameNotFoundException {
-        Game game = this.gamesRepo.getByName(name);
+    private Game getGameByName(String name) throws GameNotFoundException {
+        Game game = this.gamesRepo.getByNameIgnoreCase(name);
 
         if (game == null) {
             throw new GameNotFoundException(name);

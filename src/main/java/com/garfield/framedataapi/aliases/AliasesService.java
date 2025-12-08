@@ -28,7 +28,15 @@ public class AliasesService {
         this.aliasesRepository.save(alias);
     }
 
-    public Alias getAliasByIdentifier(UUID uuid) {
+    public Alias getAliasByGameAndIdentifier(Game game, String identifier) throws AliasNotFoundException {
+        try {
+            return getAliasById(UUID.fromString(identifier));
+        } catch (IllegalArgumentException e) {
+            return getAliasByName(game, identifier);
+        }
+    }
+
+    public Alias getAliasById(UUID uuid) {
         Optional<Alias> alias = this.aliasesRepository.findById(uuid);
 
         if (alias.isEmpty()) {
@@ -38,7 +46,7 @@ public class AliasesService {
         return alias.get();
     }
 
-    public Alias getAliasByIdentifier(Game game, String name) {
+    private Alias getAliasByName(Game game, String name) {
         Optional<Alias> alias = this.aliasesRepository.findByGameAndAliasName(game, name);
 
         if (alias.isEmpty()) {

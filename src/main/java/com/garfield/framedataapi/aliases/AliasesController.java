@@ -9,7 +9,6 @@ import com.garfield.framedataapi.aliases.dtos.CreateAliasDto;
 import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharactersService;
-import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
 import com.garfield.framedataapi.games.Game;
 import com.garfield.framedataapi.games.GamesService;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +17,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
-import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Controller
@@ -42,47 +40,20 @@ public class AliasesController extends BaseApiController {
     public ResponseEntity<ApiResponse<AliasDto>> getAliasByIdentifier(
             @PathVariable("gameNameOrUuid") String gameNameOrUuid,
             @PathVariable("aliasNameOrUuid") String aliasNameOrUuid) {
-        Game game;
-
-        try {
-            game = this.gamesService.getGameByIdentifier(UUID.fromString(gameNameOrUuid));
-        } catch (IllegalArgumentException e) {
-            game = this.gamesService.getGameByIdentifier(gameNameOrUuid);
-        }
-
-        Alias alias;
-
-        try {
-            alias = this.aliasesService.getAliasByIdentifier(UUID.fromString(aliasNameOrUuid));
-        } catch (IllegalArgumentException e) {
-            alias = this.aliasesService.getAliasByIdentifier(game, aliasNameOrUuid);
-        }
+        Game game = this.gamesService.getGameByIdentifier(gameNameOrUuid);
+        Alias alias = this.aliasesService.getAliasByGameAndIdentifier(game, aliasNameOrUuid);
 
         return ApiResponseEntity.ok(AliasDto.fromEntity(alias));
     }
 
     @Public
     @GetMapping("character/{characterNameOrUuid}")
-    public ResponseEntity<ApiResponse<Set<Set<AliasDto>>>> getAliasesForCharacter(
+    public ResponseEntity<ApiResponse<Set<AliasDto>>> getAliasesForCharacter(
             @PathVariable String characterNameOrUuid) {
-        Set<GameCharacter> gameCharacters;
+        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
 
-        try {
-            gameCharacters = Set.of(this.gameCharactersService.getGameCharacterById(UUID.fromString(characterNameOrUuid)));
-        } catch (IllegalArgumentException e) {
-            gameCharacters = this.gameCharactersService.getGameCharactersByName(characterNameOrUuid);
-        }
-
-        if (gameCharacters.isEmpty()) {
-            throw new GameCharacterNotFoundException(characterNameOrUuid);
-        }
-
-        Set<Set<Alias>> aliases = gameCharacters.stream().map(GameCharacter::getAliases).collect(Collectors.toSet());
-
-        return ApiResponseEntity.ok(aliases.stream()
-                .map(a -> a.stream()
-                        .map(AliasDto::fromEntity).collect(Collectors.toSet()))
-                .collect(Collectors.toSet())
+        return ApiResponseEntity.ok(gameCharacter.getAliases().stream()
+                .map(AliasDto::fromEntity).collect(Collectors.toSet())
         );
     }
 

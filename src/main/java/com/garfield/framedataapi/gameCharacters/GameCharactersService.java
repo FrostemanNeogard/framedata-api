@@ -18,26 +18,6 @@ public class GameCharactersService {
 
     private final GameCharactersRepository gameCharactersRepository;
 
-    public GameCharacter getGameCharacterById(UUID id) throws GameNotFoundException {
-        Optional<GameCharacter> gameCharacter = this.gameCharactersRepository.findById(id);
-
-        if (gameCharacter.isEmpty()) {
-            throw new GameCharacterNotFoundException(id);
-        }
-
-        return gameCharacter.get();
-    }
-
-    public Set<GameCharacter> getGameCharactersByName(String name) throws GameNotFoundException {
-        Set<GameCharacter> gameCharacter = this.gameCharactersRepository.findAllByName(name);
-
-        if (gameCharacter.isEmpty()) {
-            throw new GameCharacterNotFoundException(name);
-        }
-
-        return gameCharacter;
-    }
-
     public void createGameCharacter(GameCharacter gameCharacter) {
         Set<GameCharacter> existingCharacter = gameCharacter.getGame().getGameCharacters()
                 .stream()
@@ -69,6 +49,26 @@ public class GameCharactersService {
         }
 
         return gameCharacter.iterator().next();
+    }
+
+    public GameCharacter getGameCharacterById(UUID id) throws GameNotFoundException {
+        Optional<GameCharacter> gameCharacter = this.gameCharactersRepository.findById(id);
+
+        if (gameCharacter.isEmpty()) {
+            throw new GameCharacterNotFoundException(id);
+        }
+
+        return gameCharacter.get();
+    }
+
+    private Set<GameCharacter> getGameCharactersByName(String name) throws GameNotFoundException {
+        Set<GameCharacter> gameCharacter = this.gameCharactersRepository.findAllByName(name);
+
+        if (gameCharacter.isEmpty()) {
+            throw new GameCharacterNotFoundException(name);
+        }
+
+        return gameCharacter;
     }
 
 }
