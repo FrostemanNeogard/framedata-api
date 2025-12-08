@@ -40,7 +40,7 @@ public class GamesController extends BaseApiController {
     }
 
     @Public
-    @GetMapping("name/{nameOrUuid}")
+    @GetMapping("identifier/{nameOrUuid}")
     public ResponseEntity<ApiResponse<GameDto>> getGameByNameOrUuid(@PathVariable String nameOrUuid) {
         Game game = this.gamesService.getGameByIdentifier(nameOrUuid);
 
@@ -62,7 +62,7 @@ public class GamesController extends BaseApiController {
     }
 
     @Admin
-    @DeleteMapping("{gameId}")
+    @DeleteMapping("identifier/{gameId}")
     public ResponseEntity<ApiResponse<Void>> deleteGame(@PathVariable UUID gameId) {
         this.gamesService.deleteGameById(gameId);
 
