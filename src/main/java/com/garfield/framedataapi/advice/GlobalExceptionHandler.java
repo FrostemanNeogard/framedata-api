@@ -12,6 +12,7 @@ import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
 import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJsonException;
 import com.garfield.framedataapi.users.exceptions.UserBannedException;
+import com.garfield.framedataapi.users.exceptions.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -144,6 +145,12 @@ public class GlobalExceptionHandler {
     public ResponseEntity<ApiResponse<String>> handleUserBannedException(UserBannedException e) {
         logError(e);
         return ApiResponseEntity.error(HttpStatus.FORBIDDEN, e.getMessage());
+    }
+
+    @ExceptionHandler({UserNotFoundException.class})
+    public ResponseEntity<ApiResponse<String>> handleUserNotFoundException(UserNotFoundException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
     }
 
     private void logError(Exception e) {
