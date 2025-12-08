@@ -5,10 +5,10 @@ import com.garfield.framedataapi.games.Game;
 
 import java.util.UUID;
 
-public record GameDto(String name, UUID id, FramedataTemplate attributesTemplate) {
+public record GameDto(UUID id, String name, FramedataTemplate attributesTemplate) {
 
     public static GameDto fromEntity(Game game) {
-        return new GameDto(game.getName(), game.getId(), game.getAttributesTemplate());
+        return new GameDto(game.getId(), game.getName(), game.getAttributesTemplate());
     }
 
 }
