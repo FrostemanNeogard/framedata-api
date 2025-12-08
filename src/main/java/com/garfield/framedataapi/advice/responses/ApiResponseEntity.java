@@ -1,4 +1,4 @@
-package com.garfield.framedataapi.config.structure;
+package com.garfield.framedataapi.advice.responses;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

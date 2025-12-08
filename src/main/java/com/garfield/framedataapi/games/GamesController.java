@@ -1,10 +1,10 @@
 package com.garfield.framedataapi.games;
 
-import com.garfield.framedataapi.config.authorization.Admin;
-import com.garfield.framedataapi.config.authorization.Public;
-import com.garfield.framedataapi.config.structure.ApiResponse;
-import com.garfield.framedataapi.config.structure.ApiResponseEntity;
-import com.garfield.framedataapi.config.structure.BaseApiController;
+import com.garfield.framedataapi.advice.authorization.Admin;
+import com.garfield.framedataapi.advice.authorization.Public;
+import com.garfield.framedataapi.advice.responses.ApiResponse;
+import com.garfield.framedataapi.advice.responses.ApiResponseEntity;
+import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.framedata.FramedataTemplate;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
 import com.garfield.framedataapi.games.dto.GameDto;

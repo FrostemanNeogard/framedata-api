@@ -1,5 +1,6 @@
-package com.garfield.framedataapi.config.security;
+package com.garfield.framedataapi.config;
 
+import com.garfield.framedataapi.advice.security.JwtRequestFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;

@@ -1,7 +1,8 @@
-package com.garfield.framedataapi.config.validation;
+package com.garfield.framedataapi.advice.validation;
 
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
+
 import java.util.UUID;
 
 public class UuidValidator implements ConstraintValidator<ValidUuid, String> {

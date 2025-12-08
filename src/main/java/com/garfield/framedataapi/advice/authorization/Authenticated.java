@@ -1,4 +1,4 @@
-package com.garfield.framedataapi.config.authorization;
+package com.garfield.framedataapi.advice.authorization;
 
 import org.springframework.security.access.prepost.PreAuthorize;
 

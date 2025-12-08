@@ -1,8 +1,8 @@
-package com.garfield.framedataapi.config.security;
+package com.garfield.framedataapi.advice.security;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.garfield.framedataapi.advice.responses.ApiResponse;
 import com.garfield.framedataapi.bannedUsers.BannedUsersService;
-import com.garfield.framedataapi.config.structure.ApiResponse;
 import com.garfield.framedataapi.users.User;
 import com.garfield.framedataapi.users.UsersService;
 import com.garfield.framedataapi.users.exceptions.UserBannedException;
@@ -84,7 +84,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
 
                 }
             }
-            
+
             filterChain.doFilter(request, response);
         } catch (UserBannedException ex) {
             ApiResponse<String> errorResponse = ApiResponse.error(HttpStatus.FORBIDDEN, ex.getMessage());

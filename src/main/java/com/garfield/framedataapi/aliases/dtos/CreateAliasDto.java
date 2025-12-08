@@ -1,6 +1,6 @@
 package com.garfield.framedataapi.aliases.dtos;
 
-import com.garfield.framedataapi.config.validation.ValidUuid;
+import com.garfield.framedataapi.advice.validation.ValidUuid;
 import jakarta.validation.constraints.NotBlank;
 
 import java.util.UUID;

@@ -1,8 +1,8 @@
 package com.garfield.framedataapi.users;
 
-import com.garfield.framedataapi.config.structure.ApiResponse;
-import com.garfield.framedataapi.config.structure.ApiResponseEntity;
-import com.garfield.framedataapi.config.structure.BaseApiController;
+import com.garfield.framedataapi.advice.responses.ApiResponse;
+import com.garfield.framedataapi.advice.responses.ApiResponseEntity;
+import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.users.dtos.UserDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

@@ -1,4 +1,4 @@
-package com.garfield.framedataapi.config.structure;
+package com.garfield.framedataapi.advice.responses;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Getter;

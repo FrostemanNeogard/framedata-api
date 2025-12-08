@@ -1,9 +1,9 @@
-package com.garfield.framedataapi.config.exceptionHandler;
+package com.garfield.framedataapi.advice;
 
+import com.garfield.framedataapi.advice.responses.ApiResponse;
+import com.garfield.framedataapi.advice.responses.ApiResponseEntity;
 import com.garfield.framedataapi.aliases.exceptions.AliasAlreadyExistsException;
 import com.garfield.framedataapi.aliases.exceptions.AliasNotFoundException;
-import com.garfield.framedataapi.config.structure.ApiResponse;
-import com.garfield.framedataapi.config.structure.ApiResponseEntity;
 import com.garfield.framedataapi.framedata.exceptions.*;
 import com.garfield.framedataapi.gameCharacters.exceptions.AmbiguousGameCharacterNameException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyExistsException;
