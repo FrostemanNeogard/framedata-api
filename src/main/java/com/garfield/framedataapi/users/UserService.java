@@ -2,6 +2,7 @@ package com.garfield.framedataapi.users;
 
 import com.garfield.framedataapi.bannedUsers.BannedUser;
 import com.garfield.framedataapi.bannedUsers.BannedUserService;
+import com.garfield.framedataapi.users.exceptions.UserNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -23,6 +24,14 @@ public class UserService {
 
     public List<User> getAllUsers() {
         return userRepository.findAll();
+    }
+
+    public User getUserById(UUID id) {
+        return this.userRepository.findById(id).orElseThrow(() -> new UserNotFoundException(id));
+    }
+
+    public void deleteUser(User user) {
+        this.userRepository.delete(user);
     }
 
     public Collection<? extends GrantedAuthority> getAuthorities(User user) {
