@@ -39,9 +39,9 @@ public class FramedataController extends BaseApiController {
     @Admin
     @PostMapping("character/{characterNameOrUuid}")
     public ResponseEntity<ApiResponse<FramedataResponseDto>> createFramedata(
-            @PathVariable("characterNameOrUuid") String characterId,
+            @PathVariable String characterNameOrUuid,
             @Valid @RequestBody CreateFramedataDto dto) {
-        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterId);
+        GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
 
         Framedata framedata = new Framedata(
                 gameCharacter,
@@ -55,7 +55,7 @@ public class FramedataController extends BaseApiController {
 
     @Admin
     @DeleteMapping("identifier/{framedataId}")
-    public ResponseEntity<ApiResponse<Void>> deleteFramedata(@PathVariable("framedataId") UUID framedataId) {
+    public ResponseEntity<ApiResponse<Void>> deleteFramedata(@PathVariable UUID framedataId) {
         Framedata framedata = this.framedataService.getFramedataById(framedataId);
 
         this.framedataService.deleteFramedata(framedata);
@@ -65,9 +65,7 @@ public class FramedataController extends BaseApiController {
 
     @Public
     @GetMapping("identifier/{framedataId}")
-    public ResponseEntity<ApiResponse<FramedataResponseDto>> getFramedataById(
-            @PathVariable("framedataId")
-            UUID framedataId) {
+    public ResponseEntity<ApiResponse<FramedataResponseDto>> getFramedataById(@PathVariable UUID framedataId) {
         Framedata framedata = this.framedataService.getFramedataById(framedataId);
 
         return ApiResponseEntity.ok(new FramedataResponseDto(framedata));
@@ -76,7 +74,7 @@ public class FramedataController extends BaseApiController {
     @Public
     @GetMapping("character/{characterNameOrUuid}")
     public ResponseEntity<ApiResponse<FramedataResponseDto>> getAllFramedataForCharacter(
-            @PathVariable("characterNameOrUuid") String characterNameOrUuid) {
+            @PathVariable String characterNameOrUuid) {
         GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
         Set<Framedata> framedata = gameCharacter.getFramedata();
 
@@ -86,8 +84,8 @@ public class FramedataController extends BaseApiController {
     @Public
     @GetMapping("character/{characterNameOrUuid}/identifier/{input}")
     public ResponseEntity<ApiResponse<List<FramedataResponseDto>>> getFramedataByInput(
-            @PathVariable("characterNameOrUuid") String characterNameOrUuid,
-            @PathVariable("input") String input) {
+            @PathVariable String characterNameOrUuid,
+            @PathVariable String input) {
         GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(characterNameOrUuid);
         Set<Framedata> characterFramedata = gameCharacter.getFramedata().stream()
                 .filter(fd -> fd

@@ -35,7 +35,7 @@ public class GameCharactersController extends BaseApiController {
     @Public
     @GetMapping("name/{nameOrUuidd}")
     public ResponseEntity<ApiResponse<GameCharacterDto>> getGameCharacterByNameOrUuid(
-            @PathVariable("nameOrUuidd") String nameOrUuid) {
+            @PathVariable String nameOrUuid) {
         GameCharacter gameCharacter = this.gameCharactersService.getGameCharacterByIdentifier(nameOrUuid);
 
         return ApiResponseEntity.ok(GameCharacterDto.fromEntity(gameCharacter));
@@ -44,8 +44,8 @@ public class GameCharactersController extends BaseApiController {
     @Public
     @GetMapping("game/{gameNameOrUuid}")
     public ResponseEntity<ApiResponse<Set<GameCharacterDto>>> getGameCharactersByGame(
-            @PathVariable("gameNameOrUuid") String nameOrUuid) {
-        Game game = this.gamesService.getGameByIdentifier(nameOrUuid);
+            @PathVariable String gameNameOrUuid) {
+        Game game = this.gamesService.getGameByIdentifier(gameNameOrUuid);
 
         return ApiResponseEntity.ok(
                 game.getGameCharacters().stream().map(GameCharacterDto::fromEntity).collect(Collectors.toSet())

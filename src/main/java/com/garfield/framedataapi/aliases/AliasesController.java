@@ -38,8 +38,8 @@ public class AliasesController extends BaseApiController {
     @Public
     @GetMapping("game/{gameNameOrUuid}/alias/{aliasNameOrUuid}")
     public ResponseEntity<ApiResponse<AliasDto>> getAliasByIdentifier(
-            @PathVariable("gameNameOrUuid") String gameNameOrUuid,
-            @PathVariable("aliasNameOrUuid") String aliasNameOrUuid) {
+            @PathVariable String gameNameOrUuid,
+            @PathVariable String aliasNameOrUuid) {
         Game game = this.gamesService.getGameByIdentifier(gameNameOrUuid);
         Alias alias = this.aliasesService.getAliasByGameAndIdentifier(game, aliasNameOrUuid);
 
