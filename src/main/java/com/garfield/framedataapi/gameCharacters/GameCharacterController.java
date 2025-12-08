@@ -15,6 +15,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Set;
+import java.util.UUID;
 import java.util.stream.Collectors;
 
 @Controller
@@ -33,7 +34,7 @@ public class GameCharacterController extends BaseApiController {
     }
 
     @Public
-    @GetMapping("name/{nameOrUuidd}")
+    @GetMapping("identifier/{nameOrUuidd}")
     public ResponseEntity<ApiResponse<GameCharacterDto>> getGameCharacterByNameOrUuid(
             @PathVariable String nameOrUuid) {
         GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(nameOrUuid);
@@ -62,6 +63,16 @@ public class GameCharacterController extends BaseApiController {
         this.gameCharacterService.createGameCharacter(newGameCharacter);
 
         return ApiResponseEntity.created(createControllerUri(String.format("name/%s", newGameCharacter.getId())));
+    }
+
+    @Admin
+    @DeleteMapping("identifier/{gameCharacterId}")
+    public ResponseEntity<ApiResponse<Void>> deleteGameCharacterById(@PathVariable UUID gameCharacterId) {
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterById(gameCharacterId);
+
+        this.gameCharacterService.deleteGameCharacter(gameCharacter);
+
+        return ApiResponseEntity.deleted();
     }
 
 }

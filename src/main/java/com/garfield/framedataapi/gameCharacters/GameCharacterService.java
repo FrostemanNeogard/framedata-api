@@ -71,4 +71,8 @@ public class GameCharacterService {
         return gameCharacter;
     }
 
+    public void deleteGameCharacter(GameCharacter gameCharacter) {
+        this.gameCharacterRepository.delete(gameCharacter);
+    }
+
 }
