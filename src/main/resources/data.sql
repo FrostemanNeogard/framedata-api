@@ -1,11 +1,11 @@
-insert into roles (id, name) values
+insert into role (id, name) values
 ('00000000-0000-0000-0000-000000000000', 'admin'),
 ('11111111-1111-1111-1111-111111111111', 'user');
 
-insert into users (id, name, email) values
-('00000000-0000-0000-0000-000000000000', 'liam', 'liamfrostemanneogard@gmail.com');
-('11111111-1111-1111-1111-111111111111', 'random', 'funnyorangcat@gmail.com'),
+insert into app_user (id, username, email) values
+('00000000-0000-0000-0000-000000000000', 'liam', 'liamfrostemanneogard@gmail.com'),
+('11111111-1111-1111-1111-111111111111', 'random', 'funnyorangcat@gmail.com');
 
-insert into users_roles (user_id, role_id) values
+insert into app_users_roles (user_id, role_id) values
 ('00000000-0000-0000-0000-000000000000', '00000000-0000-0000-0000-000000000000'),
 ('11111111-1111-1111-1111-111111111111', '11111111-1111-1111-1111-111111111111');
