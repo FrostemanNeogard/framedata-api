@@ -28,6 +28,10 @@ public class ApiResponseEntity {
         return ResponseEntity.status(status).body(ApiResponse.error(status, errorMessage));
     }
 
+    public static <T> ResponseEntity<ApiResponse<T>> error(HttpStatus status, String errorMessage, T body) {
+        return ResponseEntity.status(status).body(ApiResponse.error(status, errorMessage, body));
+    }
+
     public static ResponseEntity<ApiResponse<Void>> deleted() {
         return ResponseEntity.noContent().build();
     }

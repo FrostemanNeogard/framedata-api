@@ -29,7 +29,11 @@ public class ApiResponse<T> {
     }
 
     public static <T> ApiResponse<T> error(HttpStatus status, String errorMessage) {
-        return new ApiResponse<>(status.value(), errorMessage, null);
+        return ApiResponse.error(status, errorMessage, null);
+    }
+
+    public static <T> ApiResponse<T> error(HttpStatus status, String errorMessage, T body) {
+        return new ApiResponse<>(status.value(), errorMessage, body);
     }
 
     public static <T> ApiResponse<T> created() {
