@@ -62,7 +62,7 @@ public class GameCharacterController extends BaseApiController {
 
         this.gameCharacterService.createGameCharacter(newGameCharacter);
 
-        return ApiResponseEntity.created(createControllerUri(String.format("name/%s", newGameCharacter.getId())));
+        return ApiResponseEntity.created(createControllerUri(String.format("identifier/%s", newGameCharacter.getId())));
     }
 
     @Admin
