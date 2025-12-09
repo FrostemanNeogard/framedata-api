@@ -31,7 +31,7 @@ public class FramedataService {
     }
 
     private void validateFramedataContainsOnlyStringsAndMatchesTemplate(Framedata framedata) {
-        this.validateOnlyEmptyStrings(framedata.getData().getAttributes());
+        this.validateOnlyStrings(framedata.getData().getAttributes());
         this.validateFramedataMatchesTemplate(framedata);
     }
 
@@ -68,19 +68,24 @@ public class FramedataService {
         }
     }
 
-    public void validateOnlyEmptyStrings(Map<?, ?> map) {
-        this.validateNodeOnlyContainsEmptyStrings(map);
+    public void validateOnlyStrings(Map<?, ?> map) {
+        this.validateNodeOnlyContainsEmptyStrings(map, false);
     }
 
-    private void validateNodeOnlyContainsEmptyStrings(Object node) {
+    public void validateOnlyEmptyStrings(Map<?, ?> map) {
+        this.validateNodeOnlyContainsEmptyStrings(map, true);
+    }
+
+    private void validateNodeOnlyContainsEmptyStrings(Object node, boolean shouldBeEmpty) {
         switch (node) {
             case String s -> {
-                if (!s.isEmpty()) {
+                if (shouldBeEmpty && !s.isEmpty()) {
                     throw new FramedataTemplateJsonInvalidFieldValueException(s);
                 }
             }
-            case Map<?, ?> map -> map.values().forEach(this::validateNodeOnlyContainsEmptyStrings);
-            case List<?> list -> list.forEach(this::validateNodeOnlyContainsEmptyStrings);
+            case Map<?, ?> map ->
+                    map.values().forEach(item -> validateNodeOnlyContainsEmptyStrings(item, shouldBeEmpty));
+            case List<?> list -> list.forEach(entry -> validateNodeOnlyContainsEmptyStrings(entry, shouldBeEmpty));
             default -> throw new FramedataJsonInvalidFieldTypeException(
                     node.getClass().getSimpleName(),
                     node.getClass().getTypeName()
@@ -150,12 +155,12 @@ public class FramedataService {
         return characterFramedata
                 .stream()
                 .filter(fd -> fd.getIdentity().getIdentifiers().contains(inputNotation))
-                .findFirst().orElse(null);
+                .findFirst().orElseThrow(() -> new FramedataNotFoundException(gameCharacter, inputNotation));
     }
 
     public Set<Framedata> getMostSimilarFramedataEntries(GameCharacter gameCharacter, String inputNotation) {
-        return null;
+        // TODO: Implement
+        return gameCharacter.getFramedata();
     }
-
 
 }
