@@ -1,14 +1,12 @@
 package com.garfield.framedataapi.framedata;
 
 import com.garfield.framedataapi.framedata.exceptions.*;
+import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -93,5 +91,71 @@ public class FramedataService {
     public void deleteFramedata(Framedata framedata) {
         this.framedataRepository.delete(framedata);
     }
+
+    // TODO: Temporary method from old implementation
+    // This should potentially be completely reworked
+    public String formatNotation(String inputNotation, boolean removePlus) {
+        String modifiedNotation = inputNotation.toLowerCase();
+
+        if (!modifiedNotation.contains("fc")) {
+            modifiedNotation = modifiedNotation.replaceAll("cd", "f,n,d,df");
+        }
+
+        modifiedNotation = modifiedNotation
+                .replaceAll("#", ":")
+                .replaceAll("\\.", "")
+                .replaceAll(" ", "")
+                .replaceAll("\\s*\\([^)]*\\)\\s*", "")
+                .replaceAll("[\u200B-\u200D\uFEFF]", "")
+                .replaceAll("h\\.", "in heat")
+                .replaceAll("r\\.", "in rage")
+                .replaceAll("backturned", "bt")
+                .replaceAll("backturn", "bt")
+                .replaceAll("debug", "b,db,d,df")
+                .replaceAll("gs", "f,n,b,db,d,df,f")
+                .replaceAll("wr", "f,f,f")
+                .replaceAll("qcf", "d,df,f")
+                .replaceAll("qcb", "d,db,b")
+                .replaceAll("hcf", "b,db,f,df,f")
+                .replaceAll("hcb", "f,df,d,db,d")
+                .replaceAll("ewgf", "f,n,d,df:2")
+                .replaceAll("electric", "f,n,d,df:2")
+                .replaceAll("ewhf", "f,n,d,df:2")
+                .replaceAll("heatsmash", "in heat 2+3")
+                .replaceAll("heatburst", "2+3")
+                .replaceAll("rageart", "in rage df+1+2");
+
+        String[] parts = modifiedNotation.split("or");
+        if (parts.length > 0) {
+            modifiedNotation = parts[parts.length - 1];
+        }
+
+        modifiedNotation = modifiedNotation.replaceAll("[\\s,/()]", "");
+
+        if (removePlus) {
+            modifiedNotation = modifiedNotation.replaceAll("\\+", "");
+        }
+
+        return modifiedNotation;
+    }
+
+    // TODO: Temporary method from old implementation
+    // This should be improved
+    public Framedata getFramedataByInput(
+            GameCharacter gameCharacter,
+            String inputNotation) {
+
+        Set<Framedata> characterFramedata = gameCharacter.getFramedata();
+
+        return characterFramedata
+                .stream()
+                .filter(fd -> fd.getIdentity().getIdentifiers().contains(inputNotation))
+                .findFirst().orElse(null);
+    }
+
+    public Set<Framedata> getMostSimilarFramedataEntries(GameCharacter gameCharacter, String inputNotation) {
+        return null;
+    }
+
 
 }

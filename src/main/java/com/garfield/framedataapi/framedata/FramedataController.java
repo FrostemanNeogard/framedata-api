@@ -12,14 +12,13 @@ import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharacterService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Set;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @Controller
 @RequestMapping(FramedataController.REQUEST_MAPPING)
@@ -83,24 +82,23 @@ public class FramedataController extends BaseApiController {
 
     @Public
     @GetMapping("character/{characterNameOrUuid}/identifier/{input}")
-    public ResponseEntity<ApiResponse<List<FramedataResponseDto>>> getFramedataByInput(
+    public ResponseEntity<ApiResponse<FramedataResponseDto>> getFramedataByInput(
             @PathVariable String characterNameOrUuid,
             @PathVariable String input) {
         GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
-        Set<Framedata> characterFramedata = gameCharacter.getFramedata().stream()
-                .filter(fd -> fd
-                        .getIdentity()
-                        .getIdentifiers()
-                        .contains(input)
-                ).collect(Collectors.toSet());
 
-        if (characterFramedata.isEmpty()) {
-            throw new FramedataNotFoundException(gameCharacter, input);
+        try {
+            Framedata matchedEntry = this.framedataService.getFramedataByInput(gameCharacter, input);
+            return ApiResponseEntity.ok(new FramedataResponseDto(matchedEntry));
+        } catch(FramedataNotFoundException e) {
+            Set<Framedata> matchedEntries = this.framedataService.getMostSimilarFramedataEntries(
+                    gameCharacter,
+                    input
+            );
+
+            return ApiResponseEntity.error(HttpStatus.NOT_FOUND, null, new FramedataResponseDto(matchedEntries));
         }
 
-        List<FramedataResponseDto> framedataResponseDtos = characterFramedata.stream().map(FramedataResponseDto::new).toList();
-
-        return ApiResponseEntity.ok(framedataResponseDtos);
     }
 
 }
