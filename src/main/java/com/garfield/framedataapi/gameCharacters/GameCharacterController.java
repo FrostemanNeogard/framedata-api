@@ -34,7 +34,7 @@ public class GameCharacterController extends BaseApiController {
     }
 
     @Public
-    @GetMapping("identifier/{nameOrUuidd}")
+    @GetMapping("identifier/{nameOrUuid}")
     public ResponseEntity<ApiResponse<GameCharacterDto>> getGameCharacterByNameOrUuid(
             @PathVariable String nameOrUuid) {
         GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(nameOrUuid);
