@@ -11,7 +11,7 @@ type GameCharacter = {
   game: Game;
   code: string;
   aliases: string[];
-  moves: Object;
+  moves: Object[];
 };
 type Game = {
   filepath: any;
@@ -35,7 +35,8 @@ const framedataTemplate = {
   hitLevel: "",
 };
 
-const BASE_API_URL = "http://localhost:8080/api/v1/";
+const BASE_ENDPOINT = "/api/v1/";
+const BASE_API_URL = `http://localhost:8080${BASE_ENDPOINT}`;
 
 const AUTH_JWT = process.env.AUTH_JWT;
 
@@ -60,15 +61,166 @@ async function migrate() {
 async function migrateGameWithCharacters(
   gameWithCharacters: GameWithCharacters,
 ) {
-  // TODO: Remember alternateInputs should be "identifiers" field
-  // TODO: Remember "categories" is its own separate field, not part of the attributesTemplate
+  const gameId = await getGameId(gameWithCharacters.game);
+
+  gameWithCharacters.characters.forEach(async (character) => {
+    const characterId = await getCharacterId(character);
+
+    character.moves.forEach(async (move) => {
+      const requestBody = {
+        identity: {
+          identifiers: move.alternateInputs,
+          categories: move.categories,
+        },
+        data: {
+          attributes: {
+            name: move.name,
+            input: move.input,
+            damage: move.damage,
+            startup: move.startup,
+            block: move.block,
+            hit: move.hit,
+            counter: move.counter,
+            notes: move.notes,
+            hitLevel: move.hitLevel,
+          },
+        },
+      };
+
+      const createFramedataResponse = await fetch(
+        `${BASE_API_URL}framedata/character/${characterId}`,
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${AUTH_JWT}`,
+          },
+          body: JSON.stringify(requestBody),
+        },
+      );
+
+      if (createFramedataResponse.status != 201) {
+        console.log(
+          `An error ocurred when attempting to create framedata: ${character.code}, ${gameWithCharacters.game.name}, ${move.input}. "${createFramedataResponse.status} ${createFramedataResponse.statusText}"`,
+        );
+        return null;
+      }
+
+      console.log(`Created framedata: ${move.input}`);
+    });
+  });
+}
+
+async function createGameIfDoesntExist(game: Game) {
+  const existingGameResponse = await fetch(
+    `${BASE_API_URL}games/identifier/${game.name}`,
+  );
+
+  if (existingGameResponse.status == 200) {
+    return (await existingGameResponse.json()).data.id;
+  }
+
+  const requestBody = {
+    name: game.name,
+    attributesTemplate: {
+      startup: "",
+      hit: "",
+      block: "",
+      damage: "",
+      hitLevel: "",
+      counter: "",
+      notes: [],
+    },
+  };
+
+  const createGameResponse = await fetch(`${BASE_API_URL}games`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${AUTH_JWT}`,
+    },
+    body: JSON.stringify(requestBody),
+  });
+
+  if (createGameResponse.status != 201) {
+    console.log(
+      `An error ocurred when attempting to create game: ${game.name}. "${createGameResponse.status} ${createGameResponse.statusText}"`,
+    );
+    return null;
+  }
+
+  console.log(`Created game: ${game.name}`);
+  return createGameResponse.headers
+    .get("Location")
+    ?.substring(`${BASE_ENDPOINT}games`.length);
+}
+
+async function getCharacterId(character: GameCharacter) {
+  const characterResponse = await fetch(
+    `${BASE_API_URL}/characters/identifier/${character.code}`,
+  );
+
+  if (characterResponse.status != 200) {
+    await createCharacterIfDoesntExist(character);
+  }
+}
+
+async function getGameId(game: Game) {
+  const gameResponse = await fetch(
+    `${BASE_API_URL}/games/identifier/${game.name}`,
+  );
+
+  if (gameResponse.status != 200) {
+    return await createGameIfDoesntExist(game);
+  }
+
+  return (await gameResponse.json()).data.id;
+}
+
+async function createCharacterIfDoesntExist(character: GameCharacter) {
+  const existingCharacterResponse = await fetch(
+    `${BASE_API_URL}characters/identifier/${character.code}`,
+  );
+
+  if (existingCharacterResponse.status == 200) {
+    return (await existingCharacterResponse.json()).id;
+  }
+
+  const requestBody = {
+    name: character.code,
+    gameId: await getGameId(character.game),
+  };
+
+  const createCharacterResponse = await fetch(`${BASE_API_URL}characters`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${AUTH_JWT}`,
+    },
+    body: JSON.stringify(requestBody),
+  });
+
+  if (createCharacterResponse.status != 201) {
+    console.log(
+      `An error ocurred when attempting to create character: ${character.code}. "${createCharacterResponse.status} ${createCharacterResponse.statusText}"`,
+    );
+    return;
+  }
+
+  console.log(`Created character: ${character.code}`);
+  return createCharacterResponse.headers
+    .get("Location")
+    ?.substring(`${BASE_ENDPOINT}characters`.length);
 }
 
 function getAllCharactersFromJsonFile(
-  jsonFile,
+  jsonFile: any,
   gameCode: string,
 ): GameCharacter[] {
-  return jsonFile.map((data) => ({
+  return jsonFile.map((data: any) => ({
     game: games.filter((g) => g.code == gameCode),
     code: data.characterCode,
     aliases: getAllAliasesFromCharacterCode(data.characterCode, gameCode),
