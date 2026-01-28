@@ -50,7 +50,7 @@ const games: Game[] = [
 async function migrate() {
   const gamesWithCharacters: GameWithCharacters[] = games.map((g) => ({
     game: g,
-    characters: getAllCharactersFromJsonFile(g.filepath, g.code),
+    characters: getAllCharactersFromJsonFile(g),
   }));
 
   for (let i = 0; i < gamesWithCharacters.length; i++) {
@@ -61,10 +61,18 @@ async function migrate() {
 async function migrateGameWithCharacters(
   gameWithCharacters: GameWithCharacters,
 ) {
-  const gameId = await getGameId(gameWithCharacters.game);
-
   gameWithCharacters.characters.forEach(async (character) => {
     const characterId = await getCharacterId(character);
+
+    console.log(`Migrating aliases: ${character.aliases}`);
+    if (!character.aliases) {
+      console.log(
+        `\n\n\nMISSING CHARACTER ALIASES FOR: ${character.code}\n\n\n`,
+      );
+    }
+    character.aliases?.forEach(async (alias) => {
+      await createAlias(characterId, alias);
+    });
 
     character.moves.forEach(async (move) => {
       const requestBody = {
@@ -110,6 +118,34 @@ async function migrateGameWithCharacters(
       console.log(`Created framedata: ${move.input}`);
     });
   });
+}
+
+async function createAlias(characterId: string, alias: string) {
+  console.log(`Creating alias "${alias}"`);
+
+  const requestBody = {
+    characterId: characterId,
+    aliasName: alias,
+  };
+
+  const createAliasResponse = await fetch(`${BASE_API_URL}aliases`, {
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${AUTH_JWT}`,
+    },
+    body: JSON.stringify(requestBody),
+  });
+
+  if (createAliasResponse.status != 201) {
+    console.log(
+      `An error ocurred when attempting to create alias: ${alias}. "${createAliasResponse.status}"`,
+    );
+    return;
+  }
+
+  console.log(`Created alias: ${alias}`);
 }
 
 async function createGameIfDoesntExist(game: Game) {
@@ -216,14 +252,11 @@ async function createCharacterIfDoesntExist(character: GameCharacter) {
     ?.substring(`${BASE_ENDPOINT}characters`.length);
 }
 
-function getAllCharactersFromJsonFile(
-  jsonFile: any,
-  gameCode: string,
-): GameCharacter[] {
-  return jsonFile.map((data: any) => ({
-    game: games.filter((g) => g.code == gameCode),
-    code: data.characterCode,
-    aliases: getAllAliasesFromCharacterCode(data.characterCode, gameCode),
+function getAllCharactersFromJsonFile(game: Game): GameCharacter[] {
+  return game.filepath.map((data: any) => ({
+    game: game,
+    code: data.character,
+    aliases: getAllAliasesFromCharacterCode(data.character, game.code),
     moves: data.moves,
   }));
 }
