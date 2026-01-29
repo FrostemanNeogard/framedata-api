@@ -1,9 +1,8 @@
 import dotenv from "dotenv";
 import charactercodes from "./backups/charactercodes.json" with { type: "json" };
-import tekken6 from "./backups/tekken6.json" with { type: "json" };
-import tekken7 from "./backups/tekken7.json" with { type: "json" };
+// import tekken7 from "./backups/tekken7.json" with { type: "json" };
 import tekken8 from "./backups/tekken8.json" with { type: "json" };
-import tekkentag2 from "./backups/tekkentag2.json" with { type: "json" };
+// import tekkentag2 from "./backups/tekkentag2.json" with { type: "json" };
 
 dotenv.config();
 
@@ -41,10 +40,10 @@ const BASE_API_URL = `http://localhost:8080${BASE_ENDPOINT}`;
 const AUTH_JWT = process.env.AUTH_JWT;
 
 const games: Game[] = [
-  { filepath: tekken6, code: "tekken6", name: "Tekken 6" },
-  { filepath: tekken7, code: "tekken7", name: "Tekken 7" },
+  // { filepath: tekken6, code: "tekken6", name: "Tekken 6" },
+  // { filepath: tekken7, code: "tekken7", name: "Tekken 7" },
   { filepath: tekken8, code: "tekken8", name: "Tekken 8" },
-  { filepath: tekkentag2, code: "tekkentag2", name: "Tekken Tag Tournament 2" },
+  // { filepath: tekkentag2, code: "tekkentag2", name: "Tekken Tag Tournament 2" },
 ];
 
 async function migrate() {
@@ -77,7 +76,13 @@ async function migrateGameWithCharacters(
     character.moves.forEach(async (move) => {
       const requestBody = {
         identity: {
-          identifiers: move.alternateInputs,
+          identifiers: Array.from(
+            new Set(
+              [...move.alternateInputs, move.name, move.input].filter(
+                (e) => !!e,
+              ),
+            ).values(),
+          ),
           categories: move.categories,
         },
         data: {
@@ -109,8 +114,9 @@ async function migrateGameWithCharacters(
       );
 
       if (createFramedataResponse.status != 201) {
+        const response = await createFramedataResponse.json();
         console.log(
-          `An error ocurred when attempting to create framedata: ${character.code}, ${gameWithCharacters.game.name}, ${move.input}. "${createFramedataResponse.status} ${createFramedataResponse.statusText}"`,
+          `An error ocurred when attempting to create framedata: ${characterId}, ${gameWithCharacters.game.name}, ${move.input}. "${createFramedataResponse.status} ${response.error}"`,
         );
         return null;
       }
@@ -159,15 +165,7 @@ async function createGameIfDoesntExist(game: Game) {
 
   const requestBody = {
     name: game.name,
-    attributesTemplate: {
-      startup: "",
-      hit: "",
-      block: "",
-      damage: "",
-      hitLevel: "",
-      counter: "",
-      notes: [],
-    },
+    attributesTemplate: framedataTemplate,
   };
 
   const createGameResponse = await fetch(`${BASE_API_URL}games`, {
@@ -187,10 +185,12 @@ async function createGameIfDoesntExist(game: Game) {
     return null;
   }
 
-  console.log(`Created game: ${game.name}`);
-  return createGameResponse.headers
+  const gameId = createGameResponse.headers
     .get("Location")
     ?.substring(`${BASE_ENDPOINT}games`.length);
+
+  console.log(`Created game: ${game.name} with ID ${gameId}`);
+  return gameId;
 }
 
 async function getCharacterId(character: GameCharacter) {
@@ -199,8 +199,13 @@ async function getCharacterId(character: GameCharacter) {
   );
 
   if (characterResponse.status != 200) {
-    await createCharacterIfDoesntExist(character);
+    return await createCharacterIfDoesntExist(character);
   }
+
+  const characterId = (await characterResponse.json()).data.id;
+
+  console.log(`Returning character ID: ${characterId}`);
+  return characterId;
 }
 
 async function getGameId(game: Game) {
@@ -221,7 +226,7 @@ async function createCharacterIfDoesntExist(character: GameCharacter) {
   );
 
   if (existingCharacterResponse.status == 200) {
-    return (await existingCharacterResponse.json()).id;
+    return (await existingCharacterResponse.json()).data.id;
   }
 
   const requestBody = {
@@ -241,7 +246,7 @@ async function createCharacterIfDoesntExist(character: GameCharacter) {
 
   if (createCharacterResponse.status != 201) {
     console.log(
-      `An error ocurred when attempting to create character: ${character.code}. "${createCharacterResponse.status} ${createCharacterResponse.statusText}"`,
+      `An error ocurred when attempting to create character that didn't exist: ${character.code}. "${createCharacterResponse.status} ${createCharacterResponse.statusText}"`,
     );
     return;
   }
@@ -249,7 +254,7 @@ async function createCharacterIfDoesntExist(character: GameCharacter) {
   console.log(`Created character: ${character.code}`);
   return createCharacterResponse.headers
     .get("Location")
-    ?.substring(`${BASE_ENDPOINT}characters`.length);
+    ?.substring(`${BASE_ENDPOINT}characters/identifier/`.length);
 }
 
 function getAllCharactersFromJsonFile(game: Game): GameCharacter[] {
