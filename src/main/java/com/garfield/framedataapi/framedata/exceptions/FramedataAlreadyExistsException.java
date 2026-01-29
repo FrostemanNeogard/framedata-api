@@ -8,4 +8,7 @@ public class FramedataAlreadyExistsException extends RuntimeException {
         super(String.format("Framedata already exists for this attack: \"%s\"", framedata.getData().toString()));
     }
 
+    public FramedataAlreadyExistsException(String identifier) {
+        super(String.format("Framedata already exists for attack with identifier: \"%s\"", identifier));
+    }
 }
