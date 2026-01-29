@@ -77,6 +77,10 @@ public class FramedataController extends BaseApiController {
         GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
         Set<Framedata> framedata = gameCharacter.getFramedata();
 
+        if (framedata.isEmpty()) {
+            throw new FramedataNotFoundException(characterNameOrUuid);
+        }
+
         return ApiResponseEntity.ok(new FramedataResponseDto(framedata));
     }
 
