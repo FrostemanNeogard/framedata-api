@@ -94,7 +94,7 @@ public class FramedataController extends BaseApiController {
         try {
             Framedata matchedEntry = this.framedataService.getFramedataByInput(gameCharacter, input);
             return ApiResponseEntity.ok(new FramedataResponseDto(matchedEntry));
-        } catch(FramedataNotFoundException e) {
+        } catch (FramedataNotFoundException e) {
             Set<Framedata> matchedEntries = this.framedataService.getMostSimilarFramedataEntries(
                     gameCharacter,
                     input
