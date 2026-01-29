@@ -28,6 +28,15 @@ public class FramedataService {
     @Transactional
     public void createFramedata(Framedata framedata) {
         this.validateFramedataContainsOnlyStringsAndMatchesTemplate(framedata);
+
+        framedata.getGameCharacter().getFramedata().forEach(fd -> {
+                fd.getIdentity().getIdentifiers().forEach(identifier -> {
+                    if (framedata.getIdentity().getIdentifiers().contains(identifier)) {
+                        throw new FramedataAlreadyExistsException(identifier);
+                    }
+                });
+            });
+
         this.framedataRepository.save(framedata);
     }
 
