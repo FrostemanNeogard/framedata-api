@@ -7,6 +7,7 @@ import com.garfield.framedataapi.games.Game;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.Set;
 
@@ -17,6 +18,7 @@ import java.util.Set;
 public class GameCharacter extends BaseEntity {
 
     @Column
+    @Setter
     private String name;
 
     @ManyToOne

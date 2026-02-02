@@ -7,8 +7,10 @@ import com.garfield.framedataapi.advice.responses.ApiResponseEntity;
 import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.dtos.CreateGameCharacterDto;
 import com.garfield.framedataapi.gameCharacters.dtos.GameCharacterDto;
+import com.garfield.framedataapi.gameCharacters.dtos.ModifyGameCharacterDto;
 import com.garfield.framedataapi.games.Game;
 import com.garfield.framedataapi.games.GameService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -73,6 +75,18 @@ public class GameCharacterController extends BaseApiController {
         this.gameCharacterService.deleteGameCharacter(gameCharacter);
 
         return ApiResponseEntity.deleted();
+    }
+
+    @Admin
+    @PatchMapping("identifier/{gameCharacterId}")
+    public ResponseEntity<ApiResponse<GameCharacterDto>> updateGameCharacter(
+            @PathVariable UUID gameCharacterId,
+            @Valid @RequestBody ModifyGameCharacterDto dto) {
+        GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterById(gameCharacterId);
+
+        return ApiResponseEntity.ok(GameCharacterDto.fromEntity(
+                this.gameCharacterService.updateGameCharacterName(gameCharacter, dto.name())
+        ));
     }
 
 }

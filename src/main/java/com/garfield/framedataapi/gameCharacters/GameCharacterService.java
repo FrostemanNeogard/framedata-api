@@ -71,6 +71,12 @@ public class GameCharacterService {
         return gameCharacter;
     }
 
+    public GameCharacter updateGameCharacterName(GameCharacter gameCharacter, String newName) {
+        gameCharacter.setName(newName);
+        gameCharacterRepository.save(gameCharacter);
+        return gameCharacter;
+    }
+
     public void deleteGameCharacter(GameCharacter gameCharacter) {
         this.gameCharacterRepository.delete(gameCharacter);
     }
