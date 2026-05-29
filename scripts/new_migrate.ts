@@ -1,8 +1,9 @@
 import dotenv from "dotenv";
 import charactercodes from "./backups/charactercodes.json" with { type: "json" };
-// import tekken7 from "./backups/tekken7.json" with { type: "json" };
+import tekken6 from "./backups/tekken6.json" with { type: "json" };
+import tekken7 from "./backups/tekken7.json" with { type: "json" };
 import tekken8 from "./backups/tekken8.json" with { type: "json" };
-// import tekkentag2 from "./backups/tekkentag2.json" with { type: "json" };
+import tekkentag2 from "./backups/tekkentag2.json" with { type: "json" };
 
 dotenv.config();
 
@@ -40,10 +41,10 @@ const BASE_API_URL = `http://localhost:8080${BASE_ENDPOINT}`;
 const AUTH_JWT = process.env.AUTH_JWT;
 
 const games: Game[] = [
-  // { filepath: tekken6, code: "tekken6", name: "Tekken 6" },
-  // { filepath: tekken7, code: "tekken7", name: "Tekken 7" },
+  { filepath: tekken6, code: "tekken6", name: "Tekken 6" },
+  { filepath: tekken7, code: "tekken7", name: "Tekken 7" },
   { filepath: tekken8, code: "tekken8", name: "Tekken 8" },
-  // { filepath: tekkentag2, code: "tekkentag2", name: "Tekken Tag Tournament 2" },
+  { filepath: tekkentag2, code: "tekkentag2", name: "Tekken Tag Tournament 2" },
 ];
 
 async function migrate() {
@@ -60,7 +61,7 @@ async function migrate() {
 async function migrateGameWithCharacters(
   gameWithCharacters: GameWithCharacters,
 ) {
-  gameWithCharacters.characters.forEach(async (character) => {
+  for (const character of gameWithCharacters.characters) {
     const characterId = await getCharacterId(character);
 
     console.log(`Migrating aliases: ${character.aliases}`);
@@ -69,11 +70,14 @@ async function migrateGameWithCharacters(
         `\n\n\nMISSING CHARACTER ALIASES FOR: ${character.code}\n\n\n`,
       );
     }
-    character.aliases?.forEach(async (alias) => {
-      await createAlias(characterId, alias);
-    });
 
-    character.moves.forEach(async (move) => {
+    if (character.aliases) {
+      for (const alias of character.aliases) {
+        await createAlias(characterId, alias);
+      }
+    }
+
+    for (const move of character.moves) {
       const requestBody = {
         identity: {
           identifiers: Array.from(
@@ -118,12 +122,12 @@ async function migrateGameWithCharacters(
         console.log(
           `An error ocurred when attempting to create framedata: ${characterId}, ${gameWithCharacters.game.name}, ${move.input}. "${createFramedataResponse.status} ${response.error}"`,
         );
-        return null;
+        continue;
       }
 
       console.log(`Created framedata: ${move.input}`);
-    });
-  });
+    }
+  }
 }
 
 async function createAlias(characterId: string, alias: string) {
