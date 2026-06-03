@@ -199,7 +199,7 @@ async function createGameIfDoesntExist(game: Game) {
 
 async function getCharacterId(character: GameCharacter) {
   const characterResponse = await fetch(
-    `${BASE_API_URL}/characters/identifier/${character.code}`,
+    `${BASE_API_URL}aliases/game/${character.game.name}/alias/${character.code}`,
   );
 
   if (characterResponse.status != 200) {
@@ -214,7 +214,7 @@ async function getCharacterId(character: GameCharacter) {
 
 async function getGameId(game: Game) {
   const gameResponse = await fetch(
-    `${BASE_API_URL}/games/identifier/${game.name}`,
+    `${BASE_API_URL}games/identifier/${game.name}`,
   );
 
   if (gameResponse.status != 200) {
@@ -226,7 +226,7 @@ async function getGameId(game: Game) {
 
 async function createCharacterIfDoesntExist(character: GameCharacter) {
   const existingCharacterResponse = await fetch(
-    `${BASE_API_URL}characters/identifier/${character.code}`,
+    `${BASE_API_URL}aliases/game/${character.game.name}/alias/${character.code}`,
   );
 
   if (existingCharacterResponse.status == 200) {
