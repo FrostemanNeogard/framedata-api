@@ -120,7 +120,7 @@ async function migrateGameWithCharacters(
       if (createFramedataResponse.status != 201) {
         const response = await createFramedataResponse.json();
         console.log(
-          `An error ocurred when attempting to create framedata: ${characterId}, ${gameWithCharacters.game.name}, ${move.input}. "${createFramedataResponse.status} ${response.error}"`,
+          `An error ocurred when attempting to create framedata for ${character.code}: ${characterId}, ${gameWithCharacters.game.name}, ${move.input}. "${createFramedataResponse.status} ${response.error}"`,
         );
         continue;
       }
@@ -203,10 +203,13 @@ async function getCharacterId(character: GameCharacter) {
   );
 
   if (characterResponse.status != 200) {
+    console.log(
+      `Couldn't find character: ${character.code} for game: ${character.game.name}`,
+    );
     return await createCharacterIfDoesntExist(character);
   }
 
-  const characterId = (await characterResponse.json()).data.id;
+  const characterId = (await characterResponse.json()).data.character.id;
 
   console.log(`Returning character ID: ${characterId}`);
   return characterId;
