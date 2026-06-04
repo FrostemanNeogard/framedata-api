@@ -1,9 +1,13 @@
 services:
-  mongo:
-    image: mongo:4.4.18
-    container_name: framedata_db_local
+  db:
+    container_name: framedata_db
+    restart: always
+    image: postgres:14-alpine
+    environment:
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_USER: ${DB_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
     ports:
-      - '27017:27017'
+      - 5432:5432
     volumes:
-      - ./mongodb-data:/data/db
-    restart: no
+      - ./postgres-data:/var/lib/postgresql/data

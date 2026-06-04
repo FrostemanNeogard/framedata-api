@@ -1,0 +1,160 @@
+package com.garfield.framedataapi.advice;
+
+import com.garfield.framedataapi.advice.responses.ApiResponse;
+import com.garfield.framedataapi.advice.responses.ApiResponseEntity;
+import com.garfield.framedataapi.aliases.exceptions.AliasAlreadyExistsException;
+import com.garfield.framedataapi.aliases.exceptions.AliasNotFoundException;
+import com.garfield.framedataapi.framedata.exceptions.*;
+import com.garfield.framedataapi.gameCharacters.exceptions.AmbiguousGameCharacterNameException;
+import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyExistsException;
+import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
+import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
+import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
+import com.garfield.framedataapi.games.exceptions.InvalidAttributesTemplateJsonException;
+import com.garfield.framedataapi.users.exceptions.UserBannedException;
+import com.garfield.framedataapi.users.exceptions.UserNotFoundException;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+
+import java.util.UUID;
+
+@ControllerAdvice
+@RequiredArgsConstructor
+@Slf4j
+public class GlobalExceptionHandler {
+
+    @ExceptionHandler({MethodArgumentTypeMismatchException.class})
+    public ResponseEntity<ApiResponse<String>> handleMethodArgumentTypeMismatchException(MethodArgumentTypeMismatchException e) {
+        logError(e);
+
+        if (e.getRequiredType() != null && e.getRequiredType().equals(UUID.class)) {
+            return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, String.format("\"%s\" is not a valid UUID.", e.getValue()));
+        }
+
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, String.format("\"%s\" is not a valid \"%s\".", e.getValue(), e.getRequiredType()));
+    }
+
+    @ExceptionHandler({AliasAlreadyExistsException.class})
+    public ResponseEntity<ApiResponse<String>> handleAliasAlreadyExistsException(AliasAlreadyExistsException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
+    }
+
+    @ExceptionHandler({AliasNotFoundException.class})
+    public ResponseEntity<ApiResponse<String>> handleAliasNotFoundException(AliasNotFoundException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataAlreadyExistsException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataAlreadyExistsException(FramedataAlreadyExistsException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataDoesNotMatchGameTemplateException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataDoesNotMatchGameTemplateException(FramedataDoesNotMatchGameTemplateException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataEmptyException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataEmptyException(FramedataEmptyException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataJsonInvalidFieldTypeException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataJsonInvalidFieldTypeException(FramedataJsonInvalidFieldTypeException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataJsonMissingRequiredFieldException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataJsonMissingRequiredFieldException(FramedataJsonMissingRequiredFieldException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataNotFoundException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataNotFoundException(FramedataNotFoundException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    @ExceptionHandler({FramedataTemplateJsonInvalidFieldValueException.class})
+    public ResponseEntity<ApiResponse<String>> handleFramedataTemplateJsonInvalidFieldValueException(FramedataTemplateJsonInvalidFieldValueException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    @ExceptionHandler({JsonFormatException.class})
+    public ResponseEntity<ApiResponse<String>> handleInvalidFramedataJsonException(JsonFormatException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
+    @ExceptionHandler({UnknownInternalErrorException.class})
+    public ResponseEntity<ApiResponse<String>> handleUnknownInternalErrorException(UnknownInternalErrorException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
+    }
+
+    @ExceptionHandler({AmbiguousGameCharacterNameException.class})
+    public ResponseEntity<ApiResponse<String>> handleAmbiguousGameCharacterNameException(AmbiguousGameCharacterNameException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
+    }
+
+    @ExceptionHandler({GameCharacterAlreadyExistsException.class})
+    public ResponseEntity<ApiResponse<String>> handleGameCharacterAlreadyExistsException(GameCharacterAlreadyExistsException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
+    }
+
+    @ExceptionHandler({GameCharacterNotFoundException.class})
+    public ResponseEntity<ApiResponse<String>> handleGameCharacterNotFoundException(GameCharacterNotFoundException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    @ExceptionHandler({GameAlreadyExistsException.class})
+    public ResponseEntity<ApiResponse<String>> handleGameAlreadyExistsException(GameAlreadyExistsException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.CONFLICT, e.getMessage());
+    }
+
+    @ExceptionHandler({GameNotFoundException.class})
+    public ResponseEntity<ApiResponse<String>> handleGameNotFoundException(GameNotFoundException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    @ExceptionHandler({InvalidAttributesTemplateJsonException.class})
+    public ResponseEntity<ApiResponse<String>> handleInvalidAttributesTemplateJson(InvalidAttributesTemplateJsonException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
+    }
+
+    @ExceptionHandler({UserBannedException.class})
+    public ResponseEntity<ApiResponse<String>> handleUserBannedException(UserBannedException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.FORBIDDEN, e.getMessage());
+    }
+
+    @ExceptionHandler({UserNotFoundException.class})
+    public ResponseEntity<ApiResponse<String>> handleUserNotFoundException(UserNotFoundException e) {
+        logError(e);
+        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
+    }
+
+    private void logError(Exception e) {
+        log.error("An error occurred: {}", e.getMessage());
+    }
+
+}
