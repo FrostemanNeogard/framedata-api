@@ -1,11 +1,22 @@
 services:
   api_dev:
-    build: .
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: framedata_api_dev
     volumes:
       - /usr/src/app
     ports:
-      - '${PORT}:4000'
-    command: npm run start:dev
+      - "${PORT}:8080"
+    environment:
+      ENVIRONMENT: ${ENVIRONMENT}
+      PORT: ${PORT}
+      DB_CONNECTION_URI: ${DB_CONNECTION_URI}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_USER: ${DB_USER}
+      POSTGRES_DB: ${POSTGRES_DB}
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
     networks:
       - framedata_network_dev
     restart: always

@@ -44,9 +44,11 @@ jobs:
 
       - name: Deploy API
         run: |
-          ssh -o StrictHostKeyChecking=no -p 2222 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "
+          ssh -o StrictHostKeyChecking=no -p 22 ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} "
             cd ~/projects/FramedataAPI_Dev &&
             git pull origin dev &&
             sudo docker-compose -f docker-compose.dev.yml down &&
+            sudo docker-compose -f docker-compose.dev_db.yml down &&
             sudo docker-compose -f docker-compose.dev.yml up --build -d
+            sudo docker-compose -f docker-compose.dev_db.yml up --build -d
           "
