@@ -1,6 +1,6 @@
 services:
   db:
-    container_name: framedata_db
+    container_name: framedata_sql_db
     restart: always
     image: postgres:14-alpine
     environment:
