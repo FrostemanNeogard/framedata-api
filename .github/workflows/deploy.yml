@@ -48,7 +48,5 @@ jobs:
             cd ~/projects/FramedataAPI_Dev &&
             git pull origin dev &&
             sudo docker-compose -f docker-compose.dev.yml down &&
-            sudo docker-compose -f docker-compose.dev_db.yml down &&
             sudo docker-compose -f docker-compose.dev.yml up --build -d
-            sudo docker-compose -f docker-compose.dev_db.yml up --build -d
           "
