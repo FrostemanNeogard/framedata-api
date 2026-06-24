@@ -36,7 +36,7 @@ const framedataTemplate = {
 };
 
 const BASE_ENDPOINT = "/api/v1/";
-const BASE_API_URL = `http://localhost:8080${BASE_ENDPOINT}`;
+const BASE_API_URL = `https://dev.api.framedatabot.com${BASE_ENDPOINT}`;
 
 const AUTH_JWT = process.env.AUTH_JWT;
 
