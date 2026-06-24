@@ -1,4 +1,4 @@
-import * as dotenv from 'dotenv';
+import * as dotenv from "dotenv";
 dotenv.config();
 
 // ==========================================
@@ -82,15 +82,14 @@ function getIdFromLocation(locationHeader: string | null): string | null {
 
 async function handleResponse(
   response: Response,
-  resourceName: string
+  resourceName: string,
 ): Promise<string | null> {
   if (!response.ok) {
     let errorDetail = response.statusText;
     try {
       const errorBody = await response.json();
       errorDetail = errorBody.message || JSON.stringify(errorBody);
-    } catch {
-    }
+    } catch {}
     throw new Error(`[${response.status}] ${response.url}: ${errorDetail}`);
   }
 
@@ -117,7 +116,7 @@ async function createGame(name: string, template: any): Promise<string | null> {
   } catch (error) {
     console.error(
       ` -> Failed to create game ${name}:`,
-      (error as Error).message
+      (error as Error).message,
     );
     return null;
   }
@@ -125,7 +124,7 @@ async function createGame(name: string, template: any): Promise<string | null> {
 
 async function createCharacter(
   name: string,
-  gameId: string
+  gameId: string,
 ): Promise<string | null> {
   console.log(`  Creating Character: ${name}...`);
   try {
@@ -142,7 +141,7 @@ async function createCharacter(
   } catch (error) {
     console.error(
       `  -> Failed to create character ${name}:`,
-      (error as Error).message
+      (error as Error).message,
     );
     return null;
   }
@@ -163,7 +162,7 @@ async function createAlias(charId: string, aliasName: string) {
 
 async function fetchLegacyData(
   gameSlug: string,
-  charSlug: string
+  charSlug: string,
 ): Promise<any[]> {
   const url = `${OLD_API_BASE_URL}/${gameSlug}/${charSlug}`;
   console.log(`    Fetching legacy data from: ${url}`);
@@ -176,7 +175,7 @@ async function fetchLegacyData(
   } catch (error) {
     console.error(
       `    -> Error fetching legacy data:`,
-      (error as Error).message
+      (error as Error).message,
     );
     return [];
   }
@@ -185,7 +184,7 @@ async function fetchLegacyData(
 async function transformAndUploadMoves(
   charId: string,
   moves: any[],
-  template: Record<string, any>
+  template: Record<string, any>,
 ) {
   console.log(`    Processing ${moves.length} moves...`);
   let successCount = 0;
@@ -225,7 +224,7 @@ async function transformAndUploadMoves(
           method: "POST",
           headers: AUTH_HEADERS,
           body: JSON.stringify(payload),
-        }
+        },
       );
 
       if (response.ok) {
@@ -237,13 +236,13 @@ async function transformAndUploadMoves(
           errorDetail = errorBody.message || JSON.stringify(errorBody);
         } catch {}
         console.error(
-          `    [!] Failed to upload move '${Array.from(identifiers)[0]}' [${response.status}]: ${errorDetail}`
+          `    [!] Failed to upload move '${Array.from(identifiers)[0]}' [${response.status}]: ${errorDetail}`,
         );
       }
     } catch (error) {
       console.error(
         `    [!] Exception uploading move:`,
-        (error as Error).message
+        (error as Error).message,
       );
     }
   }
@@ -261,7 +260,7 @@ async function main() {
   for (const gameConf of GAME_CONFIG) {
     const gameId = await createGame(
       gameConf.newName,
-      gameConf.attributesTemplate
+      gameConf.attributesTemplate,
     );
     if (!gameId) continue;
 
@@ -278,14 +277,14 @@ async function main() {
 
       const legacyMoves = await fetchLegacyData(
         gameConf.oldName,
-        charConf.oldName
+        charConf.oldName,
       );
 
       if (legacyMoves.length > 0) {
         await transformAndUploadMoves(
           charId,
           legacyMoves,
-          gameConf.attributesTemplate
+          gameConf.attributesTemplate,
         );
       } else {
         console.log("    -> No legacy data found.");
