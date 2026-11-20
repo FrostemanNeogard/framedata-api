@@ -128,7 +128,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler({FramedataTemplateJsonInvalidFieldValueException.class})
     public ResponseEntity<ApiResponse<String>> handleFramedataTemplateJsonInvalidFieldValueException(FramedataTemplateJsonInvalidFieldValueException e) {
         logError(e);
-        return ApiResponseEntity.error(HttpStatus.NOT_FOUND, e.getMessage());
+        return ApiResponseEntity.error(HttpStatus.BAD_REQUEST, e.getMessage());
     }
 
     @ExceptionHandler({JsonFormatException.class})
