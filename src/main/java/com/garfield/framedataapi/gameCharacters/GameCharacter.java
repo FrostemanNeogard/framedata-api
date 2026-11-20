@@ -9,6 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -29,7 +30,8 @@ public class GameCharacter extends BaseEntity {
     private Set<Alias> aliases;
 
     @OneToMany(mappedBy = "gameCharacter", cascade = CascadeType.ALL)
-    private Set<Framedata> framedata;
+    @OrderBy("position ASC, id ASC")
+    private List<Framedata> framedata;
 
     public GameCharacter(String name, Game game) {
         this.name = name;

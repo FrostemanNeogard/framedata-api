@@ -5,11 +5,10 @@ import com.garfield.framedataapi.gameCharacters.dtos.GameCharacterDto;
 import com.garfield.framedataapi.games.dto.GameDto;
 
 import java.util.List;
-import java.util.Set;
 
 public record FramedataResponseDto(GameDto game, GameCharacterDto gameCharacter, List<FramedataDto> framedata) {
 
-    public FramedataResponseDto(Set<Framedata> framedata) {
+    public FramedataResponseDto(List<Framedata> framedata) {
         this(
                 GameDto.fromEntity(framedata.iterator().next().getGame()),
                 GameCharacterDto.fromEntity(framedata.iterator().next().getGameCharacter()),

@@ -17,7 +17,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Set;
+import java.util.List;
 import java.util.UUID;
 
 @Controller
@@ -75,7 +75,7 @@ public class FramedataController extends BaseApiController {
     public ResponseEntity<ApiResponse<FramedataResponseDto>> getAllFramedataForCharacter(
             @PathVariable String characterNameOrUuid) {
         GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
-        Set<Framedata> framedata = gameCharacter.getFramedata();
+        List<Framedata> framedata = gameCharacter.getFramedata();
 
         if (framedata.isEmpty()) {
             throw new FramedataNotFoundException(characterNameOrUuid);
@@ -96,10 +96,14 @@ public class FramedataController extends BaseApiController {
             Framedata matchedEntry = this.framedataService.getFramedataByInput(gameCharacter, input);
             return ApiResponseEntity.ok(new FramedataResponseDto(matchedEntry));
         } catch (FramedataNotFoundException e) {
-            Set<Framedata> matchedEntries = this.framedataService.getMostSimilarFramedataEntries(
+            List<Framedata> matchedEntries = this.framedataService.getMostSimilarFramedataEntries(
                     gameCharacter,
                     input
             );
+
+            if (matchedEntries.isEmpty()) {
+                throw e;
+            }
 
             return ApiResponseEntity.error(HttpStatus.NOT_FOUND, null, new FramedataResponseDto(matchedEntries));
         }

@@ -6,6 +6,7 @@ import com.garfield.framedataapi.games.Game;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Table(name = "framedata")
@@ -20,6 +21,10 @@ public class Framedata extends BaseEntity {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "game_id")
     private Game game;
+
+    @Setter
+    @Column
+    private Integer position;
 
     @Embedded
     private FramedataIdentity identity;

@@ -7,7 +7,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -37,7 +36,18 @@ public class FramedataService {
                 });
             });
 
+        framedata.setPosition(this.nextPosition(framedata.getGameCharacter()));
+
         this.framedataRepository.save(framedata);
+    }
+
+    private int nextPosition(GameCharacter gameCharacter) {
+        return gameCharacter.getFramedata().stream()
+                .map(Framedata::getPosition)
+                .filter(Objects::nonNull)
+                .max(Integer::compare)
+                .map(position -> position + 1)
+                .orElse(0);
     }
 
     private void validateFramedataContainsOnlyStringsAndMatchesTemplate(Framedata framedata) {
@@ -111,7 +121,7 @@ public class FramedataService {
     }
 
     public Framedata getFramedataByInput(GameCharacter gameCharacter, String inputNotation) {
-        Set<Framedata> characterFramedata = gameCharacter.getFramedata();
+        List<Framedata> characterFramedata = gameCharacter.getFramedata();
 
         String rawInput = inputNotation.replaceAll("[\u200B-\u200D\uFEFF]", "");
         Optional<Framedata> rawMatch = characterFramedata.stream()
@@ -142,8 +152,8 @@ public class FramedataService {
         throw new FramedataNotFoundException(gameCharacter, inputNotation);
     }
 
-    public Set<Framedata> getMostSimilarFramedataEntries(GameCharacter gameCharacter, String inputNotation) {
-        Set<Framedata> characterFramedata = gameCharacter.getFramedata();
+    public List<Framedata> getMostSimilarFramedataEntries(GameCharacter gameCharacter, String inputNotation) {
+        List<Framedata> characterFramedata = gameCharacter.getFramedata();
         List<ScoredFramedata> similarityMap = new ArrayList<>();
 
         for (Framedata moveData : characterFramedata) {
@@ -162,9 +172,8 @@ public class FramedataService {
         return similarityMap.stream()
                 .sorted(Comparator.comparingDouble(ScoredFramedata::score).reversed())
                 .map(ScoredFramedata::framedata)
-                .distinct()
                 .limit(5)
-                .collect(Collectors.toSet());
+                .toList();
     }
 
     private double calculateSimilarity(String s1, String s2) {
