@@ -134,9 +134,20 @@ public class FramedataService {
             throw new FramedataEmptyException();
         }
 
+        this.validateFramedataMatchesTemplate(incoming, template, "");
+    }
+
+    @SuppressWarnings("unchecked")
+    private void validateFramedataMatchesTemplate(Map<String, Object> incoming, Map<String, Object> template, String path) {
         for (String key : incoming.keySet()) {
             if (!template.containsKey(key)) {
-                throw new FramedataDoesNotMatchGameTemplateException(key);
+                throw new FramedataDoesNotMatchGameTemplateException(path + key);
+            }
+        }
+
+        for (String key : template.keySet()) {
+            if (!incoming.containsKey(key)) {
+                throw new FramedataJsonMissingRequiredFieldException(path + key);
             }
 
             Object incomingValue = incoming.get(key);
@@ -144,17 +155,18 @@ public class FramedataService {
 
             if (templateValue instanceof Map) {
                 if (!(incomingValue instanceof Map)) {
-                    throw new FramedataFieldShapeMismatchException(key, "an object");
+                    throw new FramedataFieldShapeMismatchException(path + key, "an object");
                 }
 
-                validateFramedataMatchesTemplate(
+                this.validateFramedataMatchesTemplate(
                         (Map<String, Object>) incomingValue,
-                        (Map<String, Object>) templateValue
+                        (Map<String, Object>) templateValue,
+                        path + key + "."
                 );
             } else if (templateValue instanceof List && !(incomingValue instanceof List)) {
-                throw new FramedataFieldShapeMismatchException(key, "a list");
+                throw new FramedataFieldShapeMismatchException(path + key, "a list");
             } else if (templateValue instanceof String && !(incomingValue instanceof String)) {
-                throw new FramedataFieldShapeMismatchException(key, "a string");
+                throw new FramedataFieldShapeMismatchException(path + key, "a string");
             }
         }
     }
