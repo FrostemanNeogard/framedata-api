@@ -120,6 +120,13 @@ public class FramedataService {
     private record ScoredFramedata(Framedata framedata, double score) {
     }
 
+    public List<Framedata> filterByCategory(List<Framedata> framedata, String category) {
+        return framedata.stream()
+                .filter(fd -> fd.getIdentity().getCategories() != null
+                        && fd.getIdentity().getCategories().stream().anyMatch(category::equalsIgnoreCase))
+                .toList();
+    }
+
     public Framedata getFramedataByInput(GameCharacter gameCharacter, String inputNotation) {
         List<Framedata> characterFramedata = gameCharacter.getFramedata();
 

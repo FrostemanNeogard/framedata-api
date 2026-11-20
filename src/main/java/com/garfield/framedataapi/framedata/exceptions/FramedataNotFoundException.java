@@ -15,11 +15,16 @@ public class FramedataNotFoundException extends RuntimeException {
     }
 
     public FramedataNotFoundException(GameCharacter gameCharacter, String input) {
+        this(gameCharacter, "input", input);
+    }
+
+    public FramedataNotFoundException(GameCharacter gameCharacter, String field, String value) {
         super(String.format(
-                "No framedata found for game: \"%s\" and character: \"%s\" with input: \"%s\"",
+                "No framedata found for game: \"%s\" and character: \"%s\" with %s: \"%s\"",
                 gameCharacter.getGame().getName(),
                 gameCharacter.getName(),
-                input
+                field,
+                value
         ));
     }
 

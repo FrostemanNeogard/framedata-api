@@ -73,12 +73,17 @@ public class FramedataController extends BaseApiController {
     @Public
     @GetMapping("character/{characterNameOrUuid}")
     public ResponseEntity<ApiResponse<FramedataResponseDto>> getAllFramedataForCharacter(
-            @PathVariable String characterNameOrUuid) {
+            @PathVariable String characterNameOrUuid,
+            @RequestParam(required = false) String category) {
         GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
-        List<Framedata> framedata = gameCharacter.getFramedata();
+        List<Framedata> framedata = category == null
+                ? gameCharacter.getFramedata()
+                : this.framedataService.filterByCategory(gameCharacter.getFramedata(), category);
 
         if (framedata.isEmpty()) {
-            throw new FramedataNotFoundException(characterNameOrUuid);
+            throw category == null
+                    ? new FramedataNotFoundException(characterNameOrUuid)
+                    : new FramedataNotFoundException(gameCharacter, "category", category);
         }
 
         return ApiResponseEntity.ok(new FramedataResponseDto(framedata));
