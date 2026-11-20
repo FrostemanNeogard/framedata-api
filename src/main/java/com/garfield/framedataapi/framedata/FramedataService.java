@@ -1,5 +1,6 @@
 package com.garfield.framedataapi.framedata;
 
+import com.garfield.framedataapi.framedata.dtos.UpdateFramedataDto;
 import com.garfield.framedataapi.framedata.exceptions.*;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import jakarta.transaction.Transactional;
@@ -7,6 +8,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -50,6 +52,72 @@ public class FramedataService {
                 .orElse(0);
     }
 
+    @Transactional
+    public Framedata updateFramedata(Framedata framedata, UpdateFramedataDto dto) {
+        if (dto.identifiers() != null) {
+            this.validateIdentifiersAreUnique(framedata, dto.identifiers());
+            framedata.getIdentity().setIdentifiers(dto.identifiers().stream().distinct().collect(Collectors.toList()));
+        }
+
+        if (dto.categories() != null) {
+            framedata.getIdentity().setCategories(dto.categories().stream().distinct().collect(Collectors.toList()));
+        }
+
+        if (dto.attributes() != null) {
+            Map<String, Object> merged = this.mergeAttributes(framedata.getData().getAttributes(), dto.attributes());
+
+            this.validateOnlyStrings(merged);
+            this.validateFramedataMatchesTemplate(merged, framedata.getGame().getAttributesTemplate().getAttributes());
+            framedata.getData().setAttributes(merged);
+        }
+
+        if (dto.position() != null) {
+            this.moveToPosition(framedata, dto.position());
+        }
+
+        return this.framedataRepository.save(framedata);
+    }
+
+    @SuppressWarnings("unchecked")
+    private Map<String, Object> mergeAttributes(Map<String, Object> existing, Map<String, Object> updates) {
+        Map<String, Object> merged = new HashMap<>(existing);
+
+        updates.forEach((key, value) -> {
+            Object current = merged.get(key);
+
+            if (value instanceof Map && current instanceof Map) {
+                merged.put(key, this.mergeAttributes((Map<String, Object>) current, (Map<String, Object>) value));
+            } else {
+                merged.put(key, value);
+            }
+        });
+
+        return merged;
+    }
+
+    private void validateIdentifiersAreUnique(Framedata framedata, List<String> identifiers) {
+        framedata.getGameCharacter().getFramedata().stream()
+                .filter(other -> !other.getId().equals(framedata.getId()))
+                .flatMap(other -> other.getIdentity().getIdentifiers().stream())
+                .filter(identifiers::contains)
+                .findFirst()
+                .ifPresent(identifier -> {
+                    throw new FramedataAlreadyExistsException(identifier);
+                });
+    }
+
+    private void moveToPosition(Framedata framedata, int position) {
+        List<Framedata> ordered = new ArrayList<>(framedata.getGameCharacter().getFramedata());
+        ordered.removeIf(other -> other.getId().equals(framedata.getId()));
+        ordered.add(Math.min(position, ordered.size()), framedata);
+
+        for (int i = 0; i < ordered.size(); i++) {
+            ordered.get(i).setPosition(i);
+        }
+
+        this.framedataRepository.saveAll(ordered);
+    }
+
     private void validateFramedataContainsOnlyStringsAndMatchesTemplate(Framedata framedata) {
         this.validateOnlyStrings(framedata.getData().getAttributes());
         this.validateFramedataMatchesTemplate(framedata);
@@ -75,15 +143,19 @@ public class FramedataService {
             Object incomingValue = incoming.get(key);
             Object templateValue = template.get(key);
 
-            if (incomingValue instanceof Map) {
-                if (!(templateValue instanceof Map)) {
-                    throw new FramedataDoesNotMatchGameTemplateException(key);
+            if (templateValue instanceof Map) {
+                if (!(incomingValue instanceof Map)) {
+                    throw new FramedataFieldShapeMismatchException(key, "an object");
                 }
 
                 validateFramedataMatchesTemplate(
                         (Map<String, Object>) incomingValue,
                         (Map<String, Object>) templateValue
                 );
+            } else if (templateValue instanceof List && !(incomingValue instanceof List)) {
+                throw new FramedataFieldShapeMismatchException(key, "a list");
+            } else if (templateValue instanceof String && !(incomingValue instanceof String)) {
+                throw new FramedataFieldShapeMismatchException(key, "a string");
             }
         }
     }
@@ -98,6 +170,7 @@ public class FramedataService {
 
     private void validateNodeOnlyContainsEmptyStrings(Object node, boolean shouldBeEmpty) {
         switch (node) {
+            case null -> throw new FramedataJsonInvalidFieldTypeException("null", "null");
             case String s -> {
                 if (shouldBeEmpty && !s.isEmpty()) {
                     throw new FramedataTemplateJsonInvalidFieldValueException(s);

@@ -7,6 +7,7 @@ import com.garfield.framedataapi.advice.responses.ApiResponseEntity;
 import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.framedata.dtos.CreateFramedataDto;
 import com.garfield.framedataapi.framedata.dtos.FramedataResponseDto;
+import com.garfield.framedataapi.framedata.dtos.UpdateFramedataDto;
 import com.garfield.framedataapi.framedata.exceptions.FramedataNotFoundException;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharacterService;
@@ -50,6 +51,16 @@ public class FramedataController extends BaseApiController {
         this.framedataService.createFramedata(framedata);
 
         return ApiResponseEntity.created(createControllerUri(framedata.getId()));
+    }
+
+    @Admin
+    @PatchMapping("identifier/{framedataId}")
+    public ResponseEntity<ApiResponse<FramedataResponseDto>> updateFramedata(
+            @PathVariable UUID framedataId,
+            @Valid @RequestBody UpdateFramedataDto dto) {
+        Framedata framedata = this.framedataService.getFramedataById(framedataId);
+
+        return ApiResponseEntity.ok(new FramedataResponseDto(this.framedataService.updateFramedata(framedata, dto)));
     }
 
     @Admin
