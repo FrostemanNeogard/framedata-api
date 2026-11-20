@@ -78,7 +78,6 @@ public class FramedataService {
         return this.framedataRepository.save(framedata);
     }
 
-    @SuppressWarnings("unchecked")
     private Map<String, Object> mergeAttributes(Map<String, Object> existing, Map<String, Object> updates) {
         Map<String, Object> merged = new HashMap<>(existing);
 
