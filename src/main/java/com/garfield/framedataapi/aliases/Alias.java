@@ -24,6 +24,10 @@ public class Alias extends BaseEntity {
     @JoinColumn(name = "game_character_id")
     private GameCharacter gameCharacter;
 
+    public void rename(String aliasName) {
+        this.aliasName = aliasName;
+    }
+
     public Alias(String aliasName, GameCharacter gameCharacter) {
         this.aliasName = aliasName;
         this.game = gameCharacter.getGame();

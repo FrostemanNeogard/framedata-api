@@ -3,6 +3,7 @@ package com.garfield.framedataapi.aliases;
 import com.garfield.framedataapi.aliases.exceptions.AliasAlreadyExistsException;
 import com.garfield.framedataapi.aliases.exceptions.AliasNotFoundException;
 import com.garfield.framedataapi.games.Game;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,20 @@ public class AliasService {
         }
 
         this.aliasRepository.save(alias);
+    }
+
+    @Transactional
+    public Alias renameAlias(Alias alias, String newName) {
+        String name = newName.trim();
+        Optional<Alias> existingAlias = this.aliasRepository.findByGameAndAliasNameIgnoreCase(alias.getGame(), name);
+
+        if (existingAlias.isPresent() && !existingAlias.get().getId().equals(alias.getId())) {
+            throw new AliasAlreadyExistsException(existingAlias.get());
+        }
+
+        alias.rename(name);
+
+        return this.aliasRepository.save(alias);
     }
 
     public Alias getAliasByGameAndIdentifier(Game game, String identifier) throws AliasNotFoundException {

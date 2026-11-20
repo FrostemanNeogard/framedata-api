@@ -6,11 +6,13 @@ import com.garfield.framedataapi.advice.responses.ApiResponse;
 import com.garfield.framedataapi.advice.responses.ApiResponseEntity;
 import com.garfield.framedataapi.aliases.dtos.AliasDto;
 import com.garfield.framedataapi.aliases.dtos.CreateAliasDto;
+import com.garfield.framedataapi.aliases.dtos.UpdateAliasDto;
 import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.gameCharacters.GameCharacter;
 import com.garfield.framedataapi.gameCharacters.GameCharacterService;
 import com.garfield.framedataapi.games.Game;
 import com.garfield.framedataapi.games.GameService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -46,6 +48,16 @@ public class AliasController extends BaseApiController {
         this.aliasService.createAlias(alias);
 
         return ApiResponseEntity.created(createControllerUri(alias.getId()));
+    }
+
+    @Admin
+    @PatchMapping("identifier/{aliasId}")
+    public ResponseEntity<ApiResponse<AliasDto>> updateAlias(
+            @PathVariable UUID aliasId,
+            @Valid @RequestBody UpdateAliasDto dto) {
+        Alias alias = this.aliasService.getAliasById(aliasId);
+
+        return ApiResponseEntity.ok(AliasDto.fromEntity(this.aliasService.renameAlias(alias, dto.aliasName())));
     }
 
     @Admin
