@@ -84,11 +84,12 @@ public class FramedataController extends BaseApiController {
         return ApiResponseEntity.ok(new FramedataResponseDto(framedata));
     }
 
+    // Query param, not a path segment: Tomcat rejects %2F in paths, and notations like "d/f+2" contain a slash.
     @Public
-    @GetMapping("character/{characterNameOrUuid}/identifier/{input}")
+    @GetMapping("character/{characterNameOrUuid}/lookup")
     public ResponseEntity<ApiResponse<FramedataResponseDto>> getFramedataByInput(
             @PathVariable String characterNameOrUuid,
-            @PathVariable String input) {
+            @RequestParam String input) {
         GameCharacter gameCharacter = this.gameCharacterService.getGameCharacterByIdentifier(characterNameOrUuid);
 
         try {
