@@ -29,6 +29,10 @@ public class Game extends BaseEntity {
     @OneToMany(mappedBy = "game", cascade = CascadeType.ALL)
     private Set<Framedata> framedata;
 
+    public void rename(String name) {
+        this.name = name;
+    }
+
     public Game(String name, FramedataTemplate attributesTemplate) {
         this.name = name;
         this.attributesTemplate = attributesTemplate;

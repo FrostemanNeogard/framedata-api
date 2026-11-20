@@ -8,6 +8,7 @@ import com.garfield.framedataapi.core.BaseApiController;
 import com.garfield.framedataapi.framedata.FramedataTemplate;
 import com.garfield.framedataapi.games.dto.CreateGameDto;
 import com.garfield.framedataapi.games.dto.GameDto;
+import com.garfield.framedataapi.games.dto.UpdateGameDto;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -59,6 +60,16 @@ public class GameController extends BaseApiController {
         this.gameService.createGame(newGame);
 
         return ApiResponseEntity.created(createControllerUri(newGame.getId().toString()));
+    }
+
+    @Admin
+    @PatchMapping("identifier/{gameId}")
+    public ResponseEntity<ApiResponse<GameDto>> updateGame(
+            @PathVariable UUID gameId,
+            @Valid @RequestBody UpdateGameDto dto) {
+        Game game = this.gameService.getGameById(gameId);
+
+        return ApiResponseEntity.ok(GameDto.fromEntity(this.gameService.renameGame(game, dto.name())));
     }
 
     @Admin

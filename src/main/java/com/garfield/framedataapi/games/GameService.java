@@ -3,6 +3,7 @@ package com.garfield.framedataapi.games;
 import com.garfield.framedataapi.framedata.FramedataService;
 import com.garfield.framedataapi.games.exceptions.GameAlreadyExistsException;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
+import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
@@ -25,13 +26,21 @@ public class GameService {
     }
 
     public Game getGameById(UUID id) throws GameNotFoundException {
-        Game game = this.gameRepository.getById(id);
+        return this.gameRepository.findById(id).orElseThrow(() -> new GameNotFoundException(id));
+    }
 
-        if (game == null) {
-            throw new GameNotFoundException(id);
+    @Transactional
+    public Game renameGame(Game game, String newName) {
+        String name = newName.trim();
+        Game existing = this.gameRepository.getByNameIgnoreCase(name);
+
+        if (existing != null && !existing.getId().equals(game.getId())) {
+            throw new GameAlreadyExistsException(existing);
         }
 
-        return game;
+        game.rename(name);
+
+        return this.gameRepository.save(game);
     }
 
     private Game getGameByName(String name) throws GameNotFoundException {

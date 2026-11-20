@@ -9,7 +9,5 @@ public interface GameRepository extends ListCrudRepository<Game, UUID> {
     Game getByNameIgnoreCase(String name);
 
     List<Game> findAll();
-
-    Game getById(UUID id);
 }
 
