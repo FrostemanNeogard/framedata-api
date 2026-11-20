@@ -16,8 +16,8 @@ public class AliasService {
     private final AliasRepository aliasRepository;
 
     public void createAlias(Alias alias) {
-        Optional<Alias> existingAlias = this.aliasRepository.findByGameCharacterAndAliasName(
-                alias.getGameCharacter(),
+        Optional<Alias> existingAlias = this.aliasRepository.findByGameAndAliasNameIgnoreCase(
+                alias.getGame(),
                 alias.getAliasName()
         );
 
@@ -47,7 +47,7 @@ public class AliasService {
     }
 
     private Alias getAliasByName(Game game, String name) {
-        Optional<Alias> alias = this.aliasRepository.findByGameAndAliasName(game, name);
+        Optional<Alias> alias = this.aliasRepository.findByGameAndAliasNameIgnoreCase(game, name);
 
         if (alias.isEmpty()) {
             throw new AliasNotFoundException(game, name);

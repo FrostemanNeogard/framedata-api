@@ -11,7 +11,5 @@ import java.util.UUID;
 public interface AliasRepository extends ListCrudRepository<Alias, UUID> {
     Set<Alias> findAllByGameCharacter(GameCharacter gameCharacter);
 
-    Optional<Alias> findByGameCharacterAndAliasName(GameCharacter gameCharacter, String aliasName);
-
-    Optional<Alias> findByGameAndAliasName(Game game, String aliasName);
+    Optional<Alias> findByGameAndAliasNameIgnoreCase(Game game, String aliasName);
 }

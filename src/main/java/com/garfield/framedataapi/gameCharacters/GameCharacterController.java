@@ -55,6 +55,18 @@ public class GameCharacterController extends BaseApiController {
         );
     }
 
+    @Public
+    @GetMapping("game/{gameNameOrUuid}/identifier/{characterNameOrAliasOrUuid}")
+    public ResponseEntity<ApiResponse<GameCharacterDto>> getGameCharacterInGame(
+            @PathVariable String gameNameOrUuid,
+            @PathVariable String characterNameOrAliasOrUuid) {
+        Game game = this.gameService.getGameByIdentifier(gameNameOrUuid);
+
+        return ApiResponseEntity.ok(GameCharacterDto.fromEntity(
+                this.gameCharacterService.getGameCharacterByGameAndIdentifier(game, characterNameOrAliasOrUuid)
+        ));
+    }
+
     @Admin
     @PostMapping
     public ResponseEntity<ApiResponse<GameCharacterDto>> createGameCharacter(

@@ -1,8 +1,11 @@
 package com.garfield.framedataapi.gameCharacters;
 
+import com.garfield.framedataapi.aliases.Alias;
+import com.garfield.framedataapi.aliases.AliasRepository;
 import com.garfield.framedataapi.gameCharacters.exceptions.AmbiguousGameCharacterNameException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterAlreadyExistsException;
 import com.garfield.framedataapi.gameCharacters.exceptions.GameCharacterNotFoundException;
+import com.garfield.framedataapi.games.Game;
 import com.garfield.framedataapi.games.exceptions.GameNotFoundException;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -17,11 +20,12 @@ import java.util.stream.Collectors;
 public class GameCharacterService {
 
     private final GameCharacterRepository gameCharacterRepository;
+    private final AliasRepository aliasRepository;
 
     public void createGameCharacter(GameCharacter gameCharacter) {
         Set<GameCharacter> existingCharacter = gameCharacter.getGame().getGameCharacters()
                 .stream()
-                .filter(gc -> gc.getName().equals(gameCharacter.getName())).collect(Collectors.toSet());
+                .filter(gc -> gc.getName().equalsIgnoreCase(gameCharacter.getName())).collect(Collectors.toSet());
 
         if (!existingCharacter.isEmpty()) {
             throw new GameCharacterAlreadyExistsException(gameCharacter);
@@ -49,6 +53,36 @@ public class GameCharacterService {
         }
 
         return gameCharacter.iterator().next();
+    }
+
+    public GameCharacter getGameCharacterByGameAndIdentifier(Game game, String identifier) {
+        try {
+            GameCharacter gameCharacter = getGameCharacterById(UUID.fromString(identifier));
+
+            if (!gameCharacter.getGame().getId().equals(game.getId())) {
+                throw new GameCharacterNotFoundException(identifier);
+            }
+
+            return gameCharacter;
+        } catch (IllegalArgumentException e) {
+            return getGameCharacterByNameOrAlias(game, identifier);
+        }
+    }
+
+    private GameCharacter getGameCharacterByNameOrAlias(Game game, String identifier) {
+        Set<GameCharacter> byName = this.gameCharacterRepository.findAllByGameAndNameIgnoreCase(game, identifier);
+
+        if (byName.size() > 1) {
+            throw new AmbiguousGameCharacterNameException(identifier);
+        }
+
+        if (!byName.isEmpty()) {
+            return byName.iterator().next();
+        }
+
+        return this.aliasRepository.findByGameAndAliasNameIgnoreCase(game, identifier)
+                .map(Alias::getGameCharacter)
+                .orElseThrow(() -> new GameCharacterNotFoundException(identifier));
     }
 
     public GameCharacter getGameCharacterById(UUID id) throws GameNotFoundException {
